@@ -33,6 +33,8 @@ For software validation only, add `-UseSyntheticPilot`. Synthetic-trained models
 
 ## Architecture
 
+**[View the rendered architecture diagrams](docs/architecture/README.md)**
+
 ```mermaid
 flowchart LR
     A[Portfolio workbook or fictional demo] --> B[Evidence ledger and validation]

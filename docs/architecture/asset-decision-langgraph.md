@@ -1,3 +1,8 @@
+# Asset Decision Workflow
+
+Asset-level executable LangGraph represented as Mermaid.
+
+```mermaid
 flowchart TD
   START([Start]) --> Load[Load asset and source records]
   Load --> Evidence[Validate evidence and conflicts]
@@ -12,3 +17,4 @@ flowchart TD
   Gate -->|Yes| Complete[Buy Invest Retain Monitor or Sell Release]
   Review --> END([End])
   Complete --> END
+```

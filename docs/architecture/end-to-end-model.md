@@ -1,3 +1,8 @@
+# End-to-End Model Architecture
+
+Complete evidence-to-decision pipeline.
+
+```mermaid
 flowchart LR
   subgraph Sources[Evidence and data sources]
     A[Company portfolio workbook]
@@ -28,3 +33,4 @@ flowchart LR
   T --> U
   U --> V[Outcome monitoring backtesting and Bayesian updates]
   V --> H
+```

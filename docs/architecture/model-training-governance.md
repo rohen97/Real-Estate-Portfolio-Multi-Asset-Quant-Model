@@ -1,3 +1,8 @@
+# Model Training and Governance
+
+Training, validation, registry and deployment gates.
+
+```mermaid
 flowchart LR
   History[Verified historical financial lease planning and capex data] --> Split[Chronological train and holdout split]
   Split --> Ensemble[LightGBM plus Ridge point forecast]
@@ -12,3 +17,4 @@ flowchart LR
   Backtest --> Gate{Validation thresholds passed?}
   Gate -->|No| Block[Block production deployment]
   Gate -->|Yes| Deploy[Enable company calibrated predictions]
+```
