@@ -24,6 +24,7 @@ jobs:
           cache: npm
       - run: uv sync --frozen
       - run: npm ci
+      - run: npm audit --audit-level=high
       - run: uv run python scripts/create_public_demo.py
       - run: uv run python scripts/export_langgraph_diagrams.py
       - run: uv run pytest -q

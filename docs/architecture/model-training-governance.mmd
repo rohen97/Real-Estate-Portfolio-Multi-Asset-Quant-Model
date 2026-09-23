@@ -1,0 +1,14 @@
+flowchart LR
+  History[Verified historical financial lease planning and capex data] --> Split[Chronological train and holdout split]
+  Split --> Ensemble[LightGBM plus Ridge point forecast]
+  Split --> Quantiles[LightGBM P10 P50 P90 models]
+  Split --> Hierarchy[Empirical Bayes asset class shrinkage]
+  Split --> Survival[Discrete approval survival model]
+  Ensemble --> Registry[Versioned model registry]
+  Quantiles --> Registry
+  Hierarchy --> Registry
+  Survival --> Registry
+  Registry --> Backtest[Temporal and policy backtests]
+  Backtest --> Gate{Validation thresholds passed?}
+  Gate -->|No| Block[Block production deployment]
+  Gate -->|Yes| Deploy[Enable company calibrated predictions]

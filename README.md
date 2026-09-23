@@ -75,7 +75,7 @@ graph TD
     Audit --> END
 ```
 
-Executable graphs: `packages/orchestration/langgraph_workflow.py`.
+Executable graphs: `packages/orchestration/langgraph_workflow.py`. The application includes an **Architecture** page rendering the Mermaid end-to-end, asset, portfolio and training workflows.
 
 ## Core model
 

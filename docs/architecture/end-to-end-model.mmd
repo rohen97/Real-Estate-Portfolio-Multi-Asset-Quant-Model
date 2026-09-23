@@ -1,0 +1,30 @@
+flowchart LR
+  subgraph Sources[Evidence and data sources]
+    A[Company portfolio workbook]
+    B[Underwriting workbook]
+    C[URA SPACE MP2025]
+    D[OneMap and public market data]
+    E[Historical leases planning capex outcomes]
+  end
+  Sources --> F[Ingestion validation and provenance]
+  F --> G[Evidence ledger and versioned snapshot]
+  G --> H[Asset digital twin]
+  H --> I[Zoning and physical capacity]
+  H --> J[Lease cash flows and DCF]
+  H --> K[ML ensemble quantiles and hierarchical priors]
+  H --> L[Operational ESG and tenant risk]
+  I --> M[Approval survival and development option]
+  J --> N[Action cash flows]
+  K --> N
+  L --> N
+  M --> N
+  N --> O[Correlated heavy tailed scenarios]
+  O --> P[Action NPVs VaR CVaR and loss probability]
+  P --> Q[Zoning adjusted Buy Retain Sell selection]
+  Q --> R[Five year multi period MILP]
+  R --> S{Human review required?}
+  S -->|Yes| T[Human review overrides and open conditions]
+  S -->|No| U[Decision record]
+  T --> U
+  U --> V[Outcome monitoring backtesting and Bayesian updates]
+  V --> H
