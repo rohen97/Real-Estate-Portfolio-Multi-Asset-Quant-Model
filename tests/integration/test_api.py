@@ -26,3 +26,9 @@ def test_visualisation_endpoints():
  matrix=c.get('/visualisations/scenario-matrix').json();assert len(matrix['factors'])==6 and len(matrix['correlation'])==6
  asset=c.get('/portfolio?country=Singapore&limit=1').json()['assets'][0]
  samples=c.get('/assets/'+asset['asset_id']+'/scenario-samples').json();assert samples['draws']==600 and len(samples['samples'])==5
+
+def test_zoning_map_geojson():
+ asset=c.get('/portfolio?country=Singapore&limit=1').json()['assets'][0]
+ result=c.get('/zoning/map/'+asset['asset_id']+'?radius_m=500');assert result.status_code==200
+ body=result.json();assert body['type']=='FeatureCollection' and len(body['features'])>1
+ assert body['features'][-1]['geometry']['type']=='Point'

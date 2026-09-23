@@ -49,7 +49,7 @@ Interactive charts cover portfolio allocation, MP2025 location/GPR, capacity wat
 
 ## Automated validation
 
-- Backend unit and integration tests: 34 passed.
+- Backend unit and integration tests: 35 passed.
 - Frontend tests: 1 passed.
 - TypeScript type checking: passed.
 - Production frontend build: passed.

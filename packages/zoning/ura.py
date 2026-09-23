@@ -3,7 +3,7 @@ from datetime import datetime,timezone
 from pathlib import Path
 import sqlite3,time,math
 import httpx
-from shapely.geometry import Point,shape
+from shapely.geometry import Point,shape,mapping,box
 from shapely import wkb
 MP2025_LAYER='https://maps.ura.gov.sg/arcgis/rest/services/MP25/Updated_Landuse_gaz/MapServer/45'
 MP2025_QUERY=MP2025_LAYER+'/query'
@@ -99,3 +99,25 @@ def enrich_assets(assets:list[dict],db_path:Path)->list[dict]:
    asset['ura_zoning']=lookup_zone(db_path,asset['latitude'],asset['longitude']);asset['zoning_exception']=asset['ura_zoning'].get('spatial_review_required',False)
   elif asset.get('country')=='Singapore':asset['ura_zoning']={'matches':[],'current_plan_verification_required':True,'warning':'No verified coordinate available for MP2025 lookup.'}
  return assets
+
+LAND_USE_COLORS={'RESIDENTIAL':'#f6e58d','RESIDENTIAL WITH COMMERCIAL AT 1ST STOREY':'#f8c291','COMMERCIAL':'#1f618d','COMMERCIAL & RESIDENTIAL':'#e67e22','HOTEL':'#c0392b','WHITE':'#ecf0f1','BUSINESS 1':'#6c5ce7','BUSINESS 2':'#4834d4','BUSINESS PARK':'#8e44ad','OPEN SPACE':'#58b368','PARK':'#159957','NATURE RESERVE':'#006b3c','EDUCATIONAL INSTITUTION':'#d4a373','CIVIC & COMMUNITY INSTITUTION':'#b08968','HEALTH & MEDICAL CARE':'#ff7675','TRANSPORT FACILITIES':'#636e72','ROAD':'#dfe6e9','RESERVE SITE':'#bdc3c7','WATERBODY':'#74b9ff'}
+def land_use_color(value):
+ name=(value or '').upper();return LAND_USE_COLORS.get(name,'#95a5a6')
+def zoning_map_geojson(db_path:Path,latitude:float,longitude:float,radius_m=750,limit=700):
+ point=Point(longitude,latitude);delta=radius_m/111320;bounds=box(longitude-delta,latitude-delta,longitude+delta,latitude+delta);features=[]
+ if db_path.exists():
+  with sqlite3.connect(db_path) as conn:
+   conn.row_factory=sqlite3.Row;rows=conn.execute('select * from zones where minx<=? and maxx>=? and miny<=? and maxy>=? limit ?',(longitude+delta,longitude-delta,latitude+delta,latitude-delta,limit*3)).fetchall()
+   for row in rows:
+    geometry=wkb.loads(row['geom'])
+    if not geometry.intersects(bounds):continue
+    clipped=geometry.intersection(bounds).simplify(.000003,preserve_topology=True)
+    if clipped.is_empty:continue
+    features.append({'type':'Feature','geometry':mapping(clipped),'properties':{'objectid':row['objectid'],'land_use':row['lu_desc'],'detailed_use':row['lu_dt_desc'],'gpr':row['gpr'],'gpr_text':row['gpr_text'],'region':row['region'],'planning_area':row['planning_area'],'subzone':row['subzone'],'fill_color':land_use_color(row['lu_desc']),'source':row['source_vintage']}})
+    if len(features)>=limit:break
+ else:
+  uses=[('RESIDENTIAL',2.8),('COMMERCIAL',4.2),('PARK',None),('BUSINESS 1',2.5),('HOTEL',3.5),('RESIDENTIAL WITH COMMERCIAL AT 1ST STOREY',2.1),('OPEN SPACE',None),('WHITE',None),('CIVIC & COMMUNITY INSTITUTION',None)];cell=delta/3
+  for index,(use,gpr) in enumerate(uses):
+   row=index//3;col=index%3;minx=longitude-delta+col*2*cell;miny=latitude-delta+row*2*cell;poly=box(minx,miny,minx+2*cell,miny+2*cell);features.append({'type':'Feature','geometry':mapping(poly),'properties':{'objectid':900000+index,'land_use':use,'detailed_use':'Fictional public demo polygon','gpr':gpr,'gpr_text':str(gpr) if gpr else 'EVA','region':'DEMO REGION','planning_area':'DEMO PLANNING AREA','subzone':'DEMO SUBZONE','fill_color':land_use_color(use),'source':'Fictional public demo'}})
+ asset_feature={'type':'Feature','geometry':{'type':'Point','coordinates':[longitude,latitude]},'properties':{'feature_type':'asset','land_use':'Selected asset','fill_color':'#000000'}}
+ return {'type':'FeatureCollection','features':features+[asset_feature],'properties':{'center':[longitude,latitude],'radius_m':radius_m,'polygon_count':len(features),'source':'URA SPACE Master Plan 2025' if db_path.exists() else 'Fictional public demo','retrieved_at':'2026-09-23'}}

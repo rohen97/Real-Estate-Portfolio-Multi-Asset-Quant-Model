@@ -8,6 +8,7 @@ from fastapi.responses import FileResponse
 from pydantic import BaseModel
 from packages.optimisation.engine import optimise_portfolio
 from packages.scenarios.engine import scenario_covariance,action_scenario_samples
+from packages.zoning.ura import zoning_map_geojson
 ROOT=Path(__file__).resolve().parents[2];PORTFOLIO=ROOT/'data/processed/portfolio.json';RESULTS=ROOT/'data/processed/full_model_results.json';URA_DB=ROOT/'data/processed/ura_mp2025.sqlite';AUDIT=ROOT/'data/processed/audit.sqlite'
 app=FastAPI(title='Far East Singapore Portfolio Intelligence API',version='0.2.0');app.add_middleware(CORSMiddleware,allow_origins=['http://localhost:5173','http://127.0.0.1:5173'],allow_methods=['*'],allow_headers=['*'])
 class Opt(BaseModel):capital_budget_m:float=500;max_projects:int=20;max_development_share:float=.45;cvar_penalty:float=.3;minimum_liquidity_m:float=50
@@ -88,6 +89,12 @@ def detail(asset_id:str):
  row=next((x for x in (read(RESULTS) or read(PORTFOLIO)) if x['asset_id']==asset_id),None)
  if not row:raise HTTPException(404,'Asset not found')
  return row
+@app.get('/zoning/map/{asset_id}')
+def zoning_map(asset_id:str,radius_m:int=750):
+ row=next((x for x in read(RESULTS) if x.get('asset_id')==asset_id),None)
+ if not row:raise HTTPException(404,'Asset not found')
+ if row.get('latitude') is None or row.get('longitude') is None:raise HTTPException(422,'Asset has no verified coordinate')
+ radius_m=max(100,min(radius_m,2000));return zoning_map_geojson(URA_DB,row['latitude'],row['longitude'],radius_m)
 @app.get('/selection/{asset_id}')
 def asset_selection(asset_id:str):
  row=next((x for x in read(RESULTS) if x.get('asset_id')==asset_id),None)

@@ -18,6 +18,7 @@
 
 - Statutory-to-economic capacity waterfall.
 - Zoning sensitivity bars.
+- Interactive Leaflet map with coloured MP2025 polygons, asset marker, land-use/GPR popups, legend and adjustable radius.
 - Surrounding GPR versus distance scatterplot.
 - P10/P50/P90 attainable-GFA chart.
 
