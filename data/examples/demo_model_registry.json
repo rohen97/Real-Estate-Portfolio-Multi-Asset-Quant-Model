@@ -1,0 +1,14 @@
+{
+  "name": "portfolio-forecasting-demo",
+  "version": "0.1.0-demo",
+  "synthetic_training": true,
+  "data_source": "fictional public demo",
+  "metrics": {
+    "noi": {
+      "mae_m": 0.05,
+      "p10_p90_coverage": 0.8,
+      "observations": 10
+    }
+  },
+  "artifacts": []
+}

@@ -1,0 +1,11 @@
+import sys,csv,io,json
+from datetime import date
+from pathlib import Path
+import httpx
+ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT));OUT=ROOT/'data/public';OUT.mkdir(parents=True,exist_ok=True)
+LAND_ID='d_0ad604387b5b2dd99fbf48d89cb4f416';LAND_API=f'https://api-open.data.gov.sg/v1/public/api/datasets/{LAND_ID}/poll-download';SINGSTAT='https://tablebuilder.singstat.gov.sg/api/table/tabledata/M212181'
+with httpx.Client(timeout=90,follow_redirects=True,headers={'User-Agent':'Far-East-Real-Estate-POC/0.4'}) as client:
+ land_url=client.get(LAND_API).raise_for_status().json()['data']['url'];land_csv=client.get(land_url).raise_for_status().text;(OUT/'land_use_allocation.csv').write_text(land_csv,encoding='utf-8');land_rows=list(csv.DictReader(io.StringIO(land_csv)))
+ industrial=client.get(SINGSTAT).raise_for_status().json()['Data'];(OUT/'singstat_M212181.json').write_text(json.dumps(industrial,indent=2),encoding='utf-8')
+series=industrial['row'][0];values={x['key']:float(x['value']) for x in series['columns'] if x['value'] not in ('na','-','')};latest='2026 2Q';previous='2026 1Q';industrial_qoq=values[latest]/values[previous]-1
+snapshot={'as_of':'2026-06-30','refreshed_at':date.today().isoformat(),'land_use_allocation_hectares':{r['DataSeries'].strip():float(r['2020']) for r in land_rows},'market_indicators':{'private_residential':{'price_qoq':.005,'period':'2026 2Q','source':'URA real estate statistics 2Q2026'},'hdb_residential':{'resale_price_qoq':-.003,'period':'2026 2Q','source':'HDB resale price index 2Q2026'},'office':{'price_qoq':.046,'rent_qoq':.001,'period':'2026 2Q','source':'URA real estate statistics 2Q2026'},'retail':{'price_qoq':.008,'rent_qoq':-.004,'period':'2026 2Q','source':'URA real estate statistics 2Q2026'},'industrial':{'price_index':values[latest],'price_qoq':industrial_qoq,'period':latest,'source_table':'SingStat M212181 / JTC'},'general':{}},'sources':{'land_use':'data.gov.sg dataset '+LAND_ID,'industrial':'SingStat M212181','private_market':'URA 2Q2026 real estate statistics','public_housing':'HDB 2Q2026 resale statistics'}};(OUT/'singapore_market_snapshot.json').write_text(json.dumps(snapshot,indent=2),encoding='utf-8');print(json.dumps(snapshot,indent=2))

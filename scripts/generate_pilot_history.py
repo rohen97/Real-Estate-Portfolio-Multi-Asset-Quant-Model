@@ -1,0 +1,26 @@
+import sys,json
+from pathlib import Path
+from datetime import date,timedelta
+import numpy as np
+ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT));OUT=ROOT/'data/pilot';OUT.mkdir(parents=True,exist_ok=True);rng=np.random.default_rng(20260923);portfolio=[x for x in json.loads((ROOT/'data/processed/portfolio.json').read_text()) if x['country']=='Singapore'][:10]
+financials=[];leases=[];planning=[];capex=[];outcomes=[];legacy=[]
+for i,a in enumerate(portfolio):
+ segment=' '.join(a.get('segments',[])).lower();base_value=55+15*i;base_noi=base_value*(.038+.004*(i%4));occupancy=.78+.02*(i%9)
+ for year in range(2020,2026):
+  growth=.018+.007*np.sin(i+year)+rng.normal(0,.012);base_noi*=1+growth;occ=float(np.clip(occupancy+rng.normal(0,.025),.65,.99));cap_rate=float(np.clip(.052-.0015*(year-2020)+rng.normal(0,.002),.035,.07));value=base_noi/cap_rate
+  financials.append({'Asset ID':a['asset_id'],'Property Name':a['name'],'Fiscal Year':year,'Revenue SGD m':round(base_noi/0.66,3),'Gross Rental Income SGD m':round(base_noi/0.7,3),'Other Income SGD m':round(base_noi*.04,3),'Operating Expenses SGD m':round(base_noi/0.7+base_noi*.04-base_noi,3),'NOI SGD m':round(base_noi,3),'Occupancy %':round(occ,4),'Valuation SGD m':round(value,3),'Cap Rate %':round(cap_rate,5),'Maintenance Capex SGD m':round(value*(.008+rng.random()*.006),3),'Source':'Synthetic pilot history','Verified':'Yes','Synthetic':True})
+ for tenant in range(6):
+  start=date(2022+(tenant%3),1+(tenant*2)%12,1);expiry=date(2027+(tenant%5),1+(tenant*2)%12,1);area=600+tenant*180+i*20;rent=area*(420+15*i)
+  leases.append({'Asset ID':a['asset_id'],'Tenant ID':f'{a["asset_id"]}-T{tenant+1:02d}','Tenant Name':f'Synthetic Tenant {tenant+1}','Use':'Retail' if 'mall' in segment else 'Office' if 'commercial' in segment else 'Residential','Area sqm':area,'Passing Rent SGD pa':rent,'Market Rent SGD pa':rent*(1.03+rng.normal(0,.02)),'Lease Start':start.isoformat(),'Lease Expiry':expiry.isoformat(),'Break Date':None,'Security Deposit SGD':rent/4,'Tenant Credit Grade':['A','BBB','BB'][tenant%3],'Collection %':round(float(np.clip(.97+rng.normal(0,.015),.85,1)),4),'Renewal Option':'Yes','Source':'Synthetic pilot history','Verified':'Yes','Synthetic':True})
+ approved=True if i%5 else False;submit=date(2022+i%3,2,1);stages=['Pre-application','Planning submission','Technical clearances','Committee/public review','Conditions discharge','Building permission']
+ for stage_idx,stage in enumerate(stages):
+  decision=submit+timedelta(days=int(45+stage_idx*55+rng.integers(0,40)));outcome='Approved' if approved or stage_idx<3 else 'Rejected'
+  planning.append({'Application ID':f'{a["asset_id"]}-PA{i:02d}','Asset ID':a['asset_id'],'Submission Date':submit.isoformat(),'Decision Date':decision.isoformat(),'Stage':stage,'Outcome':outcome,'Submitted GFA sqm':20000+i*1200,'Approved GFA sqm':(19000+i*1150) if approved else None,'Redesign Required':'Yes' if i%4==0 else 'No','Conditions Count':int(rng.integers(2,12)),'Decision Reference':f'SYN-{i}-{stage_idx}','Source':'Synthetic pilot history','Verified':'Yes','Synthetic':True})
+ for project in range(3):
+  action=['Retrofit','Repurpose','Redevelop'][project];budget=5+project*18+i*.8;overrun=rng.normal(.06,.11);spent=budget*(1+overrun);success=float(np.clip(.9-project*.12+rng.normal(0,.04),.5,.98))
+  capex.append({'Project ID':f'{a["asset_id"]}-P{project+1}','Asset ID':a['asset_id'],'Action':action,'Category':'Synthetic pilot','Start Date':date(2021+project,1,1).isoformat(),'End Date':date(2022+project,6,30).isoformat(),'Budget SGD m':round(budget,3),'Spent SGD m':round(spent,3),'Committed SGD m':0,'Success Probability %':success,'Income Disruption SGD m':round(base_noi*.15*(project+1),3),'Approval Status':'Approved','Project Status':'Completed','Source':'Synthetic pilot history','Verified':'Yes','Synthetic':True})
+ scores=[(85,80,90,75,82.5,82.5),(75,55,85,65,65,75),(45,40,50,35,42,43),(60,80,70,60,70,65),(50,60,45,40,55,43)][i] if i<5 else (float(rng.integers(45,90)),float(rng.integers(45,90)),float(rng.integers(45,90)),float(rng.integers(45,90)),None,None)
+ legacy.append({'asset_id':a['asset_id'],'asset_name':a['name'],'financial':scores[0],'operational':scores[1],'market':scores[2],'sustainability':scores[3],'published_current':scores[4],'published_future':scores[5],'source':'Far East November 2025 legacy scorecard / synthetic extension','synthetic_extension':i>=5})
+ outcomes.append({'asset_id':a['asset_id'],'decision_date':'2022-01-01','action':['Hold','Retrofit','Repurpose','Redevelop','Sell'][i%5],'realised_npv_m':round(float(rng.normal(12+i,8)),3),'realised_return':round(float(rng.normal(.09,.035)),5),'realised_cost_overrun':round(float(rng.normal(.06,.1)),5),'synthetic':True})
+for name,data in [('financials',financials),('leases',leases),('planning_history',planning),('capex',capex),('outcomes',outcomes),('legacy_inputs',legacy),('pilot_assets',portfolio)]: (OUT/(name+'.json')).write_text(json.dumps(data,indent=2,default=str),encoding='utf-8')
+print(json.dumps({'pilot_assets':len(portfolio),'financial_rows':len(financials),'leases':len(leases),'planning_events':len(planning),'capex_projects':len(capex),'outcomes':len(outcomes),'synthetic':True},indent=2))

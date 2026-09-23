@@ -1,0 +1,27 @@
+{
+  "as_of": "2026-06-30",
+  "status": "synthetic_demo_context",
+  "land_use_allocation_hectares": {
+    "Total": 73800,
+    "Housing": 10400,
+    "Industry And Commerce": 9100,
+    "Parks And Nature Reserves": 6900
+  },
+  "market_indicators": {
+    "private_residential": {
+      "price_qoq": 0.005
+    },
+    "office": {
+      "price_qoq": 0.046,
+      "rent_qoq": 0.001
+    },
+    "retail": {
+      "price_qoq": 0.008,
+      "rent_qoq": -0.004
+    },
+    "industrial": {
+      "price_qoq": 0.006
+    }
+  },
+  "warning": "Public demo snapshot. Refresh official sources for current analysis."
+}

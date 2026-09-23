@@ -1,0 +1,1 @@
+ $r=Split-Path -Parent $PSScriptRoot;Set-Location $r;.\tools\uv.exe run python scripts\regenerate_data.py

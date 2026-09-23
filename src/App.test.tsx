@@ -1,0 +1,1 @@
+import{render,screen}from'@testing-library/react';import{vi,test,expect}from'vitest';import App from'./App';vi.stubGlobal('fetch',vi.fn(()=>Promise.resolve({json:()=>Promise.resolve({assets:[]})})));test('opens app',()=>{render(<App/>);expect(screen.getByText('Portfolio intelligence')).toBeInTheDocument()});

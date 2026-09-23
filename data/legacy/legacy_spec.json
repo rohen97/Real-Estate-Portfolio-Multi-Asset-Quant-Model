@@ -1,0 +1,16 @@
+{
+  "version": "legacy-scorecard-2025.11-frozen",
+  "weights": {
+    "financial": 0.35,
+    "operational": 0.25,
+    "market": 0.25,
+    "sustainability": 0.15
+  },
+  "threshold": 70,
+  "formulas": {
+    "current": "(Financial × 0.35 + Operational × 0.25) / 0.60",
+    "future": "(Market × 0.25 + Sustainability × 0.15) / 0.40"
+  },
+  "source": "Far East_V1.7_051125_NSN.pptx",
+  "status": "Frozen comparison baseline; not primary decision engine"
+}

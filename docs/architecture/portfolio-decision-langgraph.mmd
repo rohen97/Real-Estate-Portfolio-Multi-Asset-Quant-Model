@@ -1,0 +1,20 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	load_portfolio(load_portfolio)
+	evaluate_asset_twins(evaluate_asset_twins)
+	multi_period_optimisation(multi_period_optimisation)
+	audit_and_governance(audit_and_governance)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> load_portfolio;
+	evaluate_asset_twins --> multi_period_optimisation;
+	load_portfolio --> evaluate_asset_twins;
+	multi_period_optimisation --> audit_and_governance;
+	audit_and_governance --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc

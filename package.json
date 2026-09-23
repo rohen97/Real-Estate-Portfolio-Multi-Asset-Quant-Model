@@ -1,0 +1,33 @@
+{
+  "name": "far-east-real-estate-poc",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -k \"npm:dev:web\" \"npm:dev:api\"",
+    "dev:web": "vite --host 127.0.0.1",
+    "dev:api": "tools\\uv.exe run uvicorn apps.api.main:app --reload --host 127.0.0.1 --port 8001",
+    "build": "vite build",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@types/react-plotly.js": "^2.6.4",
+    "@vitejs/plugin-react": "latest",
+    "lucide-react": "latest",
+    "plotly.js-dist-min": "^4.1.1",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-plotly.js": "^4.1.0",
+    "typescript": "latest",
+    "vite": "latest"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "latest",
+    "@testing-library/react": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "concurrently": "latest",
+    "jsdom": "latest",
+    "vitest": "latest"
+  },
+  "type": "module"
+}

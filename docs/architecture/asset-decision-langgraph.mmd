@@ -1,0 +1,25 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	load_asset(load_asset)
+	validate_evidence(validate_evidence)
+	resolve_mp2025_zoning(resolve_mp2025_zoning)
+	evaluate_economics(evaluate_economics)
+	human_review_gate(human_review_gate)
+	complete(complete)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> load_asset;
+	evaluate_economics -.-> complete;
+	evaluate_economics -. &nbsp;review&nbsp; .-> human_review_gate;
+	load_asset --> validate_evidence;
+	resolve_mp2025_zoning --> evaluate_economics;
+	validate_evidence --> resolve_mp2025_zoning;
+	complete --> __end__;
+	human_review_gate --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc

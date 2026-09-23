@@ -1,0 +1,95 @@
+{
+  "status": "public_synthetic_demo",
+  "noi_forecast": {
+    "mae_m": 0.05,
+    "p10_p90_coverage": 0.8,
+    "observations": 10
+  },
+  "decision_policy": {
+    "economic_action_hit_rate": 0.6,
+    "legacy_management_label_hit_rate": 0.3,
+    "observations": 10
+  },
+  "predictions": [
+    {
+      "asset_id": "DEMO-001",
+      "actual_noi_m": 1.601,
+      "point": 1.598,
+      "p10": 1.539,
+      "p50": 1.598,
+      "p90": 1.664
+    },
+    {
+      "asset_id": "DEMO-002",
+      "actual_noi_m": 1.601,
+      "point": 1.598,
+      "p10": 1.539,
+      "p50": 1.598,
+      "p90": 1.664
+    },
+    {
+      "asset_id": "DEMO-003",
+      "actual_noi_m": 1.601,
+      "point": 1.598,
+      "p10": 1.539,
+      "p50": 1.598,
+      "p90": 1.664
+    },
+    {
+      "asset_id": "DEMO-004",
+      "actual_noi_m": 1.601,
+      "point": 1.598,
+      "p10": 1.539,
+      "p50": 1.598,
+      "p90": 1.664
+    },
+    {
+      "asset_id": "DEMO-005",
+      "actual_noi_m": 1.928,
+      "point": 1.924,
+      "p10": 1.852,
+      "p50": 1.924,
+      "p90": 2.003
+    },
+    {
+      "asset_id": "DEMO-006",
+      "actual_noi_m": 1.601,
+      "point": 1.598,
+      "p10": 1.539,
+      "p50": 1.598,
+      "p90": 1.664
+    },
+    {
+      "asset_id": "DEMO-007",
+      "actual_noi_m": 1.601,
+      "point": 1.598,
+      "p10": 1.539,
+      "p50": 1.598,
+      "p90": 1.664
+    },
+    {
+      "asset_id": "DEMO-008",
+      "actual_noi_m": 1.601,
+      "point": 1.598,
+      "p10": 1.539,
+      "p50": 1.598,
+      "p90": 1.664
+    },
+    {
+      "asset_id": "DEMO-009",
+      "actual_noi_m": 1.928,
+      "point": 1.924,
+      "p10": 1.852,
+      "p50": 1.924,
+      "p90": 2.003
+    },
+    {
+      "asset_id": "DEMO-010",
+      "actual_noi_m": 1.856,
+      "point": 1.853,
+      "p10": 1.784,
+      "p50": 1.853,
+      "p90": 1.929
+    }
+  ]
+}

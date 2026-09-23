@@ -1,0 +1,35 @@
+[
+  {
+    "id": "GSW",
+    "name": "Greater Southern Waterfront",
+    "latitude": 1.265,
+    "longitude": 103.82,
+    "influence_radius_km": 7,
+    "target_year": 2040,
+    "delivery_probability": 0.65,
+    "potential_value_uplift": 0.1,
+    "source": "URA strategic planning; screening geofence only"
+  },
+  {
+    "id": "JLD",
+    "name": "Jurong Lake District",
+    "latitude": 1.334,
+    "longitude": 103.743,
+    "influence_radius_km": 5,
+    "target_year": 2035,
+    "delivery_probability": 0.8,
+    "potential_value_uplift": 0.09,
+    "source": "URA strategic planning; screening geofence only"
+  },
+  {
+    "id": "PLAB",
+    "name": "Paya Lebar Air Base transformation",
+    "latitude": 1.355,
+    "longitude": 103.906,
+    "influence_radius_km": 6,
+    "target_year": 2040,
+    "delivery_probability": 0.55,
+    "potential_value_uplift": 0.08,
+    "source": "URA strategic planning; screening geofence only"
+  }
+]

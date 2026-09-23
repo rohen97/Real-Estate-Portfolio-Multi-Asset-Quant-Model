@@ -1,0 +1,5606 @@
+{
+  "governance": {
+    "synthetic_model_allowed": true,
+    "observed_assets": 0,
+    "proxy_assets": 10
+  },
+  "assets": [
+    {
+      "asset_id": "DEMO-001",
+      "name": "Demo Mixed use Asset 1",
+      "country": "Singapore",
+      "jurisdiction": "Singapore URA",
+      "segments": [
+        "Mixed use"
+      ],
+      "address": "Illustrative Singapore Location 1",
+      "source_records": 1,
+      "source_rows": [
+        {
+          "sheet": "Public Demo",
+          "row": 2
+        }
+      ],
+      "latitude": 1.268,
+      "longitude": 103.72500000000001,
+      "synthetic": true,
+      "synthetic_financials": true,
+      "tenure_hint": {
+        "type": "99-year leasehold",
+        "remaining_years": 67,
+        "source": "synthetic demo"
+      },
+      "ura_zoning": {
+        "matches": [
+          {
+            "objectid": 900001,
+            "lu_desc": "COMMERCIAL & RESIDENTIAL",
+            "gpr": 4.2,
+            "gpr_text": "4.2",
+            "planning_area": "DEMO PLANNING AREA",
+            "subzone": "DEMO SUBZONE 1",
+            "source_vintage": "URA SPACE Master Plan 2025 demo fixture"
+          }
+        ],
+        "match_method": "demo_fixture",
+        "spatial_review_required": false,
+        "current_statutory_plan": "Master Plan 2025"
+      },
+      "catalogue_details": [
+        "Fictional public demonstration asset"
+      ],
+      "market_context": {
+        "market_segment": "general",
+        "indicators": {},
+        "as_of": "2026-06-30",
+        "warning": "Public market indicators are contextual evidence and are not asset-level forecasts."
+      },
+      "surrounding_context": {
+        "status": "available",
+        "radius_m": 500,
+        "candidate_polygons": 23,
+        "developable_polygons": 21,
+        "high_density_polygons": 0,
+        "maximum_gpr": 1.0,
+        "distance_weighted_gpr": 1.0,
+        "view_block_probability": 0,
+        "supply_pressure_index": 0.175,
+        "candidates": [
+          {
+            "objectid": 60150,
+            "land_use": "BUSINESS 2",
+            "gpr": 1.0,
+            "distance_m": 0.0,
+            "planning_area": "WESTERN ISLANDS",
+            "subzone": "JURONG ISLAND AND BUKOM"
+          },
+          {
+            "objectid": 60128,
+            "land_use": "UTILITY",
+            "gpr": null,
+            "distance_m": 49.6,
+            "planning_area": "WESTERN ISLANDS",
+            "subzone": "JURONG ISLAND AND BUKOM"
+          },
+          {
+            "objectid": 60106,
+            "land_use": "UTILITY",
+            "gpr": null,
+            "distance_m": 74.6,
+            "planning_area": "WESTERN ISLANDS",
+            "subzone": "JURONG ISLAND AND BUKOM"
+          },
+          {
+            "objectid": 122252,
+            "land_use": "BUSINESS 2",
+            "gpr": 1.0,
+            "distance_m": 84.7,
+            "planning_area": "WESTERN ISLANDS",
+            "subzone": "JURONG ISLAND AND BUKOM"
+          },
+          {
+            "objectid": 60322,
+            "land_use": "BUSINESS 2",
+            "gpr": 1.0,
+            "distance_m": 189.9,
+            "planning_area": "WESTERN ISLANDS",
+            "subzone": "JURONG ISLAND AND BUKOM"
+          },
+          {
+            "objectid": 125298,
+            "land_use": "BUSINESS 2",
+            "gpr": 1.0,
+            "distance_m": 198.9,
+            "planning_area": "WESTERN ISLANDS",
+            "subzone": "JURONG ISLAND AND BUKOM"
+          },
+          {
+            "objectid": 60254,
+            "land_use": "BUSINESS 2",
+            "gpr": 1.0,
+            "distance_m": 206.5,
+            "planning_area": "WESTERN ISLANDS",
+            "subzone": "JURONG ISLAND AND BUKOM"
+          },
+          {
+            "objectid": 108296,
+            "land_use": "BUSINESS 2",
+            "gpr": 1.0,
+            "distance_m": 293.4,
+            "planning_area": "WESTERN ISLANDS",
+            "subzone": "JURONG ISLAND AND BUKOM"
+          },
+          {
+            "objectid": 60324,
+            "land_use": "BUSINESS 2",
+            "gpr": 1.0,
+            "distance_m": 329.9,
+            "planning_area": "WESTERN ISLANDS",
+            "subzone": "JURONG ISLAND AND BUKOM"
+          },
+          {
+            "objectid": 60323,
+            "land_use": "BUSINESS 2",
+            "gpr": 1.0,
+            "distance_m": 331.7,
+            "planning_area": "WESTERN ISLANDS",
+            "subzone": "JURONG ISLAND AND BUKOM"
+          },
+          {
+            "objectid": 60325,
+            "land_use": "BUSINESS 2",
+            "gpr": 1.0,
+            "distance_m": 339.3,
+            "planning_area": "WESTERN ISLANDS",
+            "subzone": "JURONG ISLAND AND BUKOM"
+          },
+          {
+            "objectid": 105490,
+            "land_use": "BUSINESS 2",
+            "gpr": 1.0,
+            "distance_m": 378.0,
+            "planning_area": "WESTERN ISLANDS",
+            "subzone": "JURONG ISLAND AND BUKOM"
+          },
+          {
+            "objectid": 105382,
+            "land_use": "BUSINESS 2",
+            "gpr": 1.0,
+            "distance_m": 398.2,
+            "planning_area": "WESTERN ISLANDS",
+            "subzone": "JURONG ISLAND AND BUKOM"
+          },
+          {
+            "objectid": 105387,
+            "land_use": "BUSINESS 2",
+            "gpr": 1.0,
+            "distance_m": 406.8,
+            "planning_area": "WESTERN ISLANDS",
+            "subzone": "JURONG ISLAND AND BUKOM"
+          },
+          {
+            "objectid": 105384,
+            "land_use": "BUSINESS 2",
+            "gpr": 1.0,
+            "distance_m": 421.8,
+            "planning_area": "WESTERN ISLANDS",
+            "subzone": "JURONG ISLAND AND BUKOM"
+          },
+          {
+            "objectid": 105381,
+            "land_use": "BUSINESS 2",
+            "gpr": 1.0,
+            "distance_m": 434.6,
+            "planning_area": "WESTERN ISLANDS",
+            "subzone": "JURONG ISLAND AND BUKOM"
+          },
+          {
+            "objectid": 105383,
+            "land_use": "BUSINESS 2",
+            "gpr": 1.0,
+            "distance_m": 444.0,
+            "planning_area": "WESTERN ISLANDS",
+            "subzone": "JURONG ISLAND AND BUKOM"
+          },
+          {
+            "objectid": 108298,
+            "land_use": "BUSINESS 2",
+            "gpr": 1.0,
+            "distance_m": 457.3,
+            "planning_area": "WESTERN ISLANDS",
+            "subzone": "JURONG ISLAND AND BUKOM"
+          },
+          {
+            "objectid": 120559,
+            "land_use": "BUSINESS 2",
+            "gpr": 1.0,
+            "distance_m": 459.2,
+            "planning_area": "WESTERN ISLANDS",
+            "subzone": "JURONG ISLAND AND BUKOM"
+          },
+          {
+            "objectid": 108297,
+            "land_use": "BUSINESS 2",
+            "gpr": 1.0,
+            "distance_m": 467.8,
+            "planning_area": "WESTERN ISLANDS",
+            "subzone": "JURONG ISLAND AND BUKOM"
+          },
+          {
+            "objectid": 105380,
+            "land_use": "BUSINESS 2",
+            "gpr": 1.0,
+            "distance_m": 479.8,
+            "planning_area": "WESTERN ISLANDS",
+            "subzone": "JURONG ISLAND AND BUKOM"
+          },
+          {
+            "objectid": 105385,
+            "land_use": "BUSINESS 2",
+            "gpr": 1.0,
+            "distance_m": 486.2,
+            "planning_area": "WESTERN ISLANDS",
+            "subzone": "JURONG ISLAND AND BUKOM"
+          },
+          {
+            "objectid": 105386,
+            "land_use": "BUSINESS 2",
+            "gpr": 1.0,
+            "distance_m": 495.3,
+            "planning_area": "WESTERN ISLANDS",
+            "subzone": "JURONG ISLAND AND BUKOM"
+          }
+        ],
+        "source": "URA SPACE Master Plan 2025 surrounding polygons",
+        "verification_required": true
+      },
+      "selection": {
+        "signal": "Data Required / Monitor",
+        "preferred_action": "Sell",
+        "selection_npv_m": 2.18,
+        "annual_expected_alpha": -0.02069,
+        "expected_total_return": 0.05731,
+        "operating_yield": 0.04486,
+        "market_return": 0.0,
+        "incremental_action_return": 0.01246,
+        "required_return": 0.078,
+        "acquisition_signal": "Avoid",
+        "portfolio_signal": "Sell / Release",
+        "action_npv_m": 2.18,
+        "action_comparison": [
+          {
+            "action": "Hold",
+            "base_action_npv_m": -1.2,
+            "adjusted_selection_npv_m": -1.751,
+            "probability_of_loss": 0.5924,
+            "adjustments": {
+              "enbloc_m": 0.044,
+              "transformation_m": 0,
+              "view_supply_lease_penalty_m": 0.595
+            }
+          },
+          {
+            "action": "Retrofit",
+            "base_action_npv_m": -2.75,
+            "adjusted_selection_npv_m": -3.25,
+            "probability_of_loss": 0.6588,
+            "adjustments": {
+              "enbloc_m": 0.035,
+              "transformation_m": 0,
+              "view_supply_lease_penalty_m": 0.535
+            }
+          },
+          {
+            "action": "Repurpose",
+            "base_action_npv_m": -7.95,
+            "adjusted_selection_npv_m": -8.353,
+            "probability_of_loss": 0.7702,
+            "adjustments": {
+              "enbloc_m": 0.013,
+              "transformation_m": 0,
+              "view_supply_lease_penalty_m": 0.416
+            }
+          },
+          {
+            "action": "Redevelop",
+            "base_action_npv_m": -18.27,
+            "adjusted_selection_npv_m": -18.508,
+            "probability_of_loss": 0.9478,
+            "adjustments": {
+              "enbloc_m": 0.0,
+              "transformation_m": 0,
+              "view_supply_lease_penalty_m": 0.238
+            }
+          },
+          {
+            "action": "Sell",
+            "base_action_npv_m": 2.18,
+            "adjusted_selection_npv_m": 2.18,
+            "probability_of_loss": 0.3272,
+            "adjustments": {
+              "enbloc_m": 0.0,
+              "transformation_m": 0.0,
+              "view_supply_lease_penalty_m": 0.0
+            }
+          }
+        ],
+        "zoning_option_value_m": 4.44,
+        "enbloc": {
+          "probability": 0.01,
+          "option_value_m": 0.044,
+          "underutilisation": 0.2,
+          "tenure_factor": 0.65,
+          "collective_sale_applicable": false,
+          "warning": "Screening probability only. Owner consent, Land Betterment Charge, acquisition premium and technical feasibility require project evidence."
+        },
+        "transformation": {
+          "value_m": 0,
+          "exposures": [],
+          "quality": "screening_geofence"
+        },
+        "view_risk": {
+          "probability": 0.0,
+          "penalty_m": 0.0
+        },
+        "supply_pressure": {
+          "index": 0.175,
+          "penalty_m": 0.245,
+          "market_momentum_qoq": 0.0
+        },
+        "lease_decay": {
+          "penalty_m": 0.35,
+          "factor": 0.01,
+          "remaining_years": 67,
+          "tenure": "99-year leasehold",
+          "quality": "synthetic demo"
+        },
+        "probability_of_loss": 0.3272,
+        "reasons": [],
+        "quality": "provisional",
+        "warning": "Selection signal is an economic screening output, not a transaction instruction."
+      },
+      "model_status": "provisional_proxy_run",
+      "input_quality": "low - portfolio workbook is a catalogue, not an underwriting dataset",
+      "proxy_inputs": [
+        "site area proxy",
+        "current GFA proxy",
+        "company valuation, NOI, tenure, leases, debt and capex required"
+      ],
+      "zoning_source": {
+        "matches": [
+          {
+            "objectid": 900001,
+            "lu_desc": "COMMERCIAL & RESIDENTIAL",
+            "gpr": 4.2,
+            "gpr_text": "4.2",
+            "planning_area": "DEMO PLANNING AREA",
+            "subzone": "DEMO SUBZONE 1",
+            "source_vintage": "URA SPACE Master Plan 2025 demo fixture"
+          }
+        ],
+        "match_method": "demo_fixture",
+        "spatial_review_required": false,
+        "current_statutory_plan": "Master Plan 2025"
+      },
+      "zoning_model_status": "verified_match",
+      "statutory_gpr_used": 4.2,
+      "gpr_source": "MP2025",
+      "capacity": {
+        "statutory_gfa_sqm": 10920.0,
+        "geometric_gfa_sqm": 34320.0,
+        "physical_gfa_sqm": 10920.0,
+        "de_facto_gfa_sqm": 10046.4,
+        "expected_approved_gfa_sqm": 6228.8,
+        "economic_gfa_sqm": 10046.4,
+        "unused_economic_gfa_sqm": 2184.0,
+        "buildable_footprint_sqm": 1040.0,
+        "storeys_by_height": 33,
+        "binding_constraints": [
+          "plot_ratio",
+          "site_coverage"
+        ],
+        "sensitivities": {
+          "legal_gpr": 148.3,
+          "site_coverage_max": 0.0,
+          "height_max_m": 0.0,
+          "front_setback_m": 0.0,
+          "side_setback_m": 0.0,
+          "approval_probability": 502.3
+        },
+        "residual_value_m": 4.44,
+        "p10_gfa_sqm": 4657.5,
+        "p50_gfa_sqm": 6281.5,
+        "p90_gfa_sqm": 7733.0,
+        "verification_required": true,
+        "methodology_version": "sg-capacity-0.2"
+      },
+      "approval": {
+        "stages": [
+          {
+            "stage": "Pre-application",
+            "conditional_probability": 0.94,
+            "cumulative_probability": 0.94,
+            "expected_months": 2.5
+          },
+          {
+            "stage": "Planning submission",
+            "conditional_probability": 0.86,
+            "cumulative_probability": 0.8084,
+            "expected_months": 5
+          },
+          {
+            "stage": "Technical clearances",
+            "conditional_probability": 0.82,
+            "cumulative_probability": 0.6629,
+            "expected_months": 6
+          },
+          {
+            "stage": "Committee/public review",
+            "conditional_probability": 0.88,
+            "cumulative_probability": 0.5833,
+            "expected_months": 4
+          },
+          {
+            "stage": "Conditions discharge",
+            "conditional_probability": 0.93,
+            "cumulative_probability": 0.5425,
+            "expected_months": 4
+          },
+          {
+            "stage": "Building permission",
+            "conditional_probability": 0.97,
+            "cumulative_probability": 0.5262,
+            "expected_months": 3
+          }
+        ],
+        "overall_probability": 0.5264,
+        "p50_months": 19.0,
+        "p90_months": 27.4,
+        "redesign_probability": 0.4736,
+        "seed": 20260922
+      },
+      "economics": {
+        "current_value_m": 35,
+        "current_noi_m": 1.57,
+        "occupancy": 0.9,
+        "market_rent_growth": 0.025,
+        "vacancy_target": 0.07,
+        "cap_rate": 0.0475,
+        "discount_rate": 0.078,
+        "selling_cost_rate": 0.025,
+        "holding_years": 10,
+        "source_quality": "illustrative proxy - replace with observed company financials"
+      },
+      "dcf": {
+        "value_m": 31.98,
+        "cashflows_m": [
+          1.61,
+          1.65,
+          1.69,
+          1.73,
+          1.78,
+          1.82,
+          1.87,
+          1.91,
+          1.96,
+          44.29
+        ],
+        "terminal_value_m": 42.28
+      },
+      "actions": [
+        {
+          "action": "Hold",
+          "incremental_npv_m": -1.32,
+          "pv_after_m": 32.29,
+          "pv_without_m": 31.98,
+          "capex_m": 1.5,
+          "financing_cost_m": 0.01,
+          "disruption_cost_m": 0.11,
+          "failure_cost_m": 0.02,
+          "success_probability": 0.98,
+          "execution_years": 0.25,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -1.2,
+          "p10_npv_m": -7.81,
+          "p50_npv_m": -1.21,
+          "p90_npv_m": 5.47,
+          "probability_of_loss": 0.5924,
+          "var_95_m": 9.6,
+          "cvar_95_m": 11.69,
+          "scenario_seed": 20260922,
+          "draws": 5000
+        },
+        {
+          "action": "Retrofit",
+          "incremental_npv_m": -2.91,
+          "pv_after_m": 35.17,
+          "pv_without_m": 31.98,
+          "capex_m": 5,
+          "financing_cost_m": 0.17,
+          "disruption_cost_m": 0.66,
+          "failure_cost_m": 0.27,
+          "success_probability": 0.9,
+          "execution_years": 1.5,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -2.75,
+          "p10_npv_m": -11.11,
+          "p50_npv_m": -2.82,
+          "p90_npv_m": 5.85,
+          "probability_of_loss": 0.6588,
+          "var_95_m": 13.76,
+          "cvar_95_m": 16.44,
+          "scenario_seed": 20260922,
+          "draws": 5000
+        },
+        {
+          "action": "Repurpose",
+          "incremental_npv_m": -8.15,
+          "pv_after_m": 39.68,
+          "pv_without_m": 31.98,
+          "capex_m": 12,
+          "financing_cost_m": 0.68,
+          "disruption_cost_m": 1.32,
+          "failure_cost_m": 1.85,
+          "success_probability": 0.72,
+          "execution_years": 2.5,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -7.95,
+          "p10_npv_m": -21.92,
+          "p50_npv_m": -8.03,
+          "p90_npv_m": 6.22,
+          "probability_of_loss": 0.7702,
+          "var_95_m": 25.86,
+          "cvar_95_m": 30.54,
+          "scenario_seed": 20260922,
+          "draws": 5000
+        },
+        {
+          "action": "Redevelop",
+          "incremental_npv_m": -18.51,
+          "pv_after_m": 48.36,
+          "pv_without_m": 31.98,
+          "capex_m": 25,
+          "financing_cost_m": 2.25,
+          "disruption_cost_m": 2.42,
+          "failure_cost_m": 5.23,
+          "success_probability": 0.62,
+          "execution_years": 4,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -18.27,
+          "p10_npv_m": -31.98,
+          "p50_npv_m": -18.29,
+          "p90_npv_m": -4.19,
+          "probability_of_loss": 0.9478,
+          "var_95_m": 36.06,
+          "cvar_95_m": 40.9,
+          "scenario_seed": 20260922,
+          "draws": 5000
+        },
+        {
+          "action": "Sell",
+          "incremental_npv_m": 2.14,
+          "pv_after_m": 34.12,
+          "pv_without_m": 31.98,
+          "capex_m": -34.12,
+          "financing_cost_m": 0.0,
+          "disruption_cost_m": 0.0,
+          "failure_cost_m": 0,
+          "success_probability": 0.97,
+          "execution_years": 0.75,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": 2.18,
+          "p10_npv_m": -4.4,
+          "p50_npv_m": 2.16,
+          "p90_npv_m": 8.66,
+          "probability_of_loss": 0.3272,
+          "var_95_m": 6.42,
+          "cvar_95_m": 8.46,
+          "scenario_seed": 20260922,
+          "draws": 5000
+        }
+      ],
+      "recommendation": {
+        "action": "Sell",
+        "management_label": "Release",
+        "expected_npv_m": 2.18,
+        "probability_of_loss": 0.3272,
+        "selection_signal": "Data Required / Monitor",
+        "explanation": "Sell maximises the zoning- and market-adjusted selection NPV. Selection screen: Data Required / Monitor. Replace proxy inputs before decision use."
+      },
+      "expected_alpha": -0.02069,
+      "required_return": 0.078,
+      "model_version": "economic-model-v2-selection-0.2",
+      "verification_required": true,
+      "cache_key": "0a758ebe69bff8a9"
+    },
+    {
+      "asset_id": "DEMO-002",
+      "name": "Demo Office Asset 2",
+      "country": "Singapore",
+      "jurisdiction": "Singapore URA",
+      "segments": [
+        "Office"
+      ],
+      "address": "Illustrative Singapore Location 2",
+      "source_records": 1,
+      "source_rows": [
+        {
+          "sheet": "Public Demo",
+          "row": 3
+        }
+      ],
+      "latitude": 1.286,
+      "longitude": 103.75,
+      "synthetic": true,
+      "synthetic_financials": true,
+      "tenure_hint": {
+        "type": "99-year leasehold",
+        "remaining_years": 66,
+        "source": "synthetic demo"
+      },
+      "ura_zoning": {
+        "matches": [
+          {
+            "objectid": 900002,
+            "lu_desc": "COMMERCIAL",
+            "gpr": 5.6,
+            "gpr_text": "5.6",
+            "planning_area": "DEMO PLANNING AREA",
+            "subzone": "DEMO SUBZONE 2",
+            "source_vintage": "URA SPACE Master Plan 2025 demo fixture"
+          }
+        ],
+        "match_method": "demo_fixture",
+        "spatial_review_required": false,
+        "current_statutory_plan": "Master Plan 2025"
+      },
+      "catalogue_details": [
+        "Fictional public demonstration asset"
+      ],
+      "market_context": {
+        "market_segment": "office",
+        "indicators": {
+          "price_qoq": 0.046,
+          "rent_qoq": 0.001,
+          "period": "2026 2Q",
+          "source": "URA real estate statistics 2Q2026"
+        },
+        "as_of": "2026-06-30",
+        "warning": "Public market indicators are contextual evidence and are not asset-level forecasts."
+      },
+      "surrounding_context": {
+        "status": "available",
+        "radius_m": 500,
+        "candidate_polygons": 1,
+        "developable_polygons": 0,
+        "high_density_polygons": 0,
+        "maximum_gpr": null,
+        "distance_weighted_gpr": null,
+        "view_block_probability": 0,
+        "supply_pressure_index": 0.0,
+        "candidates": [
+          {
+            "objectid": 185409,
+            "land_use": "PORT / AIRPORT",
+            "gpr": null,
+            "distance_m": 329.9,
+            "planning_area": "QUEENSTOWN",
+            "subzone": "PORT"
+          }
+        ],
+        "source": "URA SPACE Master Plan 2025 surrounding polygons",
+        "verification_required": true
+      },
+      "selection": {
+        "signal": "Data Required / Monitor",
+        "preferred_action": "Sell",
+        "selection_npv_m": 2.07,
+        "annual_expected_alpha": 0.09869,
+        "expected_total_return": 0.17669,
+        "operating_yield": 0.04486,
+        "market_return": 0.12,
+        "incremental_action_return": 0.01183,
+        "required_return": 0.078,
+        "acquisition_signal": "Buy",
+        "portfolio_signal": "Sell / Release",
+        "action_npv_m": 2.07,
+        "action_comparison": [
+          {
+            "action": "Hold",
+            "base_action_npv_m": -1.36,
+            "adjusted_selection_npv_m": -1.651,
+            "probability_of_loss": 0.6094,
+            "adjustments": {
+              "enbloc_m": 0.059,
+              "transformation_m": 0,
+              "view_supply_lease_penalty_m": 0.35
+            }
+          },
+          {
+            "action": "Retrofit",
+            "base_action_npv_m": -2.99,
+            "adjusted_selection_npv_m": -3.258,
+            "probability_of_loss": 0.6782,
+            "adjustments": {
+              "enbloc_m": 0.047,
+              "transformation_m": 0,
+              "view_supply_lease_penalty_m": 0.315
+            }
+          },
+          {
+            "action": "Repurpose",
+            "base_action_npv_m": -7.98,
+            "adjusted_selection_npv_m": -8.207,
+            "probability_of_loss": 0.7628,
+            "adjustments": {
+              "enbloc_m": 0.018,
+              "transformation_m": 0,
+              "view_supply_lease_penalty_m": 0.245
+            }
+          },
+          {
+            "action": "Redevelop",
+            "base_action_npv_m": -18.05,
+            "adjusted_selection_npv_m": -18.19,
+            "probability_of_loss": 0.9492,
+            "adjustments": {
+              "enbloc_m": 0.0,
+              "transformation_m": 0,
+              "view_supply_lease_penalty_m": 0.14
+            }
+          },
+          {
+            "action": "Sell",
+            "base_action_npv_m": 2.07,
+            "adjusted_selection_npv_m": 2.07,
+            "probability_of_loss": 0.3448,
+            "adjustments": {
+              "enbloc_m": 0.0,
+              "transformation_m": 0.0,
+              "view_supply_lease_penalty_m": 0.0
+            }
+          }
+        ],
+        "zoning_option_value_m": 5.92,
+        "enbloc": {
+          "probability": 0.01,
+          "option_value_m": 0.059,
+          "underutilisation": 0.2,
+          "tenure_factor": 0.65,
+          "collective_sale_applicable": false,
+          "warning": "Screening probability only. Owner consent, Land Betterment Charge, acquisition premium and technical feasibility require project evidence."
+        },
+        "transformation": {
+          "value_m": 0,
+          "exposures": [],
+          "quality": "screening_geofence"
+        },
+        "view_risk": {
+          "probability": 0.0,
+          "penalty_m": 0.0
+        },
+        "supply_pressure": {
+          "index": 0.0,
+          "penalty_m": 0,
+          "market_momentum_qoq": 0.046
+        },
+        "lease_decay": {
+          "penalty_m": 0.35,
+          "factor": 0.01,
+          "remaining_years": 66,
+          "tenure": "99-year leasehold",
+          "quality": "synthetic demo"
+        },
+        "probability_of_loss": 0.3448,
+        "reasons": [],
+        "quality": "provisional",
+        "warning": "Selection signal is an economic screening output, not a transaction instruction."
+      },
+      "model_status": "provisional_proxy_run",
+      "input_quality": "low - portfolio workbook is a catalogue, not an underwriting dataset",
+      "proxy_inputs": [
+        "site area proxy",
+        "current GFA proxy",
+        "company valuation, NOI, tenure, leases, debt and capex required"
+      ],
+      "zoning_source": {
+        "matches": [
+          {
+            "objectid": 900002,
+            "lu_desc": "COMMERCIAL",
+            "gpr": 5.6,
+            "gpr_text": "5.6",
+            "planning_area": "DEMO PLANNING AREA",
+            "subzone": "DEMO SUBZONE 2",
+            "source_vintage": "URA SPACE Master Plan 2025 demo fixture"
+          }
+        ],
+        "match_method": "demo_fixture",
+        "spatial_review_required": false,
+        "current_statutory_plan": "Master Plan 2025"
+      },
+      "zoning_model_status": "verified_match",
+      "statutory_gpr_used": 5.6,
+      "gpr_source": "MP2025",
+      "capacity": {
+        "statutory_gfa_sqm": 14560.0,
+        "geometric_gfa_sqm": 34320.0,
+        "physical_gfa_sqm": 14560.0,
+        "de_facto_gfa_sqm": 13395.2,
+        "expected_approved_gfa_sqm": 8305.0,
+        "economic_gfa_sqm": 13395.2,
+        "unused_economic_gfa_sqm": 2912.0,
+        "buildable_footprint_sqm": 1040.0,
+        "storeys_by_height": 33,
+        "binding_constraints": [
+          "plot_ratio",
+          "site_coverage"
+        ],
+        "sensitivities": {
+          "legal_gpr": 148.3,
+          "site_coverage_max": 0.0,
+          "height_max_m": 0.0,
+          "front_setback_m": 0.0,
+          "side_setback_m": 0.0,
+          "approval_probability": 669.8
+        },
+        "residual_value_m": 5.92,
+        "p10_gfa_sqm": 6286.9,
+        "p50_gfa_sqm": 8322.3,
+        "p90_gfa_sqm": 10321.0,
+        "verification_required": true,
+        "methodology_version": "sg-capacity-0.2"
+      },
+      "approval": {
+        "stages": [
+          {
+            "stage": "Pre-application",
+            "conditional_probability": 0.94,
+            "cumulative_probability": 0.94,
+            "expected_months": 2.5
+          },
+          {
+            "stage": "Planning submission",
+            "conditional_probability": 0.86,
+            "cumulative_probability": 0.8084,
+            "expected_months": 5
+          },
+          {
+            "stage": "Technical clearances",
+            "conditional_probability": 0.82,
+            "cumulative_probability": 0.6629,
+            "expected_months": 6
+          },
+          {
+            "stage": "Committee/public review",
+            "conditional_probability": 0.88,
+            "cumulative_probability": 0.5833,
+            "expected_months": 4
+          },
+          {
+            "stage": "Conditions discharge",
+            "conditional_probability": 0.93,
+            "cumulative_probability": 0.5425,
+            "expected_months": 4
+          },
+          {
+            "stage": "Building permission",
+            "conditional_probability": 0.97,
+            "cumulative_probability": 0.5262,
+            "expected_months": 3
+          }
+        ],
+        "overall_probability": 0.5242,
+        "p50_months": 19.0,
+        "p90_months": 27.0,
+        "redesign_probability": 0.4758,
+        "seed": 20260923
+      },
+      "economics": {
+        "current_value_m": 35,
+        "current_noi_m": 1.57,
+        "occupancy": 0.9,
+        "market_rent_growth": 0.025,
+        "vacancy_target": 0.07,
+        "cap_rate": 0.0475,
+        "discount_rate": 0.078,
+        "selling_cost_rate": 0.025,
+        "holding_years": 10,
+        "source_quality": "illustrative proxy - replace with observed company financials"
+      },
+      "dcf": {
+        "value_m": 31.98,
+        "cashflows_m": [
+          1.61,
+          1.65,
+          1.69,
+          1.73,
+          1.78,
+          1.82,
+          1.87,
+          1.91,
+          1.96,
+          44.29
+        ],
+        "terminal_value_m": 42.28
+      },
+      "actions": [
+        {
+          "action": "Hold",
+          "incremental_npv_m": -1.32,
+          "pv_after_m": 32.29,
+          "pv_without_m": 31.98,
+          "capex_m": 1.5,
+          "financing_cost_m": 0.01,
+          "disruption_cost_m": 0.11,
+          "failure_cost_m": 0.02,
+          "success_probability": 0.98,
+          "execution_years": 0.25,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -1.36,
+          "p10_npv_m": -7.93,
+          "p50_npv_m": -1.37,
+          "p90_npv_m": 5.28,
+          "probability_of_loss": 0.6094,
+          "var_95_m": 9.72,
+          "cvar_95_m": 12.08,
+          "scenario_seed": 20260923,
+          "draws": 5000
+        },
+        {
+          "action": "Retrofit",
+          "incremental_npv_m": -2.91,
+          "pv_after_m": 35.17,
+          "pv_without_m": 31.98,
+          "capex_m": 5,
+          "financing_cost_m": 0.17,
+          "disruption_cost_m": 0.66,
+          "failure_cost_m": 0.27,
+          "success_probability": 0.9,
+          "execution_years": 1.5,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -2.99,
+          "p10_npv_m": -11.61,
+          "p50_npv_m": -3.09,
+          "p90_npv_m": 5.59,
+          "probability_of_loss": 0.6782,
+          "var_95_m": 13.79,
+          "cvar_95_m": 16.56,
+          "scenario_seed": 20260923,
+          "draws": 5000
+        },
+        {
+          "action": "Repurpose",
+          "incremental_npv_m": -7.92,
+          "pv_after_m": 39.9,
+          "pv_without_m": 31.98,
+          "capex_m": 12,
+          "financing_cost_m": 0.68,
+          "disruption_cost_m": 1.32,
+          "failure_cost_m": 1.85,
+          "success_probability": 0.72,
+          "execution_years": 2.5,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -7.98,
+          "p10_npv_m": -21.88,
+          "p50_npv_m": -8.17,
+          "p90_npv_m": 6.15,
+          "probability_of_loss": 0.7628,
+          "var_95_m": 25.54,
+          "cvar_95_m": 30.38,
+          "scenario_seed": 20260923,
+          "draws": 5000
+        },
+        {
+          "action": "Redevelop",
+          "incremental_npv_m": -17.85,
+          "pv_after_m": 49.02,
+          "pv_without_m": 31.98,
+          "capex_m": 25,
+          "financing_cost_m": 2.25,
+          "disruption_cost_m": 2.42,
+          "failure_cost_m": 5.23,
+          "success_probability": 0.62,
+          "execution_years": 4,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -18.05,
+          "p10_npv_m": -32.44,
+          "p50_npv_m": -18.11,
+          "p90_npv_m": -3.84,
+          "probability_of_loss": 0.9492,
+          "var_95_m": 36.01,
+          "cvar_95_m": 40.74,
+          "scenario_seed": 20260923,
+          "draws": 5000
+        },
+        {
+          "action": "Sell",
+          "incremental_npv_m": 2.14,
+          "pv_after_m": 34.12,
+          "pv_without_m": 31.98,
+          "capex_m": -34.12,
+          "financing_cost_m": 0.0,
+          "disruption_cost_m": 0.0,
+          "failure_cost_m": 0,
+          "success_probability": 0.97,
+          "execution_years": 0.75,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": 2.07,
+          "p10_npv_m": -4.54,
+          "p50_npv_m": 2.11,
+          "p90_npv_m": 8.64,
+          "probability_of_loss": 0.3448,
+          "var_95_m": 6.42,
+          "cvar_95_m": 8.47,
+          "scenario_seed": 20260923,
+          "draws": 5000
+        }
+      ],
+      "recommendation": {
+        "action": "Sell",
+        "management_label": "Release",
+        "expected_npv_m": 2.07,
+        "probability_of_loss": 0.3448,
+        "selection_signal": "Data Required / Monitor",
+        "explanation": "Sell maximises the zoning- and market-adjusted selection NPV. Selection screen: Data Required / Monitor. Replace proxy inputs before decision use."
+      },
+      "expected_alpha": 0.09869,
+      "required_return": 0.078,
+      "model_version": "economic-model-v2-selection-0.2",
+      "verification_required": true,
+      "cache_key": "ddf8820e87d19aae"
+    },
+    {
+      "asset_id": "DEMO-003",
+      "name": "Demo Retail Asset 3",
+      "country": "Singapore",
+      "jurisdiction": "Singapore URA",
+      "segments": [
+        "Retail"
+      ],
+      "address": "Illustrative Singapore Location 3",
+      "source_records": 1,
+      "source_rows": [
+        {
+          "sheet": "Public Demo",
+          "row": 4
+        }
+      ],
+      "latitude": 1.304,
+      "longitude": 103.775,
+      "synthetic": true,
+      "synthetic_financials": true,
+      "tenure_hint": {
+        "type": "Freehold",
+        "remaining_years": null,
+        "source": "synthetic demo"
+      },
+      "ura_zoning": {
+        "matches": [
+          {
+            "objectid": 900003,
+            "lu_desc": "COMMERCIAL",
+            "gpr": 3.5,
+            "gpr_text": "3.5",
+            "planning_area": "DEMO PLANNING AREA",
+            "subzone": "DEMO SUBZONE 3",
+            "source_vintage": "URA SPACE Master Plan 2025 demo fixture"
+          }
+        ],
+        "match_method": "demo_fixture",
+        "spatial_review_required": false,
+        "current_statutory_plan": "Master Plan 2025"
+      },
+      "catalogue_details": [
+        "Fictional public demonstration asset"
+      ],
+      "market_context": {
+        "market_segment": "retail",
+        "indicators": {
+          "price_qoq": 0.008,
+          "rent_qoq": -0.004,
+          "period": "2026 2Q",
+          "source": "URA real estate statistics 2Q2026"
+        },
+        "as_of": "2026-06-30",
+        "warning": "Public market indicators are contextual evidence and are not asset-level forecasts."
+      },
+      "surrounding_context": {
+        "status": "available",
+        "radius_m": 500,
+        "candidate_polygons": 8,
+        "developable_polygons": 1,
+        "high_density_polygons": 1,
+        "maximum_gpr": 2.8000000000000003,
+        "distance_weighted_gpr": 2.8,
+        "view_block_probability": 0.0021,
+        "supply_pressure_index": 0.0483,
+        "candidates": [
+          {
+            "objectid": 224316,
+            "land_use": "EDUCATIONAL INSTITUTION",
+            "gpr": null,
+            "distance_m": 0.0,
+            "planning_area": "QUEENSTOWN",
+            "subzone": "DOVER"
+          },
+          {
+            "objectid": 236874,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 29.9,
+            "planning_area": "QUEENSTOWN",
+            "subzone": "DOVER"
+          },
+          {
+            "objectid": 186991,
+            "land_use": "EDUCATIONAL INSTITUTION",
+            "gpr": null,
+            "distance_m": 210.2,
+            "planning_area": "QUEENSTOWN",
+            "subzone": "NATIONAL UNIVERSITY OF S'PORE"
+          },
+          {
+            "objectid": 224627,
+            "land_use": "UTILITY",
+            "gpr": null,
+            "distance_m": 339.4,
+            "planning_area": "QUEENSTOWN",
+            "subzone": "NATIONAL UNIVERSITY OF S'PORE"
+          },
+          {
+            "objectid": 186434,
+            "land_use": "EDUCATIONAL INSTITUTION",
+            "gpr": null,
+            "distance_m": 463.6,
+            "planning_area": "QUEENSTOWN",
+            "subzone": "DOVER"
+          },
+          {
+            "objectid": 147809,
+            "land_use": "RESIDENTIAL",
+            "gpr": 2.8000000000000003,
+            "distance_m": 479.0,
+            "planning_area": "CLEMENTI",
+            "subzone": "CLEMENTI WOODS"
+          },
+          {
+            "objectid": 149451,
+            "land_use": "UTILITY",
+            "gpr": null,
+            "distance_m": 488.8,
+            "planning_area": "QUEENSTOWN",
+            "subzone": "SINGAPORE POLYTECHNIC"
+          },
+          {
+            "objectid": 199052,
+            "land_use": "EDUCATIONAL INSTITUTION",
+            "gpr": null,
+            "distance_m": 492.6,
+            "planning_area": "QUEENSTOWN",
+            "subzone": "SINGAPORE POLYTECHNIC"
+          }
+        ],
+        "source": "URA SPACE Master Plan 2025 surrounding polygons",
+        "verification_required": true
+      },
+      "selection": {
+        "signal": "Data Required / Monitor",
+        "preferred_action": "Sell",
+        "selection_npv_m": 2.123,
+        "annual_expected_alpha": 0.01099,
+        "expected_total_return": 0.08899,
+        "operating_yield": 0.04486,
+        "market_return": 0.032,
+        "incremental_action_return": 0.01213,
+        "required_return": 0.078,
+        "acquisition_signal": "Watch",
+        "portfolio_signal": "Sell / Release",
+        "action_npv_m": 2.1,
+        "action_comparison": [
+          {
+            "action": "Hold",
+            "base_action_npv_m": -1.39,
+            "adjusted_selection_npv_m": -1.279,
+            "probability_of_loss": 0.605,
+            "adjustments": {
+              "enbloc_m": 0.037,
+              "transformation_m": 0.075,
+              "view_supply_lease_penalty_m": 0.001
+            }
+          },
+          {
+            "action": "Retrofit",
+            "base_action_npv_m": -2.98,
+            "adjusted_selection_npv_m": -2.876,
+            "probability_of_loss": 0.6726,
+            "adjustments": {
+              "enbloc_m": 0.03,
+              "transformation_m": 0.075,
+              "view_supply_lease_penalty_m": 0.001
+            }
+          },
+          {
+            "action": "Repurpose",
+            "base_action_npv_m": -8.52,
+            "adjusted_selection_npv_m": -8.435,
+            "probability_of_loss": 0.776,
+            "adjustments": {
+              "enbloc_m": 0.011,
+              "transformation_m": 0.075,
+              "view_supply_lease_penalty_m": 0.001
+            }
+          },
+          {
+            "action": "Redevelop",
+            "base_action_npv_m": -19.01,
+            "adjusted_selection_npv_m": -18.935,
+            "probability_of_loss": 0.9602,
+            "adjustments": {
+              "enbloc_m": 0.0,
+              "transformation_m": 0.075,
+              "view_supply_lease_penalty_m": 0.0
+            }
+          },
+          {
+            "action": "Sell",
+            "base_action_npv_m": 2.1,
+            "adjusted_selection_npv_m": 2.123,
+            "probability_of_loss": 0.3346,
+            "adjustments": {
+              "enbloc_m": 0.0,
+              "transformation_m": 0.022,
+              "view_supply_lease_penalty_m": 0.0
+            }
+          }
+        ],
+        "zoning_option_value_m": 3.7,
+        "enbloc": {
+          "probability": 0.01,
+          "option_value_m": 0.037,
+          "underutilisation": 0.2,
+          "tenure_factor": 0.9,
+          "collective_sale_applicable": false,
+          "warning": "Screening probability only. Owner consent, Land Betterment Charge, acquisition premium and technical feasibility require project evidence."
+        },
+        "transformation": {
+          "value_m": 0.075,
+          "exposures": [
+            {
+              "zone": "Greater Southern Waterfront",
+              "distance_km": 6.62,
+              "proximity_factor": 0.0542,
+              "target_year": 2040,
+              "delivery_probability": 0.65,
+              "discounted_value_m": 0.043,
+              "source": "URA strategic planning; screening geofence only"
+            },
+            {
+              "zone": "Jurong Lake District",
+              "distance_km": 4.88,
+              "proximity_factor": 0.0247,
+              "target_year": 2035,
+              "delivery_probability": 0.8,
+              "discounted_value_m": 0.032,
+              "source": "URA strategic planning; screening geofence only"
+            }
+          ],
+          "quality": "screening_geofence"
+        },
+        "view_risk": {
+          "probability": 0.0021,
+          "penalty_m": 0.001
+        },
+        "supply_pressure": {
+          "index": 0.0483,
+          "penalty_m": 0,
+          "market_momentum_qoq": 0.008
+        },
+        "lease_decay": {
+          "penalty_m": 0,
+          "factor": 0,
+          "remaining_years": null,
+          "tenure": "Freehold",
+          "quality": "synthetic demo"
+        },
+        "probability_of_loss": 0.3346,
+        "reasons": [],
+        "quality": "provisional",
+        "warning": "Selection signal is an economic screening output, not a transaction instruction."
+      },
+      "model_status": "provisional_proxy_run",
+      "input_quality": "low - portfolio workbook is a catalogue, not an underwriting dataset",
+      "proxy_inputs": [
+        "site area proxy",
+        "current GFA proxy",
+        "company valuation, NOI, tenure, leases, debt and capex required"
+      ],
+      "zoning_source": {
+        "matches": [
+          {
+            "objectid": 900003,
+            "lu_desc": "COMMERCIAL",
+            "gpr": 3.5,
+            "gpr_text": "3.5",
+            "planning_area": "DEMO PLANNING AREA",
+            "subzone": "DEMO SUBZONE 3",
+            "source_vintage": "URA SPACE Master Plan 2025 demo fixture"
+          }
+        ],
+        "match_method": "demo_fixture",
+        "spatial_review_required": false,
+        "current_statutory_plan": "Master Plan 2025"
+      },
+      "zoning_model_status": "verified_match",
+      "statutory_gpr_used": 3.5,
+      "gpr_source": "MP2025",
+      "capacity": {
+        "statutory_gfa_sqm": 9100.0,
+        "geometric_gfa_sqm": 22880.0,
+        "physical_gfa_sqm": 9100.0,
+        "de_facto_gfa_sqm": 8372.0,
+        "expected_approved_gfa_sqm": 5190.6,
+        "economic_gfa_sqm": 8372.0,
+        "unused_economic_gfa_sqm": 1820.0,
+        "buildable_footprint_sqm": 1040.0,
+        "storeys_by_height": 22,
+        "binding_constraints": [
+          "plot_ratio",
+          "site_coverage"
+        ],
+        "sensitivities": {
+          "legal_gpr": 148.3,
+          "site_coverage_max": 0.0,
+          "height_max_m": 0.0,
+          "front_setback_m": 0.0,
+          "side_setback_m": 0.0,
+          "approval_probability": 418.6
+        },
+        "residual_value_m": 3.7,
+        "p10_gfa_sqm": 3871.0,
+        "p50_gfa_sqm": 5218.8,
+        "p90_gfa_sqm": 6469.0,
+        "verification_required": true,
+        "methodology_version": "sg-capacity-0.2"
+      },
+      "approval": {
+        "stages": [
+          {
+            "stage": "Pre-application",
+            "conditional_probability": 0.94,
+            "cumulative_probability": 0.94,
+            "expected_months": 2.5
+          },
+          {
+            "stage": "Planning submission",
+            "conditional_probability": 0.86,
+            "cumulative_probability": 0.8084,
+            "expected_months": 5
+          },
+          {
+            "stage": "Technical clearances",
+            "conditional_probability": 0.82,
+            "cumulative_probability": 0.6629,
+            "expected_months": 6
+          },
+          {
+            "stage": "Committee/public review",
+            "conditional_probability": 0.88,
+            "cumulative_probability": 0.5833,
+            "expected_months": 4
+          },
+          {
+            "stage": "Conditions discharge",
+            "conditional_probability": 0.93,
+            "cumulative_probability": 0.5425,
+            "expected_months": 4
+          },
+          {
+            "stage": "Building permission",
+            "conditional_probability": 0.97,
+            "cumulative_probability": 0.5262,
+            "expected_months": 3
+          }
+        ],
+        "overall_probability": 0.521,
+        "p50_months": 19.0,
+        "p90_months": 27.5,
+        "redesign_probability": 0.479,
+        "seed": 20260924
+      },
+      "economics": {
+        "current_value_m": 35,
+        "current_noi_m": 1.57,
+        "occupancy": 0.9,
+        "market_rent_growth": 0.025,
+        "vacancy_target": 0.07,
+        "cap_rate": 0.0475,
+        "discount_rate": 0.078,
+        "selling_cost_rate": 0.025,
+        "holding_years": 10,
+        "source_quality": "illustrative proxy - replace with observed company financials"
+      },
+      "dcf": {
+        "value_m": 31.98,
+        "cashflows_m": [
+          1.61,
+          1.65,
+          1.69,
+          1.73,
+          1.78,
+          1.82,
+          1.87,
+          1.91,
+          1.96,
+          44.29
+        ],
+        "terminal_value_m": 42.28
+      },
+      "actions": [
+        {
+          "action": "Hold",
+          "incremental_npv_m": -1.32,
+          "pv_after_m": 32.29,
+          "pv_without_m": 31.98,
+          "capex_m": 1.5,
+          "financing_cost_m": 0.01,
+          "disruption_cost_m": 0.11,
+          "failure_cost_m": 0.02,
+          "success_probability": 0.98,
+          "execution_years": 0.25,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -1.39,
+          "p10_npv_m": -8.04,
+          "p50_npv_m": -1.39,
+          "p90_npv_m": 5.2,
+          "probability_of_loss": 0.605,
+          "var_95_m": 9.93,
+          "cvar_95_m": 12.08,
+          "scenario_seed": 20260924,
+          "draws": 5000
+        },
+        {
+          "action": "Retrofit",
+          "incremental_npv_m": -2.91,
+          "pv_after_m": 35.17,
+          "pv_without_m": 31.98,
+          "capex_m": 5,
+          "financing_cost_m": 0.17,
+          "disruption_cost_m": 0.66,
+          "failure_cost_m": 0.27,
+          "success_probability": 0.9,
+          "execution_years": 1.5,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -2.98,
+          "p10_npv_m": -11.5,
+          "p50_npv_m": -2.93,
+          "p90_npv_m": 5.76,
+          "probability_of_loss": 0.6726,
+          "var_95_m": 14.45,
+          "cvar_95_m": 17.21,
+          "scenario_seed": 20260924,
+          "draws": 5000
+        },
+        {
+          "action": "Repurpose",
+          "incremental_npv_m": -8.26,
+          "pv_after_m": 39.56,
+          "pv_without_m": 31.98,
+          "capex_m": 12,
+          "financing_cost_m": 0.68,
+          "disruption_cost_m": 1.32,
+          "failure_cost_m": 1.85,
+          "success_probability": 0.72,
+          "execution_years": 2.5,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -8.52,
+          "p10_npv_m": -22.54,
+          "p50_npv_m": -8.54,
+          "p90_npv_m": 5.67,
+          "probability_of_loss": 0.776,
+          "var_95_m": 26.86,
+          "cvar_95_m": 31.83,
+          "scenario_seed": 20260924,
+          "draws": 5000
+        },
+        {
+          "action": "Redevelop",
+          "incremental_npv_m": -18.85,
+          "pv_after_m": 48.02,
+          "pv_without_m": 31.98,
+          "capex_m": 25,
+          "financing_cost_m": 2.25,
+          "disruption_cost_m": 2.42,
+          "failure_cost_m": 5.23,
+          "success_probability": 0.62,
+          "execution_years": 4,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -19.01,
+          "p10_npv_m": -33.23,
+          "p50_npv_m": -19.0,
+          "p90_npv_m": -4.87,
+          "probability_of_loss": 0.9602,
+          "var_95_m": 37.54,
+          "cvar_95_m": 42.22,
+          "scenario_seed": 20260924,
+          "draws": 5000
+        },
+        {
+          "action": "Sell",
+          "incremental_npv_m": 2.14,
+          "pv_after_m": 34.12,
+          "pv_without_m": 31.98,
+          "capex_m": -34.12,
+          "financing_cost_m": 0.0,
+          "disruption_cost_m": 0.0,
+          "failure_cost_m": 0,
+          "success_probability": 0.97,
+          "execution_years": 0.75,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": 2.1,
+          "p10_npv_m": -4.41,
+          "p50_npv_m": 2.12,
+          "p90_npv_m": 8.65,
+          "probability_of_loss": 0.3346,
+          "var_95_m": 6.24,
+          "cvar_95_m": 8.58,
+          "scenario_seed": 20260924,
+          "draws": 5000
+        }
+      ],
+      "recommendation": {
+        "action": "Sell",
+        "management_label": "Release",
+        "expected_npv_m": 2.1,
+        "probability_of_loss": 0.3346,
+        "selection_signal": "Data Required / Monitor",
+        "explanation": "Sell maximises the zoning- and market-adjusted selection NPV. Selection screen: Data Required / Monitor. Replace proxy inputs before decision use."
+      },
+      "expected_alpha": 0.01099,
+      "required_return": 0.078,
+      "model_version": "economic-model-v2-selection-0.2",
+      "verification_required": true,
+      "cache_key": "9e4d5f659c7bb306"
+    },
+    {
+      "asset_id": "DEMO-004",
+      "name": "Demo Logistics Asset 4",
+      "country": "Singapore",
+      "jurisdiction": "Singapore URA",
+      "segments": [
+        "Logistics"
+      ],
+      "address": "Illustrative Singapore Location 4",
+      "source_records": 1,
+      "source_rows": [
+        {
+          "sheet": "Public Demo",
+          "row": 5
+        }
+      ],
+      "latitude": 1.322,
+      "longitude": 103.8,
+      "synthetic": true,
+      "synthetic_financials": true,
+      "tenure_hint": {
+        "type": "99-year leasehold",
+        "remaining_years": 64,
+        "source": "synthetic demo"
+      },
+      "ura_zoning": {
+        "matches": [
+          {
+            "objectid": 900004,
+            "lu_desc": "BUSINESS 2",
+            "gpr": 2.5,
+            "gpr_text": "2.5",
+            "planning_area": "DEMO PLANNING AREA",
+            "subzone": "DEMO SUBZONE 4",
+            "source_vintage": "URA SPACE Master Plan 2025 demo fixture"
+          }
+        ],
+        "match_method": "demo_fixture",
+        "spatial_review_required": false,
+        "current_statutory_plan": "Master Plan 2025"
+      },
+      "catalogue_details": [
+        "Fictional public demonstration asset"
+      ],
+      "market_context": {
+        "market_segment": "general",
+        "indicators": {},
+        "as_of": "2026-06-30",
+        "warning": "Public market indicators are contextual evidence and are not asset-level forecasts."
+      },
+      "surrounding_context": {
+        "status": "available",
+        "radius_m": 500,
+        "candidate_polygons": 885,
+        "developable_polygons": 38,
+        "high_density_polygons": 0,
+        "maximum_gpr": 1.4000000000000001,
+        "distance_weighted_gpr": 1.4,
+        "view_block_probability": 0.0,
+        "supply_pressure_index": 0.3167,
+        "candidates": [
+          {
+            "objectid": 168454,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 0.0,
+            "planning_area": "BUKIT TIMAH",
+            "subzone": "LEEDON PARK"
+          },
+          {
+            "objectid": 193903,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 2.6,
+            "planning_area": "BUKIT TIMAH",
+            "subzone": "LEEDON PARK"
+          },
+          {
+            "objectid": 231921,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 6.5,
+            "planning_area": "BUKIT TIMAH",
+            "subzone": "LEEDON PARK"
+          },
+          {
+            "objectid": 194307,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 7.3,
+            "planning_area": "BUKIT TIMAH",
+            "subzone": "LEEDON PARK"
+          },
+          {
+            "objectid": 206384,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 11.6,
+            "planning_area": "BUKIT TIMAH",
+            "subzone": "LEEDON PARK"
+          },
+          {
+            "objectid": 232045,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 16.6,
+            "planning_area": "BUKIT TIMAH",
+            "subzone": "LEEDON PARK"
+          },
+          {
+            "objectid": 207085,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 18.3,
+            "planning_area": "BUKIT TIMAH",
+            "subzone": "LEEDON PARK"
+          },
+          {
+            "objectid": 168252,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 20.0,
+            "planning_area": "BUKIT TIMAH",
+            "subzone": "LEEDON PARK"
+          },
+          {
+            "objectid": 218537,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 21.2,
+            "planning_area": "BUKIT TIMAH",
+            "subzone": "LEEDON PARK"
+          },
+          {
+            "objectid": 206792,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 26.2,
+            "planning_area": "BUKIT TIMAH",
+            "subzone": "LEEDON PARK"
+          },
+          {
+            "objectid": 243906,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 28.0,
+            "planning_area": "BUKIT TIMAH",
+            "subzone": "LEEDON PARK"
+          },
+          {
+            "objectid": 169304,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 28.5,
+            "planning_area": "BUKIT TIMAH",
+            "subzone": "LEEDON PARK"
+          },
+          {
+            "objectid": 168738,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 30.0,
+            "planning_area": "BUKIT TIMAH",
+            "subzone": "LEEDON PARK"
+          },
+          {
+            "objectid": 180587,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 32.1,
+            "planning_area": "BUKIT TIMAH",
+            "subzone": "LEEDON PARK"
+          },
+          {
+            "objectid": 193717,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 35.0,
+            "planning_area": "BUKIT TIMAH",
+            "subzone": "LEEDON PARK"
+          },
+          {
+            "objectid": 244479,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 37.2,
+            "planning_area": "BUKIT TIMAH",
+            "subzone": "LEEDON PARK"
+          },
+          {
+            "objectid": 244281,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 38.7,
+            "planning_area": "BUKIT TIMAH",
+            "subzone": "LEEDON PARK"
+          },
+          {
+            "objectid": 205821,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 39.5,
+            "planning_area": "BUKIT TIMAH",
+            "subzone": "LEEDON PARK"
+          },
+          {
+            "objectid": 156744,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 42.9,
+            "planning_area": "BUKIT TIMAH",
+            "subzone": "LEEDON PARK"
+          },
+          {
+            "objectid": 168707,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 48.8,
+            "planning_area": "BUKIT TIMAH",
+            "subzone": "LEEDON PARK"
+          },
+          {
+            "objectid": 243934,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 50.9,
+            "planning_area": "BUKIT TIMAH",
+            "subzone": "LEEDON PARK"
+          },
+          {
+            "objectid": 193738,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 51.5,
+            "planning_area": "BUKIT TIMAH",
+            "subzone": "LEEDON PARK"
+          },
+          {
+            "objectid": 194312,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 54.5,
+            "planning_area": "BUKIT TIMAH",
+            "subzone": "LEEDON PARK"
+          },
+          {
+            "objectid": 218992,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 57.6,
+            "planning_area": "BUKIT TIMAH",
+            "subzone": "LEEDON PARK"
+          },
+          {
+            "objectid": 206683,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 58.9,
+            "planning_area": "BUKIT TIMAH",
+            "subzone": "LEEDON PARK"
+          }
+        ],
+        "source": "URA SPACE Master Plan 2025 surrounding polygons",
+        "verification_required": true
+      },
+      "selection": {
+        "signal": "Data Required / Monitor",
+        "preferred_action": "Sell",
+        "selection_npv_m": 2.3,
+        "annual_expected_alpha": -0.02,
+        "expected_total_return": 0.058,
+        "operating_yield": 0.04486,
+        "market_return": 0.0,
+        "incremental_action_return": 0.01314,
+        "required_return": 0.078,
+        "acquisition_signal": "Avoid",
+        "portfolio_signal": "Sell / Release",
+        "action_npv_m": 2.29,
+        "action_comparison": [
+          {
+            "action": "Hold",
+            "base_action_npv_m": -1.18,
+            "adjusted_selection_npv_m": -1.915,
+            "probability_of_loss": 0.5878,
+            "adjustments": {
+              "enbloc_m": 0.026,
+              "transformation_m": 0.032,
+              "view_supply_lease_penalty_m": 0.793
+            }
+          },
+          {
+            "action": "Retrofit",
+            "base_action_npv_m": -2.81,
+            "adjusted_selection_npv_m": -3.471,
+            "probability_of_loss": 0.6622,
+            "adjustments": {
+              "enbloc_m": 0.021,
+              "transformation_m": 0.032,
+              "view_supply_lease_penalty_m": 0.714
+            }
+          },
+          {
+            "action": "Repurpose",
+            "base_action_npv_m": -8.15,
+            "adjusted_selection_npv_m": -8.666,
+            "probability_of_loss": 0.7648,
+            "adjustments": {
+              "enbloc_m": 0.008,
+              "transformation_m": 0.032,
+              "view_supply_lease_penalty_m": 0.555
+            }
+          },
+          {
+            "action": "Redevelop",
+            "base_action_npv_m": -19.0,
+            "adjusted_selection_npv_m": -19.285,
+            "probability_of_loss": 0.9572,
+            "adjustments": {
+              "enbloc_m": 0.0,
+              "transformation_m": 0.032,
+              "view_supply_lease_penalty_m": 0.317
+            }
+          },
+          {
+            "action": "Sell",
+            "base_action_npv_m": 2.29,
+            "adjusted_selection_npv_m": 2.3,
+            "probability_of_loss": 0.326,
+            "adjustments": {
+              "enbloc_m": 0.0,
+              "transformation_m": 0.01,
+              "view_supply_lease_penalty_m": 0.0
+            }
+          }
+        ],
+        "zoning_option_value_m": 2.64,
+        "enbloc": {
+          "probability": 0.01,
+          "option_value_m": 0.026,
+          "underutilisation": 0.2,
+          "tenure_factor": 0.65,
+          "collective_sale_applicable": false,
+          "warning": "Screening probability only. Owner consent, Land Betterment Charge, acquisition premium and technical feasibility require project evidence."
+        },
+        "transformation": {
+          "value_m": 0.032,
+          "exposures": [
+            {
+              "zone": "Greater Southern Waterfront",
+              "distance_km": 6.72,
+              "proximity_factor": 0.0405,
+              "target_year": 2040,
+              "delivery_probability": 0.65,
+              "discounted_value_m": 0.032,
+              "source": "URA strategic planning; screening geofence only"
+            }
+          ],
+          "quality": "screening_geofence"
+        },
+        "view_risk": {
+          "probability": 0.0,
+          "penalty_m": 0.0
+        },
+        "supply_pressure": {
+          "index": 0.3167,
+          "penalty_m": 0.443,
+          "market_momentum_qoq": 0.0
+        },
+        "lease_decay": {
+          "penalty_m": 0.35,
+          "factor": 0.01,
+          "remaining_years": 64,
+          "tenure": "99-year leasehold",
+          "quality": "synthetic demo"
+        },
+        "probability_of_loss": 0.326,
+        "reasons": [],
+        "quality": "provisional",
+        "warning": "Selection signal is an economic screening output, not a transaction instruction."
+      },
+      "model_status": "provisional_proxy_run",
+      "input_quality": "low - portfolio workbook is a catalogue, not an underwriting dataset",
+      "proxy_inputs": [
+        "site area proxy",
+        "current GFA proxy",
+        "company valuation, NOI, tenure, leases, debt and capex required"
+      ],
+      "zoning_source": {
+        "matches": [
+          {
+            "objectid": 900004,
+            "lu_desc": "BUSINESS 2",
+            "gpr": 2.5,
+            "gpr_text": "2.5",
+            "planning_area": "DEMO PLANNING AREA",
+            "subzone": "DEMO SUBZONE 4",
+            "source_vintage": "URA SPACE Master Plan 2025 demo fixture"
+          }
+        ],
+        "match_method": "demo_fixture",
+        "spatial_review_required": false,
+        "current_statutory_plan": "Master Plan 2025"
+      },
+      "zoning_model_status": "verified_match",
+      "statutory_gpr_used": 2.5,
+      "gpr_source": "MP2025",
+      "capacity": {
+        "statutory_gfa_sqm": 6500.0,
+        "geometric_gfa_sqm": 22880.0,
+        "physical_gfa_sqm": 6500.0,
+        "de_facto_gfa_sqm": 5980.0,
+        "expected_approved_gfa_sqm": 3707.6,
+        "economic_gfa_sqm": 5980.0,
+        "unused_economic_gfa_sqm": 1300.0,
+        "buildable_footprint_sqm": 1040.0,
+        "storeys_by_height": 22,
+        "binding_constraints": [
+          "plot_ratio",
+          "site_coverage"
+        ],
+        "sensitivities": {
+          "legal_gpr": 148.3,
+          "site_coverage_max": 0.0,
+          "height_max_m": 0.0,
+          "front_setback_m": 0.0,
+          "side_setback_m": 0.0,
+          "approval_probability": 299.0
+        },
+        "residual_value_m": 2.64,
+        "p10_gfa_sqm": 2803.7,
+        "p50_gfa_sqm": 3703.8,
+        "p90_gfa_sqm": 4630.4,
+        "verification_required": true,
+        "methodology_version": "sg-capacity-0.2"
+      },
+      "approval": {
+        "stages": [
+          {
+            "stage": "Pre-application",
+            "conditional_probability": 0.94,
+            "cumulative_probability": 0.94,
+            "expected_months": 2.5
+          },
+          {
+            "stage": "Planning submission",
+            "conditional_probability": 0.86,
+            "cumulative_probability": 0.8084,
+            "expected_months": 5
+          },
+          {
+            "stage": "Technical clearances",
+            "conditional_probability": 0.82,
+            "cumulative_probability": 0.6629,
+            "expected_months": 6
+          },
+          {
+            "stage": "Committee/public review",
+            "conditional_probability": 0.88,
+            "cumulative_probability": 0.5833,
+            "expected_months": 4
+          },
+          {
+            "stage": "Conditions discharge",
+            "conditional_probability": 0.93,
+            "cumulative_probability": 0.5425,
+            "expected_months": 4
+          },
+          {
+            "stage": "Building permission",
+            "conditional_probability": 0.97,
+            "cumulative_probability": 0.5262,
+            "expected_months": 3
+          }
+        ],
+        "overall_probability": 0.5276,
+        "p50_months": 19.1,
+        "p90_months": 27.3,
+        "redesign_probability": 0.4724,
+        "seed": 20260925
+      },
+      "economics": {
+        "current_value_m": 35,
+        "current_noi_m": 1.57,
+        "occupancy": 0.9,
+        "market_rent_growth": 0.025,
+        "vacancy_target": 0.07,
+        "cap_rate": 0.0475,
+        "discount_rate": 0.078,
+        "selling_cost_rate": 0.025,
+        "holding_years": 10,
+        "source_quality": "illustrative proxy - replace with observed company financials"
+      },
+      "dcf": {
+        "value_m": 31.98,
+        "cashflows_m": [
+          1.61,
+          1.65,
+          1.69,
+          1.73,
+          1.78,
+          1.82,
+          1.87,
+          1.91,
+          1.96,
+          44.29
+        ],
+        "terminal_value_m": 42.28
+      },
+      "actions": [
+        {
+          "action": "Hold",
+          "incremental_npv_m": -1.32,
+          "pv_after_m": 32.29,
+          "pv_without_m": 31.98,
+          "capex_m": 1.5,
+          "financing_cost_m": 0.01,
+          "disruption_cost_m": 0.11,
+          "failure_cost_m": 0.02,
+          "success_probability": 0.98,
+          "execution_years": 0.25,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -1.18,
+          "p10_npv_m": -7.73,
+          "p50_npv_m": -1.2,
+          "p90_npv_m": 5.3,
+          "probability_of_loss": 0.5878,
+          "var_95_m": 9.75,
+          "cvar_95_m": 11.64,
+          "scenario_seed": 20260925,
+          "draws": 5000
+        },
+        {
+          "action": "Retrofit",
+          "incremental_npv_m": -2.91,
+          "pv_after_m": 35.17,
+          "pv_without_m": 31.98,
+          "capex_m": 5,
+          "financing_cost_m": 0.17,
+          "disruption_cost_m": 0.66,
+          "failure_cost_m": 0.27,
+          "success_probability": 0.9,
+          "execution_years": 1.5,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -2.81,
+          "p10_npv_m": -11.38,
+          "p50_npv_m": -2.78,
+          "p90_npv_m": 5.83,
+          "probability_of_loss": 0.6622,
+          "var_95_m": 14.05,
+          "cvar_95_m": 16.62,
+          "scenario_seed": 20260925,
+          "draws": 5000
+        },
+        {
+          "action": "Repurpose",
+          "incremental_npv_m": -8.42,
+          "pv_after_m": 39.41,
+          "pv_without_m": 31.98,
+          "capex_m": 12,
+          "financing_cost_m": 0.68,
+          "disruption_cost_m": 1.32,
+          "failure_cost_m": 1.85,
+          "success_probability": 0.72,
+          "execution_years": 2.5,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -8.15,
+          "p10_npv_m": -22.58,
+          "p50_npv_m": -8.12,
+          "p90_npv_m": 6.02,
+          "probability_of_loss": 0.7648,
+          "var_95_m": 26.47,
+          "cvar_95_m": 31.03,
+          "scenario_seed": 20260925,
+          "draws": 5000
+        },
+        {
+          "action": "Redevelop",
+          "incremental_npv_m": -19.32,
+          "pv_after_m": 47.55,
+          "pv_without_m": 31.98,
+          "capex_m": 25,
+          "financing_cost_m": 2.25,
+          "disruption_cost_m": 2.42,
+          "failure_cost_m": 5.23,
+          "success_probability": 0.62,
+          "execution_years": 4,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -19.0,
+          "p10_npv_m": -33.14,
+          "p50_npv_m": -18.8,
+          "p90_npv_m": -4.75,
+          "probability_of_loss": 0.9572,
+          "var_95_m": 37.32,
+          "cvar_95_m": 41.56,
+          "scenario_seed": 20260925,
+          "draws": 5000
+        },
+        {
+          "action": "Sell",
+          "incremental_npv_m": 2.14,
+          "pv_after_m": 34.12,
+          "pv_without_m": 31.98,
+          "capex_m": -34.12,
+          "financing_cost_m": 0.0,
+          "disruption_cost_m": 0.0,
+          "failure_cost_m": 0,
+          "success_probability": 0.97,
+          "execution_years": 0.75,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": 2.29,
+          "p10_npv_m": -4.25,
+          "p50_npv_m": 2.21,
+          "p90_npv_m": 8.84,
+          "probability_of_loss": 0.326,
+          "var_95_m": 6.15,
+          "cvar_95_m": 8.36,
+          "scenario_seed": 20260925,
+          "draws": 5000
+        }
+      ],
+      "recommendation": {
+        "action": "Sell",
+        "management_label": "Release",
+        "expected_npv_m": 2.29,
+        "probability_of_loss": 0.326,
+        "selection_signal": "Data Required / Monitor",
+        "explanation": "Sell maximises the zoning- and market-adjusted selection NPV. Selection screen: Data Required / Monitor. Replace proxy inputs before decision use."
+      },
+      "expected_alpha": -0.02,
+      "required_return": 0.078,
+      "model_version": "economic-model-v2-selection-0.2",
+      "verification_required": true,
+      "cache_key": "35575473b79a08c2"
+    },
+    {
+      "asset_id": "DEMO-005",
+      "name": "Demo Residential Asset 5",
+      "country": "Singapore",
+      "jurisdiction": "Singapore URA",
+      "segments": [
+        "Residential"
+      ],
+      "address": "Illustrative Singapore Location 5",
+      "source_records": 1,
+      "source_rows": [
+        {
+          "sheet": "Public Demo",
+          "row": 6
+        }
+      ],
+      "latitude": 1.34,
+      "longitude": 103.825,
+      "synthetic": true,
+      "synthetic_financials": true,
+      "tenure_hint": {
+        "type": "99-year leasehold",
+        "remaining_years": 63,
+        "source": "synthetic demo"
+      },
+      "ura_zoning": {
+        "matches": [
+          {
+            "objectid": 900005,
+            "lu_desc": "RESIDENTIAL",
+            "gpr": 2.8,
+            "gpr_text": "2.8",
+            "planning_area": "DEMO PLANNING AREA",
+            "subzone": "DEMO SUBZONE 5",
+            "source_vintage": "URA SPACE Master Plan 2025 demo fixture"
+          }
+        ],
+        "match_method": "demo_fixture",
+        "spatial_review_required": false,
+        "current_statutory_plan": "Master Plan 2025"
+      },
+      "catalogue_details": [
+        "Fictional public demonstration asset"
+      ],
+      "market_context": {
+        "market_segment": "private_residential",
+        "indicators": {
+          "price_qoq": 0.005,
+          "period": "2026 2Q",
+          "source": "URA real estate statistics 2Q2026"
+        },
+        "as_of": "2026-06-30",
+        "warning": "Public market indicators are contextual evidence and are not asset-level forecasts."
+      },
+      "surrounding_context": {
+        "status": "available",
+        "radius_m": 500,
+        "candidate_polygons": 27,
+        "developable_polygons": 0,
+        "high_density_polygons": 0,
+        "maximum_gpr": null,
+        "distance_weighted_gpr": null,
+        "view_block_probability": 0,
+        "supply_pressure_index": 0.0,
+        "candidates": [
+          {
+            "objectid": 185375,
+            "land_use": "CEMETERY",
+            "gpr": null,
+            "distance_m": 0.0,
+            "planning_area": "NOVENA",
+            "subzone": "MOUNT PLEASANT"
+          },
+          {
+            "objectid": 238786,
+            "land_use": "OPEN SPACE",
+            "gpr": null,
+            "distance_m": 148.2,
+            "planning_area": "CENTRAL WATER CATCHMENT",
+            "subzone": "CENTRAL WATER CATCHMENT"
+          },
+          {
+            "objectid": 186094,
+            "land_use": "CEMETERY",
+            "gpr": null,
+            "distance_m": 163.0,
+            "planning_area": "NOVENA",
+            "subzone": "MOUNT PLEASANT"
+          },
+          {
+            "objectid": 242109,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 319.2,
+            "planning_area": "NOVENA",
+            "subzone": "MOUNT PLEASANT"
+          },
+          {
+            "objectid": 213429,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 324.2,
+            "planning_area": "NOVENA",
+            "subzone": "MOUNT PLEASANT"
+          },
+          {
+            "objectid": 229651,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 326.5,
+            "planning_area": "NOVENA",
+            "subzone": "MOUNT PLEASANT"
+          },
+          {
+            "objectid": 154457,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 326.7,
+            "planning_area": "NOVENA",
+            "subzone": "MOUNT PLEASANT"
+          },
+          {
+            "objectid": 209538,
+            "land_use": "OPEN SPACE",
+            "gpr": null,
+            "distance_m": 328.1,
+            "planning_area": "CENTRAL WATER CATCHMENT",
+            "subzone": "CENTRAL WATER CATCHMENT"
+          },
+          {
+            "objectid": 179272,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 370.8,
+            "planning_area": "NOVENA",
+            "subzone": "MOUNT PLEASANT"
+          },
+          {
+            "objectid": 229610,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 412.1,
+            "planning_area": "NOVENA",
+            "subzone": "MOUNT PLEASANT"
+          },
+          {
+            "objectid": 210800,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 419.3,
+            "planning_area": "NOVENA",
+            "subzone": "MOUNT PLEASANT"
+          },
+          {
+            "objectid": 185400,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 433.3,
+            "planning_area": "NOVENA",
+            "subzone": "MOUNT PLEASANT"
+          },
+          {
+            "objectid": 204517,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 435.7,
+            "planning_area": "NOVENA",
+            "subzone": "MOUNT PLEASANT"
+          },
+          {
+            "objectid": 160703,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 449.0,
+            "planning_area": "NOVENA",
+            "subzone": "MOUNT PLEASANT"
+          },
+          {
+            "objectid": 217110,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 454.4,
+            "planning_area": "NOVENA",
+            "subzone": "MOUNT PLEASANT"
+          },
+          {
+            "objectid": 223317,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 462.5,
+            "planning_area": "NOVENA",
+            "subzone": "MOUNT PLEASANT"
+          },
+          {
+            "objectid": 154373,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 464.2,
+            "planning_area": "NOVENA",
+            "subzone": "MOUNT PLEASANT"
+          },
+          {
+            "objectid": 167021,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 466.1,
+            "planning_area": "NOVENA",
+            "subzone": "MOUNT PLEASANT"
+          },
+          {
+            "objectid": 191751,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 470.5,
+            "planning_area": "NOVENA",
+            "subzone": "MOUNT PLEASANT"
+          },
+          {
+            "objectid": 173076,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 473.8,
+            "planning_area": "NOVENA",
+            "subzone": "MOUNT PLEASANT"
+          },
+          {
+            "objectid": 179336,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 473.9,
+            "planning_area": "NOVENA",
+            "subzone": "MOUNT PLEASANT"
+          },
+          {
+            "objectid": 154372,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 476.0,
+            "planning_area": "NOVENA",
+            "subzone": "MOUNT PLEASANT"
+          },
+          {
+            "objectid": 185394,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 480.9,
+            "planning_area": "NOVENA",
+            "subzone": "MOUNT PLEASANT"
+          },
+          {
+            "objectid": 166990,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 483.6,
+            "planning_area": "NOVENA",
+            "subzone": "MOUNT PLEASANT"
+          },
+          {
+            "objectid": 166962,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 488.3,
+            "planning_area": "NOVENA",
+            "subzone": "MOUNT PLEASANT"
+          }
+        ],
+        "source": "URA SPACE Master Plan 2025 surrounding polygons",
+        "verification_required": true
+      },
+      "selection": {
+        "signal": "Data Required / Monitor",
+        "preferred_action": "Sell",
+        "selection_npv_m": 2.47,
+        "annual_expected_alpha": -0.00124,
+        "expected_total_return": 0.07676,
+        "operating_yield": 0.045,
+        "market_return": 0.02,
+        "incremental_action_return": 0.01176,
+        "required_return": 0.078,
+        "acquisition_signal": "Avoid",
+        "portfolio_signal": "Sell / Release",
+        "action_npv_m": 2.47,
+        "action_comparison": [
+          {
+            "action": "Hold",
+            "base_action_npv_m": -1.34,
+            "adjusted_selection_npv_m": -0.932,
+            "probability_of_loss": 0.6016,
+            "adjustments": {
+              "enbloc_m": 0.828,
+              "transformation_m": 0,
+              "view_supply_lease_penalty_m": 0.42
+            }
+          },
+          {
+            "action": "Retrofit",
+            "base_action_npv_m": -2.43,
+            "adjusted_selection_npv_m": -2.146,
+            "probability_of_loss": 0.6396,
+            "adjustments": {
+              "enbloc_m": 0.662,
+              "transformation_m": 0,
+              "view_supply_lease_penalty_m": 0.378
+            }
+          },
+          {
+            "action": "Repurpose",
+            "base_action_npv_m": -7.21,
+            "adjusted_selection_npv_m": -7.256,
+            "probability_of_loss": 0.7486,
+            "adjustments": {
+              "enbloc_m": 0.248,
+              "transformation_m": 0,
+              "view_supply_lease_penalty_m": 0.294
+            }
+          },
+          {
+            "action": "Redevelop",
+            "base_action_npv_m": -16.74,
+            "adjusted_selection_npv_m": -16.908,
+            "probability_of_loss": 0.9342,
+            "adjustments": {
+              "enbloc_m": 0.0,
+              "transformation_m": 0,
+              "view_supply_lease_penalty_m": 0.168
+            }
+          },
+          {
+            "action": "Sell",
+            "base_action_npv_m": 2.47,
+            "adjusted_selection_npv_m": 2.47,
+            "probability_of_loss": 0.305,
+            "adjustments": {
+              "enbloc_m": 0.0,
+              "transformation_m": 0.0,
+              "view_supply_lease_penalty_m": 0.0
+            }
+          }
+        ],
+        "zoning_option_value_m": 2.96,
+        "enbloc": {
+          "probability": 0.2799,
+          "option_value_m": 0.828,
+          "underutilisation": 0.2,
+          "tenure_factor": 0.65,
+          "collective_sale_applicable": true,
+          "warning": "Screening probability only. Owner consent, Land Betterment Charge, acquisition premium and technical feasibility require project evidence."
+        },
+        "transformation": {
+          "value_m": 0,
+          "exposures": [],
+          "quality": "screening_geofence"
+        },
+        "view_risk": {
+          "probability": 0.0,
+          "penalty_m": 0.0
+        },
+        "supply_pressure": {
+          "index": 0.0,
+          "penalty_m": 0,
+          "market_momentum_qoq": 0.005
+        },
+        "lease_decay": {
+          "penalty_m": 0.42,
+          "factor": 0.01,
+          "remaining_years": 63,
+          "tenure": "99-year leasehold",
+          "quality": "synthetic demo"
+        },
+        "probability_of_loss": 0.305,
+        "reasons": [],
+        "quality": "provisional",
+        "warning": "Selection signal is an economic screening output, not a transaction instruction."
+      },
+      "model_status": "provisional_proxy_run",
+      "input_quality": "low - portfolio workbook is a catalogue, not an underwriting dataset",
+      "proxy_inputs": [
+        "site area proxy",
+        "current GFA proxy",
+        "company valuation, NOI, tenure, leases, debt and capex required"
+      ],
+      "zoning_source": {
+        "matches": [
+          {
+            "objectid": 900005,
+            "lu_desc": "RESIDENTIAL",
+            "gpr": 2.8,
+            "gpr_text": "2.8",
+            "planning_area": "DEMO PLANNING AREA",
+            "subzone": "DEMO SUBZONE 5",
+            "source_vintage": "URA SPACE Master Plan 2025 demo fixture"
+          }
+        ],
+        "match_method": "demo_fixture",
+        "spatial_review_required": false,
+        "current_statutory_plan": "Master Plan 2025"
+      },
+      "zoning_model_status": "verified_match",
+      "statutory_gpr_used": 2.8,
+      "gpr_source": "MP2025",
+      "capacity": {
+        "statutory_gfa_sqm": 7280.0,
+        "geometric_gfa_sqm": 22880.0,
+        "physical_gfa_sqm": 7280.0,
+        "de_facto_gfa_sqm": 6697.6,
+        "expected_approved_gfa_sqm": 4152.5,
+        "economic_gfa_sqm": 6697.6,
+        "unused_economic_gfa_sqm": 1456.0,
+        "buildable_footprint_sqm": 1040.0,
+        "storeys_by_height": 22,
+        "binding_constraints": [
+          "plot_ratio",
+          "site_coverage"
+        ],
+        "sensitivities": {
+          "legal_gpr": 148.3,
+          "site_coverage_max": 0.0,
+          "height_max_m": 0.0,
+          "front_setback_m": 0.0,
+          "side_setback_m": 0.0,
+          "approval_probability": 334.9
+        },
+        "residual_value_m": 2.96,
+        "p10_gfa_sqm": 3125.1,
+        "p50_gfa_sqm": 4154.8,
+        "p90_gfa_sqm": 5143.6,
+        "verification_required": true,
+        "methodology_version": "sg-capacity-0.2"
+      },
+      "approval": {
+        "stages": [
+          {
+            "stage": "Pre-application",
+            "conditional_probability": 0.94,
+            "cumulative_probability": 0.94,
+            "expected_months": 2.5
+          },
+          {
+            "stage": "Planning submission",
+            "conditional_probability": 0.86,
+            "cumulative_probability": 0.8084,
+            "expected_months": 5
+          },
+          {
+            "stage": "Technical clearances",
+            "conditional_probability": 0.82,
+            "cumulative_probability": 0.6629,
+            "expected_months": 6
+          },
+          {
+            "stage": "Committee/public review",
+            "conditional_probability": 0.88,
+            "cumulative_probability": 0.5833,
+            "expected_months": 4
+          },
+          {
+            "stage": "Conditions discharge",
+            "conditional_probability": 0.93,
+            "cumulative_probability": 0.5425,
+            "expected_months": 4
+          },
+          {
+            "stage": "Building permission",
+            "conditional_probability": 0.97,
+            "cumulative_probability": 0.5262,
+            "expected_months": 3
+          }
+        ],
+        "overall_probability": 0.5216,
+        "p50_months": 19.0,
+        "p90_months": 27.5,
+        "redesign_probability": 0.4784,
+        "seed": 20260926
+      },
+      "economics": {
+        "current_value_m": 42,
+        "current_noi_m": 1.89,
+        "occupancy": 0.9,
+        "market_rent_growth": 0.025,
+        "vacancy_target": 0.07,
+        "cap_rate": 0.0475,
+        "discount_rate": 0.078,
+        "selling_cost_rate": 0.025,
+        "holding_years": 10,
+        "source_quality": "illustrative proxy - replace with observed company financials"
+      },
+      "dcf": {
+        "value_m": 38.49,
+        "cashflows_m": [
+          1.94,
+          1.99,
+          2.04,
+          2.09,
+          2.14,
+          2.19,
+          2.25,
+          2.3,
+          2.36,
+          53.32
+        ],
+        "terminal_value_m": 50.9
+      },
+      "actions": [
+        {
+          "action": "Hold",
+          "incremental_npv_m": -1.27,
+          "pv_after_m": 38.88,
+          "pv_without_m": 38.49,
+          "capex_m": 1.5,
+          "financing_cost_m": 0.01,
+          "disruption_cost_m": 0.13,
+          "failure_cost_m": 0.02,
+          "success_probability": 0.98,
+          "execution_years": 0.25,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -1.34,
+          "p10_npv_m": -7.96,
+          "p50_npv_m": -1.31,
+          "p90_npv_m": 5.14,
+          "probability_of_loss": 0.6016,
+          "var_95_m": 9.91,
+          "cvar_95_m": 12.1,
+          "scenario_seed": 20260926,
+          "draws": 5000
+        },
+        {
+          "action": "Retrofit",
+          "incremental_npv_m": -2.39,
+          "pv_after_m": 42.34,
+          "pv_without_m": 38.49,
+          "capex_m": 5,
+          "financing_cost_m": 0.17,
+          "disruption_cost_m": 0.79,
+          "failure_cost_m": 0.27,
+          "success_probability": 0.9,
+          "execution_years": 1.5,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -2.43,
+          "p10_npv_m": -10.77,
+          "p50_npv_m": -2.43,
+          "p90_npv_m": 5.87,
+          "probability_of_loss": 0.6396,
+          "var_95_m": 13.3,
+          "cvar_95_m": 16.05,
+          "scenario_seed": 20260926,
+          "draws": 5000
+        },
+        {
+          "action": "Repurpose",
+          "incremental_npv_m": -7.2,
+          "pv_after_m": 47.4,
+          "pv_without_m": 38.49,
+          "capex_m": 12,
+          "financing_cost_m": 0.68,
+          "disruption_cost_m": 1.59,
+          "failure_cost_m": 1.85,
+          "success_probability": 0.72,
+          "execution_years": 2.5,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -7.21,
+          "p10_npv_m": -21.05,
+          "p50_npv_m": -7.21,
+          "p90_npv_m": 6.58,
+          "probability_of_loss": 0.7486,
+          "var_95_m": 24.92,
+          "cvar_95_m": 30.11,
+          "scenario_seed": 20260926,
+          "draws": 5000
+        },
+        {
+          "action": "Redevelop",
+          "incremental_npv_m": -16.73,
+          "pv_after_m": 57.14,
+          "pv_without_m": 38.49,
+          "capex_m": 25,
+          "financing_cost_m": 2.25,
+          "disruption_cost_m": 2.91,
+          "failure_cost_m": 5.23,
+          "success_probability": 0.62,
+          "execution_years": 4,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -16.74,
+          "p10_npv_m": -30.62,
+          "p50_npv_m": -16.79,
+          "p90_npv_m": -2.6,
+          "probability_of_loss": 0.9342,
+          "var_95_m": 34.95,
+          "cvar_95_m": 39.64,
+          "scenario_seed": 20260926,
+          "draws": 5000
+        },
+        {
+          "action": "Sell",
+          "incremental_npv_m": 2.46,
+          "pv_after_m": 40.95,
+          "pv_without_m": 38.49,
+          "capex_m": -40.95,
+          "financing_cost_m": 0.0,
+          "disruption_cost_m": 0.0,
+          "failure_cost_m": 0,
+          "success_probability": 0.97,
+          "execution_years": 0.75,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": 2.47,
+          "p10_npv_m": -4.19,
+          "p50_npv_m": 2.57,
+          "p90_npv_m": 8.9,
+          "probability_of_loss": 0.305,
+          "var_95_m": 6.18,
+          "cvar_95_m": 8.2,
+          "scenario_seed": 20260926,
+          "draws": 5000
+        }
+      ],
+      "recommendation": {
+        "action": "Sell",
+        "management_label": "Release",
+        "expected_npv_m": 2.47,
+        "probability_of_loss": 0.305,
+        "selection_signal": "Data Required / Monitor",
+        "explanation": "Sell maximises the zoning- and market-adjusted selection NPV. Selection screen: Data Required / Monitor. Replace proxy inputs before decision use."
+      },
+      "expected_alpha": -0.00124,
+      "required_return": 0.078,
+      "model_version": "economic-model-v2-selection-0.2",
+      "verification_required": true,
+      "cache_key": "acf928ad4b5d2962"
+    },
+    {
+      "asset_id": "DEMO-006",
+      "name": "Demo Hospitality Asset 6",
+      "country": "Singapore",
+      "jurisdiction": "Singapore URA",
+      "segments": [
+        "Hospitality"
+      ],
+      "address": "Illustrative Singapore Location 6",
+      "source_records": 1,
+      "source_rows": [
+        {
+          "sheet": "Public Demo",
+          "row": 7
+        }
+      ],
+      "latitude": 1.358,
+      "longitude": 103.85000000000001,
+      "synthetic": true,
+      "synthetic_financials": true,
+      "tenure_hint": {
+        "type": "Freehold",
+        "remaining_years": null,
+        "source": "synthetic demo"
+      },
+      "ura_zoning": {
+        "matches": [
+          {
+            "objectid": 900006,
+            "lu_desc": "HOTEL",
+            "gpr": 3.5,
+            "gpr_text": "3.5",
+            "planning_area": "DEMO PLANNING AREA",
+            "subzone": "DEMO SUBZONE 6",
+            "source_vintage": "URA SPACE Master Plan 2025 demo fixture"
+          }
+        ],
+        "match_method": "demo_fixture",
+        "spatial_review_required": false,
+        "current_statutory_plan": "Master Plan 2025"
+      },
+      "catalogue_details": [
+        "Fictional public demonstration asset"
+      ],
+      "market_context": {
+        "market_segment": "general",
+        "indicators": {},
+        "as_of": "2026-06-30",
+        "warning": "Public market indicators are contextual evidence and are not asset-level forecasts."
+      },
+      "surrounding_context": {
+        "status": "available",
+        "radius_m": 500,
+        "candidate_polygons": 43,
+        "developable_polygons": 10,
+        "high_density_polygons": 9,
+        "maximum_gpr": 3.5,
+        "distance_weighted_gpr": 2.874,
+        "view_block_probability": 0.0848,
+        "supply_pressure_index": 0.4433,
+        "candidates": [
+          {
+            "objectid": 199294,
+            "land_use": "PARK",
+            "gpr": null,
+            "distance_m": 0.0,
+            "planning_area": "BISHAN",
+            "subzone": "MARYMOUNT"
+          },
+          {
+            "objectid": 237109,
+            "land_use": "RESIDENTIAL",
+            "gpr": 2.8000000000000003,
+            "distance_m": 66.8,
+            "planning_area": "BISHAN",
+            "subzone": "MARYMOUNT"
+          },
+          {
+            "objectid": 197749,
+            "land_use": "TRANSPORT FACILITIES",
+            "gpr": null,
+            "distance_m": 102.6,
+            "planning_area": "BISHAN",
+            "subzone": "BISHAN EAST"
+          },
+          {
+            "objectid": 161841,
+            "land_use": "PARK",
+            "gpr": null,
+            "distance_m": 114.0,
+            "planning_area": "BISHAN",
+            "subzone": "MARYMOUNT"
+          },
+          {
+            "objectid": 224549,
+            "land_use": "TRANSPORT FACILITIES",
+            "gpr": null,
+            "distance_m": 135.0,
+            "planning_area": "BISHAN",
+            "subzone": "BISHAN EAST"
+          },
+          {
+            "objectid": 185667,
+            "land_use": "CIVIC & COMMUNITY INSTITUTION",
+            "gpr": null,
+            "distance_m": 230.6,
+            "planning_area": "BISHAN",
+            "subzone": "MARYMOUNT"
+          },
+          {
+            "objectid": 149393,
+            "land_use": "SPORTS & RECREATION",
+            "gpr": null,
+            "distance_m": 240.8,
+            "planning_area": "BISHAN",
+            "subzone": "BISHAN EAST"
+          },
+          {
+            "objectid": 237253,
+            "land_use": "EDUCATIONAL INSTITUTION",
+            "gpr": null,
+            "distance_m": 266.5,
+            "planning_area": "BISHAN",
+            "subzone": "MARYMOUNT"
+          },
+          {
+            "objectid": 211963,
+            "land_use": "SPORTS & RECREATION",
+            "gpr": null,
+            "distance_m": 277.0,
+            "planning_area": "BISHAN",
+            "subzone": "BISHAN EAST"
+          },
+          {
+            "objectid": 188784,
+            "land_use": "TRANSPORT FACILITIES",
+            "gpr": null,
+            "distance_m": 284.8,
+            "planning_area": "BISHAN",
+            "subzone": "BISHAN EAST"
+          },
+          {
+            "objectid": 223510,
+            "land_use": "RESERVE SITE",
+            "gpr": null,
+            "distance_m": 300.0,
+            "planning_area": "BISHAN",
+            "subzone": "MARYMOUNT"
+          },
+          {
+            "objectid": 226565,
+            "land_use": "UTILITY",
+            "gpr": null,
+            "distance_m": 342.9,
+            "planning_area": "BISHAN",
+            "subzone": "BISHAN EAST"
+          },
+          {
+            "objectid": 174303,
+            "land_use": "RESERVE SITE",
+            "gpr": null,
+            "distance_m": 350.1,
+            "planning_area": "BISHAN",
+            "subzone": "BISHAN EAST"
+          },
+          {
+            "objectid": 213995,
+            "land_use": "RESERVE SITE",
+            "gpr": null,
+            "distance_m": 351.7,
+            "planning_area": "BISHAN",
+            "subzone": "BISHAN EAST"
+          },
+          {
+            "objectid": 174299,
+            "land_use": "SPORTS & RECREATION",
+            "gpr": null,
+            "distance_m": 359.8,
+            "planning_area": "BISHAN",
+            "subzone": "BISHAN EAST"
+          },
+          {
+            "objectid": 174429,
+            "land_use": "RESERVE SITE",
+            "gpr": null,
+            "distance_m": 376.8,
+            "planning_area": "BISHAN",
+            "subzone": "MARYMOUNT"
+          },
+          {
+            "objectid": 239145,
+            "land_use": "RESERVE SITE",
+            "gpr": null,
+            "distance_m": 386.9,
+            "planning_area": "BISHAN",
+            "subzone": "BISHAN EAST"
+          },
+          {
+            "objectid": 210416,
+            "land_use": "RESIDENTIAL",
+            "gpr": 2.8000000000000003,
+            "distance_m": 387.3,
+            "planning_area": "ANG MO KIO",
+            "subzone": "TOWNSVILLE"
+          },
+          {
+            "objectid": 248986,
+            "land_use": "PARK",
+            "gpr": null,
+            "distance_m": 391.5,
+            "planning_area": "ANG MO KIO",
+            "subzone": "CHONG BOON"
+          },
+          {
+            "objectid": 236928,
+            "land_use": "UTILITY",
+            "gpr": null,
+            "distance_m": 392.6,
+            "planning_area": "ANG MO KIO",
+            "subzone": "CHONG BOON"
+          },
+          {
+            "objectid": 186378,
+            "land_use": "UTILITY",
+            "gpr": null,
+            "distance_m": 400.9,
+            "planning_area": "ANG MO KIO",
+            "subzone": "CHONG BOON"
+          },
+          {
+            "objectid": 174084,
+            "land_use": "EDUCATIONAL INSTITUTION",
+            "gpr": null,
+            "distance_m": 402.2,
+            "planning_area": "ANG MO KIO",
+            "subzone": "CHONG BOON"
+          },
+          {
+            "objectid": 173846,
+            "land_use": "OPEN SPACE",
+            "gpr": null,
+            "distance_m": 410.1,
+            "planning_area": "ANG MO KIO",
+            "subzone": "CHONG BOON"
+          },
+          {
+            "objectid": 174260,
+            "land_use": "RESIDENTIAL",
+            "gpr": 3.5,
+            "distance_m": 410.7,
+            "planning_area": "BISHAN",
+            "subzone": "MARYMOUNT"
+          },
+          {
+            "objectid": 186472,
+            "land_use": "EDUCATIONAL INSTITUTION",
+            "gpr": null,
+            "distance_m": 423.3,
+            "planning_area": "ANG MO KIO",
+            "subzone": "CHONG BOON"
+          }
+        ],
+        "source": "URA SPACE Master Plan 2025 surrounding polygons",
+        "verification_required": true
+      },
+      "selection": {
+        "signal": "Data Required / Monitor",
+        "preferred_action": "Sell",
+        "selection_npv_m": 2.01,
+        "annual_expected_alpha": -0.02166,
+        "expected_total_return": 0.05634,
+        "operating_yield": 0.04486,
+        "market_return": 0.0,
+        "incremental_action_return": 0.01149,
+        "required_return": 0.078,
+        "acquisition_signal": "Avoid",
+        "portfolio_signal": "Sell / Release",
+        "action_npv_m": 2.01,
+        "action_comparison": [
+          {
+            "action": "Hold",
+            "base_action_npv_m": -1.44,
+            "adjusted_selection_npv_m": -2.059,
+            "probability_of_loss": 0.6192,
+            "adjustments": {
+              "enbloc_m": 0.037,
+              "transformation_m": 0,
+              "view_supply_lease_penalty_m": 0.656
+            }
+          },
+          {
+            "action": "Retrofit",
+            "base_action_npv_m": -3.03,
+            "adjusted_selection_npv_m": -3.591,
+            "probability_of_loss": 0.679,
+            "adjustments": {
+              "enbloc_m": 0.03,
+              "transformation_m": 0,
+              "view_supply_lease_penalty_m": 0.591
+            }
+          },
+          {
+            "action": "Repurpose",
+            "base_action_npv_m": -8.43,
+            "adjusted_selection_npv_m": -8.878,
+            "probability_of_loss": 0.7798,
+            "adjustments": {
+              "enbloc_m": 0.011,
+              "transformation_m": 0,
+              "view_supply_lease_penalty_m": 0.459
+            }
+          },
+          {
+            "action": "Redevelop",
+            "base_action_npv_m": -19.02,
+            "adjusted_selection_npv_m": -19.282,
+            "probability_of_loss": 0.9624,
+            "adjustments": {
+              "enbloc_m": 0.0,
+              "transformation_m": 0,
+              "view_supply_lease_penalty_m": 0.262
+            }
+          },
+          {
+            "action": "Sell",
+            "base_action_npv_m": 2.01,
+            "adjusted_selection_npv_m": 2.01,
+            "probability_of_loss": 0.3366,
+            "adjustments": {
+              "enbloc_m": 0.0,
+              "transformation_m": 0.0,
+              "view_supply_lease_penalty_m": 0.0
+            }
+          }
+        ],
+        "zoning_option_value_m": 3.7,
+        "enbloc": {
+          "probability": 0.01,
+          "option_value_m": 0.037,
+          "underutilisation": 0.2,
+          "tenure_factor": 0.9,
+          "collective_sale_applicable": false,
+          "warning": "Screening probability only. Owner consent, Land Betterment Charge, acquisition premium and technical feasibility require project evidence."
+        },
+        "transformation": {
+          "value_m": 0,
+          "exposures": [],
+          "quality": "screening_geofence"
+        },
+        "view_risk": {
+          "probability": 0.0848,
+          "penalty_m": 0.036
+        },
+        "supply_pressure": {
+          "index": 0.4433,
+          "penalty_m": 0.621,
+          "market_momentum_qoq": 0.0
+        },
+        "lease_decay": {
+          "penalty_m": 0,
+          "factor": 0,
+          "remaining_years": null,
+          "tenure": "Freehold",
+          "quality": "synthetic demo"
+        },
+        "probability_of_loss": 0.3366,
+        "reasons": [],
+        "quality": "provisional",
+        "warning": "Selection signal is an economic screening output, not a transaction instruction."
+      },
+      "model_status": "provisional_proxy_run",
+      "input_quality": "low - portfolio workbook is a catalogue, not an underwriting dataset",
+      "proxy_inputs": [
+        "site area proxy",
+        "current GFA proxy",
+        "company valuation, NOI, tenure, leases, debt and capex required"
+      ],
+      "zoning_source": {
+        "matches": [
+          {
+            "objectid": 900006,
+            "lu_desc": "HOTEL",
+            "gpr": 3.5,
+            "gpr_text": "3.5",
+            "planning_area": "DEMO PLANNING AREA",
+            "subzone": "DEMO SUBZONE 6",
+            "source_vintage": "URA SPACE Master Plan 2025 demo fixture"
+          }
+        ],
+        "match_method": "demo_fixture",
+        "spatial_review_required": false,
+        "current_statutory_plan": "Master Plan 2025"
+      },
+      "zoning_model_status": "verified_match",
+      "statutory_gpr_used": 3.5,
+      "gpr_source": "MP2025",
+      "capacity": {
+        "statutory_gfa_sqm": 9100.0,
+        "geometric_gfa_sqm": 22880.0,
+        "physical_gfa_sqm": 9100.0,
+        "de_facto_gfa_sqm": 8372.0,
+        "expected_approved_gfa_sqm": 5190.6,
+        "economic_gfa_sqm": 8372.0,
+        "unused_economic_gfa_sqm": 1820.0,
+        "buildable_footprint_sqm": 1040.0,
+        "storeys_by_height": 22,
+        "binding_constraints": [
+          "plot_ratio",
+          "site_coverage"
+        ],
+        "sensitivities": {
+          "legal_gpr": 148.3,
+          "site_coverage_max": 0.0,
+          "height_max_m": 0.0,
+          "front_setback_m": 0.0,
+          "side_setback_m": 0.0,
+          "approval_probability": 418.6
+        },
+        "residual_value_m": 3.7,
+        "p10_gfa_sqm": 3867.1,
+        "p50_gfa_sqm": 5186.8,
+        "p90_gfa_sqm": 6492.2,
+        "verification_required": true,
+        "methodology_version": "sg-capacity-0.2"
+      },
+      "approval": {
+        "stages": [
+          {
+            "stage": "Pre-application",
+            "conditional_probability": 0.94,
+            "cumulative_probability": 0.94,
+            "expected_months": 2.5
+          },
+          {
+            "stage": "Planning submission",
+            "conditional_probability": 0.86,
+            "cumulative_probability": 0.8084,
+            "expected_months": 5
+          },
+          {
+            "stage": "Technical clearances",
+            "conditional_probability": 0.82,
+            "cumulative_probability": 0.6629,
+            "expected_months": 6
+          },
+          {
+            "stage": "Committee/public review",
+            "conditional_probability": 0.88,
+            "cumulative_probability": 0.5833,
+            "expected_months": 4
+          },
+          {
+            "stage": "Conditions discharge",
+            "conditional_probability": 0.93,
+            "cumulative_probability": 0.5425,
+            "expected_months": 4
+          },
+          {
+            "stage": "Building permission",
+            "conditional_probability": 0.97,
+            "cumulative_probability": 0.5262,
+            "expected_months": 3
+          }
+        ],
+        "overall_probability": 0.5248,
+        "p50_months": 19.3,
+        "p90_months": 27.5,
+        "redesign_probability": 0.4752,
+        "seed": 20260927
+      },
+      "economics": {
+        "current_value_m": 35,
+        "current_noi_m": 1.57,
+        "occupancy": 0.9,
+        "market_rent_growth": 0.025,
+        "vacancy_target": 0.07,
+        "cap_rate": 0.0475,
+        "discount_rate": 0.078,
+        "selling_cost_rate": 0.025,
+        "holding_years": 10,
+        "source_quality": "illustrative proxy - replace with observed company financials"
+      },
+      "dcf": {
+        "value_m": 31.98,
+        "cashflows_m": [
+          1.61,
+          1.65,
+          1.69,
+          1.73,
+          1.78,
+          1.82,
+          1.87,
+          1.91,
+          1.96,
+          44.29
+        ],
+        "terminal_value_m": 42.28
+      },
+      "actions": [
+        {
+          "action": "Hold",
+          "incremental_npv_m": -1.32,
+          "pv_after_m": 32.29,
+          "pv_without_m": 31.98,
+          "capex_m": 1.5,
+          "financing_cost_m": 0.01,
+          "disruption_cost_m": 0.11,
+          "failure_cost_m": 0.02,
+          "success_probability": 0.98,
+          "execution_years": 0.25,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -1.44,
+          "p10_npv_m": -8.07,
+          "p50_npv_m": -1.47,
+          "p90_npv_m": 5.11,
+          "probability_of_loss": 0.6192,
+          "var_95_m": 9.79,
+          "cvar_95_m": 11.87,
+          "scenario_seed": 20260927,
+          "draws": 5000
+        },
+        {
+          "action": "Retrofit",
+          "incremental_npv_m": -2.91,
+          "pv_after_m": 35.17,
+          "pv_without_m": 31.98,
+          "capex_m": 5,
+          "financing_cost_m": 0.17,
+          "disruption_cost_m": 0.66,
+          "failure_cost_m": 0.27,
+          "success_probability": 0.9,
+          "execution_years": 1.5,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -3.03,
+          "p10_npv_m": -11.28,
+          "p50_npv_m": -3.07,
+          "p90_npv_m": 5.38,
+          "probability_of_loss": 0.679,
+          "var_95_m": 13.81,
+          "cvar_95_m": 16.93,
+          "scenario_seed": 20260927,
+          "draws": 5000
+        },
+        {
+          "action": "Repurpose",
+          "incremental_npv_m": -8.26,
+          "pv_after_m": 39.56,
+          "pv_without_m": 31.98,
+          "capex_m": 12,
+          "financing_cost_m": 0.68,
+          "disruption_cost_m": 1.32,
+          "failure_cost_m": 1.85,
+          "success_probability": 0.72,
+          "execution_years": 2.5,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -8.43,
+          "p10_npv_m": -22.23,
+          "p50_npv_m": -8.46,
+          "p90_npv_m": 5.63,
+          "probability_of_loss": 0.7798,
+          "var_95_m": 26.1,
+          "cvar_95_m": 31.25,
+          "scenario_seed": 20260927,
+          "draws": 5000
+        },
+        {
+          "action": "Redevelop",
+          "incremental_npv_m": -18.85,
+          "pv_after_m": 48.02,
+          "pv_without_m": 31.98,
+          "capex_m": 25,
+          "financing_cost_m": 2.25,
+          "disruption_cost_m": 2.42,
+          "failure_cost_m": 5.23,
+          "success_probability": 0.62,
+          "execution_years": 4,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -19.02,
+          "p10_npv_m": -32.91,
+          "p50_npv_m": -19.09,
+          "p90_npv_m": -4.84,
+          "probability_of_loss": 0.9624,
+          "var_95_m": 36.99,
+          "cvar_95_m": 41.45,
+          "scenario_seed": 20260927,
+          "draws": 5000
+        },
+        {
+          "action": "Sell",
+          "incremental_npv_m": 2.14,
+          "pv_after_m": 34.12,
+          "pv_without_m": 31.98,
+          "capex_m": -34.12,
+          "financing_cost_m": 0.0,
+          "disruption_cost_m": 0.0,
+          "failure_cost_m": 0,
+          "success_probability": 0.97,
+          "execution_years": 0.75,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": 2.01,
+          "p10_npv_m": -4.55,
+          "p50_npv_m": 2.0,
+          "p90_npv_m": 8.31,
+          "probability_of_loss": 0.3366,
+          "var_95_m": 6.57,
+          "cvar_95_m": 8.58,
+          "scenario_seed": 20260927,
+          "draws": 5000
+        }
+      ],
+      "recommendation": {
+        "action": "Sell",
+        "management_label": "Release",
+        "expected_npv_m": 2.01,
+        "probability_of_loss": 0.3366,
+        "selection_signal": "Data Required / Monitor",
+        "explanation": "Sell maximises the zoning- and market-adjusted selection NPV. Selection screen: Data Required / Monitor. Replace proxy inputs before decision use."
+      },
+      "expected_alpha": -0.02166,
+      "required_return": 0.078,
+      "model_version": "economic-model-v2-selection-0.2",
+      "verification_required": true,
+      "cache_key": "9b4ed965d4110b43"
+    },
+    {
+      "asset_id": "DEMO-007",
+      "name": "Demo Office Asset 7",
+      "country": "Singapore",
+      "jurisdiction": "Singapore URA",
+      "segments": [
+        "Office"
+      ],
+      "address": "Illustrative Singapore Location 7",
+      "source_records": 1,
+      "source_rows": [
+        {
+          "sheet": "Public Demo",
+          "row": 8
+        }
+      ],
+      "latitude": 1.376,
+      "longitude": 103.875,
+      "synthetic": true,
+      "synthetic_financials": true,
+      "tenure_hint": {
+        "type": "99-year leasehold",
+        "remaining_years": 61,
+        "source": "synthetic demo"
+      },
+      "ura_zoning": {
+        "matches": [
+          {
+            "objectid": 900007,
+            "lu_desc": "COMMERCIAL",
+            "gpr": 4.2,
+            "gpr_text": "4.2",
+            "planning_area": "DEMO PLANNING AREA",
+            "subzone": "DEMO SUBZONE 7",
+            "source_vintage": "URA SPACE Master Plan 2025 demo fixture"
+          }
+        ],
+        "match_method": "demo_fixture",
+        "spatial_review_required": false,
+        "current_statutory_plan": "Master Plan 2025"
+      },
+      "catalogue_details": [
+        "Fictional public demonstration asset"
+      ],
+      "market_context": {
+        "market_segment": "office",
+        "indicators": {
+          "price_qoq": 0.046,
+          "rent_qoq": 0.001,
+          "period": "2026 2Q",
+          "source": "URA real estate statistics 2Q2026"
+        },
+        "as_of": "2026-06-30",
+        "warning": "Public market indicators are contextual evidence and are not asset-level forecasts."
+      },
+      "surrounding_context": {
+        "status": "available",
+        "radius_m": 500,
+        "candidate_polygons": 149,
+        "developable_polygons": 33,
+        "high_density_polygons": 11,
+        "maximum_gpr": 3.0,
+        "distance_weighted_gpr": 2.601,
+        "view_block_probability": 0.5619,
+        "supply_pressure_index": 0.715,
+        "candidates": [
+          {
+            "objectid": 224881,
+            "land_use": "BUSINESS 1",
+            "gpr": 2.5,
+            "distance_m": 0.0,
+            "planning_area": "SERANGOON",
+            "subzone": "SERANGOON NORTH"
+          },
+          {
+            "objectid": 248550,
+            "land_use": "BUSINESS 1",
+            "gpr": 3.0,
+            "distance_m": 20.5,
+            "planning_area": "SERANGOON",
+            "subzone": "SERANGOON NORTH"
+          },
+          {
+            "objectid": 160320,
+            "land_use": "BUSINESS 1",
+            "gpr": 2.5,
+            "distance_m": 35.6,
+            "planning_area": "SERANGOON",
+            "subzone": "SERANGOON NORTH"
+          },
+          {
+            "objectid": 210410,
+            "land_use": "BUSINESS 1",
+            "gpr": 2.5,
+            "distance_m": 53.9,
+            "planning_area": "SERANGOON",
+            "subzone": "SERANGOON NORTH"
+          },
+          {
+            "objectid": 210420,
+            "land_use": "BUSINESS 1",
+            "gpr": 2.5,
+            "distance_m": 58.2,
+            "planning_area": "SERANGOON",
+            "subzone": "SERANGOON NORTH"
+          },
+          {
+            "objectid": 161003,
+            "land_use": "BUSINESS 1",
+            "gpr": 2.5,
+            "distance_m": 64.0,
+            "planning_area": "SERANGOON",
+            "subzone": "SERANGOON NORTH"
+          },
+          {
+            "objectid": 185694,
+            "land_use": "BUSINESS 1",
+            "gpr": 2.5,
+            "distance_m": 68.2,
+            "planning_area": "SERANGOON",
+            "subzone": "SERANGOON NORTH"
+          },
+          {
+            "objectid": 223921,
+            "land_use": "BUSINESS 1",
+            "gpr": 2.5,
+            "distance_m": 69.9,
+            "planning_area": "SERANGOON",
+            "subzone": "SERANGOON NORTH"
+          },
+          {
+            "objectid": 185748,
+            "land_use": "BUSINESS 1",
+            "gpr": 2.5,
+            "distance_m": 78.1,
+            "planning_area": "SERANGOON",
+            "subzone": "SERANGOON NORTH"
+          },
+          {
+            "objectid": 178270,
+            "land_use": "BUSINESS 1",
+            "gpr": 2.5,
+            "distance_m": 80.9,
+            "planning_area": "SERANGOON",
+            "subzone": "SERANGOON NORTH"
+          },
+          {
+            "objectid": 161078,
+            "land_use": "BUSINESS 1",
+            "gpr": 3.0,
+            "distance_m": 87.8,
+            "planning_area": "SERANGOON",
+            "subzone": "SERANGOON NORTH"
+          },
+          {
+            "objectid": 166142,
+            "land_use": "BUSINESS 1",
+            "gpr": 2.5,
+            "distance_m": 93.1,
+            "planning_area": "SERANGOON",
+            "subzone": "SERANGOON NORTH"
+          },
+          {
+            "objectid": 185693,
+            "land_use": "BUSINESS 1",
+            "gpr": 2.5,
+            "distance_m": 109.3,
+            "planning_area": "SERANGOON",
+            "subzone": "SERANGOON NORTH"
+          },
+          {
+            "objectid": 198870,
+            "land_use": "RESIDENTIAL",
+            "gpr": 2.8000000000000003,
+            "distance_m": 112.4,
+            "planning_area": "SERANGOON",
+            "subzone": "SERANGOON NORTH"
+          },
+          {
+            "objectid": 228648,
+            "land_use": "BUSINESS 1",
+            "gpr": 2.5,
+            "distance_m": 135.9,
+            "planning_area": "SERANGOON",
+            "subzone": "SERANGOON NORTH"
+          },
+          {
+            "objectid": 198455,
+            "land_use": "BUSINESS 1",
+            "gpr": 2.5,
+            "distance_m": 138.2,
+            "planning_area": "SERANGOON",
+            "subzone": "SERANGOON NORTH"
+          },
+          {
+            "objectid": 223660,
+            "land_use": "BUSINESS 1",
+            "gpr": 2.5,
+            "distance_m": 139.5,
+            "planning_area": "SERANGOON",
+            "subzone": "SERANGOON NORTH"
+          },
+          {
+            "objectid": 224385,
+            "land_use": "RESIDENTIAL",
+            "gpr": 2.8000000000000003,
+            "distance_m": 140.3,
+            "planning_area": "SERANGOON",
+            "subzone": "SERANGOON NORTH"
+          },
+          {
+            "objectid": 161418,
+            "land_use": "CIVIC & COMMUNITY INSTITUTION",
+            "gpr": null,
+            "distance_m": 161.9,
+            "planning_area": "SERANGOON",
+            "subzone": "SERANGOON NORTH"
+          },
+          {
+            "objectid": 203518,
+            "land_use": "BUSINESS 2",
+            "gpr": 2.5,
+            "distance_m": 179.0,
+            "planning_area": "SERANGOON",
+            "subzone": "SERANGOON NORTH"
+          },
+          {
+            "objectid": 248536,
+            "land_use": "BUSINESS 1",
+            "gpr": 2.5,
+            "distance_m": 182.4,
+            "planning_area": "SERANGOON",
+            "subzone": "SERANGOON NORTH"
+          },
+          {
+            "objectid": 173322,
+            "land_use": "BUSINESS 1",
+            "gpr": 2.5,
+            "distance_m": 243.7,
+            "planning_area": "SERANGOON",
+            "subzone": "SERANGOON NORTH"
+          },
+          {
+            "objectid": 159673,
+            "land_use": "RESIDENTIAL",
+            "gpr": 2.8000000000000003,
+            "distance_m": 247.0,
+            "planning_area": "HOUGANG",
+            "subzone": "TRAFALGAR"
+          },
+          {
+            "objectid": 173504,
+            "land_use": "RESIDENTIAL",
+            "gpr": 2.8000000000000003,
+            "distance_m": 282.9,
+            "planning_area": "HOUGANG",
+            "subzone": "TRAFALGAR"
+          },
+          {
+            "objectid": 149119,
+            "land_use": "UTILITY",
+            "gpr": null,
+            "distance_m": 289.4,
+            "planning_area": "SERANGOON",
+            "subzone": "SERANGOON NORTH"
+          }
+        ],
+        "source": "URA SPACE Master Plan 2025 surrounding polygons",
+        "verification_required": true
+      },
+      "selection": {
+        "signal": "Data Required / Monitor",
+        "preferred_action": "Sell",
+        "selection_npv_m": 2.139,
+        "annual_expected_alpha": 0.09908,
+        "expected_total_return": 0.17708,
+        "operating_yield": 0.04486,
+        "market_return": 0.12,
+        "incremental_action_return": 0.01222,
+        "required_return": 0.078,
+        "acquisition_signal": "Buy",
+        "portfolio_signal": "Sell / Release",
+        "action_npv_m": 2.09,
+        "action_comparison": [
+          {
+            "action": "Hold",
+            "base_action_npv_m": -1.28,
+            "adjusted_selection_npv_m": -1.853,
+            "probability_of_loss": 0.6012,
+            "adjustments": {
+              "enbloc_m": 0.044,
+              "transformation_m": 0.165,
+              "view_supply_lease_penalty_m": 0.782
+            }
+          },
+          {
+            "action": "Retrofit",
+            "base_action_npv_m": -2.85,
+            "adjusted_selection_npv_m": -3.354,
+            "probability_of_loss": 0.6662,
+            "adjustments": {
+              "enbloc_m": 0.035,
+              "transformation_m": 0.165,
+              "view_supply_lease_penalty_m": 0.704
+            }
+          },
+          {
+            "action": "Repurpose",
+            "base_action_npv_m": -8.04,
+            "adjusted_selection_npv_m": -8.409,
+            "probability_of_loss": 0.7672,
+            "adjustments": {
+              "enbloc_m": 0.013,
+              "transformation_m": 0.165,
+              "view_supply_lease_penalty_m": 0.547
+            }
+          },
+          {
+            "action": "Redevelop",
+            "base_action_npv_m": -18.49,
+            "adjusted_selection_npv_m": -18.638,
+            "probability_of_loss": 0.951,
+            "adjustments": {
+              "enbloc_m": 0.0,
+              "transformation_m": 0.165,
+              "view_supply_lease_penalty_m": 0.313
+            }
+          },
+          {
+            "action": "Sell",
+            "base_action_npv_m": 2.09,
+            "adjusted_selection_npv_m": 2.139,
+            "probability_of_loss": 0.3358,
+            "adjustments": {
+              "enbloc_m": 0.0,
+              "transformation_m": 0.05,
+              "view_supply_lease_penalty_m": 0.0
+            }
+          }
+        ],
+        "zoning_option_value_m": 4.44,
+        "enbloc": {
+          "probability": 0.01,
+          "option_value_m": 0.044,
+          "underutilisation": 0.2,
+          "tenure_factor": 0.65,
+          "collective_sale_applicable": false,
+          "warning": "Screening probability only. Owner consent, Land Betterment Charge, acquisition premium and technical feasibility require project evidence."
+        },
+        "transformation": {
+          "value_m": 0.165,
+          "exposures": [
+            {
+              "zone": "Paya Lebar Air Base transformation",
+              "distance_km": 4.16,
+              "proximity_factor": 0.3062,
+              "target_year": 2040,
+              "delivery_probability": 0.55,
+              "discounted_value_m": 0.165,
+              "source": "URA strategic planning; screening geofence only"
+            }
+          ],
+          "quality": "screening_geofence"
+        },
+        "view_risk": {
+          "probability": 0.5619,
+          "penalty_m": 0.236
+        },
+        "supply_pressure": {
+          "index": 0.715,
+          "penalty_m": 0.196,
+          "market_momentum_qoq": 0.046
+        },
+        "lease_decay": {
+          "penalty_m": 0.35,
+          "factor": 0.01,
+          "remaining_years": 61,
+          "tenure": "99-year leasehold",
+          "quality": "synthetic demo"
+        },
+        "probability_of_loss": 0.3358,
+        "reasons": [],
+        "quality": "provisional",
+        "warning": "Selection signal is an economic screening output, not a transaction instruction."
+      },
+      "model_status": "provisional_proxy_run",
+      "input_quality": "low - portfolio workbook is a catalogue, not an underwriting dataset",
+      "proxy_inputs": [
+        "site area proxy",
+        "current GFA proxy",
+        "company valuation, NOI, tenure, leases, debt and capex required"
+      ],
+      "zoning_source": {
+        "matches": [
+          {
+            "objectid": 900007,
+            "lu_desc": "COMMERCIAL",
+            "gpr": 4.2,
+            "gpr_text": "4.2",
+            "planning_area": "DEMO PLANNING AREA",
+            "subzone": "DEMO SUBZONE 7",
+            "source_vintage": "URA SPACE Master Plan 2025 demo fixture"
+          }
+        ],
+        "match_method": "demo_fixture",
+        "spatial_review_required": false,
+        "current_statutory_plan": "Master Plan 2025"
+      },
+      "zoning_model_status": "verified_match",
+      "statutory_gpr_used": 4.2,
+      "gpr_source": "MP2025",
+      "capacity": {
+        "statutory_gfa_sqm": 10920.0,
+        "geometric_gfa_sqm": 34320.0,
+        "physical_gfa_sqm": 10920.0,
+        "de_facto_gfa_sqm": 10046.4,
+        "expected_approved_gfa_sqm": 6228.8,
+        "economic_gfa_sqm": 10046.4,
+        "unused_economic_gfa_sqm": 2184.0,
+        "buildable_footprint_sqm": 1040.0,
+        "storeys_by_height": 33,
+        "binding_constraints": [
+          "plot_ratio",
+          "site_coverage"
+        ],
+        "sensitivities": {
+          "legal_gpr": 148.3,
+          "site_coverage_max": 0.0,
+          "height_max_m": 0.0,
+          "front_setback_m": 0.0,
+          "side_setback_m": 0.0,
+          "approval_probability": 502.3
+        },
+        "residual_value_m": 4.44,
+        "p10_gfa_sqm": 4670.0,
+        "p50_gfa_sqm": 6214.7,
+        "p90_gfa_sqm": 7742.7,
+        "verification_required": true,
+        "methodology_version": "sg-capacity-0.2"
+      },
+      "approval": {
+        "stages": [
+          {
+            "stage": "Pre-application",
+            "conditional_probability": 0.94,
+            "cumulative_probability": 0.94,
+            "expected_months": 2.5
+          },
+          {
+            "stage": "Planning submission",
+            "conditional_probability": 0.86,
+            "cumulative_probability": 0.8084,
+            "expected_months": 5
+          },
+          {
+            "stage": "Technical clearances",
+            "conditional_probability": 0.82,
+            "cumulative_probability": 0.6629,
+            "expected_months": 6
+          },
+          {
+            "stage": "Committee/public review",
+            "conditional_probability": 0.88,
+            "cumulative_probability": 0.5833,
+            "expected_months": 4
+          },
+          {
+            "stage": "Conditions discharge",
+            "conditional_probability": 0.93,
+            "cumulative_probability": 0.5425,
+            "expected_months": 4
+          },
+          {
+            "stage": "Building permission",
+            "conditional_probability": 0.97,
+            "cumulative_probability": 0.5262,
+            "expected_months": 3
+          }
+        ],
+        "overall_probability": 0.524,
+        "p50_months": 19.0,
+        "p90_months": 27.6,
+        "redesign_probability": 0.476,
+        "seed": 20260928
+      },
+      "economics": {
+        "current_value_m": 35,
+        "current_noi_m": 1.57,
+        "occupancy": 0.9,
+        "market_rent_growth": 0.025,
+        "vacancy_target": 0.07,
+        "cap_rate": 0.0475,
+        "discount_rate": 0.078,
+        "selling_cost_rate": 0.025,
+        "holding_years": 10,
+        "source_quality": "illustrative proxy - replace with observed company financials"
+      },
+      "dcf": {
+        "value_m": 31.98,
+        "cashflows_m": [
+          1.61,
+          1.65,
+          1.69,
+          1.73,
+          1.78,
+          1.82,
+          1.87,
+          1.91,
+          1.96,
+          44.29
+        ],
+        "terminal_value_m": 42.28
+      },
+      "actions": [
+        {
+          "action": "Hold",
+          "incremental_npv_m": -1.32,
+          "pv_after_m": 32.29,
+          "pv_without_m": 31.98,
+          "capex_m": 1.5,
+          "financing_cost_m": 0.01,
+          "disruption_cost_m": 0.11,
+          "failure_cost_m": 0.02,
+          "success_probability": 0.98,
+          "execution_years": 0.25,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -1.28,
+          "p10_npv_m": -7.82,
+          "p50_npv_m": -1.39,
+          "p90_npv_m": 5.29,
+          "probability_of_loss": 0.6012,
+          "var_95_m": 9.61,
+          "cvar_95_m": 11.79,
+          "scenario_seed": 20260928,
+          "draws": 5000
+        },
+        {
+          "action": "Retrofit",
+          "incremental_npv_m": -2.91,
+          "pv_after_m": 35.17,
+          "pv_without_m": 31.98,
+          "capex_m": 5,
+          "financing_cost_m": 0.17,
+          "disruption_cost_m": 0.66,
+          "failure_cost_m": 0.27,
+          "success_probability": 0.9,
+          "execution_years": 1.5,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -2.85,
+          "p10_npv_m": -11.22,
+          "p50_npv_m": -2.88,
+          "p90_npv_m": 5.75,
+          "probability_of_loss": 0.6662,
+          "var_95_m": 13.67,
+          "cvar_95_m": 16.77,
+          "scenario_seed": 20260928,
+          "draws": 5000
+        },
+        {
+          "action": "Repurpose",
+          "incremental_npv_m": -8.15,
+          "pv_after_m": 39.68,
+          "pv_without_m": 31.98,
+          "capex_m": 12,
+          "financing_cost_m": 0.68,
+          "disruption_cost_m": 1.32,
+          "failure_cost_m": 1.85,
+          "success_probability": 0.72,
+          "execution_years": 2.5,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -8.04,
+          "p10_npv_m": -22.26,
+          "p50_npv_m": -8.0,
+          "p90_npv_m": 5.91,
+          "probability_of_loss": 0.7672,
+          "var_95_m": 26.13,
+          "cvar_95_m": 30.36,
+          "scenario_seed": 20260928,
+          "draws": 5000
+        },
+        {
+          "action": "Redevelop",
+          "incremental_npv_m": -18.51,
+          "pv_after_m": 48.36,
+          "pv_without_m": 31.98,
+          "capex_m": 25,
+          "financing_cost_m": 2.25,
+          "disruption_cost_m": 2.42,
+          "failure_cost_m": 5.23,
+          "success_probability": 0.62,
+          "execution_years": 4,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -18.49,
+          "p10_npv_m": -32.47,
+          "p50_npv_m": -18.52,
+          "p90_npv_m": -4.24,
+          "probability_of_loss": 0.951,
+          "var_95_m": 36.45,
+          "cvar_95_m": 40.93,
+          "scenario_seed": 20260928,
+          "draws": 5000
+        },
+        {
+          "action": "Sell",
+          "incremental_npv_m": 2.14,
+          "pv_after_m": 34.12,
+          "pv_without_m": 31.98,
+          "capex_m": -34.12,
+          "financing_cost_m": 0.0,
+          "disruption_cost_m": 0.0,
+          "failure_cost_m": 0,
+          "success_probability": 0.97,
+          "execution_years": 0.75,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": 2.09,
+          "p10_npv_m": -4.44,
+          "p50_npv_m": 2.03,
+          "p90_npv_m": 8.83,
+          "probability_of_loss": 0.3358,
+          "var_95_m": 6.18,
+          "cvar_95_m": 8.41,
+          "scenario_seed": 20260928,
+          "draws": 5000
+        }
+      ],
+      "recommendation": {
+        "action": "Sell",
+        "management_label": "Release",
+        "expected_npv_m": 2.09,
+        "probability_of_loss": 0.3358,
+        "selection_signal": "Data Required / Monitor",
+        "explanation": "Sell maximises the zoning- and market-adjusted selection NPV. Selection screen: Data Required / Monitor. Replace proxy inputs before decision use."
+      },
+      "expected_alpha": 0.09908,
+      "required_return": 0.078,
+      "model_version": "economic-model-v2-selection-0.2",
+      "verification_required": true,
+      "cache_key": "a1ea304e3ffd279e"
+    },
+    {
+      "asset_id": "DEMO-008",
+      "name": "Demo Retail Asset 8",
+      "country": "Singapore",
+      "jurisdiction": "Singapore URA",
+      "segments": [
+        "Retail"
+      ],
+      "address": "Illustrative Singapore Location 8",
+      "source_records": 1,
+      "source_rows": [
+        {
+          "sheet": "Public Demo",
+          "row": 9
+        }
+      ],
+      "latitude": 1.394,
+      "longitude": 103.9,
+      "synthetic": true,
+      "synthetic_financials": true,
+      "tenure_hint": {
+        "type": "99-year leasehold",
+        "remaining_years": 60,
+        "source": "synthetic demo"
+      },
+      "ura_zoning": {
+        "matches": [
+          {
+            "objectid": 900008,
+            "lu_desc": "COMMERCIAL",
+            "gpr": 3.0,
+            "gpr_text": "3.0",
+            "planning_area": "DEMO PLANNING AREA",
+            "subzone": "DEMO SUBZONE 8",
+            "source_vintage": "URA SPACE Master Plan 2025 demo fixture"
+          }
+        ],
+        "match_method": "demo_fixture",
+        "spatial_review_required": false,
+        "current_statutory_plan": "Master Plan 2025"
+      },
+      "catalogue_details": [
+        "Fictional public demonstration asset"
+      ],
+      "market_context": {
+        "market_segment": "retail",
+        "indicators": {
+          "price_qoq": 0.008,
+          "rent_qoq": -0.004,
+          "period": "2026 2Q",
+          "source": "URA real estate statistics 2Q2026"
+        },
+        "as_of": "2026-06-30",
+        "warning": "Public market indicators are contextual evidence and are not asset-level forecasts."
+      },
+      "surrounding_context": {
+        "status": "available",
+        "radius_m": 500,
+        "candidate_polygons": 181,
+        "developable_polygons": 19,
+        "high_density_polygons": 19,
+        "maximum_gpr": 4.2,
+        "distance_weighted_gpr": 3.021,
+        "view_block_probability": 0.3714,
+        "supply_pressure_index": 0.9183,
+        "candidates": [
+          {
+            "objectid": 161794,
+            "land_use": "RESIDENTIAL",
+            "gpr": 3.0,
+            "distance_m": 0.0,
+            "planning_area": "SENGKANG",
+            "subzone": "SENGKANG TOWN CENTRE"
+          },
+          {
+            "objectid": 211868,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 59.0,
+            "planning_area": "SENGKANG",
+            "subzone": "SENGKANG TOWN CENTRE"
+          },
+          {
+            "objectid": 224446,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 71.4,
+            "planning_area": "SENGKANG",
+            "subzone": "SENGKANG TOWN CENTRE"
+          },
+          {
+            "objectid": 211866,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 84.0,
+            "planning_area": "SENGKANG",
+            "subzone": "SENGKANG TOWN CENTRE"
+          },
+          {
+            "objectid": 186591,
+            "land_use": "RESIDENTIAL",
+            "gpr": 3.0,
+            "distance_m": 87.4,
+            "planning_area": "SENGKANG",
+            "subzone": "SENGKANG TOWN CENTRE"
+          },
+          {
+            "objectid": 174179,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 104.7,
+            "planning_area": "SENGKANG",
+            "subzone": "SENGKANG TOWN CENTRE"
+          },
+          {
+            "objectid": 199275,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 109.0,
+            "planning_area": "SENGKANG",
+            "subzone": "SENGKANG TOWN CENTRE"
+          },
+          {
+            "objectid": 186612,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 115.7,
+            "planning_area": "SENGKANG",
+            "subzone": "SENGKANG TOWN CENTRE"
+          },
+          {
+            "objectid": 161812,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 116.2,
+            "planning_area": "SENGKANG",
+            "subzone": "SENGKANG TOWN CENTRE"
+          },
+          {
+            "objectid": 211896,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 120.5,
+            "planning_area": "SENGKANG",
+            "subzone": "SENGKANG TOWN CENTRE"
+          },
+          {
+            "objectid": 199215,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 120.7,
+            "planning_area": "SENGKANG",
+            "subzone": "SENGKANG TOWN CENTRE"
+          },
+          {
+            "objectid": 237028,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 123.2,
+            "planning_area": "SENGKANG",
+            "subzone": "SENGKANG TOWN CENTRE"
+          },
+          {
+            "objectid": 174220,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 127.4,
+            "planning_area": "SENGKANG",
+            "subzone": "SENGKANG TOWN CENTRE"
+          },
+          {
+            "objectid": 174234,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 131.6,
+            "planning_area": "SENGKANG",
+            "subzone": "SENGKANG TOWN CENTRE"
+          },
+          {
+            "objectid": 199226,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 131.9,
+            "planning_area": "SENGKANG",
+            "subzone": "SENGKANG TOWN CENTRE"
+          },
+          {
+            "objectid": 224488,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 136.0,
+            "planning_area": "SENGKANG",
+            "subzone": "SENGKANG TOWN CENTRE"
+          },
+          {
+            "objectid": 149289,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 136.4,
+            "planning_area": "SENGKANG",
+            "subzone": "SENGKANG TOWN CENTRE"
+          },
+          {
+            "objectid": 161780,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 140.7,
+            "planning_area": "SENGKANG",
+            "subzone": "SENGKANG TOWN CENTRE"
+          },
+          {
+            "objectid": 211895,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 141.8,
+            "planning_area": "SENGKANG",
+            "subzone": "SENGKANG TOWN CENTRE"
+          },
+          {
+            "objectid": 211892,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 145.6,
+            "planning_area": "SENGKANG",
+            "subzone": "SENGKANG TOWN CENTRE"
+          },
+          {
+            "objectid": 211888,
+            "land_use": "OPEN SPACE",
+            "gpr": null,
+            "distance_m": 147.5,
+            "planning_area": "SENGKANG",
+            "subzone": "SENGKANG TOWN CENTRE"
+          },
+          {
+            "objectid": 237035,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 148.2,
+            "planning_area": "SENGKANG",
+            "subzone": "SENGKANG TOWN CENTRE"
+          },
+          {
+            "objectid": 199216,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 150.6,
+            "planning_area": "SENGKANG",
+            "subzone": "SENGKANG TOWN CENTRE"
+          },
+          {
+            "objectid": 237039,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 155.7,
+            "planning_area": "SENGKANG",
+            "subzone": "SENGKANG TOWN CENTRE"
+          },
+          {
+            "objectid": 224491,
+            "land_use": "EDUCATIONAL INSTITUTION",
+            "gpr": null,
+            "distance_m": 157.1,
+            "planning_area": "SENGKANG",
+            "subzone": "SENGKANG TOWN CENTRE"
+          }
+        ],
+        "source": "URA SPACE Master Plan 2025 surrounding polygons",
+        "verification_required": true
+      },
+      "selection": {
+        "signal": "Data Required / Monitor",
+        "preferred_action": "Sell",
+        "selection_npv_m": 2.023,
+        "annual_expected_alpha": 0.01042,
+        "expected_total_return": 0.08842,
+        "operating_yield": 0.04486,
+        "market_return": 0.032,
+        "incremental_action_return": 0.01156,
+        "required_return": 0.078,
+        "acquisition_signal": "Watch",
+        "portfolio_signal": "Sell / Release",
+        "action_npv_m": 1.98,
+        "action_comparison": [
+          {
+            "action": "Hold",
+            "base_action_npv_m": -1.42,
+            "adjusted_selection_npv_m": -2.895,
+            "probability_of_loss": 0.6034,
+            "adjustments": {
+              "enbloc_m": 0.032,
+              "transformation_m": 0.145,
+              "view_supply_lease_penalty_m": 1.652
+            }
+          },
+          {
+            "action": "Retrofit",
+            "base_action_npv_m": -3.06,
+            "adjusted_selection_npv_m": -4.376,
+            "probability_of_loss": 0.6818,
+            "adjustments": {
+              "enbloc_m": 0.026,
+              "transformation_m": 0.145,
+              "view_supply_lease_penalty_m": 1.486
+            }
+          },
+          {
+            "action": "Repurpose",
+            "base_action_npv_m": -8.7,
+            "adjusted_selection_npv_m": -9.702,
+            "probability_of_loss": 0.7872,
+            "adjustments": {
+              "enbloc_m": 0.01,
+              "transformation_m": 0.145,
+              "view_supply_lease_penalty_m": 1.156
+            }
+          },
+          {
+            "action": "Redevelop",
+            "base_action_npv_m": -19.54,
+            "adjusted_selection_npv_m": -20.056,
+            "probability_of_loss": 0.9576,
+            "adjustments": {
+              "enbloc_m": 0.0,
+              "transformation_m": 0.145,
+              "view_supply_lease_penalty_m": 0.661
+            }
+          },
+          {
+            "action": "Sell",
+            "base_action_npv_m": 1.98,
+            "adjusted_selection_npv_m": 2.023,
+            "probability_of_loss": 0.3502,
+            "adjustments": {
+              "enbloc_m": 0.0,
+              "transformation_m": 0.043,
+              "view_supply_lease_penalty_m": 0.0
+            }
+          }
+        ],
+        "zoning_option_value_m": 3.17,
+        "enbloc": {
+          "probability": 0.01,
+          "option_value_m": 0.032,
+          "underutilisation": 0.2,
+          "tenure_factor": 0.65,
+          "collective_sale_applicable": false,
+          "warning": "Screening probability only. Owner consent, Land Betterment Charge, acquisition premium and technical feasibility require project evidence."
+        },
+        "transformation": {
+          "value_m": 0.145,
+          "exposures": [
+            {
+              "zone": "Paya Lebar Air Base transformation",
+              "distance_km": 4.39,
+              "proximity_factor": 0.2687,
+              "target_year": 2040,
+              "delivery_probability": 0.55,
+              "discounted_value_m": 0.145,
+              "source": "URA strategic planning; screening geofence only"
+            }
+          ],
+          "quality": "screening_geofence"
+        },
+        "view_risk": {
+          "probability": 0.3714,
+          "penalty_m": 0.156
+        },
+        "supply_pressure": {
+          "index": 0.9183,
+          "penalty_m": 1.146,
+          "market_momentum_qoq": 0.008
+        },
+        "lease_decay": {
+          "penalty_m": 0.35,
+          "factor": 0.01,
+          "remaining_years": 60,
+          "tenure": "99-year leasehold",
+          "quality": "synthetic demo"
+        },
+        "probability_of_loss": 0.3502,
+        "reasons": [
+          "Future competing-supply pressure"
+        ],
+        "quality": "provisional",
+        "warning": "Selection signal is an economic screening output, not a transaction instruction."
+      },
+      "model_status": "provisional_proxy_run",
+      "input_quality": "low - portfolio workbook is a catalogue, not an underwriting dataset",
+      "proxy_inputs": [
+        "site area proxy",
+        "current GFA proxy",
+        "company valuation, NOI, tenure, leases, debt and capex required"
+      ],
+      "zoning_source": {
+        "matches": [
+          {
+            "objectid": 900008,
+            "lu_desc": "COMMERCIAL",
+            "gpr": 3.0,
+            "gpr_text": "3.0",
+            "planning_area": "DEMO PLANNING AREA",
+            "subzone": "DEMO SUBZONE 8",
+            "source_vintage": "URA SPACE Master Plan 2025 demo fixture"
+          }
+        ],
+        "match_method": "demo_fixture",
+        "spatial_review_required": false,
+        "current_statutory_plan": "Master Plan 2025"
+      },
+      "zoning_model_status": "verified_match",
+      "statutory_gpr_used": 3.0,
+      "gpr_source": "MP2025",
+      "capacity": {
+        "statutory_gfa_sqm": 7800.0,
+        "geometric_gfa_sqm": 22880.0,
+        "physical_gfa_sqm": 7800.0,
+        "de_facto_gfa_sqm": 7176.0,
+        "expected_approved_gfa_sqm": 4449.1,
+        "economic_gfa_sqm": 7176.0,
+        "unused_economic_gfa_sqm": 1560.0,
+        "buildable_footprint_sqm": 1040.0,
+        "storeys_by_height": 22,
+        "binding_constraints": [
+          "plot_ratio",
+          "site_coverage"
+        ],
+        "sensitivities": {
+          "legal_gpr": 148.3,
+          "site_coverage_max": 0.0,
+          "height_max_m": 0.0,
+          "front_setback_m": 0.0,
+          "side_setback_m": 0.0,
+          "approval_probability": 358.8
+        },
+        "residual_value_m": 3.17,
+        "p10_gfa_sqm": 3358.9,
+        "p50_gfa_sqm": 4479.2,
+        "p90_gfa_sqm": 5548.3,
+        "verification_required": true,
+        "methodology_version": "sg-capacity-0.2"
+      },
+      "approval": {
+        "stages": [
+          {
+            "stage": "Pre-application",
+            "conditional_probability": 0.94,
+            "cumulative_probability": 0.94,
+            "expected_months": 2.5
+          },
+          {
+            "stage": "Planning submission",
+            "conditional_probability": 0.86,
+            "cumulative_probability": 0.8084,
+            "expected_months": 5
+          },
+          {
+            "stage": "Technical clearances",
+            "conditional_probability": 0.82,
+            "cumulative_probability": 0.6629,
+            "expected_months": 6
+          },
+          {
+            "stage": "Committee/public review",
+            "conditional_probability": 0.88,
+            "cumulative_probability": 0.5833,
+            "expected_months": 4
+          },
+          {
+            "stage": "Conditions discharge",
+            "conditional_probability": 0.93,
+            "cumulative_probability": 0.5425,
+            "expected_months": 4
+          },
+          {
+            "stage": "Building permission",
+            "conditional_probability": 0.97,
+            "cumulative_probability": 0.5262,
+            "expected_months": 3
+          }
+        ],
+        "overall_probability": 0.5252,
+        "p50_months": 19.0,
+        "p90_months": 27.6,
+        "redesign_probability": 0.4748,
+        "seed": 20260929
+      },
+      "economics": {
+        "current_value_m": 35,
+        "current_noi_m": 1.57,
+        "occupancy": 0.9,
+        "market_rent_growth": 0.025,
+        "vacancy_target": 0.07,
+        "cap_rate": 0.0475,
+        "discount_rate": 0.078,
+        "selling_cost_rate": 0.025,
+        "holding_years": 10,
+        "source_quality": "illustrative proxy - replace with observed company financials"
+      },
+      "dcf": {
+        "value_m": 31.98,
+        "cashflows_m": [
+          1.61,
+          1.65,
+          1.69,
+          1.73,
+          1.78,
+          1.82,
+          1.87,
+          1.91,
+          1.96,
+          44.29
+        ],
+        "terminal_value_m": 42.28
+      },
+      "actions": [
+        {
+          "action": "Hold",
+          "incremental_npv_m": -1.32,
+          "pv_after_m": 32.29,
+          "pv_without_m": 31.98,
+          "capex_m": 1.5,
+          "financing_cost_m": 0.01,
+          "disruption_cost_m": 0.11,
+          "failure_cost_m": 0.02,
+          "success_probability": 0.98,
+          "execution_years": 0.25,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -1.42,
+          "p10_npv_m": -8.12,
+          "p50_npv_m": -1.38,
+          "p90_npv_m": 5.05,
+          "probability_of_loss": 0.6034,
+          "var_95_m": 9.98,
+          "cvar_95_m": 12.06,
+          "scenario_seed": 20260929,
+          "draws": 5000
+        },
+        {
+          "action": "Retrofit",
+          "incremental_npv_m": -2.91,
+          "pv_after_m": 35.17,
+          "pv_without_m": 31.98,
+          "capex_m": 5,
+          "financing_cost_m": 0.17,
+          "disruption_cost_m": 0.66,
+          "failure_cost_m": 0.27,
+          "success_probability": 0.9,
+          "execution_years": 1.5,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -3.06,
+          "p10_npv_m": -11.7,
+          "p50_npv_m": -3.14,
+          "p90_npv_m": 5.69,
+          "probability_of_loss": 0.6818,
+          "var_95_m": 13.79,
+          "cvar_95_m": 16.57,
+          "scenario_seed": 20260929,
+          "draws": 5000
+        },
+        {
+          "action": "Repurpose",
+          "incremental_npv_m": -8.34,
+          "pv_after_m": 39.49,
+          "pv_without_m": 31.98,
+          "capex_m": 12,
+          "financing_cost_m": 0.68,
+          "disruption_cost_m": 1.32,
+          "failure_cost_m": 1.85,
+          "success_probability": 0.72,
+          "execution_years": 2.5,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -8.7,
+          "p10_npv_m": -22.79,
+          "p50_npv_m": -8.69,
+          "p90_npv_m": 5.44,
+          "probability_of_loss": 0.7872,
+          "var_95_m": 26.87,
+          "cvar_95_m": 31.72,
+          "scenario_seed": 20260929,
+          "draws": 5000
+        },
+        {
+          "action": "Redevelop",
+          "incremental_npv_m": -19.09,
+          "pv_after_m": 47.79,
+          "pv_without_m": 31.98,
+          "capex_m": 25,
+          "financing_cost_m": 2.25,
+          "disruption_cost_m": 2.42,
+          "failure_cost_m": 5.23,
+          "success_probability": 0.62,
+          "execution_years": 4,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -19.54,
+          "p10_npv_m": -33.43,
+          "p50_npv_m": -19.7,
+          "p90_npv_m": -5.33,
+          "probability_of_loss": 0.9576,
+          "var_95_m": 37.63,
+          "cvar_95_m": 42.69,
+          "scenario_seed": 20260929,
+          "draws": 5000
+        },
+        {
+          "action": "Sell",
+          "incremental_npv_m": 2.14,
+          "pv_after_m": 34.12,
+          "pv_without_m": 31.98,
+          "capex_m": -34.12,
+          "financing_cost_m": 0.0,
+          "disruption_cost_m": 0.0,
+          "failure_cost_m": 0,
+          "success_probability": 0.97,
+          "execution_years": 0.75,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": 1.98,
+          "p10_npv_m": -4.67,
+          "p50_npv_m": 1.92,
+          "p90_npv_m": 8.61,
+          "probability_of_loss": 0.3502,
+          "var_95_m": 6.33,
+          "cvar_95_m": 8.51,
+          "scenario_seed": 20260929,
+          "draws": 5000
+        }
+      ],
+      "recommendation": {
+        "action": "Sell",
+        "management_label": "Release",
+        "expected_npv_m": 1.98,
+        "probability_of_loss": 0.3502,
+        "selection_signal": "Data Required / Monitor",
+        "explanation": "Sell maximises the zoning- and market-adjusted selection NPV. Selection screen: Data Required / Monitor. Replace proxy inputs before decision use."
+      },
+      "expected_alpha": 0.01042,
+      "required_return": 0.078,
+      "model_version": "economic-model-v2-selection-0.2",
+      "verification_required": true,
+      "cache_key": "afcd78399297398c"
+    },
+    {
+      "asset_id": "DEMO-009",
+      "name": "Demo Residential Asset 9",
+      "country": "Singapore",
+      "jurisdiction": "Singapore URA",
+      "segments": [
+        "Residential"
+      ],
+      "address": "Illustrative Singapore Location 9",
+      "source_records": 1,
+      "source_rows": [
+        {
+          "sheet": "Public Demo",
+          "row": 10
+        }
+      ],
+      "latitude": 1.412,
+      "longitude": 103.925,
+      "synthetic": true,
+      "synthetic_financials": true,
+      "tenure_hint": {
+        "type": "Freehold",
+        "remaining_years": null,
+        "source": "synthetic demo"
+      },
+      "ura_zoning": {
+        "matches": [
+          {
+            "objectid": 900009,
+            "lu_desc": "RESIDENTIAL",
+            "gpr": 2.1,
+            "gpr_text": "2.1",
+            "planning_area": "DEMO PLANNING AREA",
+            "subzone": "DEMO SUBZONE 9",
+            "source_vintage": "URA SPACE Master Plan 2025 demo fixture"
+          }
+        ],
+        "match_method": "demo_fixture",
+        "spatial_review_required": false,
+        "current_statutory_plan": "Master Plan 2025"
+      },
+      "catalogue_details": [
+        "Fictional public demonstration asset"
+      ],
+      "market_context": {
+        "market_segment": "private_residential",
+        "indicators": {
+          "price_qoq": 0.005,
+          "period": "2026 2Q",
+          "source": "URA real estate statistics 2Q2026"
+        },
+        "as_of": "2026-06-30",
+        "warning": "Public market indicators are contextual evidence and are not asset-level forecasts."
+      },
+      "surrounding_context": {
+        "status": "available",
+        "radius_m": 500,
+        "candidate_polygons": 2,
+        "developable_polygons": 0,
+        "high_density_polygons": 0,
+        "maximum_gpr": null,
+        "distance_weighted_gpr": null,
+        "view_block_probability": 0,
+        "supply_pressure_index": 0.0,
+        "candidates": [
+          {
+            "objectid": 245679,
+            "land_use": "PARK",
+            "gpr": null,
+            "distance_m": 182.7,
+            "planning_area": "PUNGGOL",
+            "subzone": "CONEY ISLAND"
+          },
+          {
+            "objectid": 220611,
+            "land_use": "RESIDENTIAL",
+            "gpr": null,
+            "distance_m": 478.3,
+            "planning_area": "PUNGGOL",
+            "subzone": "CONEY ISLAND"
+          }
+        ],
+        "source": "URA SPACE Master Plan 2025 surrounding polygons",
+        "verification_required": true
+      },
+      "selection": {
+        "signal": "Data Required / Monitor",
+        "preferred_action": "Sell",
+        "selection_npv_m": 2.34,
+        "annual_expected_alpha": -0.00186,
+        "expected_total_return": 0.07614,
+        "operating_yield": 0.045,
+        "market_return": 0.02,
+        "incremental_action_return": 0.01114,
+        "required_return": 0.078,
+        "acquisition_signal": "Avoid",
+        "portfolio_signal": "Sell / Release",
+        "action_npv_m": 2.34,
+        "action_comparison": [
+          {
+            "action": "Hold",
+            "base_action_npv_m": -1.29,
+            "adjusted_selection_npv_m": -0.539,
+            "probability_of_loss": 0.6074,
+            "adjustments": {
+              "enbloc_m": 0.751,
+              "transformation_m": 0,
+              "view_supply_lease_penalty_m": 0.0
+            }
+          },
+          {
+            "action": "Retrofit",
+            "base_action_npv_m": -2.49,
+            "adjusted_selection_npv_m": -1.889,
+            "probability_of_loss": 0.6466,
+            "adjustments": {
+              "enbloc_m": 0.601,
+              "transformation_m": 0,
+              "view_supply_lease_penalty_m": 0.0
+            }
+          },
+          {
+            "action": "Repurpose",
+            "base_action_npv_m": -7.58,
+            "adjusted_selection_npv_m": -7.355,
+            "probability_of_loss": 0.753,
+            "adjustments": {
+              "enbloc_m": 0.225,
+              "transformation_m": 0,
+              "view_supply_lease_penalty_m": 0.0
+            }
+          },
+          {
+            "action": "Redevelop",
+            "base_action_npv_m": -17.27,
+            "adjusted_selection_npv_m": -17.27,
+            "probability_of_loss": 0.9436,
+            "adjustments": {
+              "enbloc_m": 0.0,
+              "transformation_m": 0,
+              "view_supply_lease_penalty_m": 0.0
+            }
+          },
+          {
+            "action": "Sell",
+            "base_action_npv_m": 2.34,
+            "adjusted_selection_npv_m": 2.34,
+            "probability_of_loss": 0.3156,
+            "adjustments": {
+              "enbloc_m": 0.0,
+              "transformation_m": 0.0,
+              "view_supply_lease_penalty_m": 0.0
+            }
+          }
+        ],
+        "zoning_option_value_m": 2.22,
+        "enbloc": {
+          "probability": 0.3385,
+          "option_value_m": 0.751,
+          "underutilisation": 0.2,
+          "tenure_factor": 0.9,
+          "collective_sale_applicable": true,
+          "warning": "Screening probability only. Owner consent, Land Betterment Charge, acquisition premium and technical feasibility require project evidence."
+        },
+        "transformation": {
+          "value_m": 0,
+          "exposures": [],
+          "quality": "screening_geofence"
+        },
+        "view_risk": {
+          "probability": 0.0,
+          "penalty_m": 0.0
+        },
+        "supply_pressure": {
+          "index": 0.0,
+          "penalty_m": 0,
+          "market_momentum_qoq": 0.005
+        },
+        "lease_decay": {
+          "penalty_m": 0,
+          "factor": 0,
+          "remaining_years": null,
+          "tenure": "Freehold",
+          "quality": "synthetic demo"
+        },
+        "probability_of_loss": 0.3156,
+        "reasons": [],
+        "quality": "provisional",
+        "warning": "Selection signal is an economic screening output, not a transaction instruction."
+      },
+      "model_status": "provisional_proxy_run",
+      "input_quality": "low - portfolio workbook is a catalogue, not an underwriting dataset",
+      "proxy_inputs": [
+        "site area proxy",
+        "current GFA proxy",
+        "company valuation, NOI, tenure, leases, debt and capex required"
+      ],
+      "zoning_source": {
+        "matches": [
+          {
+            "objectid": 900009,
+            "lu_desc": "RESIDENTIAL",
+            "gpr": 2.1,
+            "gpr_text": "2.1",
+            "planning_area": "DEMO PLANNING AREA",
+            "subzone": "DEMO SUBZONE 9",
+            "source_vintage": "URA SPACE Master Plan 2025 demo fixture"
+          }
+        ],
+        "match_method": "demo_fixture",
+        "spatial_review_required": false,
+        "current_statutory_plan": "Master Plan 2025"
+      },
+      "zoning_model_status": "verified_match",
+      "statutory_gpr_used": 2.1,
+      "gpr_source": "MP2025",
+      "capacity": {
+        "statutory_gfa_sqm": 5460.0,
+        "geometric_gfa_sqm": 22880.0,
+        "physical_gfa_sqm": 5460.0,
+        "de_facto_gfa_sqm": 5023.2,
+        "expected_approved_gfa_sqm": 3114.4,
+        "economic_gfa_sqm": 5023.2,
+        "unused_economic_gfa_sqm": 1092.0,
+        "buildable_footprint_sqm": 1040.0,
+        "storeys_by_height": 22,
+        "binding_constraints": [
+          "plot_ratio",
+          "site_coverage"
+        ],
+        "sensitivities": {
+          "legal_gpr": 148.3,
+          "site_coverage_max": 0.0,
+          "height_max_m": 0.0,
+          "front_setback_m": 0.0,
+          "side_setback_m": 0.0,
+          "approval_probability": 251.2
+        },
+        "residual_value_m": 2.22,
+        "p10_gfa_sqm": 2325.8,
+        "p50_gfa_sqm": 3108.4,
+        "p90_gfa_sqm": 3889.8,
+        "verification_required": true,
+        "methodology_version": "sg-capacity-0.2"
+      },
+      "approval": {
+        "stages": [
+          {
+            "stage": "Pre-application",
+            "conditional_probability": 0.94,
+            "cumulative_probability": 0.94,
+            "expected_months": 2.5
+          },
+          {
+            "stage": "Planning submission",
+            "conditional_probability": 0.86,
+            "cumulative_probability": 0.8084,
+            "expected_months": 5
+          },
+          {
+            "stage": "Technical clearances",
+            "conditional_probability": 0.82,
+            "cumulative_probability": 0.6629,
+            "expected_months": 6
+          },
+          {
+            "stage": "Committee/public review",
+            "conditional_probability": 0.88,
+            "cumulative_probability": 0.5833,
+            "expected_months": 4
+          },
+          {
+            "stage": "Conditions discharge",
+            "conditional_probability": 0.93,
+            "cumulative_probability": 0.5425,
+            "expected_months": 4
+          },
+          {
+            "stage": "Building permission",
+            "conditional_probability": 0.97,
+            "cumulative_probability": 0.5262,
+            "expected_months": 3
+          }
+        ],
+        "overall_probability": 0.5336,
+        "p50_months": 19.2,
+        "p90_months": 27.8,
+        "redesign_probability": 0.4664,
+        "seed": 20260930
+      },
+      "economics": {
+        "current_value_m": 42,
+        "current_noi_m": 1.89,
+        "occupancy": 0.9,
+        "market_rent_growth": 0.025,
+        "vacancy_target": 0.07,
+        "cap_rate": 0.0475,
+        "discount_rate": 0.078,
+        "selling_cost_rate": 0.025,
+        "holding_years": 10,
+        "source_quality": "illustrative proxy - replace with observed company financials"
+      },
+      "dcf": {
+        "value_m": 38.49,
+        "cashflows_m": [
+          1.94,
+          1.99,
+          2.04,
+          2.09,
+          2.14,
+          2.19,
+          2.25,
+          2.3,
+          2.36,
+          53.32
+        ],
+        "terminal_value_m": 50.9
+      },
+      "actions": [
+        {
+          "action": "Hold",
+          "incremental_npv_m": -1.27,
+          "pv_after_m": 38.88,
+          "pv_without_m": 38.49,
+          "capex_m": 1.5,
+          "financing_cost_m": 0.01,
+          "disruption_cost_m": 0.13,
+          "failure_cost_m": 0.02,
+          "success_probability": 0.98,
+          "execution_years": 0.25,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -1.29,
+          "p10_npv_m": -7.72,
+          "p50_npv_m": -1.38,
+          "p90_npv_m": 5.23,
+          "probability_of_loss": 0.6074,
+          "var_95_m": 9.49,
+          "cvar_95_m": 11.54,
+          "scenario_seed": 20260930,
+          "draws": 5000
+        },
+        {
+          "action": "Retrofit",
+          "incremental_npv_m": -2.39,
+          "pv_after_m": 42.34,
+          "pv_without_m": 38.49,
+          "capex_m": 5,
+          "financing_cost_m": 0.17,
+          "disruption_cost_m": 0.79,
+          "failure_cost_m": 0.27,
+          "success_probability": 0.9,
+          "execution_years": 1.5,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -2.49,
+          "p10_npv_m": -10.96,
+          "p50_npv_m": -2.4,
+          "p90_npv_m": 5.92,
+          "probability_of_loss": 0.6466,
+          "var_95_m": 13.4,
+          "cvar_95_m": 16.43,
+          "scenario_seed": 20260930,
+          "draws": 5000
+        },
+        {
+          "action": "Repurpose",
+          "incremental_npv_m": -7.31,
+          "pv_after_m": 47.29,
+          "pv_without_m": 38.49,
+          "capex_m": 12,
+          "financing_cost_m": 0.68,
+          "disruption_cost_m": 1.59,
+          "failure_cost_m": 1.85,
+          "success_probability": 0.72,
+          "execution_years": 2.5,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -7.58,
+          "p10_npv_m": -21.64,
+          "p50_npv_m": -7.62,
+          "p90_npv_m": 6.66,
+          "probability_of_loss": 0.753,
+          "var_95_m": 25.6,
+          "cvar_95_m": 30.66,
+          "scenario_seed": 20260930,
+          "draws": 5000
+        },
+        {
+          "action": "Redevelop",
+          "incremental_npv_m": -17.07,
+          "pv_after_m": 56.81,
+          "pv_without_m": 38.49,
+          "capex_m": 25,
+          "financing_cost_m": 2.25,
+          "disruption_cost_m": 2.91,
+          "failure_cost_m": 5.23,
+          "success_probability": 0.62,
+          "execution_years": 4,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -17.27,
+          "p10_npv_m": -31.48,
+          "p50_npv_m": -16.98,
+          "p90_npv_m": -3.0,
+          "probability_of_loss": 0.9436,
+          "var_95_m": 35.48,
+          "cvar_95_m": 39.89,
+          "scenario_seed": 20260930,
+          "draws": 5000
+        },
+        {
+          "action": "Sell",
+          "incremental_npv_m": 2.46,
+          "pv_after_m": 40.95,
+          "pv_without_m": 38.49,
+          "capex_m": -40.95,
+          "financing_cost_m": 0.0,
+          "disruption_cost_m": 0.0,
+          "failure_cost_m": 0,
+          "success_probability": 0.97,
+          "execution_years": 0.75,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": 2.34,
+          "p10_npv_m": -4.11,
+          "p50_npv_m": 2.38,
+          "p90_npv_m": 8.8,
+          "probability_of_loss": 0.3156,
+          "var_95_m": 5.98,
+          "cvar_95_m": 8.13,
+          "scenario_seed": 20260930,
+          "draws": 5000
+        }
+      ],
+      "recommendation": {
+        "action": "Sell",
+        "management_label": "Release",
+        "expected_npv_m": 2.34,
+        "probability_of_loss": 0.3156,
+        "selection_signal": "Data Required / Monitor",
+        "explanation": "Sell maximises the zoning- and market-adjusted selection NPV. Selection screen: Data Required / Monitor. Replace proxy inputs before decision use."
+      },
+      "expected_alpha": -0.00186,
+      "required_return": 0.078,
+      "model_version": "economic-model-v2-selection-0.2",
+      "verification_required": true,
+      "cache_key": "e2a28748f1b46a47"
+    },
+    {
+      "asset_id": "DEMO-010",
+      "name": "Demo Industrial Asset 10",
+      "country": "Singapore",
+      "jurisdiction": "Singapore URA",
+      "segments": [
+        "Industrial"
+      ],
+      "address": "Illustrative Singapore Location 10",
+      "source_records": 1,
+      "source_rows": [
+        {
+          "sheet": "Public Demo",
+          "row": 11
+        }
+      ],
+      "latitude": 1.43,
+      "longitude": 103.95,
+      "synthetic": true,
+      "synthetic_financials": true,
+      "tenure_hint": {
+        "type": "99-year leasehold",
+        "remaining_years": 58,
+        "source": "synthetic demo"
+      },
+      "ura_zoning": {
+        "matches": [
+          {
+            "objectid": 900010,
+            "lu_desc": "BUSINESS 1",
+            "gpr": 2.5,
+            "gpr_text": "2.5",
+            "planning_area": "DEMO PLANNING AREA",
+            "subzone": "DEMO SUBZONE 10",
+            "source_vintage": "URA SPACE Master Plan 2025 demo fixture"
+          }
+        ],
+        "match_method": "demo_fixture",
+        "spatial_review_required": false,
+        "current_statutory_plan": "Master Plan 2025"
+      },
+      "catalogue_details": [
+        "Fictional public demonstration asset"
+      ],
+      "market_context": {
+        "market_segment": "industrial",
+        "indicators": {
+          "price_index": 113.8,
+          "price_qoq": 0.006189213085764811,
+          "period": "2026 2Q",
+          "source_table": "SingStat M212181 / JTC"
+        },
+        "as_of": "2026-06-30",
+        "warning": "Public market indicators are contextual evidence and are not asset-level forecasts."
+      },
+      "surrounding_context": {
+        "status": "available",
+        "radius_m": 500,
+        "candidate_polygons": 0,
+        "developable_polygons": 0,
+        "high_density_polygons": 0,
+        "maximum_gpr": null,
+        "distance_weighted_gpr": null,
+        "view_block_probability": 0,
+        "supply_pressure_index": 0.0,
+        "candidates": [],
+        "source": "URA SPACE Master Plan 2025 surrounding polygons",
+        "verification_required": true
+      },
+      "selection": {
+        "signal": "Data Required / Monitor",
+        "preferred_action": "Hold",
+        "selection_npv_m": -2.734,
+        "annual_expected_alpha": -0.01687,
+        "expected_total_return": 0.06113,
+        "operating_yield": 0.052,
+        "market_return": 0.02476,
+        "incremental_action_return": -0.01562,
+        "required_return": 0.078,
+        "acquisition_signal": "Avoid",
+        "portfolio_signal": "Sell / Release",
+        "action_npv_m": -1.36,
+        "action_comparison": [
+          {
+            "action": "Hold",
+            "base_action_npv_m": -1.36,
+            "adjusted_selection_npv_m": -2.734,
+            "probability_of_loss": 0.6026,
+            "adjustments": {
+              "enbloc_m": 0.026,
+              "transformation_m": 0,
+              "view_supply_lease_penalty_m": 1.4
+            }
+          },
+          {
+            "action": "Retrofit",
+            "base_action_npv_m": -2.66,
+            "adjusted_selection_npv_m": -3.899,
+            "probability_of_loss": 0.6474,
+            "adjustments": {
+              "enbloc_m": 0.021,
+              "transformation_m": 0,
+              "view_supply_lease_penalty_m": 1.26
+            }
+          },
+          {
+            "action": "Repurpose",
+            "base_action_npv_m": -7.67,
+            "adjusted_selection_npv_m": -8.642,
+            "probability_of_loss": 0.757,
+            "adjustments": {
+              "enbloc_m": 0.008,
+              "transformation_m": 0,
+              "view_supply_lease_penalty_m": 0.98
+            }
+          },
+          {
+            "action": "Redevelop",
+            "base_action_npv_m": -17.66,
+            "adjusted_selection_npv_m": -18.22,
+            "probability_of_loss": 0.9478,
+            "adjustments": {
+              "enbloc_m": 0.0,
+              "transformation_m": 0,
+              "view_supply_lease_penalty_m": 0.56
+            }
+          },
+          {
+            "action": "Sell",
+            "base_action_npv_m": -3.02,
+            "adjusted_selection_npv_m": -3.02,
+            "probability_of_loss": 0.7256,
+            "adjustments": {
+              "enbloc_m": 0.0,
+              "transformation_m": 0.0,
+              "view_supply_lease_penalty_m": 0.0
+            }
+          }
+        ],
+        "zoning_option_value_m": 2.64,
+        "enbloc": {
+          "probability": 0.01,
+          "option_value_m": 0.026,
+          "underutilisation": 0.2,
+          "tenure_factor": 0.65,
+          "collective_sale_applicable": false,
+          "warning": "Screening probability only. Owner consent, Land Betterment Charge, acquisition premium and technical feasibility require project evidence."
+        },
+        "transformation": {
+          "value_m": 0,
+          "exposures": [],
+          "quality": "screening_geofence"
+        },
+        "view_risk": {
+          "probability": 0.0,
+          "penalty_m": 0.0
+        },
+        "supply_pressure": {
+          "index": 0.0,
+          "penalty_m": 0,
+          "market_momentum_qoq": 0.006189213085764811
+        },
+        "lease_decay": {
+          "penalty_m": 1.4,
+          "factor": 0.04,
+          "remaining_years": 58,
+          "tenure": "99-year leasehold",
+          "quality": "synthetic demo"
+        },
+        "probability_of_loss": 0.6026,
+        "reasons": [
+          "Lease-decay or tenure uncertainty"
+        ],
+        "quality": "provisional",
+        "warning": "Selection signal is an economic screening output, not a transaction instruction."
+      },
+      "model_status": "provisional_proxy_run",
+      "input_quality": "low - portfolio workbook is a catalogue, not an underwriting dataset",
+      "proxy_inputs": [
+        "site area proxy",
+        "current GFA proxy",
+        "company valuation, NOI, tenure, leases, debt and capex required"
+      ],
+      "zoning_source": {
+        "matches": [
+          {
+            "objectid": 900010,
+            "lu_desc": "BUSINESS 1",
+            "gpr": 2.5,
+            "gpr_text": "2.5",
+            "planning_area": "DEMO PLANNING AREA",
+            "subzone": "DEMO SUBZONE 10",
+            "source_vintage": "URA SPACE Master Plan 2025 demo fixture"
+          }
+        ],
+        "match_method": "demo_fixture",
+        "spatial_review_required": false,
+        "current_statutory_plan": "Master Plan 2025"
+      },
+      "zoning_model_status": "verified_match",
+      "statutory_gpr_used": 2.5,
+      "gpr_source": "MP2025",
+      "capacity": {
+        "statutory_gfa_sqm": 6500.0,
+        "geometric_gfa_sqm": 31318.1,
+        "physical_gfa_sqm": 6500.0,
+        "de_facto_gfa_sqm": 5980.0,
+        "expected_approved_gfa_sqm": 3707.6,
+        "economic_gfa_sqm": 5980.0,
+        "unused_economic_gfa_sqm": 1300.0,
+        "buildable_footprint_sqm": 1423.6,
+        "storeys_by_height": 22,
+        "binding_constraints": [
+          "plot_ratio",
+          "setbacks"
+        ],
+        "sensitivities": {
+          "legal_gpr": 148.3,
+          "site_coverage_max": 0.0,
+          "height_max_m": 0.0,
+          "front_setback_m": 0.0,
+          "side_setback_m": 0.0,
+          "approval_probability": 299.0
+        },
+        "residual_value_m": 2.64,
+        "p10_gfa_sqm": 2779.3,
+        "p50_gfa_sqm": 3718.2,
+        "p90_gfa_sqm": 4603.8,
+        "verification_required": true,
+        "methodology_version": "sg-capacity-0.2"
+      },
+      "approval": {
+        "stages": [
+          {
+            "stage": "Pre-application",
+            "conditional_probability": 0.94,
+            "cumulative_probability": 0.94,
+            "expected_months": 2.5
+          },
+          {
+            "stage": "Planning submission",
+            "conditional_probability": 0.86,
+            "cumulative_probability": 0.8084,
+            "expected_months": 5
+          },
+          {
+            "stage": "Technical clearances",
+            "conditional_probability": 0.82,
+            "cumulative_probability": 0.6629,
+            "expected_months": 6
+          },
+          {
+            "stage": "Committee/public review",
+            "conditional_probability": 0.88,
+            "cumulative_probability": 0.5833,
+            "expected_months": 4
+          },
+          {
+            "stage": "Conditions discharge",
+            "conditional_probability": 0.93,
+            "cumulative_probability": 0.5425,
+            "expected_months": 4
+          },
+          {
+            "stage": "Building permission",
+            "conditional_probability": 0.97,
+            "cumulative_probability": 0.5262,
+            "expected_months": 3
+          }
+        ],
+        "overall_probability": 0.5222,
+        "p50_months": 19.0,
+        "p90_months": 27.5,
+        "redesign_probability": 0.4778,
+        "seed": 20260931
+      },
+      "economics": {
+        "current_value_m": 35,
+        "current_noi_m": 1.82,
+        "occupancy": 0.9,
+        "market_rent_growth": 0.025,
+        "vacancy_target": 0.07,
+        "cap_rate": 0.0475,
+        "discount_rate": 0.078,
+        "selling_cost_rate": 0.025,
+        "holding_years": 10,
+        "source_quality": "illustrative proxy - replace with observed company financials"
+      },
+      "dcf": {
+        "value_m": 37.07,
+        "cashflows_m": [
+          1.87,
+          1.91,
+          1.96,
+          2.01,
+          2.06,
+          2.11,
+          2.16,
+          2.22,
+          2.27,
+          51.35
+        ],
+        "terminal_value_m": 49.02
+      },
+      "actions": [
+        {
+          "action": "Hold",
+          "incremental_npv_m": -1.28,
+          "pv_after_m": 37.44,
+          "pv_without_m": 37.07,
+          "capex_m": 1.5,
+          "financing_cost_m": 0.01,
+          "disruption_cost_m": 0.13,
+          "failure_cost_m": 0.02,
+          "success_probability": 0.98,
+          "execution_years": 0.25,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -1.36,
+          "p10_npv_m": -7.86,
+          "p50_npv_m": -1.38,
+          "p90_npv_m": 5.17,
+          "probability_of_loss": 0.6026,
+          "var_95_m": 9.86,
+          "cvar_95_m": 11.82,
+          "scenario_seed": 20260931,
+          "draws": 5000
+        },
+        {
+          "action": "Retrofit",
+          "incremental_npv_m": -2.51,
+          "pv_after_m": 40.77,
+          "pv_without_m": 37.07,
+          "capex_m": 5,
+          "financing_cost_m": 0.17,
+          "disruption_cost_m": 0.76,
+          "failure_cost_m": 0.27,
+          "success_probability": 0.9,
+          "execution_years": 1.5,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -2.66,
+          "p10_npv_m": -11.49,
+          "p50_npv_m": -2.61,
+          "p90_npv_m": 5.82,
+          "probability_of_loss": 0.6474,
+          "var_95_m": 13.8,
+          "cvar_95_m": 16.43,
+          "scenario_seed": 20260931,
+          "draws": 5000
+        },
+        {
+          "action": "Repurpose",
+          "incremental_npv_m": -7.51,
+          "pv_after_m": 45.62,
+          "pv_without_m": 37.07,
+          "capex_m": 12,
+          "financing_cost_m": 0.68,
+          "disruption_cost_m": 1.53,
+          "failure_cost_m": 1.85,
+          "success_probability": 0.72,
+          "execution_years": 2.5,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -7.67,
+          "p10_npv_m": -21.98,
+          "p50_npv_m": -7.76,
+          "p90_npv_m": 6.63,
+          "probability_of_loss": 0.757,
+          "var_95_m": 26.19,
+          "cvar_95_m": 31.18,
+          "scenario_seed": 20260931,
+          "draws": 5000
+        },
+        {
+          "action": "Redevelop",
+          "incremental_npv_m": -17.41,
+          "pv_after_m": 54.94,
+          "pv_without_m": 37.07,
+          "capex_m": 25,
+          "financing_cost_m": 2.25,
+          "disruption_cost_m": 2.8,
+          "failure_cost_m": 5.23,
+          "success_probability": 0.62,
+          "execution_years": 4,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -17.66,
+          "p10_npv_m": -31.4,
+          "p50_npv_m": -17.55,
+          "p90_npv_m": -3.61,
+          "probability_of_loss": 0.9478,
+          "var_95_m": 35.32,
+          "cvar_95_m": 40.04,
+          "scenario_seed": 20260931,
+          "draws": 5000
+        },
+        {
+          "action": "Sell",
+          "incremental_npv_m": -2.95,
+          "pv_after_m": 34.12,
+          "pv_without_m": 37.07,
+          "capex_m": -34.12,
+          "financing_cost_m": 0.0,
+          "disruption_cost_m": 0.0,
+          "failure_cost_m": 0,
+          "success_probability": 0.97,
+          "execution_years": 0.75,
+          "source_quality": "illustrative proxy - replace with observed company financials",
+          "expected_npv_m": -3.02,
+          "p10_npv_m": -9.66,
+          "p50_npv_m": -2.96,
+          "p90_npv_m": 3.52,
+          "probability_of_loss": 0.7256,
+          "var_95_m": 11.45,
+          "cvar_95_m": 13.6,
+          "scenario_seed": 20260931,
+          "draws": 5000
+        }
+      ],
+      "recommendation": {
+        "action": "Hold",
+        "management_label": "Retain",
+        "expected_npv_m": -1.36,
+        "probability_of_loss": 0.6026,
+        "selection_signal": "Data Required / Monitor",
+        "explanation": "Hold maximises the zoning- and market-adjusted selection NPV. Selection screen: Data Required / Monitor. Replace proxy inputs before decision use."
+      },
+      "expected_alpha": -0.01687,
+      "required_return": 0.078,
+      "model_version": "economic-model-v2-selection-0.2",
+      "verification_required": true,
+      "cache_key": "202000fa6111002a"
+    }
+  ]
+}
