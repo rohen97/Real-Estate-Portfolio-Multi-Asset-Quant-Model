@@ -24,7 +24,7 @@ def init_db():
  with sqlite3.connect(AUDIT) as c:c.execute('create table if not exists decisions(id integer primary key,asset_id text,decision text,reviewer text,rationale text,open_conditions text,timestamp text,model_version text)')
 init_db()
 @app.get('/health')
-def health():return {'status':'ok','date':'2026-09-23','model_version':'economic-model-v2-selection-0.2','portfolio_loaded':PORTFOLIO.exists() or (EXAMPLES/'demo_portfolio.json').exists(),'demo_mode':DEMO_MODE or not PORTFOLIO.exists(),'ura_index_loaded':URA_DB.exists(),'results_loaded':RESULTS.exists()}
+def health():return {'status':'ok','date':'2026-09-23','model_version':'economic-model-v2-zoning-ml-0.4','portfolio_loaded':PORTFOLIO.exists() or (EXAMPLES/'demo_portfolio.json').exists(),'demo_mode':DEMO_MODE or not PORTFOLIO.exists(),'ura_index_loaded':URA_DB.exists(),'results_loaded':RESULTS.exists()}
 @app.get('/data/status')
 def data_status():
  p=read(PORTFOLIO);r=read(RESULTS);return {'portfolio_assets':len(p),'singapore_assets':sum(x.get('country')=='Singapore' for x in p),'geocoded_assets':sum(x.get('latitude') is not None for x in p),'zoned_assets':sum(bool(x.get('ura_zoning',{}).get('matches')) for x in p),'modelled_assets':sum(x.get('model_status')=='provisional_proxy_run' for x in r),'portfolio_source':'Far_East_Asset_List.xlsx','ura_source':'Live URA SPACE Master Plan 2025 land-use layer','current_plan':'URA Master Plan 2025','current_plan_verification_required':True}
@@ -89,6 +89,17 @@ def detail(asset_id:str):
  row=next((x for x in (read(RESULTS) or read(PORTFOLIO)) if x['asset_id']==asset_id),None)
  if not row:raise HTTPException(404,'Asset not found')
  return row
+@app.get('/zoning/prediction/{asset_id}')
+def zoning_prediction(asset_id:str):
+ path=ROOT/'data/processed/zoning_predictions.json';fallback=EXAMPLES/'demo_zoning_predictions.json';path=fallback if DEMO_MODE or not path.exists() else path
+ if not path.exists():return {'status':'not_trained','asset_id':asset_id}
+ row=next((x for x in json.loads(path.read_text()) if x.get('asset_id')==asset_id),None)
+ if not row:raise HTTPException(404,'Zoning prediction not found')
+ return row
+@app.get('/zoning/discrepancy-map')
+def zoning_discrepancy_map():
+ path=ROOT/'data/processed/zoning_discrepancy_map.geojson';fallback=EXAMPLES/'demo_zoning_discrepancy_map.geojson';path=fallback if DEMO_MODE or not path.exists() else path
+ return json.loads(path.read_text()) if path.exists() else {'type':'FeatureCollection','features':[],'status':'not_trained'}
 @app.get('/zoning/map/{asset_id}')
 def zoning_map(asset_id:str,radius_m:int=750):
  row=next((x for x in read(RESULTS) if x.get('asset_id')==asset_id),None)

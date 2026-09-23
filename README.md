@@ -137,6 +137,8 @@ The local implementation currently passes 34 backend tests, frontend tests, Type
 - `docs/economic_model_v2.md`
 - `docs/selection_methodology.md`
 - `docs/singapore_zoning_methodology.md`
+- `docs/zoning_prediction_methodology.md`
+- `docs/open_source_zoning_review.md`
 - `docs/visualization_methodology.md`
 - `docs/optimisation_methodology.md`
 - `docs/validation_report.md`

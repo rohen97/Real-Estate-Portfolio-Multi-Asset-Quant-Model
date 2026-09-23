@@ -1,0 +1,662 @@
+[
+  {
+    "asset_id": "DEMO-001",
+    "name": "Demo Mixed use Asset 1",
+    "latitude": 1.268,
+    "longitude": 103.72500000000001,
+    "legal_land_use": "COMMERCIAL & RESIDENTIAL",
+    "legal_gpr": 4.2,
+    "planning_area": "DEMO PLANNING AREA",
+    "subzone": "DEMO SUBZONE 1",
+    "prediction": {
+      "core": {
+        "prediction": "Residential",
+        "confidence": 0.86,
+        "entropy": 0.28,
+        "top3": [
+          {
+            "label": "Residential",
+            "probability": 0.86
+          },
+          {
+            "label": "Mixed Use",
+            "probability": 0.09
+          },
+          {
+            "label": "Other",
+            "probability": 0.05
+          }
+        ],
+        "abstain": false
+      },
+      "subtype": {
+        "prediction": "COMMERCIAL & RESIDENTIAL",
+        "confidence": 0.8,
+        "entropy": 0.35,
+        "top3": [],
+        "abstain": false
+      },
+      "gpr_band": {
+        "prediction": "Demo band",
+        "confidence": 0.72,
+        "entropy": 0.42,
+        "top3": [],
+        "abstain": false
+      },
+      "synthetic_training": true
+    },
+    "discrepancy": {
+      "legal_land_use": "COMMERCIAL & RESIDENTIAL",
+      "legal_core": "Residential",
+      "legal_gpr": 4.2,
+      "predicted_core": "Residential",
+      "predicted_subtype": "COMMERCIAL & RESIDENTIAL",
+      "predicted_gpr_band": "Demo band",
+      "observed_lulc": "building",
+      "severity": 0,
+      "status": "consistent",
+      "reasons": [],
+      "prediction_confidence": 0.86,
+      "prediction_entropy": 0.28
+    },
+    "future_change": {
+      "change_probability": 0.18,
+      "signal": "Low",
+      "synthetic_training": true
+    }
+  },
+  {
+    "asset_id": "DEMO-002",
+    "name": "Demo Office Asset 2",
+    "latitude": 1.286,
+    "longitude": 103.75,
+    "legal_land_use": "COMMERCIAL",
+    "legal_gpr": 5.6,
+    "planning_area": "DEMO PLANNING AREA",
+    "subzone": "DEMO SUBZONE 2",
+    "prediction": {
+      "core": {
+        "prediction": "Commercial",
+        "confidence": 0.86,
+        "entropy": 0.28,
+        "top3": [
+          {
+            "label": "Commercial",
+            "probability": 0.86
+          },
+          {
+            "label": "Mixed Use",
+            "probability": 0.09
+          },
+          {
+            "label": "Other",
+            "probability": 0.05
+          }
+        ],
+        "abstain": false
+      },
+      "subtype": {
+        "prediction": "COMMERCIAL",
+        "confidence": 0.8,
+        "entropy": 0.35,
+        "top3": [],
+        "abstain": false
+      },
+      "gpr_band": {
+        "prediction": "Demo band",
+        "confidence": 0.72,
+        "entropy": 0.42,
+        "top3": [],
+        "abstain": false
+      },
+      "synthetic_training": true
+    },
+    "discrepancy": {
+      "legal_land_use": "COMMERCIAL",
+      "legal_core": "Commercial",
+      "legal_gpr": 5.6,
+      "predicted_core": "Commercial",
+      "predicted_subtype": "COMMERCIAL",
+      "predicted_gpr_band": "Demo band",
+      "observed_lulc": "building",
+      "severity": 0,
+      "status": "consistent",
+      "reasons": [],
+      "prediction_confidence": 0.86,
+      "prediction_entropy": 0.28
+    },
+    "future_change": {
+      "change_probability": 0.18,
+      "signal": "Low",
+      "synthetic_training": true
+    }
+  },
+  {
+    "asset_id": "DEMO-003",
+    "name": "Demo Retail Asset 3",
+    "latitude": 1.304,
+    "longitude": 103.775,
+    "legal_land_use": "COMMERCIAL",
+    "legal_gpr": 3.5,
+    "planning_area": "DEMO PLANNING AREA",
+    "subzone": "DEMO SUBZONE 3",
+    "prediction": {
+      "core": {
+        "prediction": "Commercial",
+        "confidence": 0.86,
+        "entropy": 0.28,
+        "top3": [
+          {
+            "label": "Commercial",
+            "probability": 0.86
+          },
+          {
+            "label": "Mixed Use",
+            "probability": 0.09
+          },
+          {
+            "label": "Other",
+            "probability": 0.05
+          }
+        ],
+        "abstain": false
+      },
+      "subtype": {
+        "prediction": "COMMERCIAL",
+        "confidence": 0.8,
+        "entropy": 0.35,
+        "top3": [],
+        "abstain": false
+      },
+      "gpr_band": {
+        "prediction": "Demo band",
+        "confidence": 0.72,
+        "entropy": 0.42,
+        "top3": [],
+        "abstain": false
+      },
+      "synthetic_training": true
+    },
+    "discrepancy": {
+      "legal_land_use": "COMMERCIAL",
+      "legal_core": "Commercial",
+      "legal_gpr": 3.5,
+      "predicted_core": "Commercial",
+      "predicted_subtype": "COMMERCIAL",
+      "predicted_gpr_band": "Demo band",
+      "observed_lulc": "building",
+      "severity": 0,
+      "status": "consistent",
+      "reasons": [],
+      "prediction_confidence": 0.86,
+      "prediction_entropy": 0.28
+    },
+    "future_change": {
+      "change_probability": 0.18,
+      "signal": "Low",
+      "synthetic_training": true
+    }
+  },
+  {
+    "asset_id": "DEMO-004",
+    "name": "Demo Logistics Asset 4",
+    "latitude": 1.322,
+    "longitude": 103.8,
+    "legal_land_use": "BUSINESS 2",
+    "legal_gpr": 2.5,
+    "planning_area": "DEMO PLANNING AREA",
+    "subzone": "DEMO SUBZONE 4",
+    "prediction": {
+      "core": {
+        "prediction": "Industrial",
+        "confidence": 0.86,
+        "entropy": 0.28,
+        "top3": [
+          {
+            "label": "Industrial",
+            "probability": 0.86
+          },
+          {
+            "label": "Mixed Use",
+            "probability": 0.09
+          },
+          {
+            "label": "Other",
+            "probability": 0.05
+          }
+        ],
+        "abstain": false
+      },
+      "subtype": {
+        "prediction": "BUSINESS 2",
+        "confidence": 0.8,
+        "entropy": 0.35,
+        "top3": [],
+        "abstain": false
+      },
+      "gpr_band": {
+        "prediction": "Demo band",
+        "confidence": 0.72,
+        "entropy": 0.42,
+        "top3": [],
+        "abstain": false
+      },
+      "synthetic_training": true
+    },
+    "discrepancy": {
+      "legal_land_use": "BUSINESS 2",
+      "legal_core": "Industrial",
+      "legal_gpr": 2.5,
+      "predicted_core": "Industrial",
+      "predicted_subtype": "BUSINESS 2",
+      "predicted_gpr_band": "Demo band",
+      "observed_lulc": "building",
+      "severity": 0,
+      "status": "consistent",
+      "reasons": [],
+      "prediction_confidence": 0.86,
+      "prediction_entropy": 0.28
+    },
+    "future_change": {
+      "change_probability": 0.18,
+      "signal": "Low",
+      "synthetic_training": true
+    }
+  },
+  {
+    "asset_id": "DEMO-005",
+    "name": "Demo Residential Asset 5",
+    "latitude": 1.34,
+    "longitude": 103.825,
+    "legal_land_use": "RESIDENTIAL",
+    "legal_gpr": 2.8,
+    "planning_area": "DEMO PLANNING AREA",
+    "subzone": "DEMO SUBZONE 5",
+    "prediction": {
+      "core": {
+        "prediction": "Residential",
+        "confidence": 0.86,
+        "entropy": 0.28,
+        "top3": [
+          {
+            "label": "Residential",
+            "probability": 0.86
+          },
+          {
+            "label": "Mixed Use",
+            "probability": 0.09
+          },
+          {
+            "label": "Other",
+            "probability": 0.05
+          }
+        ],
+        "abstain": false
+      },
+      "subtype": {
+        "prediction": "RESIDENTIAL",
+        "confidence": 0.8,
+        "entropy": 0.35,
+        "top3": [],
+        "abstain": false
+      },
+      "gpr_band": {
+        "prediction": "Demo band",
+        "confidence": 0.72,
+        "entropy": 0.42,
+        "top3": [],
+        "abstain": false
+      },
+      "synthetic_training": true
+    },
+    "discrepancy": {
+      "legal_land_use": "RESIDENTIAL",
+      "legal_core": "Residential",
+      "legal_gpr": 2.8,
+      "predicted_core": "Residential",
+      "predicted_subtype": "RESIDENTIAL",
+      "predicted_gpr_band": "Demo band",
+      "observed_lulc": "building",
+      "severity": 0,
+      "status": "consistent",
+      "reasons": [],
+      "prediction_confidence": 0.86,
+      "prediction_entropy": 0.28
+    },
+    "future_change": {
+      "change_probability": 0.18,
+      "signal": "Low",
+      "synthetic_training": true
+    }
+  },
+  {
+    "asset_id": "DEMO-006",
+    "name": "Demo Hospitality Asset 6",
+    "latitude": 1.358,
+    "longitude": 103.85000000000001,
+    "legal_land_use": "HOTEL",
+    "legal_gpr": 3.5,
+    "planning_area": "DEMO PLANNING AREA",
+    "subzone": "DEMO SUBZONE 6",
+    "prediction": {
+      "core": {
+        "prediction": "Hotel",
+        "confidence": 0.86,
+        "entropy": 0.28,
+        "top3": [
+          {
+            "label": "Hotel",
+            "probability": 0.86
+          },
+          {
+            "label": "Mixed Use",
+            "probability": 0.09
+          },
+          {
+            "label": "Other",
+            "probability": 0.05
+          }
+        ],
+        "abstain": false
+      },
+      "subtype": {
+        "prediction": "HOTEL",
+        "confidence": 0.8,
+        "entropy": 0.35,
+        "top3": [],
+        "abstain": false
+      },
+      "gpr_band": {
+        "prediction": "Demo band",
+        "confidence": 0.72,
+        "entropy": 0.42,
+        "top3": [],
+        "abstain": false
+      },
+      "synthetic_training": true
+    },
+    "discrepancy": {
+      "legal_land_use": "HOTEL",
+      "legal_core": "Hotel",
+      "legal_gpr": 3.5,
+      "predicted_core": "Hotel",
+      "predicted_subtype": "HOTEL",
+      "predicted_gpr_band": "Demo band",
+      "observed_lulc": "building",
+      "severity": 0,
+      "status": "consistent",
+      "reasons": [],
+      "prediction_confidence": 0.86,
+      "prediction_entropy": 0.28
+    },
+    "future_change": {
+      "change_probability": 0.18,
+      "signal": "Low",
+      "synthetic_training": true
+    }
+  },
+  {
+    "asset_id": "DEMO-007",
+    "name": "Demo Office Asset 7",
+    "latitude": 1.376,
+    "longitude": 103.875,
+    "legal_land_use": "COMMERCIAL",
+    "legal_gpr": 4.2,
+    "planning_area": "DEMO PLANNING AREA",
+    "subzone": "DEMO SUBZONE 7",
+    "prediction": {
+      "core": {
+        "prediction": "Commercial",
+        "confidence": 0.86,
+        "entropy": 0.28,
+        "top3": [
+          {
+            "label": "Commercial",
+            "probability": 0.86
+          },
+          {
+            "label": "Mixed Use",
+            "probability": 0.09
+          },
+          {
+            "label": "Other",
+            "probability": 0.05
+          }
+        ],
+        "abstain": false
+      },
+      "subtype": {
+        "prediction": "COMMERCIAL",
+        "confidence": 0.8,
+        "entropy": 0.35,
+        "top3": [],
+        "abstain": false
+      },
+      "gpr_band": {
+        "prediction": "Demo band",
+        "confidence": 0.72,
+        "entropy": 0.42,
+        "top3": [],
+        "abstain": false
+      },
+      "synthetic_training": true
+    },
+    "discrepancy": {
+      "legal_land_use": "COMMERCIAL",
+      "legal_core": "Commercial",
+      "legal_gpr": 4.2,
+      "predicted_core": "Commercial",
+      "predicted_subtype": "COMMERCIAL",
+      "predicted_gpr_band": "Demo band",
+      "observed_lulc": "building",
+      "severity": 0,
+      "status": "consistent",
+      "reasons": [],
+      "prediction_confidence": 0.86,
+      "prediction_entropy": 0.28
+    },
+    "future_change": {
+      "change_probability": 0.18,
+      "signal": "Low",
+      "synthetic_training": true
+    }
+  },
+  {
+    "asset_id": "DEMO-008",
+    "name": "Demo Retail Asset 8",
+    "latitude": 1.394,
+    "longitude": 103.9,
+    "legal_land_use": "COMMERCIAL",
+    "legal_gpr": 3.0,
+    "planning_area": "DEMO PLANNING AREA",
+    "subzone": "DEMO SUBZONE 8",
+    "prediction": {
+      "core": {
+        "prediction": "Commercial",
+        "confidence": 0.86,
+        "entropy": 0.28,
+        "top3": [
+          {
+            "label": "Commercial",
+            "probability": 0.86
+          },
+          {
+            "label": "Mixed Use",
+            "probability": 0.09
+          },
+          {
+            "label": "Other",
+            "probability": 0.05
+          }
+        ],
+        "abstain": false
+      },
+      "subtype": {
+        "prediction": "COMMERCIAL",
+        "confidence": 0.8,
+        "entropy": 0.35,
+        "top3": [],
+        "abstain": false
+      },
+      "gpr_band": {
+        "prediction": "Demo band",
+        "confidence": 0.72,
+        "entropy": 0.42,
+        "top3": [],
+        "abstain": false
+      },
+      "synthetic_training": true
+    },
+    "discrepancy": {
+      "legal_land_use": "COMMERCIAL",
+      "legal_core": "Commercial",
+      "legal_gpr": 3.0,
+      "predicted_core": "Commercial",
+      "predicted_subtype": "COMMERCIAL",
+      "predicted_gpr_band": "Demo band",
+      "observed_lulc": "building",
+      "severity": 0,
+      "status": "consistent",
+      "reasons": [],
+      "prediction_confidence": 0.86,
+      "prediction_entropy": 0.28
+    },
+    "future_change": {
+      "change_probability": 0.18,
+      "signal": "Low",
+      "synthetic_training": true
+    }
+  },
+  {
+    "asset_id": "DEMO-009",
+    "name": "Demo Residential Asset 9",
+    "latitude": 1.412,
+    "longitude": 103.925,
+    "legal_land_use": "RESIDENTIAL",
+    "legal_gpr": 2.1,
+    "planning_area": "DEMO PLANNING AREA",
+    "subzone": "DEMO SUBZONE 9",
+    "prediction": {
+      "core": {
+        "prediction": "Residential",
+        "confidence": 0.86,
+        "entropy": 0.28,
+        "top3": [
+          {
+            "label": "Residential",
+            "probability": 0.86
+          },
+          {
+            "label": "Mixed Use",
+            "probability": 0.09
+          },
+          {
+            "label": "Other",
+            "probability": 0.05
+          }
+        ],
+        "abstain": false
+      },
+      "subtype": {
+        "prediction": "RESIDENTIAL",
+        "confidence": 0.8,
+        "entropy": 0.35,
+        "top3": [],
+        "abstain": false
+      },
+      "gpr_band": {
+        "prediction": "Demo band",
+        "confidence": 0.72,
+        "entropy": 0.42,
+        "top3": [],
+        "abstain": false
+      },
+      "synthetic_training": true
+    },
+    "discrepancy": {
+      "legal_land_use": "RESIDENTIAL",
+      "legal_core": "Residential",
+      "legal_gpr": 2.1,
+      "predicted_core": "Residential",
+      "predicted_subtype": "RESIDENTIAL",
+      "predicted_gpr_band": "Demo band",
+      "observed_lulc": "building",
+      "severity": 0,
+      "status": "consistent",
+      "reasons": [],
+      "prediction_confidence": 0.86,
+      "prediction_entropy": 0.28
+    },
+    "future_change": {
+      "change_probability": 0.18,
+      "signal": "Low",
+      "synthetic_training": true
+    }
+  },
+  {
+    "asset_id": "DEMO-010",
+    "name": "Demo Industrial Asset 10",
+    "latitude": 1.43,
+    "longitude": 103.95,
+    "legal_land_use": "BUSINESS 1",
+    "legal_gpr": 2.5,
+    "planning_area": "DEMO PLANNING AREA",
+    "subzone": "DEMO SUBZONE 10",
+    "prediction": {
+      "core": {
+        "prediction": "Industrial",
+        "confidence": 0.86,
+        "entropy": 0.28,
+        "top3": [
+          {
+            "label": "Industrial",
+            "probability": 0.86
+          },
+          {
+            "label": "Mixed Use",
+            "probability": 0.09
+          },
+          {
+            "label": "Other",
+            "probability": 0.05
+          }
+        ],
+        "abstain": false
+      },
+      "subtype": {
+        "prediction": "BUSINESS 1",
+        "confidence": 0.8,
+        "entropy": 0.35,
+        "top3": [],
+        "abstain": false
+      },
+      "gpr_band": {
+        "prediction": "Demo band",
+        "confidence": 0.72,
+        "entropy": 0.42,
+        "top3": [],
+        "abstain": false
+      },
+      "synthetic_training": true
+    },
+    "discrepancy": {
+      "legal_land_use": "BUSINESS 1",
+      "legal_core": "Industrial",
+      "legal_gpr": 2.5,
+      "predicted_core": "Industrial",
+      "predicted_subtype": "BUSINESS 1",
+      "predicted_gpr_band": "Demo band",
+      "observed_lulc": "building",
+      "severity": 0,
+      "status": "consistent",
+      "reasons": [],
+      "prediction_confidence": 0.86,
+      "prediction_entropy": 0.28
+    },
+    "future_change": {
+      "change_probability": 0.18,
+      "signal": "Low",
+      "synthetic_training": true
+    }
+  }
+]

@@ -14,12 +14,19 @@ if($CompletedUnderwritingWorkbook){& $uv run python scripts\import_underwriting.
 if($UseSyntheticPilot){
  & $uv run python scripts\generate_pilot_history.py
  & $uv run python scripts\train_models.py --allow-synthetic-pilot --version 0.1.0
+ & $uv run python scripts\generate_zoning_training_demo.py
+ & $uv run python scripts\train_zoning_challenger.py --allow-synthetic-demo --version 0.1.0
+ & $uv run python scripts\train_rezoning_model.py --allow-synthetic-demo --version 0.1.0
+ & $uv run python scripts\predict_zoning_challenger.py
  & $uv run python scripts\run_pilot_model.py
  & $uv run python scripts\compare_legacy_model.py
  & $uv run python scripts\backtest_models.py
  & $uv run python scripts\run_full_portfolio_v2.py --allow-synthetic-model
 }else{
  & $uv run python scripts\train_models.py --version 1.0.0
+ & $uv run python scripts\train_zoning_challenger.py --version 1.0.0
+ & $uv run python scripts\train_rezoning_model.py --version 1.0.0
+ & $uv run python scripts\predict_zoning_challenger.py
  & $uv run python scripts\run_full_portfolio_v2.py
 }
 & $uv run pytest -q

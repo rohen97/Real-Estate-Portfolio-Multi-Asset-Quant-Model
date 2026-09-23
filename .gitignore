@@ -33,6 +33,10 @@ data/synthetic/
 data/public/*
 !data/public/transformation_zones.json
 
+# Regenerated synthetic ML training sets
+data/examples/demo_zoning_training.json
+data/examples/demo_zoning_change_training.json
+
 # Source materials and generated artifacts
 *.xlsx
 *.xls

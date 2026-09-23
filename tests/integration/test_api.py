@@ -32,3 +32,9 @@ def test_zoning_map_geojson():
  result=c.get('/zoning/map/'+asset['asset_id']+'?radius_m=500');assert result.status_code==200
  body=result.json();assert body['type']=='FeatureCollection' and len(body['features'])>1
  assert body['features'][-1]['geometry']['type']=='Point'
+
+def test_zoning_prediction_endpoints():
+ asset=c.get('/portfolio?country=Singapore&limit=1').json()['assets'][0]
+ prediction=c.get('/zoning/prediction/'+asset['asset_id']);assert prediction.status_code==200
+ body=prediction.json();assert body.get('status')=='not_trained' or 'prediction' in body
+ discrepancy=c.get('/zoning/discrepancy-map');assert discrepancy.status_code==200 and discrepancy.json()['type']=='FeatureCollection'

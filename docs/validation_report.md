@@ -47,6 +47,15 @@ These statistics validate software execution only and are not claims about inves
 
 Interactive charts cover portfolio allocation, MP2025 location/GPR, capacity waterfalls, zoning sensitivity, surrounding development, DCF cash flows, action risks, covariance/correlation, selection bridges, optimisation timelines, legacy quadrants, model diagnostics, evidence provenance and audit gates. Plotly is lazy-loaded to preserve initial application performance.
 
+## Zoning challenger validation
+
+- Synthetic training observations: 1,200 across nine detailed land-use classes.
+- Stratified planning-area cross-validation mean macro F1: approximately 0.864.
+- Mean balanced accuracy: approximately 0.936.
+- Real portfolio inference: 177 assets, 19 model abstentions and 57 discrepancy reviews.
+- Probability calibration uses held-out planning areas and temperature scaling.
+- Future-change synthetic model performance is weak and remains software validation only.
+
 ## Automated validation
 
 - Backend unit and integration tests: 35 passed.
