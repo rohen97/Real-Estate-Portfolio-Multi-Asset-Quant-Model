@@ -11,7 +11,7 @@ def test_frozen_legacy_scorecard_corrects_deck_values():
 def test_lease_level_cashflow():
  leases=[{'Area sqm':1000,'Passing Rent SGD pa':600000,'Market Rent SGD pa':660000,'Lease Expiry':'2028-12-31','Tenant Credit Grade':'A','Collection %':.99}];r=lease_cashflow(leases);assert len(r['noi_m'])==10;assert r['present_value_m']>0;assert all(0<=x<=1 for x in r['occupancy'])
 def test_action_and_real_options():
- actions=evaluate_actions(120,5.8,14);opts=real_options(actions,5.8);assert len(actions)==5;assert set(opts)>={'Wait','Phase','Abandon','Expand'}
+ actions=evaluate_actions(120,5.8,14);low_cap_actions=evaluate_actions(120,5.8,14,terminal_cap_rate=.035);opts=real_options(actions,5.8);assert len(actions)==5;assert set(opts)>={'Wait','Phase','Abandon','Expand'};assert low_cap_actions[0]['incremental_npv_m']>actions[0]['incremental_npv_m']
 def test_multiperiod_optimizer():
  actions=evaluate_actions(100,5,10)
  risk=[{**x,'expected_npv_m':x['incremental_npv_m'],'cvar_95_m':max(0,-x['incremental_npv_m']),'probability_of_loss':.2} for x in actions]

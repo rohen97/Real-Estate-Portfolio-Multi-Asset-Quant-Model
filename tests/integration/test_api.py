@@ -38,3 +38,12 @@ def test_zoning_prediction_endpoints():
  prediction=c.get('/zoning/prediction/'+asset['asset_id']);assert prediction.status_code==200
  body=prediction.json();assert body.get('status')=='not_trained' or 'prediction' in body
  discrepancy=c.get('/zoning/discrepancy-map');assert discrepancy.status_code==200 and discrepancy.json()['type']=='FeatureCollection'
+
+
+def test_digital_twin_dashboard_endpoints():
+ dashboard=c.get('/digital-twins/dashboard');assert dashboard.status_code==200
+ body=dashboard.json();assert body['status'] in ('synthetic_software_validation','not_run')
+ if body['status']=='synthetic_software_validation':
+  assert body['portfolio_summary']['assets']>=10 and len(body['environments'])==3
+  asset_id=body['assets'][0]['asset_id'];detail=c.get('/digital-twins/assets/'+asset_id)
+  assert detail.status_code==200 and detail.json()['twin']['asset_id']==asset_id

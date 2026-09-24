@@ -10,6 +10,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@tabler/core": "^1.5.1",
     "@types/leaflet": "^1.9.22",
     "@types/react-plotly.js": "^2.6.4",
     "@vitejs/plugin-react": "latest",

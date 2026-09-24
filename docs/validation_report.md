@@ -1,6 +1,6 @@
 # Validation report
 
-Validation date: 23 September 2026.
+Validation date: 24 September 2026.
 
 ## Ten-step delivery status
 
@@ -56,9 +56,26 @@ Interactive charts cover portfolio allocation, MP2025 location/GPR, capacity wat
 - Probability calibration uses held-out planning areas and temperature scaling.
 - Future-change synthetic model performance is weak and remains software validation only.
 
+## Advanced component validation
+
+- Ten assets processed through detailed cash flow, 3D envelope, viewshed and en-bloc models with zero execution errors.
+- Two-stage stochastic portfolio optimisation: feasible on the ten-asset pilot.
+- Decision-stability analysis identified three fragile recommendations requiring review.
+- Synthetic market regime, covariance and spatial forecast pipelines execute end to end.
+- Land Betterment Charge remains a required project-specific input when the current sector/use rate is unavailable.
+
+
+## Semi-synthetic digital-twin dashboard
+
+- 177 Singapore assets retain their real portfolio identity, segment, coordinates and URA MP2025 context.
+- Missing underwriting, leases, capex and twelve-year financial histories are generated deterministically and labelled synthetic at field level.
+- The new model is displayed under base, market-and-cost-stress, and structural-demand-change environments.
+- Dashboard outputs include action alternatives, P10/P50/P90 ranges, loss probabilities, decision stability, capital allocation and the five-year optimised plan.
+- No legacy-model comparison is presented in the application.
+
 ## Automated validation
 
-- Backend unit and integration tests: 35 passed.
+- Backend unit and integration tests: 54 passed.
 - Frontend tests: 1 passed.
 - TypeScript type checking: passed.
 - Production frontend build: passed.

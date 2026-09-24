@@ -72,7 +72,7 @@ def surrounding_development_context(db_path:Path,latitude:float,longitude:float,
    if distance_m>radius_m:continue
    gpr=float(row['gpr']) if row['gpr'] is not None else None;land=(row['lu_desc'] or '').upper()
    if any(x in land for x in ['ROAD','WATERBODY']):continue
-   candidates.append({'objectid':row['objectid'],'land_use':row['lu_desc'],'gpr':gpr,'distance_m':round(distance_m,1),'planning_area':row['planning_area'],'subzone':row['subzone']})
+   centroid=geometry.centroid;dx=(centroid.x-longitude)*111320*math.cos(math.radians(latitude));dy=(centroid.y-latitude)*110540;candidates.append({'objectid':row['objectid'],'land_use':row['lu_desc'],'gpr':gpr,'distance_m':round(distance_m,1),'planning_area':row['planning_area'],'subzone':row['subzone'],'longitude':centroid.x,'latitude':centroid.y,'dx_m':round(dx,1),'dy_m':round(dy,1),'width_m':round(math.sqrt(max(geometry.area,1e-12))*111320,1)})
  intensity=0;high_density=0;developable=0;weighted_gpr=[]
  for c in candidates:
   if c['gpr'] is not None:

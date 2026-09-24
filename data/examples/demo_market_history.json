@@ -1,0 +1,1002 @@
+[
+  {
+    "period": "2002 Q1",
+    "regime": "Contraction",
+    "rent_growth": -0.00973195791953505,
+    "vacancy": 0.11497031693629484,
+    "cap_rate": 0.06613037620744314,
+    "interest_rate": 0.050140667208739255,
+    "cost_inflation": 0.07550826613393373,
+    "approval_delay": 37.61575451886639
+  },
+  {
+    "period": "2002 Q2",
+    "regime": "Contraction",
+    "rent_growth": -0.006371203060113606,
+    "vacancy": 0.08737396903491329,
+    "cap_rate": 0.049202910733878266,
+    "interest_rate": 0.05431673601492026,
+    "cost_inflation": 0.06326353186203812,
+    "approval_delay": 50.56411041876727
+  },
+  {
+    "period": "2002 Q3",
+    "regime": "Contraction",
+    "rent_growth": 0.019266848022405896,
+    "vacancy": 0.12680799378283453,
+    "cap_rate": 0.05938048686089305,
+    "interest_rate": 0.06675647865369731,
+    "cost_inflation": 0.07392968149263447,
+    "approval_delay": 41.021058471527354
+  },
+  {
+    "period": "2002 Q4",
+    "regime": "Contraction",
+    "rent_growth": -0.012975288413749321,
+    "vacancy": 0.13740889590597025,
+    "cap_rate": 0.05297465618811611,
+    "interest_rate": 0.05721190856981208,
+    "cost_inflation": 0.027141536572942604,
+    "approval_delay": 39.27462672323202
+  },
+  {
+    "period": "2003 Q1",
+    "regime": "Contraction",
+    "rent_growth": -0.020718415848133304,
+    "vacancy": 0.1228555163255779,
+    "cap_rate": 0.07832015867712858,
+    "interest_rate": 0.043543857163684876,
+    "cost_inflation": 0.028694639908362712,
+    "approval_delay": 40.19909963505436
+  },
+  {
+    "period": "2003 Q2",
+    "regime": "Contraction",
+    "rent_growth": 0.07241906439415492,
+    "vacancy": 0.1313207522357551,
+    "cap_rate": 0.05759712722924219,
+    "interest_rate": 0.023680663952226302,
+    "cost_inflation": 0.08203905991843043,
+    "approval_delay": 23.65818294182823
+  },
+  {
+    "period": "2003 Q3",
+    "regime": "Contraction",
+    "rent_growth": -0.00964331241713485,
+    "vacancy": 0.14869372454045116,
+    "cap_rate": 0.08011486697246198,
+    "interest_rate": 0.08275527371381572,
+    "cost_inflation": 0.11292171152318914,
+    "approval_delay": 39.46709806680316
+  },
+  {
+    "period": "2003 Q4",
+    "regime": "Contraction",
+    "rent_growth": 0.019941353289978415,
+    "vacancy": 0.15909387408147568,
+    "cap_rate": 0.0597975864596296,
+    "interest_rate": 0.058107137492341726,
+    "cost_inflation": 0.04810076183292661,
+    "approval_delay": 30.820823941125653
+  },
+  {
+    "period": "2004 Q1",
+    "regime": "Contraction",
+    "rent_growth": -0.05527651636527531,
+    "vacancy": 0.10286363037335255,
+    "cap_rate": 0.058083828531811224,
+    "interest_rate": 0.05141070434432847,
+    "cost_inflation": 0.049288686876971584,
+    "approval_delay": 42.16334036741141
+  },
+  {
+    "period": "2004 Q2",
+    "regime": "Contraction",
+    "rent_growth": 0.008747267485090013,
+    "vacancy": 0.1349762391510709,
+    "cap_rate": 0.08191568474137116,
+    "interest_rate": 0.07901819364372689,
+    "cost_inflation": 0.08340209765511113,
+    "approval_delay": 20.131620886999404
+  },
+  {
+    "period": "2004 Q3",
+    "regime": "Contraction",
+    "rent_growth": -0.02360258157109801,
+    "vacancy": 0.11191108786417447,
+    "cap_rate": 0.07317898202555898,
+    "interest_rate": 0.05271660471175401,
+    "cost_inflation": 0.12588835225583322,
+    "approval_delay": 17.161927966400466
+  },
+  {
+    "period": "2004 Q4",
+    "regime": "Stable",
+    "rent_growth": 0.005905710895248589,
+    "vacancy": 0.09494774360862533,
+    "cap_rate": 0.05260202081163368,
+    "interest_rate": 0.03297321532932862,
+    "cost_inflation": 0.033084610200401515,
+    "approval_delay": 23.564205638889874
+  },
+  {
+    "period": "2005 Q1",
+    "regime": "Stable",
+    "rent_growth": 0.04931133979002374,
+    "vacancy": 0.08157771437154755,
+    "cap_rate": 0.05879086654321049,
+    "interest_rate": 0.03126774450974963,
+    "cost_inflation": 0.008741866612695704,
+    "approval_delay": 31.9402616017802
+  },
+  {
+    "period": "2005 Q2",
+    "regime": "Expansion",
+    "rent_growth": 0.04746533584357887,
+    "vacancy": 0.017493902076526496,
+    "cap_rate": 0.045542832542441236,
+    "interest_rate": 0.03055863064027112,
+    "cost_inflation": 0.019730083262489352,
+    "approval_delay": 15.30126982093722
+  },
+  {
+    "period": "2005 Q3",
+    "regime": "Stable",
+    "rent_growth": 0.039494646230891106,
+    "vacancy": 0.07477817508589765,
+    "cap_rate": 0.04726625401129717,
+    "interest_rate": 0.04426160442917667,
+    "cost_inflation": 0.04709346933986285,
+    "approval_delay": 24.92906841662292
+  },
+  {
+    "period": "2005 Q4",
+    "regime": "Contraction",
+    "rent_growth": -0.04535629906679878,
+    "vacancy": 0.18061305988804804,
+    "cap_rate": 0.07522180205382559,
+    "interest_rate": 0.09006018721020533,
+    "cost_inflation": 0.09344170266021955,
+    "approval_delay": 35.1452867742605
+  },
+  {
+    "period": "2006 Q1",
+    "regime": "Contraction",
+    "rent_growth": -0.008322648408485091,
+    "vacancy": 0.12406515260170103,
+    "cap_rate": 0.06615562972748279,
+    "interest_rate": 0.054429140974294674,
+    "cost_inflation": 0.09737766975737712,
+    "approval_delay": 39.376812632729994
+  },
+  {
+    "period": "2006 Q2",
+    "regime": "Contraction",
+    "rent_growth": -0.051277186718223816,
+    "vacancy": 0.13755567590262055,
+    "cap_rate": 0.07131563213329067,
+    "interest_rate": 0.034838831064002436,
+    "cost_inflation": 0.040960742142164004,
+    "approval_delay": 37.89149326269162
+  },
+  {
+    "period": "2006 Q3",
+    "regime": "Contraction",
+    "rent_growth": 0.019529279531732346,
+    "vacancy": 0.12130230112888007,
+    "cap_rate": 0.058718891136065834,
+    "interest_rate": 0.06943123998488392,
+    "cost_inflation": 0.09512428233026102,
+    "approval_delay": 47.057989187677556
+  },
+  {
+    "period": "2006 Q4",
+    "regime": "Stable",
+    "rent_growth": 0.025473657803012455,
+    "vacancy": 0.0900247606821028,
+    "cap_rate": 0.033972617090385335,
+    "interest_rate": 0.041864605835118716,
+    "cost_inflation": 0.03682305141425359,
+    "approval_delay": 34.55289821284948
+  },
+  {
+    "period": "2007 Q1",
+    "regime": "Stable",
+    "rent_growth": 0.009055509691459613,
+    "vacancy": 0.09582555853085992,
+    "cap_rate": 0.04760797292168393,
+    "interest_rate": 0.053057366626749175,
+    "cost_inflation": 0.03955447252369719,
+    "approval_delay": 17.829814702299696
+  },
+  {
+    "period": "2007 Q2",
+    "regime": "Stable",
+    "rent_growth": 0.01570446572436666,
+    "vacancy": 0.04555287637408062,
+    "cap_rate": 0.05879509964957556,
+    "interest_rate": 0.055920492664709213,
+    "cost_inflation": 0.036719349037076736,
+    "approval_delay": 26.819769479707013
+  },
+  {
+    "period": "2007 Q3",
+    "regime": "Stable",
+    "rent_growth": 0.010015766784457286,
+    "vacancy": 0.06801812479621017,
+    "cap_rate": 0.036908588837157384,
+    "interest_rate": 0.025757948259685266,
+    "cost_inflation": 0.029667513799642303,
+    "approval_delay": 29.829074939239703
+  },
+  {
+    "period": "2007 Q4",
+    "regime": "Contraction",
+    "rent_growth": -0.07280918575396697,
+    "vacancy": 0.13376645011098345,
+    "cap_rate": 0.07623638752235251,
+    "interest_rate": 0.06253726391323958,
+    "cost_inflation": 0.06330065293433779,
+    "approval_delay": 21.64246057135449
+  },
+  {
+    "period": "2008 Q1",
+    "regime": "Contraction",
+    "rent_growth": -0.026812946550054693,
+    "vacancy": 0.09234254218254112,
+    "cap_rate": 0.07476700923621436,
+    "interest_rate": 0.05731838344730588,
+    "cost_inflation": 0.09593686922404368,
+    "approval_delay": 40.908679065097495
+  },
+  {
+    "period": "2008 Q2",
+    "regime": "Contraction",
+    "rent_growth": -0.03541810223339925,
+    "vacancy": 0.15285458830954549,
+    "cap_rate": 0.05748080251143982,
+    "interest_rate": 0.0602288774724509,
+    "cost_inflation": 0.09284812597289051,
+    "approval_delay": 20.576106499246766
+  },
+  {
+    "period": "2008 Q3",
+    "regime": "Contraction",
+    "rent_growth": -0.020783260676479058,
+    "vacancy": 0.14714704809567064,
+    "cap_rate": 0.07813735841092949,
+    "interest_rate": 0.03806470233240915,
+    "cost_inflation": 0.08500702195679818,
+    "approval_delay": 42.771107104841875
+  },
+  {
+    "period": "2008 Q4",
+    "regime": "Contraction",
+    "rent_growth": 0.009242719213591235,
+    "vacancy": 0.15860237983268852,
+    "cap_rate": 0.0651313259997444,
+    "interest_rate": 0.053940454691050355,
+    "cost_inflation": 0.053988137359680555,
+    "approval_delay": 34.97648143174383
+  },
+  {
+    "period": "2009 Q1",
+    "regime": "Contraction",
+    "rent_growth": -0.003146881635945977,
+    "vacancy": 0.09761103158531756,
+    "cap_rate": 0.061812644092902394,
+    "interest_rate": 0.053649266049302424,
+    "cost_inflation": 0.046142651330987716,
+    "approval_delay": 39.181704809646234
+  },
+  {
+    "period": "2009 Q2",
+    "regime": "Contraction",
+    "rent_growth": -0.007329242999936687,
+    "vacancy": 0.15488180084666028,
+    "cap_rate": 0.06961932539008799,
+    "interest_rate": 0.05162265070749773,
+    "cost_inflation": 0.060541572225646066,
+    "approval_delay": 41.746843757942585
+  },
+  {
+    "period": "2009 Q3",
+    "regime": "Contraction",
+    "rent_growth": -0.010966854125482654,
+    "vacancy": 0.11265612893339592,
+    "cap_rate": 0.0562696723883926,
+    "interest_rate": 0.07078554934652699,
+    "cost_inflation": 0.12267385859661892,
+    "approval_delay": 34.9047592293734
+  },
+  {
+    "period": "2009 Q4",
+    "regime": "Stable",
+    "rent_growth": 0.07260232905980527,
+    "vacancy": 0.0380998524893578,
+    "cap_rate": 0.04454810158077363,
+    "interest_rate": 0.03311387921164041,
+    "cost_inflation": 0.041737116656585874,
+    "approval_delay": 20.651861400988636
+  },
+  {
+    "period": "2010 Q1",
+    "regime": "Stable",
+    "rent_growth": 0.0320755051919142,
+    "vacancy": 0.0801195538539997,
+    "cap_rate": 0.045097854373071,
+    "interest_rate": 0.04622048972838326,
+    "cost_inflation": 0.030221467716989272,
+    "approval_delay": 18.611375847633024
+  },
+  {
+    "period": "2010 Q2",
+    "regime": "Stable",
+    "rent_growth": 0.009842647645086031,
+    "vacancy": 0.07024502113791833,
+    "cap_rate": 0.04717770169667402,
+    "interest_rate": 0.03878185481877175,
+    "cost_inflation": 0.03775210510438031,
+    "approval_delay": 18.72802781832213
+  },
+  {
+    "period": "2010 Q3",
+    "regime": "Stable",
+    "rent_growth": -0.003824286574894392,
+    "vacancy": 0.06553818070208399,
+    "cap_rate": 0.05245544997747148,
+    "interest_rate": 0.025328598357195885,
+    "cost_inflation": 0.04342924039785895,
+    "approval_delay": 21.96564025730786
+  },
+  {
+    "period": "2010 Q4",
+    "regime": "Stable",
+    "rent_growth": 0.04493343069278063,
+    "vacancy": 0.09175420973720118,
+    "cap_rate": 0.03987168508900052,
+    "interest_rate": 0.03258486052813116,
+    "cost_inflation": 0.033956330479894256,
+    "approval_delay": 23.87106598672618
+  },
+  {
+    "period": "2011 Q1",
+    "regime": "Stable",
+    "rent_growth": 0.01555529784779298,
+    "vacancy": 0.0652142209207707,
+    "cap_rate": 0.05115241309123925,
+    "interest_rate": 0.036445832394273535,
+    "cost_inflation": 0.046874424679728036,
+    "approval_delay": 26.40296647952132
+  },
+  {
+    "period": "2011 Q2",
+    "regime": "Contraction",
+    "rent_growth": 0.005901251775451411,
+    "vacancy": 0.13589533415213487,
+    "cap_rate": 0.05317125260009929,
+    "interest_rate": 0.06245568984278206,
+    "cost_inflation": 0.04315853021545599,
+    "approval_delay": 44.28334317191181
+  },
+  {
+    "period": "2011 Q3",
+    "regime": "Contraction",
+    "rent_growth": -0.055791158023275375,
+    "vacancy": 0.1810846268689751,
+    "cap_rate": 0.05606861797189322,
+    "interest_rate": 0.04596230676157884,
+    "cost_inflation": 0.012626953886254691,
+    "approval_delay": 41.64178884343271
+  },
+  {
+    "period": "2011 Q4",
+    "regime": "Stable",
+    "rent_growth": 0.0358006261498428,
+    "vacancy": 0.08816903920332758,
+    "cap_rate": 0.04847195751360173,
+    "interest_rate": 0.03748513350359453,
+    "cost_inflation": 0.0292564067132135,
+    "approval_delay": 25.290396580644334
+  },
+  {
+    "period": "2012 Q1",
+    "regime": "Stable",
+    "rent_growth": 0.03202865440792559,
+    "vacancy": 0.08804262813462667,
+    "cap_rate": 0.039289089874843225,
+    "interest_rate": 0.032207352852849036,
+    "cost_inflation": 0.030994895139374166,
+    "approval_delay": 26.783765751112853
+  },
+  {
+    "period": "2012 Q2",
+    "regime": "Stable",
+    "rent_growth": 0.03576171020992038,
+    "vacancy": 0.07048137806949392,
+    "cap_rate": 0.0496198785653153,
+    "interest_rate": 0.04629221955314743,
+    "cost_inflation": 0.04812487893312101,
+    "approval_delay": 38.53591504853621
+  },
+  {
+    "period": "2012 Q3",
+    "regime": "Stable",
+    "rent_growth": 0.012024884879493531,
+    "vacancy": 0.047592487140913436,
+    "cap_rate": 0.04954036580682097,
+    "interest_rate": 0.04116902180271432,
+    "cost_inflation": 0.04334185373836162,
+    "approval_delay": 31.298046897890913
+  },
+  {
+    "period": "2012 Q4",
+    "regime": "Stable",
+    "rent_growth": 0.05484618606081448,
+    "vacancy": 0.11469980970166882,
+    "cap_rate": 0.04068295329412627,
+    "interest_rate": 0.04125770968393475,
+    "cost_inflation": 0.05510502706323679,
+    "approval_delay": 25.775369731473724
+  },
+  {
+    "period": "2013 Q1",
+    "regime": "Contraction",
+    "rent_growth": -0.0342491113627689,
+    "vacancy": 0.13789189783517675,
+    "cap_rate": 0.06449488602726614,
+    "interest_rate": 0.06469645328388,
+    "cost_inflation": 0.061463505796336845,
+    "approval_delay": 34.904236837668385
+  },
+  {
+    "period": "2013 Q2",
+    "regime": "Contraction",
+    "rent_growth": -0.04122526347378359,
+    "vacancy": 0.15550816672611922,
+    "cap_rate": 0.06281952213633771,
+    "interest_rate": 0.052397778502853494,
+    "cost_inflation": 0.09305375971499749,
+    "approval_delay": 16.957863441391893
+  },
+  {
+    "period": "2013 Q3",
+    "regime": "Stable",
+    "rent_growth": 0.015604652626043821,
+    "vacancy": 0.10418401604920373,
+    "cap_rate": 0.047361867693291336,
+    "interest_rate": 0.029692254473982188,
+    "cost_inflation": 0.029200736862215464,
+    "approval_delay": 22.826950341766974
+  },
+  {
+    "period": "2013 Q4",
+    "regime": "Stable",
+    "rent_growth": 0.02856525691826961,
+    "vacancy": 0.07205125852251358,
+    "cap_rate": 0.043584102452659236,
+    "interest_rate": 0.04245432363327046,
+    "cost_inflation": 0.006944095670472557,
+    "approval_delay": 33.024740792962646
+  },
+  {
+    "period": "2014 Q1",
+    "regime": "Stable",
+    "rent_growth": 0.016021939909385066,
+    "vacancy": 0.06338058926881839,
+    "cap_rate": 0.049879540865738536,
+    "interest_rate": 0.03351160567164786,
+    "cost_inflation": 0.046362065727746996,
+    "approval_delay": 28.397764747413945
+  },
+  {
+    "period": "2014 Q2",
+    "regime": "Expansion",
+    "rent_growth": 0.04172039130628901,
+    "vacancy": 0.03477823694519087,
+    "cap_rate": 0.047024094380073544,
+    "interest_rate": 0.02835920327503491,
+    "cost_inflation": 0.036884722602633216,
+    "approval_delay": 17.49422418149091
+  },
+  {
+    "period": "2014 Q3",
+    "regime": "Expansion",
+    "rent_growth": 0.042099826624794966,
+    "vacancy": 0.04033002962747703,
+    "cap_rate": 0.052659934923947715,
+    "interest_rate": 0.01880837691441697,
+    "cost_inflation": 0.0035538963683316264,
+    "approval_delay": 15.177581655510094
+  },
+  {
+    "period": "2014 Q4",
+    "regime": "Expansion",
+    "rent_growth": 0.06622664529355983,
+    "vacancy": 0.02679267482215797,
+    "cap_rate": 0.049660411625230105,
+    "interest_rate": 0.024711601664915823,
+    "cost_inflation": 0.02540907100372388,
+    "approval_delay": 16.435900265202054
+  },
+  {
+    "period": "2015 Q1",
+    "regime": "Expansion",
+    "rent_growth": 0.07937773521752164,
+    "vacancy": 0.033645180824640394,
+    "cap_rate": 0.03644641749160427,
+    "interest_rate": 0.02515112569031589,
+    "cost_inflation": 0.02173799010402969,
+    "approval_delay": 21.557583070756188
+  },
+  {
+    "period": "2015 Q2",
+    "regime": "Contraction",
+    "rent_growth": -0.04596493940920417,
+    "vacancy": 0.12863269383908071,
+    "cap_rate": 0.06747658088349628,
+    "interest_rate": 0.03450342579580449,
+    "cost_inflation": 0.08376020721631683,
+    "approval_delay": 11.039706858047587
+  },
+  {
+    "period": "2015 Q3",
+    "regime": "Stable",
+    "rent_growth": 0.046136724818149066,
+    "vacancy": 0.11728889882813126,
+    "cap_rate": 0.06051130330120674,
+    "interest_rate": 0.03143171636943162,
+    "cost_inflation": 0.04394106648007495,
+    "approval_delay": 28.368167871981324
+  },
+  {
+    "period": "2015 Q4",
+    "regime": "Stable",
+    "rent_growth": 0.026888504338881725,
+    "vacancy": 0.06110011054696485,
+    "cap_rate": 0.04450256283464648,
+    "interest_rate": 0.04205226908617404,
+    "cost_inflation": 0.030678009319919434,
+    "approval_delay": 28.250404874333473
+  },
+  {
+    "period": "2016 Q1",
+    "regime": "Expansion",
+    "rent_growth": 0.09919636064657988,
+    "vacancy": 0.03336167140396787,
+    "cap_rate": 0.03334182654421916,
+    "interest_rate": 0.02088429003729881,
+    "cost_inflation": 0.010946323319824718,
+    "approval_delay": 19.67861060559901
+  },
+  {
+    "period": "2016 Q2",
+    "regime": "Expansion",
+    "rent_growth": 0.08524834152644192,
+    "vacancy": 0.03956312552414962,
+    "cap_rate": 0.042916222903597104,
+    "interest_rate": 0.025753176473467445,
+    "cost_inflation": 0.014011055108147642,
+    "approval_delay": 16.920903112065456
+  },
+  {
+    "period": "2016 Q3",
+    "regime": "Expansion",
+    "rent_growth": 0.03094926559710793,
+    "vacancy": 0.01525349874312196,
+    "cap_rate": 0.032234108878982044,
+    "interest_rate": 0.01012277693251674,
+    "cost_inflation": -0.0015048598838513505,
+    "approval_delay": 21.505225748625968
+  },
+  {
+    "period": "2016 Q4",
+    "regime": "Expansion",
+    "rent_growth": 0.04762791202597637,
+    "vacancy": 0.04031971318806075,
+    "cap_rate": 0.043366841921037944,
+    "interest_rate": 0.02779270871036023,
+    "cost_inflation": 0.0007028868401545499,
+    "approval_delay": 16.090468148424954
+  },
+  {
+    "period": "2017 Q1",
+    "regime": "Expansion",
+    "rent_growth": 0.041868469631024974,
+    "vacancy": 0.06107742305414729,
+    "cap_rate": 0.03468527459657553,
+    "interest_rate": 0.024116689853097596,
+    "cost_inflation": 0.02726654328365314,
+    "approval_delay": 4.625240279046098
+  },
+  {
+    "period": "2017 Q2",
+    "regime": "Expansion",
+    "rent_growth": 0.05217781100399065,
+    "vacancy": 0.03181663561452795,
+    "cap_rate": 0.025,
+    "interest_rate": 0.027657417962163165,
+    "cost_inflation": 0.016235322650965354,
+    "approval_delay": 12.047425524113606
+  },
+  {
+    "period": "2017 Q3",
+    "regime": "Stable",
+    "rent_growth": 0.03200739381937165,
+    "vacancy": 0.07503150777300825,
+    "cap_rate": 0.04797477452129194,
+    "interest_rate": 0.04070195018533007,
+    "cost_inflation": 0.05635347984099813,
+    "approval_delay": 28.516990611948003
+  },
+  {
+    "period": "2017 Q4",
+    "regime": "Contraction",
+    "rent_growth": -0.043318724844602016,
+    "vacancy": 0.06673450157301641,
+    "cap_rate": 0.07420538739786878,
+    "interest_rate": 0.05898768463348085,
+    "cost_inflation": 0.046199063345904824,
+    "approval_delay": 45.68267520100813
+  },
+  {
+    "period": "2018 Q1",
+    "regime": "Contraction",
+    "rent_growth": -0.020084827826134233,
+    "vacancy": 0.07304973752176479,
+    "cap_rate": 0.0590365858970669,
+    "interest_rate": 0.06709827588884783,
+    "cost_inflation": 0.06414961142274302,
+    "approval_delay": 36.55756369804517
+  },
+  {
+    "period": "2018 Q2",
+    "regime": "Stable",
+    "rent_growth": 0.026430488710638862,
+    "vacancy": 0.11598449037397693,
+    "cap_rate": 0.052360150283338264,
+    "interest_rate": 0.050500353625563564,
+    "cost_inflation": 0.025448206050142384,
+    "approval_delay": 34.90135547572213
+  },
+  {
+    "period": "2018 Q3",
+    "regime": "Stable",
+    "rent_growth": 0.01482513740194099,
+    "vacancy": 0.05225933367046251,
+    "cap_rate": 0.05310285185017828,
+    "interest_rate": 0.030576666888478134,
+    "cost_inflation": 0.05957138891047989,
+    "approval_delay": 17.325154023082842
+  },
+  {
+    "period": "2018 Q4",
+    "regime": "Contraction",
+    "rent_growth": -0.03836420641005634,
+    "vacancy": 0.17374714344467562,
+    "cap_rate": 0.06245878678634265,
+    "interest_rate": 0.07514052385388614,
+    "cost_inflation": 0.0740909458170949,
+    "approval_delay": 44.40472335155986
+  },
+  {
+    "period": "2019 Q1",
+    "regime": "Stable",
+    "rent_growth": 0.041877879069883814,
+    "vacancy": 0.0846051671746483,
+    "cap_rate": 0.04850136680734758,
+    "interest_rate": 0.031179477325181965,
+    "cost_inflation": 0.038853732477240235,
+    "approval_delay": 16.55216062406077
+  },
+  {
+    "period": "2019 Q2",
+    "regime": "Stable",
+    "rent_growth": 0.007264768312265926,
+    "vacancy": 0.10186840903419345,
+    "cap_rate": 0.04263226828206204,
+    "interest_rate": 0.0481196415925775,
+    "cost_inflation": 0.04804958071136091,
+    "approval_delay": 7.9193753152045225
+  },
+  {
+    "period": "2019 Q3",
+    "regime": "Expansion",
+    "rent_growth": 0.06131110432168427,
+    "vacancy": 0.04396814008697052,
+    "cap_rate": 0.03246275791298222,
+    "interest_rate": 0.02926894650455439,
+    "cost_inflation": 0.021125608762082956,
+    "approval_delay": 24.92843091833394
+  },
+  {
+    "period": "2019 Q4",
+    "regime": "Stable",
+    "rent_growth": 0.027045915016640987,
+    "vacancy": 0.12113123832562595,
+    "cap_rate": 0.03829063260901933,
+    "interest_rate": 0.026072155183597012,
+    "cost_inflation": 0.03336583963186398,
+    "approval_delay": 29.2770384028085
+  },
+  {
+    "period": "2020 Q1",
+    "regime": "Stable",
+    "rent_growth": 0.013530102285869582,
+    "vacancy": 0.0801028200502897,
+    "cap_rate": 0.05889476059322616,
+    "interest_rate": 0.04555704305444514,
+    "cost_inflation": 0.04171082626213857,
+    "approval_delay": 43.03110442518471
+  },
+  {
+    "period": "2020 Q2",
+    "regime": "Stable",
+    "rent_growth": 0.011432845475839474,
+    "vacancy": 0.0856673493408417,
+    "cap_rate": 0.04798516791652547,
+    "interest_rate": 0.03561811755127218,
+    "cost_inflation": 0.040986148383582006,
+    "approval_delay": 24.98489290281848
+  },
+  {
+    "period": "2020 Q3",
+    "regime": "Stable",
+    "rent_growth": 0.046107985537673056,
+    "vacancy": 0.05543197400180107,
+    "cap_rate": 0.05267349147582966,
+    "interest_rate": 0.03972454047952481,
+    "cost_inflation": 0.025316243711244427,
+    "approval_delay": 30.1026680003626
+  },
+  {
+    "period": "2020 Q4",
+    "regime": "Stable",
+    "rent_growth": 0.06101946662195214,
+    "vacancy": 0.06578680832365624,
+    "cap_rate": 0.04614005129351844,
+    "interest_rate": 0.03322753622536369,
+    "cost_inflation": 0.04458193564488474,
+    "approval_delay": 14.583244388127719
+  },
+  {
+    "period": "2021 Q1",
+    "regime": "Stable",
+    "rent_growth": 0.021414318464652506,
+    "vacancy": 0.05723915297455083,
+    "cap_rate": 0.05723685427381739,
+    "interest_rate": 0.03052223320035622,
+    "cost_inflation": 0.023576561835750295,
+    "approval_delay": 30.061529812514202
+  },
+  {
+    "period": "2021 Q2",
+    "regime": "Expansion",
+    "rent_growth": 0.09276217935644358,
+    "vacancy": 0.04220137946886268,
+    "cap_rate": 0.04148511835583358,
+    "interest_rate": 0.02725766711398391,
+    "cost_inflation": 0.011722786437032498,
+    "approval_delay": 19.822675720751334
+  },
+  {
+    "period": "2021 Q3",
+    "regime": "Stable",
+    "rent_growth": 0.046156259179145356,
+    "vacancy": 0.07584749496300074,
+    "cap_rate": 0.04163935779659237,
+    "interest_rate": 0.045640058437439165,
+    "cost_inflation": 0.05152018642175302,
+    "approval_delay": 12.988912962102834
+  },
+  {
+    "period": "2021 Q4",
+    "regime": "Stable",
+    "rent_growth": 0.03163833655048029,
+    "vacancy": 0.07093933508881041,
+    "cap_rate": 0.05091591005019599,
+    "interest_rate": 0.03781319175808435,
+    "cost_inflation": 0.04680781507106948,
+    "approval_delay": 28.15987179610979
+  },
+  {
+    "period": "2022 Q1",
+    "regime": "Stable",
+    "rent_growth": 0.002771160606171441,
+    "vacancy": 0.10865228807945938,
+    "cap_rate": 0.046975179869157335,
+    "interest_rate": 0.04879391835441409,
+    "cost_inflation": 0.019086672190247324,
+    "approval_delay": 12.52653469246385
+  },
+  {
+    "period": "2022 Q2",
+    "regime": "Stable",
+    "rent_growth": 0.01689445562342107,
+    "vacancy": 0.07379992591661802,
+    "cap_rate": 0.053234822044674786,
+    "interest_rate": 0.051732022195329574,
+    "cost_inflation": 0.012726959074469565,
+    "approval_delay": 16.97147524470443
+  },
+  {
+    "period": "2022 Q3",
+    "regime": "Stable",
+    "rent_growth": 0.025989225934996182,
+    "vacancy": 0.06939187864541702,
+    "cap_rate": 0.055508854652351,
+    "interest_rate": 0.02984592082369747,
+    "cost_inflation": 0.02118633352231332,
+    "approval_delay": 26.86209320270568
+  },
+  {
+    "period": "2022 Q4",
+    "regime": "Stable",
+    "rent_growth": 0.0019988774682871135,
+    "vacancy": 0.06872034733974042,
+    "cap_rate": 0.04559244111214748,
+    "interest_rate": 0.03489675913174573,
+    "cost_inflation": 0.016701806369564507,
+    "approval_delay": 25.924844162017955
+  },
+  {
+    "period": "2023 Q1",
+    "regime": "Stable",
+    "rent_growth": 0.023784327093738147,
+    "vacancy": 0.07547383163064805,
+    "cap_rate": 0.0491242994341261,
+    "interest_rate": 0.04312705097757825,
+    "cost_inflation": 0.042292693953283764,
+    "approval_delay": 32.12440286285651
+  },
+  {
+    "period": "2023 Q2",
+    "regime": "Stable",
+    "rent_growth": 0.009727611404911862,
+    "vacancy": 0.06435802895132613,
+    "cap_rate": 0.03758759609742652,
+    "interest_rate": 0.03204245824520098,
+    "cost_inflation": 0.01076771976236791,
+    "approval_delay": 28.057788587453288
+  },
+  {
+    "period": "2023 Q3",
+    "regime": "Stable",
+    "rent_growth": 0.021703317883164038,
+    "vacancy": 0.06522077720015673,
+    "cap_rate": 0.04567961498273617,
+    "interest_rate": 0.035236611071398055,
+    "cost_inflation": 0.03979867028321467,
+    "approval_delay": 33.46080959107058
+  },
+  {
+    "period": "2023 Q4",
+    "regime": "Stable",
+    "rent_growth": 0.04742927921712706,
+    "vacancy": 0.07863479668175215,
+    "cap_rate": 0.04846405057809692,
+    "interest_rate": 0.033749791624866264,
+    "cost_inflation": 0.042816647001138755,
+    "approval_delay": 23.193792051288884
+  },
+  {
+    "period": "2024 Q1",
+    "regime": "Stable",
+    "rent_growth": 0.009228796334915253,
+    "vacancy": 0.05680240144026176,
+    "cap_rate": 0.041113398257875855,
+    "interest_rate": 0.04635889386369475,
+    "cost_inflation": 0.014098369895343344,
+    "approval_delay": 22.059147274626056
+  },
+  {
+    "period": "2024 Q2",
+    "regime": "Stable",
+    "rent_growth": -0.0055104477304630355,
+    "vacancy": 0.06389229470235532,
+    "cap_rate": 0.05581356929459733,
+    "interest_rate": 0.0365758584075682,
+    "cost_inflation": 0.053622001205808456,
+    "approval_delay": 15.927024848198148
+  },
+  {
+    "period": "2024 Q3",
+    "regime": "Stable",
+    "rent_growth": -0.004944605201807319,
+    "vacancy": 0.013384938513998218,
+    "cap_rate": 0.04547520168200243,
+    "interest_rate": 0.03110014827313913,
+    "cost_inflation": 0.04003763926015797,
+    "approval_delay": 30.2907574229823
+  },
+  {
+    "period": "2024 Q4",
+    "regime": "Stable",
+    "rent_growth": 0.025377002957048218,
+    "vacancy": 0.054929677893176765,
+    "cap_rate": 0.046167409360606385,
+    "interest_rate": 0.047927309349642025,
+    "cost_inflation": 0.027075645143965668,
+    "approval_delay": 39.44008876428879
+  },
+  {
+    "period": "2025 Q1",
+    "regime": "Contraction",
+    "rent_growth": -0.022521564968602206,
+    "vacancy": 0.10088982352297893,
+    "cap_rate": 0.06706778642488859,
+    "interest_rate": 0.04517637121898152,
+    "cost_inflation": 0.06280516813087733,
+    "approval_delay": 46.60898141183521
+  },
+  {
+    "period": "2025 Q2",
+    "regime": "Contraction",
+    "rent_growth": -0.05212105639217088,
+    "vacancy": 0.12794454933165003,
+    "cap_rate": 0.05795626116529669,
+    "interest_rate": 0.0767589864029879,
+    "cost_inflation": 0.025320650454648444,
+    "approval_delay": 38.25926443508221
+  },
+  {
+    "period": "2025 Q3",
+    "regime": "Contraction",
+    "rent_growth": -0.045583155731622596,
+    "vacancy": 0.09436560438052936,
+    "cap_rate": 0.07402527876711076,
+    "interest_rate": 0.04424994408807913,
+    "cost_inflation": 0.05412988601715084,
+    "approval_delay": 42.60233671661004
+  },
+  {
+    "period": "2025 Q4",
+    "regime": "Contraction",
+    "rent_growth": -0.052179072779932764,
+    "vacancy": 0.13280195149970578,
+    "cap_rate": 0.07242660393718758,
+    "interest_rate": 0.05228619223620068,
+    "cost_inflation": 0.09196222498936524,
+    "approval_delay": 39.225587031203226
+  },
+  {
+    "period": "2026 Q1",
+    "regime": "Contraction",
+    "rent_growth": -0.036197284173726404,
+    "vacancy": 0.1377669789068657,
+    "cap_rate": 0.07806506265061966,
+    "interest_rate": 0.056944959491218285,
+    "cost_inflation": 0.13449128254702203,
+    "approval_delay": 28.960399161294824
+  },
+  {
+    "period": "2026 Q2",
+    "regime": "Contraction",
+    "rent_growth": 0.014561950520160145,
+    "vacancy": 0.12160822376236144,
+    "cap_rate": 0.07004334573804001,
+    "interest_rate": 0.05217735580433849,
+    "cost_inflation": 0.0751054896200789,
+    "approval_delay": 39.76214248926259
+  },
+  {
+    "period": "2026 Q3",
+    "regime": "Contraction",
+    "rent_growth": -0.04460244442137211,
+    "vacancy": 0.10750260725126043,
+    "cap_rate": 0.08185395279629927,
+    "interest_rate": 0.06660423922354575,
+    "cost_inflation": 0.008853107648835165,
+    "approval_delay": 44.57548655969221
+  },
+  {
+    "period": "2026 Q4",
+    "regime": "Contraction",
+    "rent_growth": -0.008705105359741226,
+    "vacancy": 0.1481180309245876,
+    "cap_rate": 0.06707286193492926,
+    "interest_rate": 0.07065830991776857,
+    "cost_inflation": 0.10138166975909274,
+    "approval_delay": 58.557112106953475
+  }
+]

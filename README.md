@@ -21,6 +21,22 @@ cd Real-Estate-Portfolio-Multi-Asset-Quant-Model
 - Web: http://127.0.0.1:5173
 - API: http://127.0.0.1:8001/docs
 
+## Hosted public dashboard
+
+A static synthetic demonstration is deployable through GitHub Pages:
+
+**https://rohen97.github.io/Real-Estate-Portfolio-Multi-Asset-Quant-Model/**
+
+The hosted page does not require the Python model or API to remain running. It uses a checked-in snapshot generated from the ten fictional public-demo assets. Private Far East asset names, addresses, underwriting and generated portfolio outputs are not published.
+
+Regenerate the public snapshot with:
+
+```powershell
+.venv/Scripts/python.exe scripts/build_public_dashboard_snapshot.py
+```
+
+The GitHub Actions workflow in `.github/workflows/pages.yml` rebuilds and deploys the static dashboard whenever `main` is updated.
+
 ## Full private-data pipeline
 
 Place private inputs under `data/input`, which is excluded from Git.
@@ -130,11 +146,13 @@ See `docs/repository_data_policy.md`. Never commit company workbooks, rent rolls
 ./scripts/check.ps1
 ```
 
-The local implementation currently passes 34 backend tests, frontend tests, TypeScript checks and the production build.
+The local implementation currently passes 54 backend tests, 1 frontend test, TypeScript checks and the production build.
 
 ## Documentation
 
 - `docs/economic_model_v2.md`
+- `docs/advanced_model_components.md`
+- `docs/digital_twin_dashboard.md`
 - `docs/selection_methodology.md`
 - `docs/singapore_zoning_methodology.md`
 - `docs/zoning_prediction_methodology.md`
