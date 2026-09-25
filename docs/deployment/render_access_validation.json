@@ -1,0 +1,73 @@
+{
+  "checked_at": "2026-09-25T07:31:49.181090+00:00",
+  "url": "https://real-estate-portfolio-multi-asset-quant.onrender.com/",
+  "tabs": [
+    {
+      "tab": "Portfolio",
+      "loaded": true
+    },
+    {
+      "tab": "Digital Twins",
+      "loaded": true
+    },
+    {
+      "tab": "Asset",
+      "loaded": true
+    },
+    {
+      "tab": "Evidence",
+      "loaded": true
+    },
+    {
+      "tab": "Zoning",
+      "loaded": true
+    },
+    {
+      "tab": "Zoning ML",
+      "loaded": true
+    },
+    {
+      "tab": "Development",
+      "loaded": true
+    },
+    {
+      "tab": "Selection",
+      "loaded": true
+    },
+    {
+      "tab": "Valuation",
+      "loaded": true
+    },
+    {
+      "tab": "Scenario",
+      "loaded": true
+    },
+    {
+      "tab": "Actions",
+      "loaded": true
+    },
+    {
+      "tab": "Optimiser",
+      "loaded": true
+    },
+    {
+      "tab": "Models",
+      "loaded": true
+    },
+    {
+      "tab": "Architecture",
+      "loaded": true
+    },
+    {
+      "tab": "Audit",
+      "loaded": true
+    }
+  ],
+  "tabs_passed": 15,
+  "mobile_navigation_tabs": 15,
+  "javascript_errors": [],
+  "failed_site_responses": [],
+  "localhost_requests": [],
+  "mode": "backend_connected",
+  "live_calculation_controls_enabled": true
+}

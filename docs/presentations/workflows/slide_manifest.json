@@ -1,0 +1,105 @@
+{
+  "slides": [
+    {
+      "slide": 1,
+      "title": "From asset information to a portfolio decision",
+      "tabs": [
+        "Portfolio",
+        "Selection",
+        "Optimiser"
+      ],
+      "notes": "Start the demonstration with the overall workflow. The main engine values five owned-asset alternatives, simulates outcomes and ranks expected incremental NPV less 0.3 times nonnegative loss CVaR. Readiness is reported separately and can remain incomplete while demo calculations are shown. Portfolio optimisation uses the full action set, not only each asset winner. The lower planning lane is separate: current ML diagnostics and advanced monthly development values do not feed the core action rankings. The dashed connection represents human interpretation only. The application neither approves nor executes a transaction. Public Pages provides saved results; calculations require the backend. Source: packages/orchestration/engine.py, advanced.py, packages/selection/engine.py and optimisation modules."
+    },
+    {
+      "slide": 2,
+      "title": "Demo overview | the dashboard follows the decision",
+      "tabs": [
+        "Portfolio",
+        "Asset",
+        "Selection"
+      ],
+      "notes": "This is an editable presentation schematic, not a screenshot or a new dashboard design. Every navigation group uses existing tab names. DEMO-001 is fictional. Sell has expected incremental NPV 3.756268m and loss CVaR 7.210666m; the risk-adjusted score is 1.593m after the 0.3 penalty. Ranking chart values come from selection.action_comparison. Data Required / Monitor blocks treating the candidate as a verified investment decision. The main public snapshot contains ten fictional assets, while Digital Twins uses a separate synthetic population. Ask the audience to follow one asset from its evidence to its candidate action, then review the portfolio plan."
+    },
+    {
+      "slide": 3,
+      "title": "Asset and evidence | establish what is known",
+      "tabs": [
+        "Asset",
+        "Evidence"
+      ],
+      "notes": "The Asset page presents the selected asset, economics and provisional recommendation. Evidence shows source details, proxy assumptions and outstanding inputs. The selection readiness function requires current valuation, NOI, site and existing floor area; title, tenure, sources and owner; verified financial and planning evidence; dates within the permitted freshness window; and verified action costs. The diagram summarises analyst review of those checks. Both branches permit a provisional demonstration to be explored; a missing field does not turn an economic recommendation into Hold. Public DEMO-001 lacks verified underwriting evidence."
+    },
+    {
+      "slide": 4,
+      "title": "Zoning ML | prioritise the right investigation",
+      "tabs": [
+        "Zoning ML",
+        "Zoning"
+      ],
+      "notes": "Implemented LightGBM code targets current core land use, subtype and GPR band. It includes spatial validation, calibration and abstention machinery. A separate change classifier exists, but a real forecast needs dated change labels, a horizon and calibration evidence. Public outputs are hand-authored fictional fixtures: no eligible trained predictions are displayed. The dashboard suppresses unsupported confidence and change probabilities. The eligibility diamond summarises presentation checks, not a guarantee that an eligible model has investment skill. Current-class discrepancies and future-change scores have distinct targets and are never combined as a trading probability. Neither enters core action rankings. Source: zoning/challenger.py, change_model.py and src/components/zoningEvidence.ts."
+    },
+    {
+      "slide": 5,
+      "title": "Zoning and development | test the physical option",
+      "tabs": [
+        "Zoning",
+        "Development"
+      ],
+      "notes": "Zoning shows statutory, physical, de-facto and economic GFA, unused capacity and binding controls. Development constructs a synthetic site rectangle and candidate envelopes from related inputs; it does not use a surveyed or approved design. Preferred envelope gross area feeds detailed monthly redevelopment cash flows. En-bloc residual valuation is a related separate calculation using legal GPR and a cost waterfall; it is not a Buy recommendation. Assessed LBC and other verified project evidence are missing in the demo. DEMO-001 has core unused capacity 2184sqm and detailed redevelopment NPV -37.022416m relative to Hold. Its advanced gross area differs from the core adjusted capacity because the assumptions differ. Detailed values are not substituted into main annual rankings. Source: orchestration/advanced.py, actions/detailed_cashflow.py and actions/enbloc.py."
+    },
+    {
+      "slide": 6,
+      "title": "Valuation and actions | make alternatives comparable",
+      "tabs": [
+        "Valuation",
+        "Actions"
+      ],
+      "notes": "Five implemented owned-asset alternatives are Hold, Retrofit, Repurpose, Redevelop and Sell. The main action engine builds annual cash flows and branches from assumed economics, computes a Hold counterfactual and measures the incremental difference. Project capex, downtime and terminal or disposal value must be consistently included. Its Redevelop template differs from the detailed monthly Development tab and those outputs are not interchangeable. Hold incremental NPV is zero by construction; that does not mean the asset has no absolute risk. Buy is not implemented. Capacity residual, en-bloc and transformation-screen values are excluded from additive NPV adjustments. Source: valuation/engine.py and actions/real_options.py."
+    },
+    {
+      "slide": 7,
+      "title": "Scenario analysis | show the range around the value",
+      "tabs": [
+        "Scenario"
+      ],
+      "notes": "Main simulated actions preserve shared market and approval factors and asset-specific variation. Expected incremental NPV, P10/P50/P90, loss probability and positive-loss CVaR are derived from simulated action outcomes. CVaR95 is the average in the worst five-percent loss tail; it is not a percentile value or a probability. The Selection page subtracts 0.3 times nonnegative loss CVaR from mean incremental NPV. DEMO-001 Sell: expected 3.756268m; probability of loss .2444; CVaR 7.210666m. These are fictional assumed scenarios, not observed investment performance. The scenario page follows the selected action and does not choose the maximum raw NPV independently. Source: scenarios/engine.py and selection/engine.py."
+    },
+    {
+      "slide": 8,
+      "title": "Selection | rank the action, then test readiness",
+      "tabs": [
+        "Selection",
+        "Actions"
+      ],
+      "notes": "The implemented score is expected incremental NPV minus 0.3 times max(0, loss CVaR95). Rank all five alternatives, then require asset evidence and verified action costs/cash flows before describing the candidate as ready for portfolio review. The no branch changes the management signal to Data Required / Monitor but retains the preferred screening action. DEMO-001 Sell mean NPV 3.756268 less .3*7.210666 gives 1.593068m, versus Hold score zero. The model therefore favours Sell financially but reports Data Required / Monitor. This is not an executable sell instruction. The yes branch is a candidate for further human and portfolio review, not automatic investment approval. Buy absent; no demonstrated alpha. Source: packages/selection/engine.py."
+    },
+    {
+      "slide": 9,
+      "title": "Optimiser | choose a plan that fits the portfolio",
+      "tabs": [
+        "Optimiser"
+      ],
+      "notes": "Input all action alternatives for the portfolio, not just independently selected asset winners. Main optimisation chooses actions and start years while checking capex, cumulative liquidity, retained income, project concurrency and development share. Joint loss CVaR uses aligned scenarios rather than summing marginal risks. The returned schedule is rechecked by the constraint audit. It remains a conditional model plan with synthetic inputs. The two-stage calculation creates contingent plans across scenarios; stability reruns perturb assumptions. Public Pages displays saved runs and disables new backend calculation controls. Funding released by sale is not profit, and annual liquidity buckets permit within-year netting. Source: optimisation/multi_period.py, two_stage.py, constraints.py and the Optimiser UI."
+    },
+    {
+      "slide": 10,
+      "title": "Digital twins | compare decisions across environments",
+      "tabs": [
+        "Digital Twins"
+      ],
+      "notes": "Digital Twins presents separate generated histories, lease and action scenarios, and a synthetic population. Environment selection loads the saved results for that environment. Independent preferred actions and the full constrained portfolio allocation are distinct paths. Asset/search filters change visible rows and asset plots but do not rerun or subset the full portfolio optimisation. Changing decisions is a sensitivity flag. The example rows on this slide describe display fields and do not invent asset outcomes. Simulation regret, action match and interval coverage are generator diagnostics, not historical backtests or realised alpha. Source: src/components/DigitalTwinDashboard.tsx and digital-twin snapshot methodology."
+    },
+    {
+      "slide": 11,
+      "title": "Review segments | explain the result before acting",
+      "tabs": [
+        "Models",
+        "Architecture",
+        "Audit"
+      ],
+      "notes": "Models provides forecast and diagnostic views, but public forecast cards are formula fixtures, not a fitted production forecast. Architecture explains the implemented calculation modules. Audit surfaces evidence and readiness checks; it is not a complete immutable transaction approval log. The diagram is a user review workflow: these three screens do not automatically combine into a recommendation service. A human investment decision and any implementation approval occur outside the demonstration. End the demo by naming the candidate, its downside, the binding portfolio constraint if any, and the missing information that would change the decision. No investment alpha has been established."
+    }
+  ],
+  "source_snapshot_sha256": "1a820ba3484444f3355ad2f1ff86e66c80d16c5b15c9982c77d57d93966095ac",
+  "reference": "Four user-provided process and demo-overview screenshots; original editable diagrams."
+}

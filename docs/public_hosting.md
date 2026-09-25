@@ -38,3 +38,7 @@ The Dockerfile copies only application code, checked-in examples, public referen
 The CI workflow tests Python, frontend checks and the Docker build. Main updates publish Pages; Render auto-deploys after provider-linked checks pass when the service has been created. Revert the release commit to roll back the code and saved snapshots together. Unset `PUBLIC_API_URL` and redeploy Pages to return to saved results if the backend is unavailable.
 
 Sources: [Render Blueprint specification](https://render.com/docs/blueprint-spec), [Render free instances](https://render.com/docs/free).
+
+## Verified deployment
+
+The full dashboard is deployed at https://real-estate-portfolio-multi-asset-quant.onrender.com/. See [validation and current connection status](deployment/README.md).

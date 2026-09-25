@@ -1,0 +1,3349 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-25T00:16:30.334129+00:00",
+    "status": "client_presentation_evidence_not_investment_advice",
+    "portfolio_status": "All 10 assets and asset financials are fictional; official aggregate market indices are separately sourced.",
+    "decision_ready": false,
+    "snapshot_generated_at": "2026-09-24T23:54:47.339448+00:00",
+    "model_revision": {
+      "model_version": "economic-model-0.9.0",
+      "code_sha256": "8bd35bf604997f1c2289e1eea3510418ba190cfd0149d827b99cd4bb310ded06",
+      "market_snapshot_sha256": "2810a2696c55a6b7035a354ad59b1170b0d388394732c095ec1683002ef005c6",
+      "warning": "Public indices may be revised; historical index dates do not establish historical availability."
+    },
+    "source_files": [
+      {
+        "path": "C:\\Users\\Rohen\\Documents\\Projects\\apg-mars-econ-model\\outputs\\real-estate-hosting\\repo\\public\\data\\api_snapshot.json",
+        "sha256": "1a820ba3484444f3355ad2f1ff86e66c80d16c5b15c9982c77d57d93966095ac"
+      },
+      {
+        "path": "C:\\Users\\Rohen\\Documents\\Projects\\apg-mars-econ-model\\outputs\\real-estate-hosting\\repo\\data\\examples\\demo_full_model_results.json",
+        "sha256": "85cc47f725a07bf77a94d820de6486669692d3a094b38d8817770f439ff44730"
+      }
+    ],
+    "units": {
+      "currency": "SGD",
+      "suffix_m": "SGD millions",
+      "noi": "annual net operating income",
+      "npv": "expected incremental unlevered net present value versus Hold, unless explicitly otherwise labelled",
+      "risk": "95% CVaR of positive-part incremental portfolio loss; average of worst 5% with exact finite-sample tail weights",
+      "area": "square metres",
+      "ratio": "decimal fraction; multiply by 100 for percent"
+    }
+  },
+  "portfolio": {
+    "assets": 10,
+    "current_value_m": 564,
+    "baseline_annual_noi_m": 25.84,
+    "independent_preferred_actions": {
+      "Sell": 8,
+      "Hold": 2
+    },
+    "decision_ready_assets": 0
+  },
+  "noi_decision_frontier": {
+    "source_route": "/snapshots/optimise",
+    "source_engine": "packages.optimisation.multiperiod.optimise_multi_period",
+    "settings": {
+      "horizon_years": 5,
+      "total_capital_budget_m": 500,
+      "minimum_liquidity_m": 50,
+      "max_concurrent_projects": 8,
+      "max_development_share": 0.45,
+      "cvar_penalty": 0.3
+    },
+    "saved_max_projects": 20,
+    "saved_baseline_reproduced_at_70pct": true,
+    "baseline_annual_noi_m": 25.84,
+    "scenario_count": 128,
+    "x_label": "Minimum annual NOI retained (%)",
+    "y_label": "Capital released (S$ million)",
+    "secondary_chart_label": "Expected incremental NPV vs Hold (S$ million)",
+    "note": "Requested cap of 8 concurrent projects replaces the saved cap of 20; neither binds because each solution schedules at most one active development. Capital release is sale proceeds, not profit or net cash after capex. Holding-floor constraints apply in each of the five annual scheduling buckets; no reinvestment strategy is modeled.",
+    "points": [
+      {
+        "minimum_noi_ratio": 0.5,
+        "sale_count": 4,
+        "hold_count": 6,
+        "action_counts": {
+          "Sell": 4,
+          "Hold": 6
+        },
+        "capital_released_m": 273.0,
+        "capital_spent_m": 0.0,
+        "expected_incremental_npv_m": 16.24517,
+        "loss_cvar_95_m": 32.914511,
+        "risk_adjusted_objective_m": 6.370817,
+        "minimum_retained_noi_m": 13.26,
+        "minimum_retained_noi_ratio": 0.513157895,
+        "audit_passed": true,
+        "constraint_violations": 0,
+        "audit_check_count": 32,
+        "max_constraint_violation": 0.0,
+        "selections": [
+          {
+            "asset_id": "DEMO-001",
+            "action": "Sell",
+            "start_year": 1,
+            "expected_npv_m": 3.756268,
+            "capex_m": -63.375
+          },
+          {
+            "asset_id": "DEMO-002",
+            "action": "Sell",
+            "start_year": 1,
+            "expected_npv_m": 3.774012,
+            "capex_m": -63.375
+          },
+          {
+            "asset_id": "DEMO-003",
+            "action": "Sell",
+            "start_year": 1,
+            "expected_npv_m": 3.799911,
+            "capex_m": -63.375
+          },
+          {
+            "asset_id": "DEMO-004",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-005",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-006",
+            "action": "Sell",
+            "start_year": 1,
+            "expected_npv_m": 4.914979,
+            "capex_m": -82.875
+          },
+          {
+            "asset_id": "DEMO-007",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-008",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-009",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-010",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          }
+        ],
+        "annual_plan": [
+          {
+            "year": 1,
+            "capex_m": 0.0,
+            "capital_released_m": 273.0,
+            "net_funding_m": -273.0,
+            "cumulative_net_funding_m": -273.0,
+            "remaining_liquidity_m": 773.0,
+            "noi_disruption_m": 12.58,
+            "active_projects": 0,
+            "contractor_units": 0.0
+          },
+          {
+            "year": 2,
+            "capex_m": 0.0,
+            "capital_released_m": 0.0,
+            "net_funding_m": 0.0,
+            "cumulative_net_funding_m": -273.0,
+            "remaining_liquidity_m": 773.0,
+            "noi_disruption_m": 12.58,
+            "active_projects": 0,
+            "contractor_units": 0.0
+          },
+          {
+            "year": 3,
+            "capex_m": 0.0,
+            "capital_released_m": 0.0,
+            "net_funding_m": 0.0,
+            "cumulative_net_funding_m": -273.0,
+            "remaining_liquidity_m": 773.0,
+            "noi_disruption_m": 12.58,
+            "active_projects": 0,
+            "contractor_units": 0.0
+          },
+          {
+            "year": 4,
+            "capex_m": 0.0,
+            "capital_released_m": 0.0,
+            "net_funding_m": 0.0,
+            "cumulative_net_funding_m": -273.0,
+            "remaining_liquidity_m": 773.0,
+            "noi_disruption_m": 12.58,
+            "active_projects": 0,
+            "contractor_units": 0.0
+          },
+          {
+            "year": 5,
+            "capex_m": 0.0,
+            "capital_released_m": 0.0,
+            "net_funding_m": 0.0,
+            "cumulative_net_funding_m": -273.0,
+            "remaining_liquidity_m": 773.0,
+            "noi_disruption_m": 12.58,
+            "active_projects": 0,
+            "contractor_units": 0.0
+          }
+        ],
+        "constraint_audit": {
+          "passed": true,
+          "tolerance": 1e-06,
+          "violation_count": 0,
+          "max_violation": 0.0,
+          "checks": [
+            {
+              "constraint": "one_action:DEMO-001",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-002",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-003",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-004",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-005",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-006",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-007",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-008",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-009",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-010",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "unknown_asset_selections",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "annual_capital:year_1",
+              "lhs": -273.0,
+              "lower": null,
+              "upper": 100.0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "liquidity:year_1",
+              "lhs": -273.0,
+              "lower": null,
+              "upper": 450,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "concurrency:year_1",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 8,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "noi_continuity:year_1",
+              "lhs": 12.58,
+              "lower": null,
+              "upper": 12.92,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "annual_capital:year_2",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 100.0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "liquidity:year_2",
+              "lhs": -273.0,
+              "lower": null,
+              "upper": 450,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "concurrency:year_2",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 8,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "noi_continuity:year_2",
+              "lhs": 12.58,
+              "lower": null,
+              "upper": 12.92,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "annual_capital:year_3",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 100.0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "liquidity:year_3",
+              "lhs": -273.0,
+              "lower": null,
+              "upper": 450,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "concurrency:year_3",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 8,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "noi_continuity:year_3",
+              "lhs": 12.58,
+              "lower": null,
+              "upper": 12.92,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "annual_capital:year_4",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 100.0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "liquidity:year_4",
+              "lhs": -273.0,
+              "lower": null,
+              "upper": 450,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "concurrency:year_4",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 8,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "noi_continuity:year_4",
+              "lhs": 12.58,
+              "lower": null,
+              "upper": 12.92,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "annual_capital:year_5",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 100.0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "liquidity:year_5",
+              "lhs": -273.0,
+              "lower": null,
+              "upper": 450,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "concurrency:year_5",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 8,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "noi_continuity:year_5",
+              "lhs": 12.58,
+              "lower": null,
+              "upper": 12.92,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "development_action_count",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 4,
+              "violation": 0.0,
+              "passed": true
+            }
+          ]
+        },
+        "scenario_count": 128,
+        "net_capital_released_m": 273.0
+      },
+      {
+        "minimum_noi_ratio": 0.6,
+        "sale_count": 3,
+        "hold_count": 6,
+        "action_counts": {
+          "Sell": 3,
+          "Retrofit": 1,
+          "Hold": 6
+        },
+        "capital_released_m": 209.625,
+        "capital_spent_m": 5.2,
+        "expected_incremental_npv_m": 11.465733,
+        "loss_cvar_95_m": 21.465627,
+        "risk_adjusted_objective_m": 5.026045,
+        "minimum_retained_noi_m": 15.8296,
+        "minimum_retained_noi_ratio": 0.612600619,
+        "audit_passed": true,
+        "constraint_violations": 0,
+        "audit_check_count": 32,
+        "max_constraint_violation": 0.0,
+        "selections": [
+          {
+            "asset_id": "DEMO-001",
+            "action": "Sell",
+            "start_year": 1,
+            "expected_npv_m": 3.756268,
+            "capex_m": -63.375
+          },
+          {
+            "asset_id": "DEMO-002",
+            "action": "Retrofit",
+            "start_year": 1,
+            "expected_npv_m": -1.005425,
+            "capex_m": 5.2
+          },
+          {
+            "asset_id": "DEMO-003",
+            "action": "Sell",
+            "start_year": 1,
+            "expected_npv_m": 3.799911,
+            "capex_m": -63.375
+          },
+          {
+            "asset_id": "DEMO-004",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-005",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-006",
+            "action": "Sell",
+            "start_year": 1,
+            "expected_npv_m": 4.914979,
+            "capex_m": -82.875
+          },
+          {
+            "asset_id": "DEMO-007",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-008",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-009",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-010",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          }
+        ],
+        "annual_plan": [
+          {
+            "year": 1,
+            "capex_m": 2.6,
+            "capital_released_m": 209.625,
+            "net_funding_m": -207.025,
+            "cumulative_net_funding_m": -207.025,
+            "remaining_liquidity_m": 707.025,
+            "noi_disruption_m": 10.0104,
+            "active_projects": 1,
+            "contractor_units": 1.0
+          },
+          {
+            "year": 2,
+            "capex_m": 2.6,
+            "capital_released_m": 0.0,
+            "net_funding_m": 2.6,
+            "cumulative_net_funding_m": -204.425,
+            "remaining_liquidity_m": 704.425,
+            "noi_disruption_m": 10.0104,
+            "active_projects": 1,
+            "contractor_units": 1.0
+          },
+          {
+            "year": 3,
+            "capex_m": 0.0,
+            "capital_released_m": 0.0,
+            "net_funding_m": 0.0,
+            "cumulative_net_funding_m": -204.425,
+            "remaining_liquidity_m": 704.425,
+            "noi_disruption_m": 9.66,
+            "active_projects": 0,
+            "contractor_units": 0.0
+          },
+          {
+            "year": 4,
+            "capex_m": 0.0,
+            "capital_released_m": 0.0,
+            "net_funding_m": 0.0,
+            "cumulative_net_funding_m": -204.425,
+            "remaining_liquidity_m": 704.425,
+            "noi_disruption_m": 9.66,
+            "active_projects": 0,
+            "contractor_units": 0.0
+          },
+          {
+            "year": 5,
+            "capex_m": 0.0,
+            "capital_released_m": 0.0,
+            "net_funding_m": 0.0,
+            "cumulative_net_funding_m": -204.425,
+            "remaining_liquidity_m": 704.425,
+            "noi_disruption_m": 9.66,
+            "active_projects": 0,
+            "contractor_units": 0.0
+          }
+        ],
+        "constraint_audit": {
+          "passed": true,
+          "tolerance": 1e-06,
+          "violation_count": 0,
+          "max_violation": 0.0,
+          "checks": [
+            {
+              "constraint": "one_action:DEMO-001",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-002",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-003",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-004",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-005",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-006",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-007",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-008",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-009",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-010",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "unknown_asset_selections",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "annual_capital:year_1",
+              "lhs": -207.025,
+              "lower": null,
+              "upper": 100.0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "liquidity:year_1",
+              "lhs": -207.025,
+              "lower": null,
+              "upper": 450,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "concurrency:year_1",
+              "lhs": 1.0,
+              "lower": null,
+              "upper": 8,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "noi_continuity:year_1",
+              "lhs": 10.010399999999999,
+              "lower": null,
+              "upper": 10.336,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "annual_capital:year_2",
+              "lhs": 2.6,
+              "lower": null,
+              "upper": 100.0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "liquidity:year_2",
+              "lhs": -204.425,
+              "lower": null,
+              "upper": 450,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "concurrency:year_2",
+              "lhs": 1.0,
+              "lower": null,
+              "upper": 8,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "noi_continuity:year_2",
+              "lhs": 10.010399999999999,
+              "lower": null,
+              "upper": 10.336,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "annual_capital:year_3",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 100.0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "liquidity:year_3",
+              "lhs": -204.425,
+              "lower": null,
+              "upper": 450,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "concurrency:year_3",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 8,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "noi_continuity:year_3",
+              "lhs": 9.66,
+              "lower": null,
+              "upper": 10.336,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "annual_capital:year_4",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 100.0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "liquidity:year_4",
+              "lhs": -204.425,
+              "lower": null,
+              "upper": 450,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "concurrency:year_4",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 8,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "noi_continuity:year_4",
+              "lhs": 9.66,
+              "lower": null,
+              "upper": 10.336,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "annual_capital:year_5",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 100.0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "liquidity:year_5",
+              "lhs": -204.425,
+              "lower": null,
+              "upper": 450,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "concurrency:year_5",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 8,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "noi_continuity:year_5",
+              "lhs": 9.66,
+              "lower": null,
+              "upper": 10.336,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "development_action_count",
+              "lhs": 1.0,
+              "lower": null,
+              "upper": 4,
+              "violation": 0.0,
+              "passed": true
+            }
+          ]
+        },
+        "scenario_count": 128,
+        "net_capital_released_m": 204.425
+      },
+      {
+        "minimum_noi_ratio": 0.7,
+        "sale_count": 3,
+        "hold_count": 7,
+        "action_counts": {
+          "Sell": 3,
+          "Hold": 7
+        },
+        "capital_released_m": 167.7,
+        "capital_spent_m": 0.0,
+        "expected_incremental_npv_m": 9.947621,
+        "loss_cvar_95_m": 20.025108,
+        "risk_adjusted_objective_m": 3.940089,
+        "minimum_retained_noi_m": 18.11,
+        "minimum_retained_noi_ratio": 0.700851393,
+        "audit_passed": true,
+        "constraint_violations": 0,
+        "audit_check_count": 32,
+        "max_constraint_violation": 0.0,
+        "selections": [
+          {
+            "asset_id": "DEMO-001",
+            "action": "Sell",
+            "start_year": 1,
+            "expected_npv_m": 3.756268,
+            "capex_m": -63.375
+          },
+          {
+            "asset_id": "DEMO-002",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-003",
+            "action": "Sell",
+            "start_year": 1,
+            "expected_npv_m": 3.799911,
+            "capex_m": -63.375
+          },
+          {
+            "asset_id": "DEMO-004",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-005",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-006",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-007",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-008",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-009",
+            "action": "Sell",
+            "start_year": 1,
+            "expected_npv_m": 2.391442,
+            "capex_m": -40.95
+          },
+          {
+            "asset_id": "DEMO-010",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          }
+        ],
+        "annual_plan": [
+          {
+            "year": 1,
+            "capex_m": 0.0,
+            "capital_released_m": 167.7,
+            "net_funding_m": -167.7,
+            "cumulative_net_funding_m": -167.7,
+            "remaining_liquidity_m": 667.7,
+            "noi_disruption_m": 7.73,
+            "active_projects": 0,
+            "contractor_units": 0.0
+          },
+          {
+            "year": 2,
+            "capex_m": 0.0,
+            "capital_released_m": 0.0,
+            "net_funding_m": 0.0,
+            "cumulative_net_funding_m": -167.7,
+            "remaining_liquidity_m": 667.7,
+            "noi_disruption_m": 7.73,
+            "active_projects": 0,
+            "contractor_units": 0.0
+          },
+          {
+            "year": 3,
+            "capex_m": 0.0,
+            "capital_released_m": 0.0,
+            "net_funding_m": 0.0,
+            "cumulative_net_funding_m": -167.7,
+            "remaining_liquidity_m": 667.7,
+            "noi_disruption_m": 7.73,
+            "active_projects": 0,
+            "contractor_units": 0.0
+          },
+          {
+            "year": 4,
+            "capex_m": 0.0,
+            "capital_released_m": 0.0,
+            "net_funding_m": 0.0,
+            "cumulative_net_funding_m": -167.7,
+            "remaining_liquidity_m": 667.7,
+            "noi_disruption_m": 7.73,
+            "active_projects": 0,
+            "contractor_units": 0.0
+          },
+          {
+            "year": 5,
+            "capex_m": 0.0,
+            "capital_released_m": 0.0,
+            "net_funding_m": 0.0,
+            "cumulative_net_funding_m": -167.7,
+            "remaining_liquidity_m": 667.7,
+            "noi_disruption_m": 7.73,
+            "active_projects": 0,
+            "contractor_units": 0.0
+          }
+        ],
+        "constraint_audit": {
+          "passed": true,
+          "tolerance": 1e-06,
+          "violation_count": 0,
+          "max_violation": 0.0,
+          "checks": [
+            {
+              "constraint": "one_action:DEMO-001",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-002",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-003",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-004",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-005",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-006",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-007",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-008",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-009",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-010",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "unknown_asset_selections",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "annual_capital:year_1",
+              "lhs": -167.7,
+              "lower": null,
+              "upper": 100.0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "liquidity:year_1",
+              "lhs": -167.7,
+              "lower": null,
+              "upper": 450,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "concurrency:year_1",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 8,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "noi_continuity:year_1",
+              "lhs": 7.7299999999999995,
+              "lower": null,
+              "upper": 7.752000000000001,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "annual_capital:year_2",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 100.0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "liquidity:year_2",
+              "lhs": -167.7,
+              "lower": null,
+              "upper": 450,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "concurrency:year_2",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 8,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "noi_continuity:year_2",
+              "lhs": 7.7299999999999995,
+              "lower": null,
+              "upper": 7.752000000000001,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "annual_capital:year_3",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 100.0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "liquidity:year_3",
+              "lhs": -167.7,
+              "lower": null,
+              "upper": 450,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "concurrency:year_3",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 8,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "noi_continuity:year_3",
+              "lhs": 7.7299999999999995,
+              "lower": null,
+              "upper": 7.752000000000001,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "annual_capital:year_4",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 100.0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "liquidity:year_4",
+              "lhs": -167.7,
+              "lower": null,
+              "upper": 450,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "concurrency:year_4",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 8,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "noi_continuity:year_4",
+              "lhs": 7.7299999999999995,
+              "lower": null,
+              "upper": 7.752000000000001,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "annual_capital:year_5",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 100.0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "liquidity:year_5",
+              "lhs": -167.7,
+              "lower": null,
+              "upper": 450,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "concurrency:year_5",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 8,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "noi_continuity:year_5",
+              "lhs": 7.7299999999999995,
+              "lower": null,
+              "upper": 7.752000000000001,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "development_action_count",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 4,
+              "violation": 0.0,
+              "passed": true
+            }
+          ]
+        },
+        "scenario_count": 128,
+        "net_capital_released_m": 167.7
+      },
+      {
+        "minimum_noi_ratio": 0.8,
+        "sale_count": 2,
+        "hold_count": 7,
+        "action_counts": {
+          "Sell": 2,
+          "Retrofit": 1,
+          "Hold": 7
+        },
+        "capital_released_m": 104.325,
+        "capital_spent_m": 5.2,
+        "expected_incremental_npv_m": 5.142285,
+        "loss_cvar_95_m": 8.707729,
+        "risk_adjusted_objective_m": 2.529966,
+        "minimum_retained_noi_m": 20.6796,
+        "minimum_retained_noi_ratio": 0.800294118,
+        "audit_passed": true,
+        "constraint_violations": 0,
+        "audit_check_count": 32,
+        "max_constraint_violation": 0.0,
+        "selections": [
+          {
+            "asset_id": "DEMO-001",
+            "action": "Sell",
+            "start_year": 1,
+            "expected_npv_m": 3.756268,
+            "capex_m": -63.375
+          },
+          {
+            "asset_id": "DEMO-002",
+            "action": "Retrofit",
+            "start_year": 1,
+            "expected_npv_m": -1.005425,
+            "capex_m": 5.2
+          },
+          {
+            "asset_id": "DEMO-003",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-004",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-005",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-006",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-007",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-008",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-009",
+            "action": "Sell",
+            "start_year": 1,
+            "expected_npv_m": 2.391442,
+            "capex_m": -40.95
+          },
+          {
+            "asset_id": "DEMO-010",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          }
+        ],
+        "annual_plan": [
+          {
+            "year": 1,
+            "capex_m": 2.6,
+            "capital_released_m": 104.325,
+            "net_funding_m": -101.725,
+            "cumulative_net_funding_m": -101.725,
+            "remaining_liquidity_m": 601.725,
+            "noi_disruption_m": 5.1604,
+            "active_projects": 1,
+            "contractor_units": 1.0
+          },
+          {
+            "year": 2,
+            "capex_m": 2.6,
+            "capital_released_m": 0.0,
+            "net_funding_m": 2.6,
+            "cumulative_net_funding_m": -99.125,
+            "remaining_liquidity_m": 599.125,
+            "noi_disruption_m": 5.1604,
+            "active_projects": 1,
+            "contractor_units": 1.0
+          },
+          {
+            "year": 3,
+            "capex_m": 0.0,
+            "capital_released_m": 0.0,
+            "net_funding_m": 0.0,
+            "cumulative_net_funding_m": -99.125,
+            "remaining_liquidity_m": 599.125,
+            "noi_disruption_m": 4.81,
+            "active_projects": 0,
+            "contractor_units": 0.0
+          },
+          {
+            "year": 4,
+            "capex_m": 0.0,
+            "capital_released_m": 0.0,
+            "net_funding_m": 0.0,
+            "cumulative_net_funding_m": -99.125,
+            "remaining_liquidity_m": 599.125,
+            "noi_disruption_m": 4.81,
+            "active_projects": 0,
+            "contractor_units": 0.0
+          },
+          {
+            "year": 5,
+            "capex_m": 0.0,
+            "capital_released_m": 0.0,
+            "net_funding_m": 0.0,
+            "cumulative_net_funding_m": -99.125,
+            "remaining_liquidity_m": 599.125,
+            "noi_disruption_m": 4.81,
+            "active_projects": 0,
+            "contractor_units": 0.0
+          }
+        ],
+        "constraint_audit": {
+          "passed": true,
+          "tolerance": 1e-06,
+          "violation_count": 0,
+          "max_violation": 0.0,
+          "checks": [
+            {
+              "constraint": "one_action:DEMO-001",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-002",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-003",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-004",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-005",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-006",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-007",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-008",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-009",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-010",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "unknown_asset_selections",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "annual_capital:year_1",
+              "lhs": -101.72500000000001,
+              "lower": null,
+              "upper": 100.0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "liquidity:year_1",
+              "lhs": -101.72500000000001,
+              "lower": null,
+              "upper": 450,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "concurrency:year_1",
+              "lhs": 1.0,
+              "lower": null,
+              "upper": 8,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "noi_continuity:year_1",
+              "lhs": 5.1604,
+              "lower": null,
+              "upper": 5.167999999999999,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "annual_capital:year_2",
+              "lhs": 2.6,
+              "lower": null,
+              "upper": 100.0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "liquidity:year_2",
+              "lhs": -99.12500000000001,
+              "lower": null,
+              "upper": 450,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "concurrency:year_2",
+              "lhs": 1.0,
+              "lower": null,
+              "upper": 8,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "noi_continuity:year_2",
+              "lhs": 5.1604,
+              "lower": null,
+              "upper": 5.167999999999999,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "annual_capital:year_3",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 100.0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "liquidity:year_3",
+              "lhs": -99.12500000000001,
+              "lower": null,
+              "upper": 450,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "concurrency:year_3",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 8,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "noi_continuity:year_3",
+              "lhs": 4.81,
+              "lower": null,
+              "upper": 5.167999999999999,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "annual_capital:year_4",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 100.0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "liquidity:year_4",
+              "lhs": -99.12500000000001,
+              "lower": null,
+              "upper": 450,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "concurrency:year_4",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 8,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "noi_continuity:year_4",
+              "lhs": 4.81,
+              "lower": null,
+              "upper": 5.167999999999999,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "annual_capital:year_5",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 100.0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "liquidity:year_5",
+              "lhs": -99.12500000000001,
+              "lower": null,
+              "upper": 450,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "concurrency:year_5",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 8,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "noi_continuity:year_5",
+              "lhs": 4.81,
+              "lower": null,
+              "upper": 5.167999999999999,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "development_action_count",
+              "lhs": 1.0,
+              "lower": null,
+              "upper": 4,
+              "violation": 0.0,
+              "passed": true
+            }
+          ]
+        },
+        "scenario_count": 128,
+        "net_capital_released_m": 99.125
+      },
+      {
+        "minimum_noi_ratio": 0.9,
+        "sale_count": 1,
+        "hold_count": 9,
+        "action_counts": {
+          "Hold": 9,
+          "Sell": 1
+        },
+        "capital_released_m": 40.95,
+        "capital_spent_m": 0.0,
+        "expected_incremental_npv_m": 2.391442,
+        "loss_cvar_95_m": 5.401621,
+        "risk_adjusted_objective_m": 0.770956,
+        "minimum_retained_noi_m": 23.95,
+        "minimum_retained_noi_ratio": 0.926857585,
+        "audit_passed": true,
+        "constraint_violations": 0,
+        "audit_check_count": 32,
+        "max_constraint_violation": 0.0,
+        "selections": [
+          {
+            "asset_id": "DEMO-001",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-002",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-003",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-004",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-005",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-006",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-007",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-008",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-009",
+            "action": "Sell",
+            "start_year": 1,
+            "expected_npv_m": 2.391442,
+            "capex_m": -40.95
+          },
+          {
+            "asset_id": "DEMO-010",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          }
+        ],
+        "annual_plan": [
+          {
+            "year": 1,
+            "capex_m": 0.0,
+            "capital_released_m": 40.95,
+            "net_funding_m": -40.95,
+            "cumulative_net_funding_m": -40.95,
+            "remaining_liquidity_m": 540.95,
+            "noi_disruption_m": 1.89,
+            "active_projects": 0,
+            "contractor_units": 0.0
+          },
+          {
+            "year": 2,
+            "capex_m": 0.0,
+            "capital_released_m": 0.0,
+            "net_funding_m": 0.0,
+            "cumulative_net_funding_m": -40.95,
+            "remaining_liquidity_m": 540.95,
+            "noi_disruption_m": 1.89,
+            "active_projects": 0,
+            "contractor_units": 0.0
+          },
+          {
+            "year": 3,
+            "capex_m": 0.0,
+            "capital_released_m": 0.0,
+            "net_funding_m": 0.0,
+            "cumulative_net_funding_m": -40.95,
+            "remaining_liquidity_m": 540.95,
+            "noi_disruption_m": 1.89,
+            "active_projects": 0,
+            "contractor_units": 0.0
+          },
+          {
+            "year": 4,
+            "capex_m": 0.0,
+            "capital_released_m": 0.0,
+            "net_funding_m": 0.0,
+            "cumulative_net_funding_m": -40.95,
+            "remaining_liquidity_m": 540.95,
+            "noi_disruption_m": 1.89,
+            "active_projects": 0,
+            "contractor_units": 0.0
+          },
+          {
+            "year": 5,
+            "capex_m": 0.0,
+            "capital_released_m": 0.0,
+            "net_funding_m": 0.0,
+            "cumulative_net_funding_m": -40.95,
+            "remaining_liquidity_m": 540.95,
+            "noi_disruption_m": 1.89,
+            "active_projects": 0,
+            "contractor_units": 0.0
+          }
+        ],
+        "constraint_audit": {
+          "passed": true,
+          "tolerance": 1e-06,
+          "violation_count": 0,
+          "max_violation": 0.0,
+          "checks": [
+            {
+              "constraint": "one_action:DEMO-001",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-002",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-003",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-004",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-005",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-006",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-007",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-008",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-009",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-010",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "unknown_asset_selections",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "annual_capital:year_1",
+              "lhs": -40.95,
+              "lower": null,
+              "upper": 100.0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "liquidity:year_1",
+              "lhs": -40.95,
+              "lower": null,
+              "upper": 450,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "concurrency:year_1",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 8,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "noi_continuity:year_1",
+              "lhs": 1.89,
+              "lower": null,
+              "upper": 2.5839999999999996,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "annual_capital:year_2",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 100.0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "liquidity:year_2",
+              "lhs": -40.95,
+              "lower": null,
+              "upper": 450,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "concurrency:year_2",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 8,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "noi_continuity:year_2",
+              "lhs": 1.89,
+              "lower": null,
+              "upper": 2.5839999999999996,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "annual_capital:year_3",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 100.0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "liquidity:year_3",
+              "lhs": -40.95,
+              "lower": null,
+              "upper": 450,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "concurrency:year_3",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 8,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "noi_continuity:year_3",
+              "lhs": 1.89,
+              "lower": null,
+              "upper": 2.5839999999999996,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "annual_capital:year_4",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 100.0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "liquidity:year_4",
+              "lhs": -40.95,
+              "lower": null,
+              "upper": 450,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "concurrency:year_4",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 8,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "noi_continuity:year_4",
+              "lhs": 1.89,
+              "lower": null,
+              "upper": 2.5839999999999996,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "annual_capital:year_5",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 100.0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "liquidity:year_5",
+              "lhs": -40.95,
+              "lower": null,
+              "upper": 450,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "concurrency:year_5",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 8,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "noi_continuity:year_5",
+              "lhs": 1.89,
+              "lower": null,
+              "upper": 2.5839999999999996,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "development_action_count",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 4,
+              "violation": 0.0,
+              "passed": true
+            }
+          ]
+        },
+        "scenario_count": 128,
+        "net_capital_released_m": 40.95
+      },
+      {
+        "minimum_noi_ratio": 1.0,
+        "sale_count": 0,
+        "hold_count": 10,
+        "action_counts": {
+          "Hold": 10
+        },
+        "capital_released_m": 0.0,
+        "capital_spent_m": 0.0,
+        "expected_incremental_npv_m": 0.0,
+        "loss_cvar_95_m": 0.0,
+        "risk_adjusted_objective_m": 0.0,
+        "minimum_retained_noi_m": 25.84,
+        "minimum_retained_noi_ratio": 1.0,
+        "audit_passed": true,
+        "constraint_violations": 0,
+        "audit_check_count": 32,
+        "max_constraint_violation": 0.0,
+        "selections": [
+          {
+            "asset_id": "DEMO-001",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-002",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-003",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-004",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-005",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-006",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-007",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-008",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-009",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          },
+          {
+            "asset_id": "DEMO-010",
+            "action": "Hold",
+            "start_year": 1,
+            "expected_npv_m": 0.0,
+            "capex_m": 0.0
+          }
+        ],
+        "annual_plan": [
+          {
+            "year": 1,
+            "capex_m": 0.0,
+            "capital_released_m": 0.0,
+            "net_funding_m": 0.0,
+            "cumulative_net_funding_m": 0.0,
+            "remaining_liquidity_m": 500.0,
+            "noi_disruption_m": 0.0,
+            "active_projects": 0,
+            "contractor_units": 0
+          },
+          {
+            "year": 2,
+            "capex_m": 0.0,
+            "capital_released_m": 0.0,
+            "net_funding_m": 0.0,
+            "cumulative_net_funding_m": 0.0,
+            "remaining_liquidity_m": 500.0,
+            "noi_disruption_m": 0.0,
+            "active_projects": 0,
+            "contractor_units": 0.0
+          },
+          {
+            "year": 3,
+            "capex_m": 0.0,
+            "capital_released_m": 0.0,
+            "net_funding_m": 0.0,
+            "cumulative_net_funding_m": 0.0,
+            "remaining_liquidity_m": 500.0,
+            "noi_disruption_m": 0.0,
+            "active_projects": 0,
+            "contractor_units": 0.0
+          },
+          {
+            "year": 4,
+            "capex_m": 0.0,
+            "capital_released_m": 0.0,
+            "net_funding_m": 0.0,
+            "cumulative_net_funding_m": 0.0,
+            "remaining_liquidity_m": 500.0,
+            "noi_disruption_m": 0.0,
+            "active_projects": 0,
+            "contractor_units": 0.0
+          },
+          {
+            "year": 5,
+            "capex_m": 0.0,
+            "capital_released_m": 0.0,
+            "net_funding_m": 0.0,
+            "cumulative_net_funding_m": 0.0,
+            "remaining_liquidity_m": 500.0,
+            "noi_disruption_m": 0.0,
+            "active_projects": 0,
+            "contractor_units": 0.0
+          }
+        ],
+        "constraint_audit": {
+          "passed": true,
+          "tolerance": 1e-06,
+          "violation_count": 0,
+          "max_violation": 0.0,
+          "checks": [
+            {
+              "constraint": "one_action:DEMO-001",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-002",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-003",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-004",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-005",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-006",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-007",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-008",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-009",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "one_action:DEMO-010",
+              "lhs": 1.0,
+              "lower": 1,
+              "upper": 1,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "unknown_asset_selections",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "annual_capital:year_1",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 100.0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "liquidity:year_1",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 450,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "concurrency:year_1",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 8,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "noi_continuity:year_1",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 0.0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "annual_capital:year_2",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 100.0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "liquidity:year_2",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 450,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "concurrency:year_2",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 8,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "noi_continuity:year_2",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 0.0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "annual_capital:year_3",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 100.0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "liquidity:year_3",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 450,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "concurrency:year_3",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 8,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "noi_continuity:year_3",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 0.0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "annual_capital:year_4",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 100.0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "liquidity:year_4",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 450,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "concurrency:year_4",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 8,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "noi_continuity:year_4",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 0.0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "annual_capital:year_5",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 100.0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "liquidity:year_5",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 450,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "concurrency:year_5",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 8,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "noi_continuity:year_5",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 0.0,
+              "violation": 0.0,
+              "passed": true
+            },
+            {
+              "constraint": "development_action_count",
+              "lhs": 0.0,
+              "lower": null,
+              "upper": 4,
+              "violation": 0.0,
+              "passed": true
+            }
+          ]
+        },
+        "scenario_count": 128,
+        "net_capital_released_m": 0.0
+      }
+    ]
+  },
+  "illustrative_asset": {
+    "source_route": "/assets/DEMO-001",
+    "id": "DEMO-001",
+    "name": "Demo Mixed use Asset 1",
+    "current_value_m": 65,
+    "annual_noi_m": 2.92,
+    "hold_absolute_pv_m": 59.469789,
+    "holding_years": 10,
+    "discount_rate": 0.078,
+    "action_risk_return": [
+      {
+        "action": "Hold",
+        "expected_npv_m": 0.0,
+        "incremental_npv_m": 0.0,
+        "cvar_95_m": 0.0,
+        "probability_of_loss": 0.0,
+        "p10_npv_m": 0.0,
+        "p50_npv_m": 0.0,
+        "p90_npv_m": 0.0,
+        "capex_m": 0.0,
+        "success_probability": 1.0,
+        "execution_years": 0.0,
+        "decision_ready": false,
+        "risk_adjusted_score_m": 0.0
+      },
+      {
+        "action": "Retrofit",
+        "expected_npv_m": -0.99831,
+        "incremental_npv_m": -1.031321,
+        "cvar_95_m": 5.000352,
+        "probability_of_loss": 0.685,
+        "p10_npv_m": -3.32466,
+        "p50_npv_m": -1.082828,
+        "p90_npv_m": 1.778839,
+        "capex_m": 5.2,
+        "success_probability": 0.9,
+        "execution_years": 1.5,
+        "decision_ready": false,
+        "risk_adjusted_score_m": -2.498416
+      },
+      {
+        "action": "Repurpose",
+        "expected_npv_m": -4.558138,
+        "incremental_npv_m": -4.646096,
+        "cvar_95_m": 14.980366,
+        "probability_of_loss": 0.8,
+        "p10_npv_m": -10.150142,
+        "p50_npv_m": -6.242586,
+        "p90_npv_m": 3.035996,
+        "capex_m": 13.0,
+        "success_probability": 0.72,
+        "execution_years": 2.5,
+        "decision_ready": false,
+        "risk_adjusted_score_m": -9.052248
+      },
+      {
+        "action": "Redevelop",
+        "expected_npv_m": -11.374229,
+        "incremental_npv_m": -11.378795,
+        "cvar_95_m": 21.938256,
+        "probability_of_loss": 0.942,
+        "p10_npv_m": -17.350195,
+        "p50_npv_m": -13.194596,
+        "p90_npv_m": -2.308223,
+        "capex_m": 27.3,
+        "success_probability": 0.62,
+        "execution_years": 4.0,
+        "decision_ready": false,
+        "risk_adjusted_score_m": -17.955706
+      },
+      {
+        "action": "Sell",
+        "expected_npv_m": 3.756268,
+        "incremental_npv_m": 3.905211,
+        "cvar_95_m": 7.210666,
+        "probability_of_loss": 0.2444,
+        "p10_npv_m": -3.248325,
+        "p50_npv_m": 3.772188,
+        "p90_npv_m": 10.705047,
+        "capex_m": -63.375,
+        "success_probability": 1.0,
+        "execution_years": 0.0,
+        "decision_ready": false,
+        "risk_adjusted_score_m": 1.593068
+      }
+    ],
+    "selection": {
+      "signal": "Data Required / Monitor",
+      "preferred_action": "Sell",
+      "selection_npv_m": 3.756,
+      "risk_adjusted_score_m": 1.593,
+      "cvar_penalty": 0.3,
+      "annual_expected_alpha": null,
+      "alpha_status": "not_estimated_requires_out_of_sample_risk_adjusted_benchmark",
+      "expected_total_return": null,
+      "operating_yield": 0.04492,
+      "market_return": null,
+      "incremental_action_return": 0.014396,
+      "return_basis": "annual equivalent incremental NPV yield; do not add to NOI yield or historical price growth",
+      "required_return": 0.078,
+      "acquisition_signal": "Not assessed: transaction price and benchmark evidence required",
+      "portfolio_signal": "Data Required / Monitor",
+      "action_npv_m": 3.756,
+      "action_comparison": [
+        {
+          "action": "Hold",
+          "base_action_npv_m": 0.0,
+          "adjusted_selection_npv_m": 0.0,
+          "cvar_95_m": 0.0,
+          "risk_adjusted_score_m": 0.0,
+          "probability_of_loss": 0.0,
+          "decision_ready": false,
+          "adjustments": {
+            "enbloc_m": 0.0,
+            "transformation_m": 0.0,
+            "view_supply_lease_penalty_m": 0.0
+          }
+        },
+        {
+          "action": "Retrofit",
+          "base_action_npv_m": -0.998,
+          "adjusted_selection_npv_m": -0.998,
+          "cvar_95_m": 5.0,
+          "risk_adjusted_score_m": -2.498,
+          "probability_of_loss": 0.685,
+          "decision_ready": false,
+          "adjustments": {
+            "enbloc_m": 0.0,
+            "transformation_m": 0.0,
+            "view_supply_lease_penalty_m": 0.0
+          }
+        },
+        {
+          "action": "Repurpose",
+          "base_action_npv_m": -4.558,
+          "adjusted_selection_npv_m": -4.558,
+          "cvar_95_m": 14.98,
+          "risk_adjusted_score_m": -9.052,
+          "probability_of_loss": 0.8,
+          "decision_ready": false,
+          "adjustments": {
+            "enbloc_m": 0.0,
+            "transformation_m": 0.0,
+            "view_supply_lease_penalty_m": 0.0
+          }
+        },
+        {
+          "action": "Redevelop",
+          "base_action_npv_m": -11.374,
+          "adjusted_selection_npv_m": -11.374,
+          "cvar_95_m": 21.938,
+          "risk_adjusted_score_m": -17.956,
+          "probability_of_loss": 0.942,
+          "decision_ready": false,
+          "adjustments": {
+            "enbloc_m": 0.0,
+            "transformation_m": 0.0,
+            "view_supply_lease_penalty_m": 0.0
+          }
+        },
+        {
+          "action": "Sell",
+          "base_action_npv_m": 3.756,
+          "adjusted_selection_npv_m": 3.756,
+          "cvar_95_m": 7.211,
+          "risk_adjusted_score_m": 1.593,
+          "probability_of_loss": 0.2444,
+          "decision_ready": false,
+          "adjustments": {
+            "enbloc_m": 0.0,
+            "transformation_m": 0.0,
+            "view_supply_lease_penalty_m": 0.0
+          }
+        }
+      ],
+      "opportunity": {
+        "status": "research_candidate",
+        "expected_incremental_npv_m": 3.756,
+        "risk_adjusted_margin_over_hold_m": 1.593,
+        "margin_to_runner_up_m": 1.593,
+        "break_even_additional_pv_cost_m": 3.756,
+        "annual_equivalent_incremental_yield": 0.014396,
+        "interpretation": "Modelled opportunity versus Hold, not excess realised return. Additional discounted costs consume the break-even cost allowance one-for-one."
+      },
+      "readiness": {
+        "ready": false,
+        "missing": [
+          "synthetic_financials",
+          "current_valuation_m",
+          "noi_m",
+          "site_area_sqm",
+          "existing_gfa_sqm",
+          "title_lot",
+          "tenure",
+          "evidence_source",
+          "data_owner",
+          "verified_financial_evidence",
+          "verified_title_and_planning",
+          "valuation_date",
+          "evidence_date",
+          "verified_action_costs_and_cashflows"
+        ],
+        "as_of": "2026-09-25",
+        "maximum_evidence_age_days": 365
+      },
+      "zoning_option_value_m": 4.44,
+      "enbloc": {
+        "probability": 0.01,
+        "option_value_m": 0.044,
+        "underutilisation": 0.2,
+        "tenure_factor": 0.65,
+        "collective_sale_applicable": false,
+        "warning": "Screening probability only. Owner consent, Land Betterment Charge, acquisition premium and technical feasibility require project evidence.",
+        "included_in_selection": false
+      },
+      "transformation": {
+        "value_m": 0,
+        "exposures": [],
+        "quality": "screening_geofence",
+        "included_in_selection": false
+      },
+      "view_risk": {
+        "probability": null,
+        "penalty_m": null,
+        "status": "unavailable"
+      },
+      "supply_pressure": {
+        "index": null,
+        "penalty_m": null,
+        "market_momentum_qoq": null,
+        "status": "unavailable"
+      },
+      "lease_decay": {
+        "penalty_m": 0.65,
+        "factor": 0.01,
+        "remaining_years": 67,
+        "tenure": "99-year leasehold",
+        "quality": "synthetic demo",
+        "included_in_selection": false
+      },
+      "probability_of_loss": 0.2444,
+      "reasons": [
+        "Ranking uses expected incremental NPV minus 0.3 times nonnegative loss CVaR, with Hold as the counterfactual.",
+        "En-bloc, transformation and spatial screens are hypotheses requiring underwriting; they are not added to action NPV.",
+        "Surrounding geometry is unavailable; zero obstruction or supply risk has not been established.",
+        "Outstanding evidence: synthetic_financials, current_valuation_m, noi_m, site_area_sqm, existing_gfa_sqm, title_lot, tenure, evidence_source, data_owner, verified_financial_evidence, verified_title_and_planning, valuation_date, evidence_date, verified_action_costs_and_cashflows"
+      ],
+      "quality": "provisional",
+      "warning": "Screening model only. No demonstrated alpha. Unverified option values are excluded to avoid overlap with cash-flow valuation."
+    },
+    "scenario_draws": 5000,
+    "capacity": {
+      "statutory_gfa_sqm": 10920.0,
+      "geometric_gfa_sqm": 34320.0,
+      "physical_gfa_sqm": 10920.0,
+      "de_facto_gfa_sqm": 10046.4,
+      "expected_approved_gfa_sqm": 6228.8,
+      "economic_gfa_sqm": 10046.4,
+      "unused_economic_gfa_sqm": 2184.0,
+      "buildable_footprint_sqm": 1040.0,
+      "storeys_by_height": 33,
+      "binding_constraints": [
+        "plot_ratio",
+        "site_coverage"
+      ],
+      "sensitivities": {
+        "legal_gpr": 148.3,
+        "site_coverage_max": 0.0,
+        "height_max_m": 0.0,
+        "front_setback_m": 0.0,
+        "side_setback_m": 0.0,
+        "approval_probability": 502.3
+      },
+      "residual_value_m": 4.44,
+      "p10_gfa_sqm": 4615.7,
+      "p50_gfa_sqm": 6233.4,
+      "p90_gfa_sqm": 7788.0,
+      "verification_required": true,
+      "methodology_version": "sg-capacity-0.2"
+    },
+    "approval": {
+      "stages": [
+        {
+          "stage": "Pre-application",
+          "conditional_probability": 0.94,
+          "cumulative_probability": 0.94,
+          "expected_months": 2.5
+        },
+        {
+          "stage": "Planning submission",
+          "conditional_probability": 0.86,
+          "cumulative_probability": 0.8084,
+          "expected_months": 5
+        },
+        {
+          "stage": "Technical clearances",
+          "conditional_probability": 0.82,
+          "cumulative_probability": 0.6629,
+          "expected_months": 6
+        },
+        {
+          "stage": "Committee/public review",
+          "conditional_probability": 0.88,
+          "cumulative_probability": 0.5833,
+          "expected_months": 4
+        },
+        {
+          "stage": "Conditions discharge",
+          "conditional_probability": 0.93,
+          "cumulative_probability": 0.5425,
+          "expected_months": 4
+        },
+        {
+          "stage": "Building permission",
+          "conditional_probability": 0.97,
+          "cumulative_probability": 0.5262,
+          "expected_months": 3
+        }
+      ],
+      "overall_probability": 0.5262,
+      "p50_months": 20.0,
+      "p90_months": 29.1,
+      "redesign_probability": 0.4738,
+      "failure_probability": 0.4738,
+      "seed": 20314800,
+      "duration_basis": "time to success or stopping failure, not successful-completion duration",
+      "p50_success_months": 24.0,
+      "p90_success_months": 31.1,
+      "probability_source": "uncalibrated stage assumptions",
+      "redesign_probability_status": "legacy alias for failure; redesign itself is not estimated"
+    },
+    "explanation": "The screened Sell action has positive incremental value under illustrative assumptions, but the finite simulated loss tail and missing evidence prevent investment sign-off. Hold at zero is a comparison baseline, not a claim that holding is risk free."
+  },
+  "development_case": {
+    "source_route": "/assets/DEMO-001/advanced-analysis",
+    "input_status": "provisional_proxy_run",
+    "decision_ready": false,
+    "valuation_status": "incomplete_inputs",
+    "capacity": {
+      "statutory_gfa_sqm": 10920.0,
+      "geometric_gfa_sqm": 34320.0,
+      "physical_gfa_sqm": 10920.0,
+      "de_facto_gfa_sqm": 10046.4,
+      "expected_approved_gfa_sqm": 6228.8,
+      "economic_gfa_sqm": 10046.4,
+      "unused_economic_gfa_sqm": 2184.0,
+      "buildable_footprint_sqm": 1040.0,
+      "storeys_by_height": 33,
+      "binding_constraints": [
+        "plot_ratio",
+        "site_coverage"
+      ],
+      "sensitivities": {
+        "legal_gpr": 148.3,
+        "site_coverage_max": 0.0,
+        "height_max_m": 0.0,
+        "front_setback_m": 0.0,
+        "side_setback_m": 0.0,
+        "approval_probability": 502.3
+      },
+      "residual_value_m": 4.44,
+      "p10_gfa_sqm": 4657.5,
+      "p50_gfa_sqm": 6281.5,
+      "p90_gfa_sqm": 7733.0,
+      "verification_required": true,
+      "methodology_version": "sg-capacity-0.2"
+    },
+    "envelope": {
+      "site_area_sqm": 2600.0,
+      "legal_gfa_sqm": 10920.0,
+      "buildable_footprint_sqm": 1263.75,
+      "max_storeys": 33,
+      "preferred": {
+        "towers": 2,
+        "storeys": 26,
+        "height_m": 93.6,
+        "floorplate_sqm": 414.39,
+        "gross_gfa_sqm": 10774.19,
+        "net_area_sqm": 8188.39,
+        "efficiency": 0.76,
+        "parking_spaces": 86,
+        "parking_area_sqm": 2758.19,
+        "daylight_score": 0.1964,
+        "binding_constraints": [
+          "Setbacks"
+        ],
+        "footprints_geojson": [
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  103.72494560585054,
+                  1.2680799317714508
+                ],
+                [
+                  103.72494560585054,
+                  1.2679200682285492
+                ],
+                [
+                  103.72478682356194,
+                  1.2679200682285492
+                ],
+                [
+                  103.72478682356194,
+                  1.2680799317714508
+                ],
+                [
+                  103.72494560585054,
+                  1.2680799317714508
+                ]
+              ]
+            ]
+          },
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  103.72516125333934,
+                  1.2679200682285492
+                ],
+                [
+                  103.72516125333934,
+                  1.2680799317714508
+                ],
+                [
+                  103.72521317643807,
+                  1.2680799317714508
+                ],
+                [
+                  103.72521317643807,
+                  1.2679200682285492
+                ],
+                [
+                  103.72516125333934,
+                  1.2679200682285492
+                ]
+              ]
+            ]
+          }
+        ],
+        "boxes": [
+          {
+            "x": -14.89,
+            "y": -0.0,
+            "footprint_sqm": 312.28,
+            "height_m": 93.6
+          },
+          {
+            "x": 20.84,
+            "y": -0.0,
+            "footprint_sqm": 102.12,
+            "height_m": 93.6
+          }
+        ],
+        "score": 10.15283406676375
+      },
+      "status": "screening_only",
+      "decision_ready": false,
+      "method": "Screening-level 3D envelope; requires architect, surveyor, parking, fire access and daylight verification"
+    },
+    "redevelopment": {
+      "action": "Redevelop",
+      "npv_m": -37.022416,
+      "incremental_npv_m": -37.022416,
+      "npv_basis": "expected unlevered incremental cashflows versus Hold",
+      "project_npv_m": -40.154802,
+      "hold_npv_m": -3.132386,
+      "success_project_npv_m": -59.619899,
+      "failure_project_npv_m": -8.39596,
+      "equity_npv_m": null,
+      "equity_discount_rate": null,
+      "irr_annual": null,
+      "irr_basis": "probability-weighted equity investment, including current-asset opportunity cost; not incremental IRR",
+      "irr_status": "unavailable_or_nonconventional_cashflows",
+      "financing_basis": "success-conditional development debt; draws added to equity, interest paid monthly, principal repaid on sale; excluded from unlevered NPV",
+      "current_asset_opportunity_cost_m": 65,
+      "additional_gfa_sqm": 2911.790000000001,
+      "construction_gfa_sqm": 10774.19,
+      "construction_m": 45.251598,
+      "professional_fees_m": 5.430192,
+      "contingency_m": 3.620128,
+      "total_development_m": 56.761918,
+      "lbc": {
+        "status": "required",
+        "total_sgd": null,
+        "warning": "LBC sector/use-group rate must be supplied from the current SLA table"
+      },
+      "buyer_stamp_duty_m": 0.0,
+      "seller_stamp_duty_m": 0.0,
+      "financing_interest_m": 5.698437,
+      "tenant_relocation_m": 1.46,
+      "demolition_m": 1,
+      "gross_terminal_value_m": 79.836748,
+      "net_sale_proceeds_m": 76.244094,
+      "debt_repayment_m": 30.799036,
+      "total_debt_draws_m": 30.799036,
+      "approval_probability": 0.62,
+      "failure_cost_m": 2.063473,
+      "months": 75,
+      "disposal_date": "2032-12-24",
+      "valuation_status": "incomplete_inputs",
+      "decision_ready": false,
+      "verification_required": true,
+      "excluded_costs": [
+        "unassessed LBC"
+      ],
+      "decision_blockers": [
+        "LBC is missing; reported numeric values exclude an unknown charge and are not decision-ready",
+        "Asset values, planning, dates, taxes, costs and approval assumptions are not verified"
+      ],
+      "assumptions": [
+        "predevelopment fees are sunk before approval; failed approval retains Hold cashflows",
+        "NOI yield, lease-up, financing, growth and approval are supplied assumptions, not calibrated forecasts",
+        "existing debt, corporate income tax, ABSD, tenure top-up and other unprovided levies are excluded; verify applicability"
+      ],
+      "feasible_envelope": true
+    },
+    "cost_components_m": [
+      {
+        "name": "Construction",
+        "value": 45.251598
+      },
+      {
+        "name": "Professional fees",
+        "value": 5.430192
+      },
+      {
+        "name": "Contingency",
+        "value": 3.620128
+      },
+      {
+        "name": "Tenant relocation",
+        "value": 1.46
+      },
+      {
+        "name": "Demolition",
+        "value": 1
+      }
+    ],
+    "debt_reconciles": true,
+    "npv_reconciles": true,
+    "enbloc": {
+      "allowable_gfa_sqm": 10920.0,
+      "additional_gfa_sqm": 3057.6,
+      "gross_development_value_m": 80.9172,
+      "construction_m": 45.864,
+      "professional_m": 5.50368,
+      "finance_m": 4.109414,
+      "marketing_m": 2.02293,
+      "lbc": {
+        "status": "required",
+        "total_sgd": null,
+        "warning": "LBC sector/use-group rate must be supplied from the current SLA table"
+      },
+      "developer_margin_m": 16.18344,
+      "buyer_stamp_duty_m": 0.150749,
+      "demolition_m": 2,
+      "tenant_cost_m": 1.46,
+      "residual_before_buyer_duty_m": 3.773736,
+      "maximum_land_value_m": 3.622987,
+      "premium_over_current_value": -0.944262,
+      "residual_reconciliation_error_m": -0.0,
+      "individual_owner_support_probability": 0.291548,
+      "owner_consent_probability": 0.291548,
+      "success_probability": 0.291548,
+      "required_consent": 0.8,
+      "required_owner_count_screen": 1,
+      "consent_method": "uncalibrated independent equal-weight owner-support screen; not a legal vote or observed approval probability",
+      "expected_discounted_enbloc_value_m": 0.84318,
+      "conditional_discounted_sale_value_m": 2.892081,
+      "expected_retained_asset_value_m": 39.585783,
+      "expected_total_terminal_value_m": 40.428963,
+      "incremental_npv_vs_hold_m": -15.447469,
+      "hold_terminal_value_m": 69.997891,
+      "attempt_cost_m": 0,
+      "timeline_years": 3,
+      "discount_rate": 0.078,
+      "value_basis": "legacy expected value is success-weighted sale component only; incremental value includes retained-asset fallback versus same-date Hold",
+      "finance_basis": "supplied effective development financing allowance on construction and professional costs; acquisition finance and tenure top-up are excluded",
+      "decision_ready": false,
+      "verification_required": true,
+      "valuation_status": "incomplete_inputs",
+      "excluded_costs": [
+        "unassessed LBC"
+      ],
+      "decision_blockers": [
+        "LBC is missing; residual and indicative values exclude an unknown charge",
+        "Site, market, costs, taxes and ownership/voting assumptions are unverified",
+        "Consent uses an uncalibrated equal-owner proxy; actual legal voting shares are unavailable"
+      ]
+    },
+    "takeaway": "Physical redevelopment capacity is not a financial recommendation: the detailed monthly project is S$37.02m worse than Hold in this fictional example, before unresolved LBC. Development debt is kept outside unlevered project NPV."
+  },
+  "digital_twins": {
+    "source_route": "/digital-twins/dashboard",
+    "summary": {
+      "assets": 10,
+      "real_portfolio_anchors": 0,
+      "fictional_asset_contexts": 10,
+      "supplied_unverified_contexts": 0,
+      "average_real_context_pct": 0.8,
+      "verified_underwriting_pct": 0.0,
+      "financial_history_years": 12,
+      "environments": 3,
+      "fragile_assets": 2,
+      "segment_distribution": {
+        "Mixed Use": 1,
+        "Commercial": 2,
+        "Mall": 2,
+        "Industrial": 2,
+        "Residential": 2,
+        "Hotel": 1
+      }
+    },
+    "methodology": {
+      "prediction_inputs": "Observable underwriting only; no latent simulation truth",
+      "risk_source": "Assumed shared economic and cost Student-t(6) factors, idiosyncratic shocks, approval branches",
+      "predictive_scenario_count": 2048,
+      "optimisation_scenario_count": 128,
+      "evaluation_source": "Separate random seed plus hidden simulation effects; one outcome per action/environment",
+      "calibration_status": "assumption_only_not_empirically_calibrated",
+      "scenario_bounds": {
+        "terminal_cap_rate": [
+          0.02,
+          0.15
+        ],
+        "rent_growth": [
+          -0.03,
+          0.08
+        ],
+        "sale_price_multiplier": [
+          0.35,
+          1.75
+        ]
+      },
+      "tail_bounds": "Student-t outcomes are unbounded and illustrate incremental-NPV model risk; not legal liability bounds",
+      "hold_baseline": "Incremental Hold NPV and risk are zero; retained asset value remains in baseline PV",
+      "context_coverage": "Populated fields, not verification; legacy real_context_pct is a compatibility alias"
+    },
+    "environments": [
+      {
+        "id": "base",
+        "label": "Base conditions",
+        "assumptions": {
+          "rent_change": 0.015,
+          "cap_rate_shift": 0.0,
+          "construction_cost_multiplier": 1.0,
+          "approval_multiplier": 1.0
+        },
+        "allocation": {
+          "Hold": 4,
+          "Retrofit": 0,
+          "Repurpose": 0,
+          "Redevelop": 0,
+          "Sell": 6
+        },
+        "expected_incremental_npv_m": 79.8007,
+        "capital_released_m": 420.794,
+        "capital_required_m": 0,
+        "baseline_noi_m": 58.041453,
+        "loss_cvar_95_m": 0.0,
+        "audit_passed": true,
+        "constraint_violations": 0,
+        "nominal_interval_coverage": 0.8,
+        "observed_synthetic_interval_coverage": 0.74,
+        "interval_coverage_observations": 50,
+        "evaluation_status": "separate_synthetic_sample_not_real_world_accuracy",
+        "simulation_regret_m": 50.5307,
+        "constraints": {
+          "total_capital_budget_m": 300,
+          "annual_capital_budgets": [
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0
+          ],
+          "minimum_liquidity_m": 30.0,
+          "max_concurrent_projects": 8,
+          "max_development_share": 0.35,
+          "maximum_development_actions": 3,
+          "minimum_noi_ratio": 0.7,
+          "cvar_penalty": 0.3,
+          "cvar_alpha": 0.95,
+          "discount_rate": 0.078
+        }
+      },
+      {
+        "id": "stress",
+        "label": "Market and cost stress",
+        "assumptions": {
+          "rent_change": -0.12,
+          "cap_rate_shift": 0.012,
+          "construction_cost_multiplier": 1.18,
+          "approval_multiplier": 0.72
+        },
+        "allocation": {
+          "Hold": 4,
+          "Retrofit": 0,
+          "Repurpose": 0,
+          "Redevelop": 0,
+          "Sell": 6
+        },
+        "expected_incremental_npv_m": 66.9548,
+        "capital_released_m": 267.3002,
+        "capital_required_m": 0,
+        "baseline_noi_m": 44.371938,
+        "loss_cvar_95_m": 0.0,
+        "audit_passed": true,
+        "constraint_violations": 0,
+        "nominal_interval_coverage": 0.8,
+        "observed_synthetic_interval_coverage": 0.78,
+        "interval_coverage_observations": 50,
+        "evaluation_status": "separate_synthetic_sample_not_real_world_accuracy",
+        "simulation_regret_m": 27.4303,
+        "constraints": {
+          "total_capital_budget_m": 300,
+          "annual_capital_budgets": [
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0
+          ],
+          "minimum_liquidity_m": 30.0,
+          "max_concurrent_projects": 8,
+          "max_development_share": 0.35,
+          "maximum_development_actions": 3,
+          "minimum_noi_ratio": 0.7,
+          "cvar_penalty": 0.3,
+          "cvar_alpha": 0.95,
+          "discount_rate": 0.078
+        }
+      },
+      {
+        "id": "structural_change",
+        "label": "Structural demand change",
+        "assumptions": {
+          "rent_change": 0.005,
+          "cap_rate_shift": 0.003,
+          "construction_cost_multiplier": 1.08,
+          "approval_multiplier": 0.86
+        },
+        "allocation": {
+          "Hold": 8,
+          "Retrofit": 0,
+          "Repurpose": 0,
+          "Redevelop": 0,
+          "Sell": 2
+        },
+        "expected_incremental_npv_m": 68.0952,
+        "capital_released_m": 367.5736,
+        "capital_required_m": 0,
+        "baseline_noi_m": 55.454051,
+        "loss_cvar_95_m": 0.0,
+        "audit_passed": true,
+        "constraint_violations": 0,
+        "nominal_interval_coverage": 0.8,
+        "observed_synthetic_interval_coverage": 0.76,
+        "interval_coverage_observations": 50,
+        "evaluation_status": "separate_synthetic_sample_not_real_world_accuracy",
+        "simulation_regret_m": 44.2933,
+        "constraints": {
+          "total_capital_budget_m": 300,
+          "annual_capital_budgets": [
+            60.0,
+            60.0,
+            60.0,
+            60.0,
+            60.0
+          ],
+          "minimum_liquidity_m": 30.0,
+          "max_concurrent_projects": 8,
+          "max_development_share": 0.35,
+          "maximum_development_actions": 3,
+          "minimum_noi_ratio": 0.7,
+          "cvar_penalty": 0.3,
+          "cvar_alpha": 0.95,
+          "discount_rate": 0.078
+        }
+      }
+    ],
+    "warning": "This is a separate synthetic financial-history experiment, not the same cash-flow calibration as the core portfolio. Do not combine its NPV values with the core frontier. No demonstrated alpha or observed real-world accuracy. Zero CVaR in bounded synthetic draws is not proof of no risk."
+  },
+  "client_takeaways": [
+    "Translate an income-retention policy into a feasible asset plan, released capital and explicit downside.",
+    "A strong system can reject an attractive physical development story when the discounted cash flows do not support it.",
+    "Treat model outputs as traceable research candidates: observed asset evidence, calibrated assumptions and independent validation are the next client pilot gates."
+  ],
+  "slide_disclosure": "Illustrative fictional portfolio; S$ million; model outputs are not investment recommendations or demonstrated alpha."
+}

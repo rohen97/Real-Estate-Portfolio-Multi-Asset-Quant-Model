@@ -1,0 +1,172 @@
+{
+  "runs": 20,
+  "seed": 20260924,
+  "successful_runs": 20,
+  "failed_runs": 0,
+  "feasible_run_rate": 1.0,
+  "failed_run_details": [],
+  "baseline_feasible": true,
+  "baseline_status": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+  "assets": [
+    {
+      "asset_id": "DEMO-001",
+      "baseline_action": "Sell",
+      "modal_action": "Hold",
+      "robust_action": "Hold",
+      "stability_score": 0.55,
+      "baseline_action_frequency": 0.35,
+      "action_frequencies": {
+        "Hold": 0.55,
+        "Sell": 0.35,
+        "Retrofit": 0.1
+      },
+      "successful_runs": 20,
+      "fragile": true
+    },
+    {
+      "asset_id": "DEMO-002",
+      "baseline_action": "Hold",
+      "modal_action": "Hold",
+      "robust_action": "Hold",
+      "stability_score": 0.7,
+      "baseline_action_frequency": 0.7,
+      "action_frequencies": {
+        "Hold": 0.7,
+        "Sell": 0.25,
+        "Retrofit": 0.05
+      },
+      "successful_runs": 20,
+      "fragile": false
+    },
+    {
+      "asset_id": "DEMO-003",
+      "baseline_action": "Sell",
+      "modal_action": "Hold",
+      "robust_action": "Hold",
+      "stability_score": 0.6,
+      "baseline_action_frequency": 0.35,
+      "action_frequencies": {
+        "Sell": 0.35,
+        "Hold": 0.6,
+        "Retrofit": 0.05
+      },
+      "successful_runs": 20,
+      "fragile": true
+    },
+    {
+      "asset_id": "DEMO-004",
+      "baseline_action": "Hold",
+      "modal_action": "Hold",
+      "robust_action": "Hold",
+      "stability_score": 1.0,
+      "baseline_action_frequency": 1.0,
+      "action_frequencies": {
+        "Hold": 1.0
+      },
+      "successful_runs": 20,
+      "fragile": false
+    },
+    {
+      "asset_id": "DEMO-005",
+      "baseline_action": "Hold",
+      "modal_action": "Hold",
+      "robust_action": "Hold",
+      "stability_score": 0.6,
+      "baseline_action_frequency": 0.6,
+      "action_frequencies": {
+        "Hold": 0.6,
+        "Sell": 0.4
+      },
+      "successful_runs": 20,
+      "fragile": true
+    },
+    {
+      "asset_id": "DEMO-006",
+      "baseline_action": "Hold",
+      "modal_action": "Hold",
+      "robust_action": "Hold",
+      "stability_score": 0.75,
+      "baseline_action_frequency": 0.75,
+      "action_frequencies": {
+        "Hold": 0.75,
+        "Retrofit": 0.05,
+        "Sell": 0.2
+      },
+      "successful_runs": 20,
+      "fragile": false
+    },
+    {
+      "asset_id": "DEMO-007",
+      "baseline_action": "Hold",
+      "modal_action": "Sell",
+      "robust_action": "Sell",
+      "stability_score": 0.5,
+      "baseline_action_frequency": 0.5,
+      "action_frequencies": {
+        "Sell": 0.5,
+        "Hold": 0.5
+      },
+      "successful_runs": 20,
+      "fragile": true
+    },
+    {
+      "asset_id": "DEMO-008",
+      "baseline_action": "Hold",
+      "modal_action": "Hold",
+      "robust_action": "Hold",
+      "stability_score": 0.6,
+      "baseline_action_frequency": 0.6,
+      "action_frequencies": {
+        "Hold": 0.6,
+        "Retrofit": 0.15,
+        "Sell": 0.25
+      },
+      "successful_runs": 20,
+      "fragile": true
+    },
+    {
+      "asset_id": "DEMO-009",
+      "baseline_action": "Sell",
+      "modal_action": "Hold",
+      "robust_action": "Hold",
+      "stability_score": 0.6,
+      "baseline_action_frequency": 0.4,
+      "action_frequencies": {
+        "Sell": 0.4,
+        "Hold": 0.6
+      },
+      "successful_runs": 20,
+      "fragile": true
+    },
+    {
+      "asset_id": "DEMO-010",
+      "baseline_action": "Hold",
+      "modal_action": "Hold",
+      "robust_action": "Hold",
+      "stability_score": 1.0,
+      "baseline_action_frequency": 1.0,
+      "action_frequencies": {
+        "Hold": 1.0
+      },
+      "successful_runs": 20,
+      "fragile": false
+    }
+  ],
+  "fragile_assets": 6,
+  "risk_adjusted_objective_mean_m": 17.916000750000002,
+  "risk_adjusted_objective_p10_m": 9.2632384,
+  "portfolio_expected_npv_mean_m": 20.12953035,
+  "portfolio_expected_npv_p10_m": 12.019130200000001,
+  "objective_mean_m": 17.916000750000002,
+  "objective_p10_m": 9.2632384,
+  "frequency_denominator": "feasible audited perturbation runs only; infeasibility reported separately",
+  "method": "Assumption sensitivity around the multi-period optimiser; this is neither forecast coverage nor validation of investment alpha.",
+  "interpretation": "Modal actions are reported asset by asset and need not form a jointly feasible portfolio. The legacy robust_action field is an alias for modal_action. Objective summaries use the penalised objective; expected NPV summaries are separate.",
+  "perturbation_assumptions": {
+    "npv_multiplier_standard_deviation": 0.06,
+    "marginal_cvar_multiplier_standard_deviation": 0.08,
+    "capex_multiplier_standard_deviation": 0.08,
+    "fragility_threshold": 0.7,
+    "cost_change_treatment": "Capex/receipt changes affect both funding and incremental NPV; joint scenario arrays retain aligned indices."
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "slides": 22,
+  "editable_shapes": 585,
+  "native_charts": 6,
+  "embedded_chart_workbooks": 6,
+  "editable_decision_plots": 2,
+  "embedded_fonts": 2,
+  "rasterized_slides": 0,
+  "overflowing_text_boxes": 0,
+  "off_canvas_shapes": 0,
+  "pdf_links": 6,
+  "reference_pages_used": "1\u201318 only",
+  "figure_reconciliation": "Reviewed against saved model outputs; all six additional policy runs pass constraint audits",
+  "files": [
+    {
+      "name": "Real_Estate_Portfolio_Intelligence_Client_Deck.pptx",
+      "bytes": 253095,
+      "sha256": "4573754baea3632d3e1cdce230816c51572bc90cfaccb521dce1055210988fbf"
+    },
+    {
+      "name": "Real_Estate_Portfolio_Intelligence_Client_Deck.pdf",
+      "bytes": 243736,
+      "sha256": "1fde0f85f20a4af7d1c8f9d8dfdbe1eef9e43be079c9bb80adca4bd5706f0b43"
+    }
+  ]
+}

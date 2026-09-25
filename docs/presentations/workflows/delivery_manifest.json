@@ -1,0 +1,21 @@
+{
+  "slides": 11,
+  "editable_shapes": 613,
+  "raster_images": 0,
+  "embedded_fonts": 2,
+  "text_overflows": 0,
+  "off_canvas_shapes": [],
+  "pdf_links": 44,
+  "files": [
+    {
+      "name": "Portfolio_Intelligence_Demo_Workflows.pptx",
+      "bytes": 176480,
+      "sha256": "35da4ffea32a11cc51496046b132df5590f33575323268e853a66c857f2a3f19"
+    },
+    {
+      "name": "Portfolio_Intelligence_Demo_Workflows.pdf",
+      "bytes": 257010,
+      "sha256": "998bf0ec94f5f236623babcdb102e33fcb4f158fc85399409f30c1525a6fa82d"
+    }
+  ]
+}

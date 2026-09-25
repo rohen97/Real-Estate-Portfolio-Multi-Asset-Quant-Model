@@ -46,3 +46,4 @@ data/examples/demo_zoning_change_training.json
 !public/reports/*.pdf
 
 .pytest_tmp*/
+!docs/presentations/**/*.pptx

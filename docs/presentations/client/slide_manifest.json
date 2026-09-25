@@ -1,0 +1,139 @@
+{
+  "slides": [
+    {
+      "slide": 1,
+      "title": "Portfolio intelligence",
+      "source": "Supplied style reference, pages 1\u201318 only",
+      "notes": "Client presentation inspired only by slides 1\u201318 of the supplied POC PDF. Original branding and diagrams. Demonstration capability is implemented; asset underwriting is fictional, and investment alpha is unvalidated."
+    },
+    {
+      "slide": 2,
+      "title": "Make the capital decision with a clearer view",
+      "source": "",
+      "notes": "The client value proposition is an integrated review workflow. No measured productivity saving or financial uplift is claimed. Five implemented action types are Hold, Retrofit, Repurpose, Redevelop and Sell."
+    },
+    {
+      "slide": 3,
+      "title": "The challenge is connecting evidence to a decision",
+      "source": "",
+      "notes": "These are common portfolio-review challenges, not findings about a specific prospective client. Ask how leases, costs and planning records are currently reconciled, whether asset proposals share a baseline, and how portfolio income and liquidity constraints enter the decision. The model offers a consistent comparison process; quantify any time saving during the pilot rather than assuming one."
+    },
+    {
+      "slide": 4,
+      "title": "One workflow from inputs to investment review",
+      "source": "",
+      "notes": "The implemented public demonstration contains 10 fictional assets, 5 action types and 15 dashboard sections. The stages are an explanation of the existing modelling workflow, not a claim that client-system integration or autonomous approvals are complete. Each stage can be inspected through the dashboard and detailed report. A real client pilot starts by validating asset-level source records."
+    },
+    {
+      "slide": 5,
+      "title": "The dashboard connects the overview to the asset case",
+      "source": "Illustrative results from 10 fictional assets. SGD millions unless stated. Model snapshot: 25 September 2026.",
+      "notes": "This is a presentation adaptation of the implemented dashboard, constructed entirely from editable shapes and text. It is not a screenshot or an additional product feature. The 70.0851% income retention and S$9.947621m incremental NPV refer to the saved core multi-period portfolio. All 10 assets require additional evidence. Public Pages serves saved results; new calculations require a connected backend."
+    },
+    {
+      "slide": 6,
+      "title": "Market context sharpens the questions for each asset",
+      "source": "Source: official URA / JTC series via data.gov.sg; cached 25 September 2026. Latest observation: 2026 Q2.",
+      "notes": "Official observations: https://data.gov.sg/datasets/d_da00b36ca8c831322fa0bb2a3378a476/view\nhttps://data.gov.sg/datasets/d_620ad30cf4aca7c1c25eb2eff9e4bedc/view\nhttps://data.gov.sg/datasets/d_620ad30cf4aca7c1c25eb2eff9e4bedc/view\nhttps://data.gov.sg/datasets/d_dce35e6697eadb9884f2e02af764e468/view\nEvery plotted series has the same 2021-Q1 origin and common completed-quarter history. These are regional/national aggregate indices, not appraisals or asset-level forecasts. Downloaded histories may be revised and are not point-in-time investment backtest inputs."
+    },
+    {
+      "slide": 7,
+      "title": "Zoning produces four different decision inputs",
+      "source": "Model trace: zoning lookup, challenger, capacity and advanced valuation modules. Public zoning records are fictional.",
+      "notes": "The four columns are distinct output families, not four additive sources of return. URA Master Plan describes permissible land use and density; project permission and detailed controls still require verification. Primary references: https://www.ura.gov.sg/land-planning/master-plan/ and https://www.ura.gov.sg/guidelines/development-control/. In the public snapshot legal fields and polygons are fictional fixtures. The ML challenger is a separate diagnostics pathway; run_asset does not consume the prediction file. The advanced engine passes selected screening-envelope GFA into monthly redevelopment cash flows. Those detailed cash flows and NPVs are not substituted into the core action templates used by selection and optimisation. Do not describe ML class disagreement as planning approval or immediately capitalise a screening residual as incremental return."
+    },
+    {
+      "slide": 8,
+      "title": "Zoning ML challenges the input evidence",
+      "source": "Implemented code: LightGBM challenger and zoning-change modules. Public results are hand-authored display fixtures.",
+      "notes": "packages/zoning/challenger.py trains separate core, subtype and GPR-band LightGBM classifiers. Outputs include top-three class probabilities, entropy and abstention, with spatial validation and temperature calibration code. packages/zoning/change_model.py is a distinct classifier with target changed; its current output has no explicit investment horizon or validated public probability. A real deployment needs dated change labels, forecast horizon, leakage checks and appropriate holdout evaluation. Current public /zoning/prediction routes all state synthetic_fixture_not_model; trained=false; abstain=true; future change status=not_estimated. Any stored illustrative numeric confidence or change value is not a model estimate. Prediction scripts export diagnostics; their outputs are not consumed by the main cash-flow/action-ranking pipeline or automatically wired into underwriting_readiness. Operational use today is analyst review of the displayed discrepancy. A forecast-driven valuation connection remains further implementation and validation work."
+    },
+    {
+      "slide": 9,
+      "title": "Floor-area headroom identifies an option to investigate",
+      "source": "Illustrative results from 10 fictional assets. SGD millions unless stated. Model snapshot: 25 September 2026.",
+      "notes": "Fictional DEMO-001: site2600sqm; assumed GPR4.2; current GFA7862.4sqm; statutory proxy10920sqm; physical screen10920sqm; de-facto/economic screen10046.4sqm; unused2184sqm. Core screen flags plot ratio and site coverage. These bars are different quantities, not a waterfall or additive areas. Adjusted capacity is the core heuristic margin/capacity screen, not granted approval. The separately constructed advanced envelope yields10774.19sqm under different geometry/efficiency assumptions and feeds the monthly development valuation; it is not the same number as core adjusted capacity. The monthly incremental redevelopment NPV is -37.022416m; assessed LBC is still missing. This monthly NPV is not fed into the main ranking. The core annual Redevelop template gives a separate -11.374m result. The S$4.44m simple capacity residual is a diagnostic excluded from additive action returns. The core annual ranking prefers Sell, but this is driven by assumed cash flows and sale economics, not an ML prediction. The operational signal remains Data Required / Monitor. Data sources: /portfolio and /assets/DEMO-001/advanced-analysis."
+    },
+    {
+      "slide": 10,
+      "title": "Translate zoning information into a decision process",
+      "source": "Decision logic guide. Economic candidates remain conditional on verified inputs and portfolio constraints.",
+      "notes": "The table explains how a user should use the information, rather than asserting a currently automatic connection from ML into recommendations. Both the ML diagnostics and detailed zoning-based redevelopment NPVs remain outside the core action-ranking and optimisation path. The implemented action universe contains Hold, Retrofit, Repurpose, Redevelop and Sell for assets already in the portfolio. Core ranking maximises expected incremental NPV minus the CVaR penalty; portfolio optimisation enforces shared constraints. ML output currently supports a separate analyst review; the main engine does not consume its scores. Verified zoning and title are part of underwriting readiness, but discrepancies are not automatically propagated from the ML prediction file into that gate. Data Required / Monitor is an evidence status, not an investment recommendation to Hold. Acquisition signal explicitly states Not assessed: transaction price and benchmark evidence required. A Buy recommendation would need a separately implemented and tested purchase underwriting comparison. Zoning forecasts can motivate due diligence and sensitivity cases; they do not justify taking action before evidence and economics have been established."
+    },
+    {
+      "slide": 11,
+      "title": "Compare every action against the same Hold baseline",
+      "source": "Illustrative results from 10 fictional assets. SGD millions unless stated. Model snapshot: 25 September 2026.",
+      "notes": "The common financial principle is action value less the value of retaining the same asset. Annual core and monthly development engines retain distinct assumptions and timing. Hold incremental value is zero by construction, which does not mean the property has no absolute risk. Core annual and monthly development outputs must not be interchanged. Model source: packages/actions/real_options.py, detailed_cashflow.py and packages/valuation/engine.py."
+    },
+    {
+      "slide": 12,
+      "title": "The action plot makes the trade-off visible",
+      "source": "Illustrative results from 10 fictional assets. SGD millions unless stated. Model snapshot: 25 September 2026.",
+      "notes": "Data: /portfolio DEMO-001 actions, 5,000 stored scenario observations per action. Loss CVaR95 is the mean worst 5% of max(0, -incremental NPV), using exact tail weights. Zero Hold incremental risk is relative to Hold itself. The independent screening preference is Sell, but all asset-level economics and probabilities are fictional. Plot coordinates are exact values and all graph elements are editable shapes. Raw values are included in decision_data.json."
+    },
+    {
+      "slide": 13,
+      "title": "More floor area does not guarantee more value",
+      "source": "Illustrative results from 10 fictional assets. SGD millions unless stated. Model snapshot: 25 September 2026.",
+      "notes": "Source /assets/DEMO-001/advanced-analysis.redevelopment_cashflow. Expected project NPV -40.154802, Hold investment NPV -3.132386, incremental NPV -37.022416 SGD m. These monthly project cash flows remain separate from the core annual action engine in slide 12; they are not substituted into its rankings or the optimiser. Assessed Land Betterment Charge is missing. Negative redevelopment results already arise before resolving that unknown; this does not establish feasibility or a price for a real site."
+    },
+    {
+      "slide": 14,
+      "title": "The best portfolio is not the sum of the top asset ideas",
+      "source": "Illustrative results from 10 fictional assets. SGD millions unless stated. Model snapshot: 25 September 2026.",
+      "notes": "Saved /snapshots/optimise. 8 Sell / 2 Hold are independent core rankings; 3 Sell / 7 Hold is the constrained multi-period solution. Sales: DEMO-001, DEMO-003, DEMO-009. Retained NOI=(25.84-7.73)/25.84=70.0851%. Expected NPV9.947621, receipts167.70, CVaR20.025108, objective3.940089 SGD m at penalty0.3. Sale receipts are capital release, not investment profit."
+    },
+    {
+      "slide": 15,
+      "title": "Your income mandate changes the capital plan",
+      "source": "Source: six audited model reruns; common inputs and scenario grid. All outcomes are illustrative.",
+      "notes": "New reproducible sensitivity analysis in analysis/decision_data.json. Total capital500m, liquidity50m, maximum8 concurrent projects, development share0.45, risk penalty0.3, common aligned scenarios. Minimum NOI ratios50%,60%,70%,80%,90%,100%. The saved snapshot uses max_projects20; both limits are nonbinding here. Every displayed plan passed the model constraint audit. These are discrete policy reruns; connecting lines guide the eye and do not imply every intermediate plan is feasible or interpolated."
+    },
+    {
+      "slide": 16,
+      "title": "A positive expected value can still carry material downside",
+      "source": "Illustrative results from 10 fictional assets. SGD millions unless stated. Model snapshot: 25 September 2026.",
+      "notes": "Source /snapshots/two-stage. Three assumed cases and weights0.50/0.25/0.25 produce expected incremental NPV7.633548m. The negative downside reflects stressed sale receipts and NPV consistently. These cases are a different scenario set from the core 128-scenario optimisation and should not be presented as a reduction in risk relative to that model. No probability calibration to realised market outcomes is claimed."
+    },
+    {
+      "slide": 17,
+      "title": "Digital twins test how the action mix changes",
+      "source": "Source: /digital-twins/dashboard. Separate synthetic underwriting; values are not comparable with the core portfolio.",
+      "notes": "Twin outputs: constrained NPV79.8007/66.9548/68.0952m; sales6/6/2; receipts420.7940/267.3002/367.5736m. The different action counts reflect asset size and environment-specific income constraints. Synthetic performance does not establish accuracy on real assets. Predictive interval coverage and regret diagnostics are available in the full report; the displayed NPV is model expectation, not realised return."
+    },
+    {
+      "slide": 18,
+      "title": "An attractive candidate still needs decision-ready evidence",
+      "source": "",
+      "notes": "Implementation has data readiness/status fields and portfolio constraint audits; all public demo assets are Data Required / Monitor. Assess title, planning, assessed LBC, lease evidence and observed financials before real decisions. Human review is the operating model; public visitors cannot write review signoffs or decision records. Client access control, approvals integration and durable audit storage need a client deployment scope."
+    },
+    {
+      "slide": 19,
+      "title": "Turn possible alpha into a testable hypothesis",
+      "source": "",
+      "notes": "The revised forecast pipeline separates chronological training, calibration and holdout periods and compares against a naive benchmark. Public forecast cards are formula fixtures, not fitted production model results. Asset-specific alpha hypotheses and decision-policy uplift require verified dated data, transaction costs, unseen outcomes and an agreed counterfactual baseline. These are proposed evaluation steps, not completed client results."
+    },
+    {
+      "slide": 20,
+      "title": "A modular system supports a staged client deployment",
+      "source": "",
+      "notes": "Implemented React/Vite frontend, FastAPI calculation service, Python valuation/scenario/optimisation packages, cached official indices and versioned public snapshots. All 15 public tabs work in GitHub Pages. Docker build and Render blueprint tested; a Render account connection is still required to provision the public backend. The private client production scope must address identity/access, tenancy, durable audit, monitoring and data integration; do not represent these as delivered features."
+    },
+    {
+      "slide": 21,
+      "title": "Start with a pilot that has measurable acceptance criteria",
+      "source": "",
+      "notes": "This is a proposed client pilot, not a claimed existing engagement or contractual offer. Agree asset selection, data access, decision mandate, baseline and acceptance thresholds with the client. Model tests already completed:154 backend passed,3 skipped due missing private data;7 frontend passed;TypeScript/build and Linux container passed;all15 public tabs and local calculation controls checked. These are software checks, not evidence of real-world investment outperformance."
+    },
+    {
+      "slide": 22,
+      "title": "Start with one portfolio and one decision mandate",
+      "source": "",
+      "notes": "Suggested close: bring the data owner, portfolio manager and investment decision maker into one scoped pilot discussion. Public dashboard and detailed report links are live as of25September2026. The 49-page report has28figures and16tables. The demonstration uses fictional underwriting, official aggregate market context, and does not establish validated alpha."
+    }
+  ],
+  "model_snapshot_sha256": "1a820ba3484444f3355ad2f1ff86e66c80d16c5b15c9982c77d57d93966095ac",
+  "reference_pages_used": "1\u201318 only",
+  "native_editable": true
+}
