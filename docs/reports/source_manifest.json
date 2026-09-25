@@ -21,8 +21,8 @@
     },
     {
       "file": "docs/reports/chart_manifest.json",
-      "sha256": "4ccc636d157873eca021ff5f5c84206378db70073f9af5cec3f8a7db74ea143c",
-      "bytes": 23574
+      "sha256": "554cebde0d820a8ab7baad8ed152f8bbf8315701a13e054e024f7269c55c8f3b",
+      "bytes": 23285
     },
     {
       "file": "docs/valuation_revision.md",
@@ -51,8 +51,8 @@
     },
     {
       "file": "scripts/report/make_charts.py",
-      "sha256": "c2dbb980bb438b9858fe876adcbcaeb408125f8d7f5c8aaa906a94256a94e56c",
-      "bytes": 48045
+      "sha256": "f477a9b4219b2945cb51eaad03c0d398fc9968c2228a0ad1fc6edb4fdc11d7e8",
+      "bytes": 48058
     },
     {
       "file": "docs/reports/validation_results.json",

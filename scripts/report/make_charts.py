@@ -434,7 +434,7 @@ class ReportCharts:
         payload={'schema_version':1,'chart_count':len(self.manifest),'sources':{
             'api_snapshot_sha256':sha256(self.api_bytes).hexdigest(),
             'digital_twin_dashboard_sha256':sha256(self.twin_bytes).hexdigest()},'figures':self.manifest}
-        (self.root/'docs/reports/chart_manifest.json').write_text(json.dumps(payload,indent=2,ensure_ascii=False),encoding='utf-8')
+        (self.root/'docs/reports/chart_manifest.json').write_text(json.dumps(payload,indent=2,ensure_ascii=False),encoding='utf-8',newline='\n')
         return payload
 
 
