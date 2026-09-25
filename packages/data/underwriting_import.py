@@ -3,15 +3,16 @@ from datetime import date,datetime
 from pathlib import Path
 import json,math
 from openpyxl import load_workbook
-CURRENT_DATE=date(2026,9,23)
+CURRENT_DATE=date.today()
 CORE_FIELDS=['ownership_entity','ownership_pct','title_lot','tenure','site_area_sqm','existing_gfa_sqm','nla_sqm','occupancy','current_valuation_m','valuation_date','noi_m','current_use','data_owner','evidence_source','evidence_date','verification_status']
 def norm(value):
  if isinstance(value,str):return value.strip()
  return value
 def number(value):
  if value in (None,''):return None
- try:return float(value)
- except:return None
+ try:
+  value=float(value);return value if math.isfinite(value) else None
+ except (TypeError,ValueError):return None
 def iso(value):
  if value in (None,''):return None
  if isinstance(value,(datetime,date)):return value.date().isoformat() if isinstance(value,datetime) else value.isoformat()

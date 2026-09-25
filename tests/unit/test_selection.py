@@ -3,8 +3,8 @@ ACTIONS=[{'action':'Hold','expected_npv_m':5,'probability_of_loss':.15},{'action
 CAPACITY={'statutory_gfa_sqm':30000,'unused_economic_gfa_sqm':12000,'residual_value_m':30}
 def test_proxy_assets_are_not_given_transaction_signal():
  asset={'segments':['Residential'],'synthetic_financials':True,'tenure_hint':{'type':'Freehold'},'latitude':1.3,'longitude':103.8,'ura_zoning':{'spatial_review_required':False}};r=evaluate_selection(asset,CAPACITY,ACTIONS,{'view_block_probability':.2,'supply_pressure_index':.3},{'indicators':{'price_qoq':.01}},120,5.8,transformation_zones=[]);assert r['signal']=='Data Required / Monitor';assert len(r['action_comparison'])==5
-def test_observed_asset_produces_economic_signal():
- asset={'segments':['Residential'],'synthetic_financials':False,'tenure_hint':{'type':'Freehold'},'latitude':1.3,'longitude':103.8,'ura_zoning':{'spatial_review_required':False}};r=evaluate_selection(asset,CAPACITY,ACTIONS,{'view_block_probability':.05,'supply_pressure_index':.05},{'indicators':{'price_qoq':.015}},120,7,.078,5,[]);assert r['signal'] in ('Invest / Retain','Retain / Monitor','Sell / Release');assert r['expected_total_return']!=r['incremental_action_return']
+def test_false_synthetic_flag_does_not_bypass_evidence_gate():
+ asset={'segments':['Residential'],'synthetic_financials':False,'tenure_hint':{'type':'Freehold'},'latitude':1.3,'longitude':103.8,'ura_zoning':{'spatial_review_required':False}};r=evaluate_selection(asset,CAPACITY,ACTIONS,{'view_block_probability':.05,'supply_pressure_index':.05},{'indicators':{'price_qoq':.015}},120,7,.078,5,[]);assert r['signal']=='Data Required / Monitor';assert r['annual_expected_alpha'] is None;assert r['expected_total_return'] is None;assert r['readiness']['missing']
 def test_lease_decay_and_enbloc_are_explicit():
  asset={'segments':['Residential'],'tenure_hint':{'type':'99-year leasehold','remaining_years':35}};assert lease_decay(asset,100)['penalty_m']>0;assert enbloc_option(asset,CAPACITY,100)['collective_sale_applicable']
 def test_transformation_is_time_discounted():

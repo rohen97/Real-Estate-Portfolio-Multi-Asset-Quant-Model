@@ -1,5 +1,7 @@
 from __future__ import annotations
-from dataclasses import dataclass,asdict
+from dataclasses import dataclass
+import math
+from packages.actions.real_options import evaluate_specifications, npv
 
 @dataclass
 class AssetEconomics:
@@ -27,30 +29,39 @@ class ActionPlan:
  sale_proceeds_m:float=0
 
 def dcf(e:AssetEconomics)->dict:
+ if not all(math.isfinite(value) for value in (e.current_noi_m,e.current_value_m,e.market_rent_growth,e.cap_rate,e.discount_rate,e.selling_cost_rate)):
+  raise ValueError('DCF inputs must be finite')
+ if e.holding_years < 1 or int(e.holding_years) != e.holding_years or e.cap_rate <= 0 or e.market_rent_growth <= -1 or not 0 <= e.selling_cost_rate < 1:
+  raise ValueError('invalid DCF horizon, cap rate, growth or selling cost')
  cash=[];noi=e.current_noi_m
  for year in range(1,e.holding_years+1):
   noi*=1+e.market_rent_growth;cash.append(noi)
  terminal=noi*(1+e.market_rent_growth)/e.cap_rate*(1-e.selling_cost_rate);cash[-1]+=terminal
- pv=sum(v/(1+e.discount_rate)**(i+1) for i,v in enumerate(cash));return {'value_m':round(pv,2),'cashflows_m':[round(x,2) for x in cash],'terminal_value_m':round(terminal,2)}
+ pv=npv(e.discount_rate,cash,start_period=1);return {'value_m':round(pv,6),'cashflows_m':[round(x,6) for x in cash],'terminal_value_m':round(terminal,6),'cashflow_start_year':1,'cashflow_basis':'unlevered year-end NOI and forward-NOI terminal value net of selling costs'}
 
 def action_plans(e:AssetEconomics,capacity:dict)->list[ActionPlan]:
- option=max(0,float(capacity.get('residual_value_m',0)))
- return [ActionPlan('Hold',1.5,.1,.01,0,.0,.98,.25),ActionPlan('Retrofit',max(5,e.current_value_m*.08),.6,.1,.05,.04,.9,1.5),ActionPlan('Repurpose',max(12,e.current_value_m*.2),1.2,.22,.12,.12,.72,2.5),ActionPlan('Redevelop',max(25,e.current_value_m*.42),2.2,.45,.18,.25,.62,4),ActionPlan('Sell',0,0,0,0,0,.97,.75,e.current_value_m*(1-e.selling_cost_rate))]
+ return [ActionPlan('Hold',0,0,0,0,0,1,0),ActionPlan('Retrofit',max(5,e.current_value_m*.08),.6,.1,.05,0,.9,1.5),ActionPlan('Repurpose',max(12,e.current_value_m*.2),1.2,.22,.12,0,.72,2.5),ActionPlan('Redevelop',max(25,e.current_value_m*.42),2.2,.45,.18,0,.62,4),ActionPlan('Sell',0,0,0,0,0,1,0,e.current_value_m*(1-e.selling_cost_rate))]
 
 def value_actions(e:AssetEconomics,capacity:dict)->list[dict]:
- baseline=dcf(e)['value_m'];out=[]
+ specifications=[]
  for plan in action_plans(e,capacity):
-  if plan.action=='Sell': after=plan.sale_proceeds_m;failure_cost=0;capital=-plan.sale_proceeds_m
-  else:
-   changed=AssetEconomics(**asdict(e));changed.current_noi_m=e.current_noi_m*(1+plan.noi_uplift);changed.occupancy=min(.99,e.occupancy+plan.occupancy_uplift);changed.current_value_m=e.current_value_m*(1+plan.terminal_value_uplift);after=dcf(changed)['value_m']+float(capacity.get('residual_value_m',0))*(.15 if plan.action=='Repurpose' else .45 if plan.action=='Redevelop' else 0);failure_cost=plan.capex_m*(1-plan.success_probability)*.55;capital=plan.capex_m
-  financing=plan.capex_m*.045*plan.execution_years/2;disruption=e.current_noi_m*plan.disruption_years*.7;npv=after-baseline-plan.capex_m-financing-disruption-failure_cost
-  out.append({'action':plan.action,'incremental_npv_m':round(npv,2),'pv_after_m':round(after,2),'pv_without_m':round(baseline,2),'capex_m':round(capital,2),'financing_cost_m':round(financing,2),'disruption_cost_m':round(disruption,2),'failure_cost_m':round(failure_cost,2),'success_probability':plan.success_probability,'execution_years':plan.execution_years,'source_quality':e.source_quality})
+  specifications.append({'action':plan.action,'capex_m':plan.capex_m,'noi_uplift':plan.noi_uplift,'disruption_rate':min(1.,plan.disruption_years*.7/max(plan.execution_years,1e-9)),'duration_years':plan.execution_years,'success_probability':plan.success_probability,'terminal_uplift':plan.terminal_value_uplift})
+ out=evaluate_specifications(e.current_value_m,e.current_noi_m,float(capacity.get('residual_value_m',0)),specifications,e.discount_rate,e.holding_years,e.cap_rate,e.market_rent_growth,e.selling_cost_rate)
+ for result,plan in zip(out,action_plans(e,capacity)):
+  result['source_quality']=e.source_quality
+  result.update({'current_value_m':e.current_value_m,'base_noi_m':e.current_noi_m,'reference_cap_rate':e.cap_rate,'reference_rent_growth':e.market_rent_growth,'baseline_vacancy':e.vacancy_target})
+  result['disruption_cost_m']=round(e.current_noi_m*plan.disruption_years*.7,6)
+  result['disruption_cost_basis']='undiscounted screening diagnostic; already included in cashflows'
+  result['occupancy_uplift_treatment']='included in total NOI uplift; not added a second time'
  return out
 
 def proxy_economics(asset:dict)->AssetEconomics:
  segments=' '.join(asset.get('segments',[])).lower();rent=asset.get('asking_rent_monthly_sgd');size=asset.get('size_from_sqft')
- if rent and size: annual=rent*12/1e6/.9;value=annual/(.052 if 'industrial' in segments else .047)
+ industrial=any(term in segments for term in ('industrial','warehouse','logistics','storage','factory'))
+ hospitality=any(term in segments for term in ('hotel','hospitality','serviced residence'))
+ commercial=any(term in segments for term in ('commercial','mall','retail','office','mixed use','mixed-use','business park'))
+ if rent and size: annual=rent*12/1e6/.9;value=annual/(.052 if industrial else .047)
  else:
-  base=42 if 'residential' in segments else 85 if 'hotel' in segments else 65 if 'commercial' in segments or 'mall' in segments else 35;value=base
- noi=value*(.052 if 'industrial' in segments else .045)
+  base=85 if hospitality else 65 if commercial else 35 if industrial else 42 if 'residential' in segments else 35;value=base
+ noi=value*(.052 if industrial else .045)
  return AssetEconomics(round(value,2),round(noi,2),source_quality='illustrative proxy - replace with observed company financials')

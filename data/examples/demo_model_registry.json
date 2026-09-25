@@ -1,14 +1,1 @@
-{
-  "name": "portfolio-forecasting-demo",
-  "version": "0.1.0-demo",
-  "synthetic_training": true,
-  "data_source": "fictional public demo",
-  "metrics": {
-    "noi": {
-      "mae_m": 0.05,
-      "p10_p90_coverage": 0.8,
-      "observations": 10
-    }
-  },
-  "artifacts": []
-}
+{"name":"portfolio-formula-demo","version":"0.2.0-demo","status":"illustrative_formula_not_trained","synthetic_training":false,"trained":false,"data_source":"fictional public demo","metrics":{"noi":{"status":"synthetic_formula_reconciliation_not_backtest","mae_m":0.004600000000000204,"rmse_m":0.004732863826479904,"bias_m":-0.004600000000000204,"p10_p90_coverage":1.0,"observations":10,"covered_observations":10,"nominal_interval_coverage":0.8,"source":"row-level fictional formula examples; no learned model or historical holdout"}},"artifacts":[]}

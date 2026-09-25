@@ -1,0 +1,26 @@
+{
+  "residential_price": {
+    "retrieved_at": "2026-09-24T16:54:00.370446+00:00",
+    "api_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_da00b36ca8c831322fa0bb2a3378a476&limit=1000"
+  },
+  "residential_rent": {
+    "retrieved_at": "2026-09-24T16:54:00.643068+00:00",
+    "api_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_647dabde09e726b9eeb75e4d9cd96699&limit=1000"
+  },
+  "commercial_price": {
+    "retrieved_at": "2026-09-24T16:54:00.892164+00:00",
+    "api_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_620ad30cf4aca7c1c25eb2eff9e4bedc&limit=1000"
+  },
+  "commercial_rent": {
+    "retrieved_at": "2026-09-24T16:54:01.124952+00:00",
+    "api_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_862c74b13138382b9f0c50c68d436b95&limit=1000"
+  },
+  "industrial_price": {
+    "retrieved_at": "2026-09-24T16:54:02.167301+00:00",
+    "api_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_dce35e6697eadb9884f2e02af764e468&limit=1000"
+  },
+  "industrial_rent": {
+    "retrieved_at": "2026-09-24T16:54:02.724966+00:00",
+    "api_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_37e46b203bb77387328d25882247d000&limit=1000"
+  }
+}

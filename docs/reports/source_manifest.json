@@ -1,0 +1,73 @@
+{
+  "report_version": "2.0",
+  "generated_at": "2026-09-25T00:04:58.454313+00:00",
+  "model_revision": {
+    "model_version": "economic-model-0.9.0",
+    "code_sha256": "8bd35bf604997f1c2289e1eea3510418ba190cfd0149d827b99cd4bb310ded06",
+    "market_snapshot_sha256": "2810a2696c55a6b7035a354ad59b1170b0d388394732c095ec1683002ef005c6",
+    "warning": "Public indices may be revised; historical index dates do not establish historical availability."
+  },
+  "figures": 28,
+  "sources": [
+    {
+      "file": "public/data/api_snapshot.json",
+      "sha256": "1a820ba3484444f3355ad2f1ff86e66c80d16c5b15c9982c77d57d93966095ac",
+      "bytes": 4201574
+    },
+    {
+      "file": "public/data/digital_twin_dashboard.json",
+      "sha256": "0d422aa007c410bf12b8742fd5110dbb07facbae8e631abc49e215052411a53c",
+      "bytes": 307902
+    },
+    {
+      "file": "docs/reports/chart_manifest.json",
+      "sha256": "554cebde0d820a8ab7baad8ed152f8bbf8315701a13e054e024f7269c55c8f3b",
+      "bytes": 23285
+    },
+    {
+      "file": "docs/valuation_revision.md",
+      "sha256": "61e55e6a0f5e609ddff300f8919c2eb288c6d4c6c01aa3317746fb271bf957b4",
+      "bytes": 11006
+    },
+    {
+      "file": "docs/optimisation_revision.md",
+      "sha256": "0efebd4db874d4963de6e89f9d1621e636be48476d6ce644346a59dffb8c1b8f",
+      "bytes": 10164
+    },
+    {
+      "file": "docs/simulation_revision.md",
+      "sha256": "4aa71f7564c39769692f19211b7249401880aa15a75b2a5ad702dda1f046503d",
+      "bytes": 8899
+    },
+    {
+      "file": "docs/forecasting_revision.md",
+      "sha256": "6b36c4f44ffae86414abf7241dd69265017b1a7a17564c66c6a8ce9e71626054",
+      "bytes": 6303
+    },
+    {
+      "file": "scripts/report/build_report.py",
+      "sha256": "39d5cdd8fe37a86354e2a93cb676adbefdfb0a960413c8207a787d0fd4bf7fe2",
+      "bytes": 52489
+    },
+    {
+      "file": "scripts/report/make_charts.py",
+      "sha256": "f477a9b4219b2945cb51eaad03c0d398fc9968c2228a0ad1fc6edb4fdc11d7e8",
+      "bytes": 48058
+    },
+    {
+      "file": "docs/reports/validation_results.json",
+      "sha256": "6a8cb4c8ce9a75097c0001e70ffe66ef9f9907f595d23609202aa45133bae550",
+      "bytes": 357
+    }
+  ],
+  "report": {
+    "path": "docs/reports/Real_Estate_Dashboard_Interpretation_Report.docx",
+    "sha256": "0c45a9b580c20390af3b92944db89d8944c8709bb4f99ceb812419ed840b7650",
+    "bytes": 3992141
+  },
+  "pdf": {
+    "path": "docs/reports/Real_Estate_Dashboard_Interpretation_Report.pdf",
+    "sha256": "07bc05b947246799e3483e770bd36f2b79cf326c26a3261baaac2e91afd894cc",
+    "bytes": 3309703
+  }
+}

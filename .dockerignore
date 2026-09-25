@@ -16,3 +16,13 @@ data/pilot
 *.xlsx
 *.pptx
 *.pdf
+
+.env
+.env.*
+!.env.example
+tools
+data/calibration
+data/synthetic
+data/overrides
+
+!public/reports/*.pdf

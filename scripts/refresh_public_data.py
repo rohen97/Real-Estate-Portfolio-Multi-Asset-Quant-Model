@@ -1,11 +1,76 @@
-import sys,csv,io,json
-from datetime import date
+"""Refresh official market indices, or reproduce the checked-in snapshot offline."""
+from __future__ import annotations
+import argparse
+from datetime import date, datetime, timezone
+from hashlib import sha256
+import json
 from pathlib import Path
+import sys
+import time
 import httpx
-ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT));OUT=ROOT/'data/public';OUT.mkdir(parents=True,exist_ok=True)
-LAND_ID='d_0ad604387b5b2dd99fbf48d89cb4f416';LAND_API=f'https://api-open.data.gov.sg/v1/public/api/datasets/{LAND_ID}/poll-download';SINGSTAT='https://tablebuilder.singstat.gov.sg/api/table/tabledata/M212181'
-with httpx.Client(timeout=90,follow_redirects=True,headers={'User-Agent':'Far-East-Real-Estate-POC/0.4'}) as client:
- land_url=client.get(LAND_API).raise_for_status().json()['data']['url'];land_csv=client.get(land_url).raise_for_status().text;(OUT/'land_use_allocation.csv').write_text(land_csv,encoding='utf-8');land_rows=list(csv.DictReader(io.StringIO(land_csv)))
- industrial=client.get(SINGSTAT).raise_for_status().json()['Data'];(OUT/'singstat_M212181.json').write_text(json.dumps(industrial,indent=2),encoding='utf-8')
-series=industrial['row'][0];values={x['key']:float(x['value']) for x in series['columns'] if x['value'] not in ('na','-','')};latest='2026 2Q';previous='2026 1Q';industrial_qoq=values[latest]/values[previous]-1
-snapshot={'as_of':'2026-06-30','refreshed_at':date.today().isoformat(),'land_use_allocation_hectares':{r['DataSeries'].strip():float(r['2020']) for r in land_rows},'market_indicators':{'private_residential':{'price_qoq':.005,'period':'2026 2Q','source':'URA real estate statistics 2Q2026'},'hdb_residential':{'resale_price_qoq':-.003,'period':'2026 2Q','source':'HDB resale price index 2Q2026'},'office':{'price_qoq':.046,'rent_qoq':.001,'period':'2026 2Q','source':'URA real estate statistics 2Q2026'},'retail':{'price_qoq':.008,'rent_qoq':-.004,'period':'2026 2Q','source':'URA real estate statistics 2Q2026'},'industrial':{'price_index':values[latest],'price_qoq':industrial_qoq,'period':latest,'source_table':'SingStat M212181 / JTC'},'general':{}},'sources':{'land_use':'data.gov.sg dataset '+LAND_ID,'industrial':'SingStat M212181','private_market':'URA 2Q2026 real estate statistics','public_housing':'HDB 2Q2026 resale statistics'}};(OUT/'singapore_market_snapshot.json').write_text(json.dumps(snapshot,indent=2),encoding='utf-8');print(json.dumps(snapshot,indent=2))
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from packages.market.official import DATASETS, build_snapshot, parse_dataset
+
+
+def refresh(root=ROOT, offline=False, as_of=None):
+    as_of = as_of or date.today()
+    cache = root / "data/reference/raw"
+    cache.mkdir(parents=True, exist_ok=True)
+    manifest_path = root / "data/reference/source_manifest.json"
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8")) if manifest_path.exists() else {}
+    series, sources, errors = [], {}, []
+    with httpx.Client(timeout=40, follow_redirects=True) as client:
+        for name, spec in DATASETS.items():
+            path = cache / (spec["id"] + ".json")
+            url = "https://data.gov.sg/api/action/datastore_search?resource_id=" + spec["id"] + "&limit=1000"
+            downloaded = False
+            if not offline:
+                try:
+                    for attempt in range(3):
+                        response = client.get(url)
+                        if response.status_code != 429 or attempt == 2:
+                            break
+                        time.sleep(min(30, max(2, int(response.headers.get("Retry-After", 5 * (attempt + 1))))))
+                    response.raise_for_status()
+                    raw = response.content
+                    parse_dataset(json.loads(raw), spec, as_of)
+                    path.write_bytes(raw)
+                    manifest[name] = {"retrieved_at": datetime.now(timezone.utc).isoformat(), "api_url": url}
+                    downloaded = True
+                except (httpx.HTTPError, ValueError, KeyError) as exc:
+                    errors.append({"dataset": name, "error": str(exc), "cached": path.exists()})
+            if not path.exists():
+                continue
+            raw = path.read_bytes()
+            try:
+                parsed = parse_dataset(json.loads(raw), spec, as_of)
+            except (ValueError, KeyError) as exc:
+                errors.append({"dataset": name, "error": str(exc), "cached": True})
+                continue
+            series.extend(parsed)
+            sources[name] = {**manifest.get(name, {}), "api_url": url,
+                             "sha256": sha256(raw).hexdigest(), "mode": "downloaded" if downloaded else "cached",
+                             "path": path.relative_to(root).as_posix()}
+    if not series:
+        raise RuntimeError("No validated public data available; existing snapshots were not overwritten")
+    snapshot = build_snapshot(series, as_of, {"sources": sources, "errors": errors, "offline": offline,
+                                             "licence": "Singapore Open Data Licence", "available_datasets": len(sources), "expected_datasets": len(DATASETS)})
+    if len(sources) < len(DATASETS) or errors:
+        snapshot["status"] = "partial_or_cached"
+    for relative in ("data/public/singapore_market_snapshot.json", "data/reference/singapore_market_snapshot.json"):
+        target = root / relative
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(json.dumps(snapshot, indent=2, allow_nan=False), encoding="utf-8")
+    manifest_path.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+    return snapshot
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--offline", action="store_true")
+    parser.add_argument("--as-of", type=date.fromisoformat)
+    args = parser.parse_args()
+    result = refresh(offline=args.offline, as_of=args.as_of)
+    print(json.dumps({"status": result["status"], "as_of": result["as_of"], "sources": result["provenance"]["available_datasets"], "errors": result["provenance"]["errors"]}, indent=2))

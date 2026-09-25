@@ -14,7 +14,7 @@ The public repository contains ten fictional Singapore assets. No private workbo
 git clone https://github.com/rohen97/Real-Estate-Portfolio-Multi-Asset-Quant-Model.git
 cd Real-Estate-Portfolio-Multi-Asset-Quant-Model
 ./scripts/bootstrap.ps1
-.venv/Scripts/python.exe scripts/create_public_demo.py
+.venv/Scripts/python.exe scripts/prepare_public_demo.py
 ./scripts/dev.ps1
 ```
 
@@ -23,19 +23,37 @@ cd Real-Estate-Portfolio-Multi-Asset-Quant-Model
 
 ## Hosted public dashboard
 
-A static synthetic demonstration is deployable through GitHub Pages:
+The public dashboard exposes all 15 tabs using saved, explicitly fictional results:
 
 **https://rohen97.github.io/Real-Estate-Portfolio-Multi-Asset-Quant-Model/**
 
-The hosted page does not require the Python model or API to remain running. It uses a checked-in snapshot generated from the ten fictional public-demo assets. Private Far East asset names, addresses, underwriting and generated portfolio outputs are not published.
+GitHub Pages does not require a running Python process. All tabs load a checked-in, read-only snapshot from ten fictional public-demo assets. Saved optimiser results are labelled; calculation buttons require a connected backend. No private portfolio or approval records are published.
 
 Regenerate the public snapshot with:
 
 ```powershell
-.venv/Scripts/python.exe scripts/build_public_dashboard_snapshot.py
+.venv/Scripts/python.exe scripts/prepare_public_demo.py
 ```
 
-The GitHub Actions workflow in `.github/workflows/pages.yml` rebuilds and deploys the static dashboard whenever `main` is updated.
+The GitHub Actions workflow in `.github/workflows/pages.yml` rebuilds and deploys the dashboard whenever `main` is updated. With no repository variable `PUBLIC_API_URL`, it serves all tabs as read-only snapshots. Setting that variable to a deployed service's `/api` URL enables live calculations after the next Pages deployment.
+
+### Full hosted service
+
+A Render Blueprint and Docker image serve the frontend and Python calculations together. The public service permits calculations on fictional data and blocks review/decision writes. It waits for startup readiness and serialises expensive requests.
+
+[Deploy the prepared service on Render](https://render.com/deploy?repo=https://github.com/rohen97/Real-Estate-Portfolio-Multi-Asset-Quant-Model)
+
+An authenticated Render account is required to create the service. The presence of `render.yaml` does not mean a service has been deployed. See [hosting instructions](docs/public_hosting.md).
+
+### Model revision 0.9
+
+- Consistent year-end cash flows, exact incremental Hold baseline, reconciled financing and missing-cost gates.
+- Shared scenario draws, no hidden simulation truth in predictions, positive-loss portfolio CVaR and independently audited funding constraints.
+- Correct sector mapping and verified-data labels; eight official price/rental histories replace hardcoded market changes.
+- Chronological forecast evaluation against a no-change baseline. No demonstrated investment alpha is claimed.
+- Updated [Word report](docs/reports/Real_Estate_Dashboard_Interpretation_Report.docx) and [PDF report](docs/reports/Real_Estate_Dashboard_Interpretation_Report.pdf), with graphs and explanations for all dashboard sections.
+
+Method notes: [valuation](docs/valuation_revision.md), [optimisation](docs/optimisation_revision.md), [simulation](docs/simulation_revision.md), [forecasting](docs/forecasting_revision.md), [official data](data/reference/README.md).
 
 ## Full private-data pipeline
 
