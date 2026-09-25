@@ -7,7 +7,7 @@ from typing import Any
 
 import numpy as np
 
-GENERATOR_VERSION = "semi-synthetic-twin-0.3.0"
+GENERATOR_VERSION = "semi-synthetic-twin-0.4.0"
 CURRENT_YEAR = 2026
 
 SEGMENT_PROFILES: dict[str, dict[str, float]] = {
@@ -77,6 +77,21 @@ SEGMENT_PROFILES: dict[str, dict[str, float]] = {
         "cap_rate": 0.058,
         "construction_cost_psm": 2900,
     },
+    "Industrial": {
+        "site_area_sqm": 7000, "gpr": 2.5, "efficiency": 0.85,
+        "rent_psm_pa": 300, "value_psm": 4700, "occupancy": 0.90,
+        "expense_ratio": 0.24, "cap_rate": 0.058, "construction_cost_psm": 2400,
+    },
+    "Mixed Use": {
+        "site_area_sqm": 5000, "gpr": 3.5, "efficiency": 0.76,
+        "rent_psm_pa": 850, "value_psm": 15500, "occupancy": 0.92,
+        "expense_ratio": 0.30, "cap_rate": 0.042, "construction_cost_psm": 4600,
+    },
+    "Other": {
+        "site_area_sqm": 3000, "gpr": 2.1, "efficiency": 0.75,
+        "rent_psm_pa": 600, "value_psm": 10000, "occupancy": 0.88,
+        "expense_ratio": 0.32, "cap_rate": 0.05, "construction_cost_psm": 3800,
+    },
 }
 
 
@@ -86,18 +101,24 @@ def stable_seed(asset_id: str, master_seed: int = 20260924) -> int:
 
 
 def segment_group(asset: dict[str, Any]) -> str:
-    text = " ".join(asset.get("segments") or []).lower()
+    text = " ".join(asset.get("segments") or []).lower().replace("-", " ")
+    if "mixed" in text or ("residential" in text and any(word in text for word in ("commercial", "office", "retail"))):
+        return "Mixed Use"
     if "storage" in text:
         return "Self-Storage"
     if "serviced" in text:
         return "Serviced Residence"
-    if "hotel" in text:
+    if "hotel" in text or "hospitality" in text:
         return "Hotel"
     if "mall" in text or "retail" in text:
         return "Mall"
-    if "commercial" in text or "industrial" in text or "medical" in text:
+    if any(word in text for word in ("industrial", "logistics", "warehouse", "business park")):
+        return "Industrial"
+    if any(word in text for word in ("commercial", "office", "medical")):
         return "Commercial"
-    return "Residential"
+    if any(word in text for word in ("residential", "apartment", "condominium", "housing")):
+        return "Residential"
+    return "Other"
 
 
 def zone_match(asset: dict[str, Any]) -> dict[str, Any]:
@@ -289,13 +310,17 @@ def generate_twin(asset: dict[str, Any], master_seed: int = 20260924) -> dict[st
         "market": market_score,
         "sustainability": sustainability_score,
     }
-    real_fields = [
+    context_fields = [field for field in context if field != "zoning_exception"]
+    populated_fields = [
         field
         for field, value in context.items()
         if field not in {"zoning_exception"} and value not in (None, "", "Unknown", [])
     ]
     synthetic_fields = list(underwriting.keys())
-    provenance = {field: {"status": "real_portfolio_anchor", "source": "Far East portfolio / URA MP2025"} for field in real_fields}
+    fictional = bool(asset.get("synthetic")) or asset.get("ura_zoning", {}).get("match_method") == "demo_fixture"
+    context_status = "synthetic_fixture" if fictional else "verified_source" if asset.get("context_verified") is True else "supplied_unverified"
+    context_source = "fictional public demonstration portfolio" if fictional else asset.get("context_source", "supplied portfolio; source not independently verified")
+    provenance = {field: {"status": context_status, "source": context_source} for field in populated_fields}
     provenance.update(
         {
             field: {
@@ -327,6 +352,8 @@ def generate_twin(asset: dict[str, Any], master_seed: int = 20260924) -> dict[st
             "status": "synthetic_software_validation",
         },
         "real_context": context,
+        "context_status": context_status,
+        "context_source": context_source,
         "underwriting": underwriting,
         "legacy_inputs": legacy_inputs,
         "histories": {
@@ -345,9 +372,12 @@ def generate_twin(asset: dict[str, Any], master_seed: int = 20260924) -> dict[st
         },
         "field_provenance": provenance,
         "completeness": {
-            "real_context_fields": len(real_fields),
-            "real_context_possible": 14,
-            "real_context_pct": round(len(real_fields) / 14, 4),
+            "real_context_fields": len(populated_fields) if context_status == "verified_source" else 0,
+            "real_context_possible": len(context_fields),
+            "real_context_pct": round(len(populated_fields) / len(context_fields), 4),
+            "context_completeness_pct": round(len(populated_fields) / len(context_fields), 4),
+            "verified_context_pct": round(len(populated_fields) / len(context_fields), 4) if context_status == "verified_source" else 0.0,
+            "legacy_real_context_pct_definition": "Populated context fraction, not verified real-data coverage",
             "verified_underwriting_pct": 0.0,
             "synthetic_underwriting_fields": len(synthetic_fields),
         },

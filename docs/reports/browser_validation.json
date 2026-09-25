@@ -1,0 +1,25 @@
+{
+  "date": "2026-09-25",
+  "browser": "Microsoft Edge, Playwright headless",
+  "static_production": {
+    "tabs_passed": 15,
+    "javascript_errors": 0,
+    "failed_local_http_responses": 0,
+    "portfolio_search_rows": 1,
+    "calculation_controls_disabled": true,
+    "mobile_horizontal_page_overflow": false
+  },
+  "live_production": {
+    "multi_period_http_status": 200,
+    "multi_period_feasible": true,
+    "two_stage_http_status": 200,
+    "two_stage_feasible": true,
+    "stability_http_status": 200,
+    "stability_successful_runs": 20,
+    "stability_failed_runs": 0,
+    "javascript_errors": 0,
+    "mobile_chart_width_px": 345,
+    "mobile_chart_container_width_px": 347
+  },
+  "scope": "Local production builds. This record does not imply that a Render service has been deployed."
+}

@@ -25,7 +25,8 @@ def test_ura_index_and_current_plan_gate():
 
 def test_public_market_snapshot():
  import json
- path=ROOT/'data/public/singapore_market_snapshot.json';path=path if path.exists() else ROOT/'data/examples/demo_market_snapshot.json';snapshot=json.loads(path.read_text());assert snapshot['land_use_allocation_hectares']['Total']==73800;assert snapshot['market_indicators']['industrial']['price_qoq']>0
+ from packages.market.public_data import load_snapshot
+ snapshot=load_snapshot(ROOT);assert snapshot['schema_version']=='2.0';assert len(snapshot['history'])==8;assert snapshot['market_indicators']['industrial']['series']['price']['source_url'].startswith('https://data.gov.sg/')
 
 @pytest.mark.skipif(not (ROOT/'data/processed/ura_mp2025.sqlite').exists(),reason="Full URA index not included in public repository")
 def test_title_boundary_lookup():

@@ -1,0 +1,290 @@
+{
+  "schema_version": 1,
+  "chart_count": 28,
+  "sources": {
+    "api_snapshot_sha256": "1a820ba3484444f3355ad2f1ff86e66c80d16c5b15c9982c77d57d93966095ac",
+    "digital_twin_dashboard_sha256": "0d422aa007c410bf12b8742fd5110dbb07facbae8e631abc49e215052411a53c"
+  },
+  "figures": [
+    {
+      "id": "01_evidence",
+      "file": "figures/01_evidence.png",
+      "title": "Populated fields do not establish verified evidence",
+      "interpretation": "10 asset contexts are fictional and 0 have verified underwriting. Context completeness averages 80.0%; it measures populated fields, not truth, legal confirmation or financial verification.",
+      "source": "digital_twin_dashboard.portfolio_summary and assets; /data/status",
+      "units": "Asset count; context completeness %",
+      "limitation": "Neither a model output nor a populated coordinate/title field upgrades a fictional input into observed evidence.",
+      "section": "Evidence and Audit"
+    },
+    {
+      "id": "02_portfolio",
+      "file": "figures/02_portfolio.png",
+      "title": "Core portfolio scale and current operating income",
+      "interpretation": "The core proxy portfolio totals SGD 564.00m of current asset value and SGD 25.84m annual NOI, an aggregate operating yield of 4.6%. Asset values and recurring income are different quantities; these values do not include incremental action NPVs.",
+      "source": "/assets/{id}.economics",
+      "units": "SGD millions; annual NOI",
+      "limitation": "Core proxy and generated twin underwriting use different inputs; their portfolio totals are not interchangeable.",
+      "section": "Portfolio and Asset"
+    },
+    {
+      "id": "03_core_actions",
+      "file": "figures/03_core_actions.png",
+      "title": "Standalone rankings and portfolio decisions differ",
+      "interpretation": "Standalone recommendations contain 8 Sell and 2 Hold actions. The constrained plan contains 3 Sell and 7 Hold actions. Joint risk, income continuity and funding constrain the final allocation; the sum of independent recommendations is not itself an executable portfolio.",
+      "source": "/assets/{id}.recommendation; /snapshots/optimise.selections",
+      "units": "Asset count",
+      "limitation": "All ten assets remain subject to evidence verification. A preferred action is a provisional research ranking.",
+      "section": "Portfolio"
+    },
+    {
+      "id": "04_market_changes",
+      "file": "figures/04_market_changes.png",
+      "title": "Official price and rental indices: latest available changes",
+      "interpretation": "Latest price quarter-on-quarter movements are private residential +0.50%, office +0.36%, retail +0.77%, industrial +0.62%. Price and rental indices measure sector-level changes, not these assets. The latest snapshot period ends 2026-06-30; office and retail observations cover the Central Region.",
+      "source": "/market/public.market_indicators; official URA/JTC datasets via data.gov.sg",
+      "units": "Percentage change, quarterly and annual",
+      "limitation": "Series can have different latest periods, are potentially revised and do not constitute asset-level forecasts or point-in-time backtests.",
+      "section": "Official Market Data"
+    },
+    {
+      "id": "05_market_history",
+      "file": "figures/05_market_history.png",
+      "title": "Official sector paths rebased for comparison",
+      "interpretation": "Each price or rent series is rebased to 100 at its first displayed observation from 2021 onward. A value of 120 means a 20% cumulative increase from that series-specific origin; different index bases have been removed so direction and relative movement can be compared. Divergent sector paths motivate separate underwriting assumptions rather than one market-wide growth rate.",
+      "source": "/market/public.history",
+      "units": "Rebased index; calendar year",
+      "limitation": "Rebasing does not make geographic coverage, property mix or publication dates identical. Historical index growth is not a forecast of future asset returns.",
+      "section": "Official Market Data"
+    },
+    {
+      "id": "06_selection",
+      "file": "figures/06_selection.png",
+      "title": "Selection separates expected value, risk and unsupported alpha",
+      "interpretation": "The displayed standalone expected incremental opportunities sum to SGD 28.58m; after individual risk penalties the scores sum to SGD 12.02m. The annual-equivalent yield converts an NPV into a level annual amount divided by current value. It is not an IRR and must not be added to NOI yield or historical price growth. Independent market alpha remains unestimated.",
+      "source": "/assets/{id}.selection",
+      "units": "SGD m; annual-equivalent proportion of current value",
+      "limitation": "Adding asset scores ignores portfolio constraints and joint risk. Break-even additional cost is an NPV allowance, not a construction budget.",
+      "section": "Selection"
+    },
+    {
+      "id": "07_twin_sectors",
+      "file": "figures/07_twin_sectors.png",
+      "title": "Digital twin sector mix and generated economic scale",
+      "interpretation": "The twin portfolio contains 10 assets across 6 sectors and totals SGD 1,312.90m. This is generated twin underwriting. Sector labels preserve office, industrial, mixed-use and hospitality distinctions instead of defaulting unrecognised uses to residential.",
+      "source": "digital_twin_dashboard.assets",
+      "units": "Asset count; generated SGD m",
+      "limitation": "Different sector totals reflect both the fixture mix and synthetic generation assumptions; they are not the company portfolio allocation.",
+      "section": "Digital Twins"
+    },
+    {
+      "id": "08_twin_allocation",
+      "file": "figures/08_twin_allocation.png",
+      "title": "Environment recommendations and constrained twin allocations",
+      "interpretation": "Base: 8 standalone Sell versus 6 constrained Sell; Stress: 10 standalone Sell versus 6 constrained Sell; Structural: 8 standalone Sell versus 2 constrained Sell. Portfolio income constraints can retain assets even when a standalone sale has the highest expected incremental score.",
+      "source": "digital_twin_dashboard.environments",
+      "units": "Asset count by action and environment",
+      "limitation": "Three environments are separate assumption sets, not probability-weighted forecasts; there is no demonstrated real-world optimal policy.",
+      "section": "Digital Twins"
+    },
+    {
+      "id": "09_twin_value_funding",
+      "file": "figures/09_twin_value_funding.png",
+      "title": "Economic value and cash released are different quantities",
+      "interpretation": "Base: expected incremental NPV SGD 79.80m, sale receipts SGD 420.79m; Stress: expected incremental NPV SGD 66.95m, sale receipts SGD 267.30m; Structural: expected incremental NPV SGD 68.10m, sale receipts SGD 367.57m. Sale proceeds are large because ownership is transferred; NPV deducts the forgone Hold income and residual value. Releasing cash does not imply creating the same amount of profit.",
+      "source": "digital_twin_dashboard.environments[].portfolio",
+      "units": "SGD m: present value versus undiscounted cash",
+      "limitation": "These remain two distinct accounting bases. A zero development allocation is a valid output under costly redevelopment assumptions.",
+      "section": "Digital Twins"
+    },
+    {
+      "id": "10_twin_intervals",
+      "file": "figures/10_twin_intervals.png",
+      "title": "Twin action uncertainty: DEMO-001, base environment",
+      "interpretation": "The selected twin action is Sell, with expected incremental NPV SGD 9.70m and P10–P90 range SGD 0.31m to SGD 19.67m. Lines show the central 80% of simulated outcomes and dots the sample mean. Hold stays at exactly zero because every alternative is measured against the same Hold cashflows.",
+      "source": "digital_twin_dashboard.assets[DEMO-001].environments.base.actions",
+      "units": "Incremental NPV, SGD m",
+      "limitation": "Intervals combine uncalibrated action assumptions, approval branches and simulated shocks; they are not investment-grade confidence intervals.",
+      "section": "Digital Twins"
+    },
+    {
+      "id": "11_twin_diagnostics",
+      "file": "figures/11_twin_diagnostics.png",
+      "title": "Simulation coverage and hindsight agreement test different things",
+      "interpretation": "Base: interval coverage 74% and simulated action agreement 80%; Stress: interval coverage 78% and simulated action agreement 90%; Structural: interval coverage 76% and simulated action agreement 70%. Coverage tests whether generated outcomes lie within their central intervals; agreement tests whether the recommended action matches a hindsight choice. They use different denominators and cannot be compared as one accuracy metric.",
+      "source": "digital_twin_dashboard.environments[].p10_p90_coverage and correct_action_rate_vs_simulation",
+      "units": "Percent; nominal coverage 80%",
+      "limitation": "The evaluation uses a separate synthetic draw and latent outcome adjustment, not observed market outcomes. Ten assets make action percentages coarse.",
+      "section": "Digital Twins"
+    },
+    {
+      "id": "12_twin_regret",
+      "file": "figures/12_twin_regret.png",
+      "title": "Regret measures missed simulated opportunity; stability measures consistency",
+      "interpretation": "There are 2 assets whose recommendations change across the three environments. The largest single asset/environment hindsight regret is SGD 34.29m. A stable action can still have regret, because consistency does not imply that the model foresaw the highest simulated outcome.",
+      "source": "digital_twin_dashboard.assets[].environments and stability_score",
+      "units": "SGD m regret; modal frequency %",
+      "limitation": "Twin stability uses three environments and a change-based fragility flag. It differs from the optimiser perturbation stability test.",
+      "section": "Digital Twins"
+    },
+    {
+      "id": "13_capacity",
+      "file": "figures/13_capacity.png",
+      "title": "Planning capacity is a sequence of distinct screening quantities",
+      "interpretation": "For DEMO-001, statutory GFA is 10,920 sqm, physical GFA 10,920 sqm and expected approved GFA 6,229 sqm. The economic screen can exceed probability-weighted approved area because those quantities answer different questions; they must not be added together.",
+      "source": "/assets/{id}.capacity",
+      "units": "Thousand square metres GFA",
+      "limitation": "GPR labels, parcel boundaries, physical limits and approval probabilities are unverified fixture/proxy inputs; no legal development entitlement is established.",
+      "section": "Zoning"
+    },
+    {
+      "id": "14_zoning_diagnostics",
+      "file": "figures/14_zoning_diagnostics.png",
+      "title": "Binding constraints and zoning display fixtures",
+      "interpretation": "The most frequent binding screen is plot ratio (10 assets). 10/10 fixture labels match their supplied legal-style labels, but no zoning model was trained and these are not independently verified legal matches. Agreement is chart plumbing, not measured classification accuracy.",
+      "source": "/assets/{id}.capacity; /zoning/prediction/{id}",
+      "units": "Asset count; fixture label count",
+      "limitation": "The displayed confidence and future-change numbers are hand-authored, uncalibrated fixtures; abstention and evidence review remain required.",
+      "section": "Zoning ML"
+    },
+    {
+      "id": "15_envelope",
+      "file": "figures/15_envelope.png",
+      "title": "Development envelope screening: DEMO-001",
+      "interpretation": "The preferred envelope has 2 tower(s), 26 storeys and 10,774 sqm GFA. The site is a synthetic rectangle and the footprint is a geometric screen constrained by GPR, height, coverage and setbacks. Surrounding-building evidence is unavailable; missing geometry does not establish an open view.",
+      "source": "/assets/DEMO-001/advanced-analysis.site_polygon and development_envelope",
+      "units": "Approximate local metres; thousand sqm",
+      "limitation": "Not a surveyed cadastral plot, architect design, parking/fire approval or verified viewshed. If no feasible envelope exists, no redevelopment value is reported.",
+      "section": "Development"
+    },
+    {
+      "id": "16_monthly_cashflow",
+      "file": "figures/16_monthly_cashflow.png",
+      "title": "Monthly redevelopment economics versus Hold: DEMO-001",
+      "interpretation": "The expected unlevered incremental NPV is SGD -37.02m over 75 months, before any unassessed LBC. Negative bars represent extra costs or forgone Hold income; the final month includes the difference in disposal proceeds. The cumulative line is undiscounted cash and therefore does not equal NPV. Project and Hold both include the same current-asset opportunity cost at time zero.",
+      "source": "/assets/DEMO-001/advanced-analysis.redevelopment_cashflow",
+      "units": "SGD m; month",
+      "limitation": "LBC is missing and underwriting is unverified. These displayed calculations are not decision-ready and are not levered equity cashflows.",
+      "section": "Development"
+    },
+    {
+      "id": "17_cost_debt",
+      "file": "figures/17_cost_debt.png",
+      "title": "Full rebuilding cost and reconciled development debt",
+      "interpretation": "DEMO-001 incurs SGD 45.25m construction cost on all 10,774 rebuilt sqm. Conditional debt draws total SGD 30.80m, equal to principal repayment SGD 30.80m; interest totals SGD 5.70m. Equity receives the loan draws before paying interest and repayment, while unlevered decision NPV excludes financing.",
+      "source": "/assets/DEMO-001/advanced-analysis.redevelopment_cashflow",
+      "units": "SGD m; months; full rebuilt sqm",
+      "limitation": "Debt series are conditional on successful development, not probability-weighted net borrowing. LBC is an unknown omitted charge, not zero.",
+      "section": "Development"
+    },
+    {
+      "id": "18_enbloc",
+      "file": "figures/18_enbloc.png",
+      "title": "En-bloc residual value reconciles known costs, not unknown charges",
+      "interpretation": "For DEMO-001, gross development value SGD 80.92m less known costs and developer margin SGD 77.29m leaves a land offer of SGD 3.62m. Buyer duty is solved on that offer. The offer is below the current proxy value of SGD 65.00m; the chart does not infer that owners would accept it. Failure retains the asset, which is included in the separate incremental comparison.",
+      "source": "/assets/{id}/advanced-analysis.enbloc",
+      "units": "SGD m, undiscounted development residual",
+      "limitation": "LBC and acquisition-finance/tenure-top-up evidence are incomplete; the residual is an incomplete screening amount. Consent probabilities remain uncalibrated.",
+      "section": "Development"
+    },
+    {
+      "id": "19_dcf",
+      "file": "figures/19_dcf.png",
+      "title": "Core Hold DCF: operating income and terminal value separated",
+      "interpretation": "DEMO-001 has a Hold DCF of SGD 59.47m: SGD 22.36m from operating income and SGD 37.11m from discounted net terminal value. Terminal PV is 62.4% of total value. That concentration explains sensitivity to exit cap rate and terminal NOI. The SGD 78.64m terminal cash receipt is not recurring annual NOI.",
+      "source": "/assets/DEMO-001.dcf and economics",
+      "units": "SGD m; year-end periods",
+      "limitation": "NOI growth, cap rate and asset costs remain proxy assumptions; sensitivity to terminal value is a valuation dependency, not evidence of overvaluation.",
+      "section": "Valuation"
+    },
+    {
+      "id": "20_core_action_risk",
+      "file": "figures/20_core_action_risk.png",
+      "title": "Core action ranges and loss probability: DEMO-001",
+      "interpretation": "The core screen selects Sell. A P10 below zero indicates lower-tail incremental losses, while the probability panel reports the fraction of all simulated outcomes below zero. Hold has zero incremental risk by construction. P10 is a quantile, not the probability of a 10% loss.",
+      "source": "/assets/DEMO-001.actions",
+      "units": "Incremental NPV SGD m; probability %",
+      "limitation": "These core scenarios use size-scaled factor exposures and approval branches. They differ from the twin environment engine and must not be merged into one distribution.",
+      "section": "Actions"
+    },
+    {
+      "id": "21_distributions",
+      "file": "figures/21_distributions.png",
+      "title": "Stored core simulation draws: DEMO-001",
+      "interpretation": "Histograms use the same 5,000 stored model draws as the reported core metrics; they are not regenerated chart samples. Retrofit: mean -1.00m, loss frequency 68.5%; Redevelop: mean -11.37m, loss frequency 94.2%; Sell: mean 3.76m, loss frequency 24.4%. The dashed red line is zero incremental NPV, and the solid line marks the sample mean. Multiple modes can reflect success and failed-execution branches.",
+      "source": "/assets/DEMO-001/scenario-samples",
+      "units": "SGD m; probability density integrates to one",
+      "limitation": "A smooth-looking distribution does not validate its assumed exposures, calibration or tail probabilities. Density heights are not probabilities at individual values.",
+      "section": "Scenario"
+    },
+    {
+      "id": "22_factor_correlation",
+      "file": "figures/22_factor_correlation.png",
+      "title": "Input correlation and realised scenario dependence",
+      "interpretation": "The scenario source is assumption fallback. The realised rent-growth/cap-rate correlation is -0.55; a negative value links stronger rent with lower cap rates in this simulation. Clipping and tail mixing can change realised correlations from the input matrix, so both are shown.",
+      "source": "/visualisations/scenario-matrix",
+      "units": "Pearson correlation, -1 to +1",
+      "limitation": "Fallback correlations are modelling assumptions, not measured market relationships; even a calibrated factor matrix does not validate action-level sensitivities.",
+      "section": "Scenario"
+    },
+    {
+      "id": "23_optimiser_funding",
+      "file": "figures/23_optimiser_funding.png",
+      "title": "Capital scheduling and retained income in the core allocation",
+      "interpretation": "The selected plan spends SGD 0.00m and releases SGD 167.70m. Lowest retained baseline NOI is SGD 18.11m, versus the SGD 18.09m minimum. Sale cash offsets funding only at its scheduled settlement; sold assets stop contributing baseline income. The independent constraint audit reports 0 violations.",
+      "source": "/snapshots/optimise.annual_plan and constraints",
+      "units": "SGD m; decision year",
+      "limitation": "Income continuity is a baseline loss screen, not a full future operating statement; budgeted liquidity is not a bank-account forecast.",
+      "section": "Optimiser"
+    },
+    {
+      "id": "24_joint_risk",
+      "file": "figures/24_joint_risk.png",
+      "title": "Joint portfolio risk must use aligned scenario outcomes",
+      "interpretation": "The core allocation has expected incremental NPV SGD 9.95m and joint positive-part-loss CVaR SGD 20.03m. On the same scenario grid, the sum of selected marginal CVaRs is SGD 20.11m. Correlations and offsetting outcomes determine the difference. The risk-adjusted objective is SGD 3.94m after the configured penalty.",
+      "source": "/snapshots/optimise plus selected /assets/{id}.actions.scenario_npvs_m",
+      "units": "SGD m; 95% CVaR of positive-part loss",
+      "limitation": "Compare joint and marginal CVaR on the same draw grid. The optimiser uses a reduced scenario grid and does not prove empirical diversification or safe tails.",
+      "section": "Optimiser"
+    },
+    {
+      "id": "25_two_stage",
+      "file": "figures/25_two_stage.png",
+      "title": "Two-stage scenarios connect commitments with funded recourse",
+      "interpretation": "Probability-weighted portfolio incremental NPV is SGD 7.63m and positive-part-loss CVaR is SGD 11.28m. Base: SGD 9.98m with 0 cancellations; Downside: SGD -11.28m with 0 cancellations; Upside: SGD 21.86m with 0 cancellations. Cancelling retains Hold economics and pays a decision-year fee; delayed projects must still finish inside the horizon.",
+      "source": "/snapshots/two-stage",
+      "units": "SGD m by scenario; executed/fallback asset counts",
+      "limitation": "Scenario probabilities and multipliers are assumptions. This is not a continuously rebalanced policy or a calibrated multi-year macro forecast.",
+      "section": "Optimiser"
+    },
+    {
+      "id": "26_stability",
+      "file": "figures/26_stability.png",
+      "title": "Optimiser stability is sensitivity, not prediction accuracy",
+      "interpretation": "20/20 perturbation runs were feasible; 6 assets have a modal action frequency below 70%. The most frequent action can differ from the original allocation. The arithmetic mean expected NPV across these perturbation solutions is SGD 20.13m; it is not an out-of-sample return.",
+      "source": "/snapshots/stability",
+      "units": "Action frequency %; feasible-run denominator",
+      "limitation": "Asset-by-asset modal actions need not form one jointly feasible portfolio. Perturbation stability and three-environment twin stability have different denominators.",
+      "section": "Optimiser"
+    },
+    {
+      "id": "27_forecast_examples",
+      "file": "figures/27_forecast_examples.png",
+      "title": "Forecast display examples reconcile; they are not a trained-model backtest",
+      "interpretation": "Recomputing the 10 fictional formula rows gives MAE SGD 4,600, mean bias SGD -4,600 and interval coverage 100.0%. The tight scatter is a consequence of the example formula, not evidence of forecasting skill. No learned production artifact or independent historical investment outcome is used by these cards.",
+      "source": "/models/backtest.predictions and noi_forecast",
+      "units": "SGD m; residual SGD thousands; coverage %",
+      "limitation": "The strengthened forecasting pipeline supports chronological train/calibration/holdout evaluation separately; these public fixture cards do not show a fitted model evaluation.",
+      "section": "Models"
+    },
+    {
+      "id": "28_architecture",
+      "file": "figures/28_architecture.png",
+      "title": "Model pathways, evidence gates and publication boundaries",
+      "interpretation": "Official sector indices enrich context; they do not replace missing asset underwriting. Core valuation, detailed projects and digital twins retain distinct assumptions and units. Scenario outcomes feed constrained optimisation, while evidence gates determine whether a recommendation can be used. The public snapshot serves saved results; a connected Python backend is required for new calculations.",
+      "source": "Repository architecture; API snapshot metadata; model provenance",
+      "units": "Workflow diagram; no quantitative scale",
+      "limitation": "This diagram describes implemented capabilities and dependencies, not confirmation that a cloud backend is deployed, calibrated or using private company data.",
+      "section": "Architecture and Audit"
+    }
+  ]
+}

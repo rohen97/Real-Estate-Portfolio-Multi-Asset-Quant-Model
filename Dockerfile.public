@@ -1,0 +1,32 @@
+FROM node:22.23.3-bookworm-slim AS web
+WORKDIR /app
+COPY package.json package-lock.json ./
+RUN npm ci --no-audit --no-fund
+COPY index.html tsconfig.json vite.config.ts ./
+COPY src ./src
+COPY public ./public
+ENV VITE_STATIC_DEMO=0 VITE_PUBLIC_DEMO=1 VITE_API_BASE=/api VITE_BASE=/
+RUN npm run build
+
+FROM python:3.13-slim
+RUN apt-get update && apt-get install -y --no-install-recommends libgomp1 && rm -rf /var/lib/apt/lists/*
+RUN pip install --no-cache-dir uv
+WORKDIR /app
+COPY pyproject.toml uv.lock ./
+RUN uv sync --frozen --no-dev --no-install-project
+COPY apps ./apps
+COPY packages ./packages
+COPY scripts ./scripts
+COPY data/examples ./data/examples
+COPY data/legacy ./data/legacy
+COPY data/reference ./data/reference
+COPY data/public/transformation_zones.json ./data/public/transformation_zones.json
+COPY --from=web /app/dist ./dist
+ENV PUBLIC_DEMO_MODE=1 PYTHONUNBUFFERED=1 PYTHONHASHSEED=20260923 \
+    FERE_MASTER_SEED=20260923 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 \
+    MKL_NUM_THREADS=1 UV_THREADPOOL_SIZE=1
+RUN .venv/bin/python scripts/prepare_public_demo.py
+RUN useradd --create-home --uid 10001 dashboard && chown -R dashboard:dashboard /app
+USER dashboard
+EXPOSE 10000
+CMD ["sh", "-c", "exec .venv/bin/uvicorn apps.api.hosted:create_app --factory --host 0.0.0.0 --port ${PORT:-10000} --workers 1 --ws none"]

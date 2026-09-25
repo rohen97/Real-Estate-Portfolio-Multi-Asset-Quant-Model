@@ -43,3 +43,6 @@ data/examples/demo_zoning_change_training.json
 *.pptx
 *.pdf
 !docs/**/*.pdf
+!public/reports/*.pdf
+
+.pytest_tmp*/

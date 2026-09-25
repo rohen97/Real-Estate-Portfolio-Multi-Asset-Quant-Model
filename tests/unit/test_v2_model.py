@@ -11,7 +11,7 @@ def test_frozen_legacy_scorecard_corrects_deck_values():
 def test_lease_level_cashflow():
  leases=[{'Area sqm':1000,'Passing Rent SGD pa':600000,'Market Rent SGD pa':660000,'Lease Expiry':'2028-12-31','Tenant Credit Grade':'A','Collection %':.99}];r=lease_cashflow(leases);assert len(r['noi_m'])==10;assert r['present_value_m']>0;assert all(0<=x<=1 for x in r['occupancy'])
 def test_action_and_real_options():
- actions=evaluate_actions(120,5.8,14);low_cap_actions=evaluate_actions(120,5.8,14,terminal_cap_rate=.035);opts=real_options(actions,5.8);assert len(actions)==5;assert set(opts)>={'Wait','Phase','Abandon','Expand'};assert low_cap_actions[0]['incremental_npv_m']>actions[0]['incremental_npv_m']
+ actions=evaluate_actions(120,5.8,14);low_cap_actions=evaluate_actions(120,5.8,14,terminal_cap_rate=.035);opts=real_options(actions,5.8);assert len(actions)==5;assert set(opts)>={'Wait','Phase','Abandon','Expand'};assert low_cap_actions[0]['pv_without_m']>actions[0]['pv_without_m'];assert low_cap_actions[0]['incremental_npv_m']==actions[0]['incremental_npv_m']==0
 def test_multiperiod_optimizer():
  actions=evaluate_actions(100,5,10)
  risk=[{**x,'expected_npv_m':x['incremental_npv_m'],'cvar_95_m':max(0,-x['incremental_npv_m']),'probability_of_loss':.2} for x in actions]
@@ -20,4 +20,8 @@ def test_synthetic_model_governance_gate():
  with pytest.raises(GovernanceError):require_production_model({'synthetic_training':True,'artifacts':[1]},False)
  assert require_production_model({'synthetic_training':True,'artifacts':[1]},True)
 def test_v2_outputs_exist():
- pilot_path=ROOT/'data/processed/pilot_model_v2.json';pilot_path=pilot_path if pilot_path.exists() else ROOT/'data/examples/demo_pilot_model_v2.json';back_path=ROOT/'data/processed/backtest_report.json';back_path=back_path if back_path.exists() else ROOT/'data/examples/demo_backtest_report.json';reg_path=ROOT/'models/registry/portfolio-forecasting-latest.json';reg_path=reg_path if reg_path.exists() else ROOT/'data/examples/demo_model_registry.json';pilot=json.loads(pilot_path.read_text());backtest=json.loads(back_path.read_text());registry=json.loads(reg_path.read_text());assert len(pilot['assets'])==10;assert backtest['status'] in ('synthetic_pilot_backtest','public_synthetic_demo');assert registry['synthetic_training'] is True
+ pilot_path=ROOT/'data/processed/pilot_model_v2.json';pilot_path=pilot_path if pilot_path.exists() else ROOT/'data/examples/demo_pilot_model_v2.json';back_path=ROOT/'data/processed/backtest_report.json';back_path=back_path if back_path.exists() else ROOT/'data/examples/demo_backtest_report.json';reg_path=ROOT/'models/registry/portfolio-forecasting-latest.json';reg_path=reg_path if reg_path.exists() else ROOT/'data/examples/demo_model_registry.json';pilot=json.loads(pilot_path.read_text());backtest=json.loads(back_path.read_text());registry=json.loads(reg_path.read_text());assert len(pilot['assets'])==10;assert backtest['status'] in ('synthetic_pilot_backtest','public_synthetic_demo')
+ if reg_path.name=='demo_model_registry.json':
+  assert registry['synthetic_training'] is False and registry['trained'] is False
+  assert registry['status']=='illustrative_formula_not_trained'
+ else:assert registry['synthetic_training'] is True

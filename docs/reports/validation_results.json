@@ -1,0 +1,19 @@
+{
+  "backend": {
+    "passed": 154,
+    "skipped": 3,
+    "command": "PUBLIC_DEMO_MODE=1 python -m pytest -q"
+  },
+  "frontend": {
+    "passed": 7,
+    "command": "npm test"
+  },
+  "typescript": {
+    "status": "passed",
+    "command": "npm run typecheck"
+  },
+  "production_build": {
+    "status": "passed",
+    "mode": "GitHub Pages saved snapshot"
+  }
+}

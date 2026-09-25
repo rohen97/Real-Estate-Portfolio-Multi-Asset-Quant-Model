@@ -1,4 +1,4 @@
-﻿name: Deploy public dashboard
+name: Deploy public dashboard
 
 on:
   push:
@@ -30,7 +30,9 @@ jobs:
       - name: Build static synthetic dashboard
         run: npm run build
         env:
-          VITE_STATIC_DEMO: '1'
+          VITE_STATIC_DEMO: ${{ vars.PUBLIC_API_URL && '0' || '1' }}
+          VITE_PUBLIC_DEMO: '1'
+          VITE_API_BASE: ${{ vars.PUBLIC_API_URL || '/api' }}
           VITE_BASE: '/Real-Estate-Portfolio-Multi-Asset-Quant-Model/'
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

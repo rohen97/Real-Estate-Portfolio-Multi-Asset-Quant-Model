@@ -13,7 +13,10 @@ twins = generate_portfolio_twins(portfolio)
 dashboard = build_dashboard(twins)
 dashboard["status"] = "public_synthetic_demo"
 dashboard["warning"] = "Public fictional assets and synthetic financials. Software demonstration only; no private Far East portfolio data are included."
+dashboard["portfolio_source"] = "data/examples/demo_portfolio.json"
+dashboard["source_status"] = "fictional_public_fixture"
+dashboard["decision_ready"] = False
 target = ROOT / "public/data/digital_twin_dashboard.json"
 target.parent.mkdir(parents=True, exist_ok=True)
-target.write_text(json.dumps(dashboard, indent=2), encoding="utf-8")
+target.write_text(json.dumps(dashboard, indent=2, allow_nan=False), encoding="utf-8", newline="\n")
 print(json.dumps({"assets": len(twins), "output": str(target), "status": dashboard["status"]}, indent=2))

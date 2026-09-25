@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: real-estate-portfolio-dashboard
+    runtime: docker
+    plan: free
+    region: singapore
+    branch: main
+    dockerfilePath: ./Dockerfile.public
+    dockerContext: .
+    healthCheckPath: /health
+    autoDeployTrigger: checksPass
+    envVars:
+      - key: PUBLIC_DEMO_MODE
+        value: "1"
+      - key: CORS_ORIGINS
+        value: https://rohen97.github.io,http://localhost:5173,http://127.0.0.1:5173
