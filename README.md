@@ -43,7 +43,7 @@ A Render Blueprint and Docker image serve the frontend and Python calculations t
 
 [Deploy the prepared service on Render](https://render.com/deploy?repo=https://github.com/rohen97/Real-Estate-Portfolio-Multi-Asset-Quant-Model)
 
-An authenticated Render account is required to create the service. The presence of `render.yaml` does not mean a service has been deployed. See [hosting instructions](docs/public_hosting.md).
+The deployed full dashboard is **https://real-estate-portfolio-multi-asset-quant.onrender.com/**. It runs independently of a local computer. All 15 tabs and all three calculation endpoints were verified on 25 September 2026. See [deployment validation](docs/deployment/README.md) and [hosting instructions](docs/public_hosting.md).
 
 ### Model revision 0.9
 
@@ -183,3 +183,7 @@ The local implementation currently passes 54 backend tests, 1 frontend test, Typ
 ## Limitations
 
 The public demo validates software behaviour only. Production calibration requires verified NOI, valuations, leases, planning outcomes, capex delivery and realised investment decisions. Professional valuation, legal, tax, planning and governance review remain mandatory.
+
+## Presentations and workflow diagrams
+
+See [the presentation collection](docs/presentations/README.md) for the editable 22-slide client deck and 11-slide demo workflow deck, matching PDFs, source scripts and validation records.
